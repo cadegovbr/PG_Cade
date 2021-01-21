@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02EBAEE6-A2E6-4E34-9983-A93CB23F35A4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PGD.Infra.Data</RootNamespace>
+    <AssemblyName>PGD.Infra.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>PGD.Infra.Data.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>PGD.Infra.Data.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Homologacao|AnyCPU'">
+    <OutputPath>bin\Homologacao\</OutputPath>
+    <CodeAnalysisRuleSet>PGD.Infra.Data.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CGU.Controls.ReportViewer, Version=1.18.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Cgu.Comum.Controls.ReportViewer.1.18.1\lib\net461\CGU.Controls.ReportViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="CGU.Util, Version=1.18.8.0, Culture=neutral, PublicKeyToken=8890dd09a4e1cbfb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Cgu.Comum.Util.1.18.8\lib\net45\CGU.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Cgu.Util.EntityFramework, Version=1.18.8.0, Culture=neutral, PublicKeyToken=e9b7c74e31ad03d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Cgu.Comum.Util.EntityFramework.1.18.8\lib\net45\Cgu.Util.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="CsQuery, Version=1.3.3.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsQuery.1.3.3\lib\net40\CsQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="DomainValidation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.5.5.0\lib\net461\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.5.5.0\lib\net461\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.5.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.6.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Extended, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.Extended.4.6.0\lib\net45\NLog.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.Web.4.8.1\lib\net35\NLog.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="RefactorThis.GraphDiff, Version=3.0.2.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\RefactorThis.GraphDiff.3.0.2\lib\net40\RefactorThis.GraphDiff.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.5.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\PGDDbContext.cs" />
+    <Compile Include="EntityConfig\AdministradorConfig.cs" />
+    <Compile Include="EntityConfig\AtividadeConfig.cs" />
+    <Compile Include="EntityConfig\AvaliacaoDetalhadaProdutoConfig.cs" />
+    <Compile Include="EntityConfig\AvaliacaoProdutoConfig.cs" />
+    <Compile Include="EntityConfig\AnexoProdutoConfig.cs" />
+    <Compile Include="EntityConfig\SituacaoProdutoConfig.cs" />
+    <Compile Include="EntityConfig\FeriadoConfig.cs" />
+    <Compile Include="EntityConfig\ItemAvaliacaoConfig.cs" />
+    <Compile Include="EntityConfig\GrupoAtividadeConfig.cs" />
+    <Compile Include="EntityConfig\HistoricoConfig.cs" />
+    <Compile Include="EntityConfig\IniciativaPlanoOperacionalConfig.cs" />
+    <Compile Include="EntityConfig\NotaAvaliacaoConfig.cs" />
+    <Compile Include="EntityConfig\CriterioAvaliacaoConfig.cs" />
+    <Compile Include="EntityConfig\OS_ItemAvaliacaoConfig.cs" />
+    <Compile Include="EntityConfig\OS_CriterioAvaliacaoConfig.cs" />
+    <Compile Include="EntityConfig\NivelAvaliacaoConfig.cs" />
+    <Compile Include="EntityConfig\PermissaoPerfilConfig.cs" />
+    <Compile Include="EntityConfig\UnidadeConfig.cs" />
+    <Compile Include="EntityConfig\Unidade_TipoPactoConfig.cs" />
+    <Compile Include="EntityConfig\ParametroSistemaConfig.cs" />
+    <Compile Include="EntityConfig\TipoPactoConfig.cs" />
+    <Compile Include="EntityConfig\SituacaoPactoConfig.cs" />
+    <Compile Include="EntityConfig\LogConfig.cs" />
+    <Compile Include="EntityConfig\JustificativaConfig.cs" />
+    <Compile Include="EntityConfig\ProdutoConfig.cs" />
+    <Compile Include="EntityConfig\PactoConfig.cs" />
+    <Compile Include="EntityConfig\OrdemServicoConfig.cs" />
+    <Compile Include="EntityConfig\OS_AtividadeConfig.cs" />
+    <Compile Include="EntityConfig\OS_GrupoAtividadeConfig.cs" />
+    <Compile Include="EntityConfig\OS_TipoAtividadeConfig.cs" />
+    <Compile Include="EntityConfig\CronogramaConfig.cs" />
+    <Compile Include="EntityConfig\TipoAtividadeConfig.cs" />
+    <Compile Include="EntityConfig\PerfilConfig.cs" />
+    <Compile Include="EntityConfig\PermissaoConfig.cs" />
+    <Compile Include="EntityConfig\UsuarioPerfilUnidadeConfig.cs" />
+    <Compile Include="EntityConfig\UsuarioConfig.cs" />
+    <Compile Include="Interfaces\IUnitOfWork.cs" />
+    <Compile Include="Migrations\202006301923291_criacao_banco.cs" />
+    <Compile Include="Migrations\202006301923291_criacao_banco.Designer.cs">
+      <DependentUpon>202006301923291_criacao_banco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008182316502_modelagemUsuarioPerfil.cs" />
+    <Compile Include="Migrations\202008182316502_modelagemUsuarioPerfil.Designer.cs">
+      <DependentUpon>202008182316502_modelagemUsuarioPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008191425035_alteracaoUnidadeEUnidade_tipoPacto.cs" />
+    <Compile Include="Migrations\202008191425035_alteracaoUnidadeEUnidade_tipoPacto.Designer.cs">
+      <DependentUpon>202008191425035_alteracaoUnidadeEUnidade_tipoPacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008210142234_Vinculo_Unidade_Superior.cs" />
+    <Compile Include="Migrations\202008210142234_Vinculo_Unidade_Superior.Designer.cs">
+      <DependentUpon>202008210142234_Vinculo_Unidade_Superior.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009040047045_RemoveHierarquiaECodigoUnidade.cs" />
+    <Compile Include="Migrations\202009040047045_RemoveHierarquiaECodigoUnidade.Designer.cs">
+      <DependentUpon>202009040047045_RemoveHierarquiaECodigoUnidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009051430110_AdicionandoColunaCodigoTabelaUnidade.cs" />
+    <Compile Include="Migrations\202009051430110_AdicionandoColunaCodigoTabelaUnidade.Designer.cs">
+      <DependentUpon>202009051430110_AdicionandoColunaCodigoTabelaUnidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009060006394_AlteracaoUnidadeAddColunasObrigatorio.cs" />
+    <Compile Include="Migrations\202009060006394_AlteracaoUnidadeAddColunasObrigatorio.Designer.cs">
+      <DependentUpon>202009060006394_AlteracaoUnidadeAddColunasObrigatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009060011390_usuarioAddDtNascObrigatoria.cs" />
+    <Compile Include="Migrations\202009060011390_usuarioAddDtNascObrigatoria.Designer.cs">
+      <DependentUpon>202009060011390_usuarioAddDtNascObrigatoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AnexoProdutoRepository.cs" />
+    <Compile Include="Repository\AvaliacaoDetalhadaProdutoRepository.cs" />
+    <Compile Include="Repository\FeriadoRepository.cs" />
+    <Compile Include="Repository\ItemAvaliacaoRepository.cs" />
+    <Compile Include="Repository\AvaliacaoProdutoRepository.cs" />
+    <Compile Include="Repository\AdministradorRepository.cs" />
+    <Compile Include="Repository\ArquivoDadoBrutoRepository.cs" />
+    <Compile Include="Repository\AtividadeRepository.cs" />
+    <Compile Include="Repository\CriterioAvaliacaoRepository.cs" />
+    <Compile Include="Repository\GrupoAtividadeRepository.cs" />
+    <Compile Include="Repository\HistpricoRepository.cs" />
+    <Compile Include="Repository\IniciativaPlanoOperacionalRepository.cs" />
+    <Compile Include="Repository\OS_ItemAvaliacaoRepository.cs" />
+    <Compile Include="Repository\OS_CriterioAvaliacaoRepository.cs" />
+    <Compile Include="Repository\ParametroSistemaRepository.cs" />
+    <Compile Include="Repository\NotaAvaliacaoRepository.cs" />
+    <Compile Include="Repository\NivelAvaliacaoRepository.cs" />
+    <Compile Include="Repository\PerfilRepository.cs" />
+    <Compile Include="Repository\SituacaoProdutoRepository.cs" />
+    <Compile Include="Repository\TipoPactoRepository.cs" />
+    <Compile Include="Repository\SituacaoPactoRepository.cs" />
+    <Compile Include="Repository\LogRepository.cs" />
+    <Compile Include="Repository\ProdutoRepository.cs" />
+    <Compile Include="Repository\PactoRepository.cs" />
+    <Compile Include="Repository\OrdemServicoRepository.cs" />
+    <Compile Include="Repository\OS_GrupoAtividadeRepository.cs" />
+    <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Repository\CronogramaRepository.cs" />
+    <Compile Include="Repository\JustificativaRepository.cs" />
+    <Compile Include="Repository\TipoAtividadeRepository.cs" />
+    <Compile Include="Repository\PermissaoRepository.cs" />
+    <Compile Include="Repository\UsuarioPerfilUnidadeRepository.cs" />
+    <Compile Include="Repository\UnidadeRepository.cs" />
+    <Compile Include="Repository\Unidade_TipoPactoRepository.cs" />
+    <Compile Include="Repository\UsuarioRepository.cs" />
+    <Compile Include="UoW\UnitOfWork.cs" />
+    <Compile Include="Util\Extensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PGD.Infra.Data.ruleset" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PGD.Domain\PGD.Domain.csproj">
+      <Project>{3f7db9dc-6635-4c81-aefa-0b20a17cce0e}</Project>
+      <Name>PGD.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConfiguracaoNLog.txt" />
+    <Content Include="ControleMigrations.txt" />
+    <Content Include="Scripts\Scripts_SQLServer.sql" />
+    <Content Include="Scripts\Scripts_SQLServer_2.sql" />
+    <Content Include="Scripts\Script_CGU_20170320.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202006301923291_criacao_banco.resx">
+      <DependentUpon>202006301923291_criacao_banco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008182316502_modelagemUsuarioPerfil.resx">
+      <DependentUpon>202008182316502_modelagemUsuarioPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008191425035_alteracaoUnidadeEUnidade_tipoPacto.resx">
+      <DependentUpon>202008191425035_alteracaoUnidadeEUnidade_tipoPacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008210142234_Vinculo_Unidade_Superior.resx">
+      <DependentUpon>202008210142234_Vinculo_Unidade_Superior.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009040047045_RemoveHierarquiaECodigoUnidade.resx">
+      <DependentUpon>202009040047045_RemoveHierarquiaECodigoUnidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009051430110_AdicionandoColunaCodigoTabelaUnidade.resx">
+      <DependentUpon>202009051430110_AdicionandoColunaCodigoTabelaUnidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009060006394_AlteracaoUnidadeAddColunasObrigatorio.resx">
+      <DependentUpon>202009060006394_AlteracaoUnidadeAddColunasObrigatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009060011390_usuarioAddDtNascObrigatoria.resx">
+      <DependentUpon>202009060011390_usuarioAddDtNascObrigatoria.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

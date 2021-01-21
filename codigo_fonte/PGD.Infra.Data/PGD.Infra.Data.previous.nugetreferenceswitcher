@@ -1,0 +1,2 @@
+CGU.Util	../../comum/Fontes/CGU.Util/CGU.Util.csproj	../packages/Cgu.Comum.Util.1.15.8/lib/net45/CGU.Util.dll
+Cgu.Util.EntityFramework	../../comum/Fontes/Cgu.Util.EntityFramework/Cgu.Util.EntityFramework.csproj	../packages/Cgu.Comum.Util.EntityFramework.1.15.8/lib/net45/Cgu.Util.EntityFramework.dll
