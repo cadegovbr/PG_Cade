@@ -1,0 +1,40 @@
+﻿@model PGD.Application.ViewModels.SelecionarUnidadeViewModel
+@using PGD.Domain.Entities.RH
+
+@{
+    ViewBag.Title = "Selecionar unidade";
+}
+
+<br />
+<br />
+
+<div class="well col-md-6 col-md-offset-3 col-xs-12">
+    <h2 class="col-md-12 text-center">Conselho Administrativo de Defesa Econômica</h2>
+    <br /><br /><br />
+
+    @using (Html.BeginForm("SelecionarUnidade", "Login", FormMethod.Post, htmlAttributes: new { @class = "form col-md-12" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="panel panel-default" style="border: 2px solid black">
+            <div class="panel-heading" style="background-image: none; background-color: #165abf"></div>
+            <div class="panel-body text-center">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        @Html.Label("IdUnidade", "Selecione a (SIGLA) - Unidade*:", new { @class = "col-md-12 control-label" })
+                        @Html.DropDownListCGUFor(m => m.IdUnidade, new SelectList((List<Unidade>)TempData["lstUnidade"], "IdUnidade", "Nome"), new { @class = "form-control" }).Selectize()
+                        @Html.ValidationMessageFor(c => c.IdUnidade)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <button class="btn btn-primary">Entrar</button>
+            </div>
+        </div>
+    }
+
+    <div class="clearfix"></div>
+</div>

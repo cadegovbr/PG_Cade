@@ -1,0 +1,54 @@
+﻿@using PGD.Application.ViewModels;
+@using PGD.Domain.Entities.RH;
+@using PGD.UI.Mvc.Controllers;
+@model RelatorioFolhaPontoSearchViewModel
+
+@{
+    ViewBag.Title = "Apoio à Folha de Ponto";
+}
+
+<h1>Apoio à Folha de Ponto</h1>
+
+@using (Html.BeginForm("Index", "RelatorioApoioFolhaPonto", FormMethod.Post, htmlAttributes: new { @class = "well" }))
+{
+    @Html.AntiForgeryToken()
+    var readOnlyServidor = Model.IsDirigente ? null : "ReadOnly";
+
+    <div class="row">
+        <div class="form-group col-md-4">
+
+            @Html.LabelFor(m => m.NomeServidor, "Nome Servidor", htmlAttributes: new { @class = "control-label" })
+            @if (Model.IsDirigente)
+            {
+                @(Html.DropDownListCGUFor(model => Model.CpfServidor, new SelectList((List<UsuarioViewModel>)TempData["NomesSubordinados"], "Cpf", "Nome"), new { @class = "form-control" })
+                                        .Selectize())
+            }
+            else
+            {
+                @Html.HiddenFor(m => m.CpfServidor)
+                <input type="text" id="NomeServidor" class="form-control" @readOnlyServidor name="NomeServidor" value="@Model.NomeServidor" />
+            }
+        </div>
+        <div class="form-group">
+            @Html.Label("Unidade", new { @class = "col-md-2 control-label" })
+            <div class="col-md-8">
+                @Html.DropDownListCGUFor(m => m.IdUnidade, new SelectList((List<Unidade>)TempData["Unidades"], "IdUnidade", "Nome"), new { @class = "form-control" }).Selectize().SetDisabled(!Model.IsDirigente)
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-6 vbottom">
+            <label for="periodoDatas" class="control-label">Período</label>
+            <div class="input-group" id="periodoDatas">
+                @Html.TextBoxFor(x => x.DataInicial, new { @class = "form-control datepicker", @placeholder = "", autocomplete = "off" })
+                <span class="input-group-addon" id="basic-addon1">&nbsp;a&nbsp;</span>
+                @Html.TextBoxFor(x => x.DataFinal, new { @class = "form-control datepicker", @placeholder = "", autocomplete = "off" })
+            </div>
+        </div><!--
+        --><div class="col-md-6 col-sm-6 vbottom">
+            <input type="submit" id="btnExportar" class="btn btn-primary pull-right" value="Gerar Relatório" />
+        </div>
+
+    </div>
+}
+

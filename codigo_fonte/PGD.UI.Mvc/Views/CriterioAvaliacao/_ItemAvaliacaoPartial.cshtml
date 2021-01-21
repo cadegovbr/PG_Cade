@@ -1,0 +1,30 @@
+﻿@using PGD.Application.ViewModels;
+@model KeyValuePair<int, PGD.Application.ViewModels.ItemAvaliacaoViewModel>
+
+@{
+    int index = Model.Key;
+    var itemAva = Model.Value;
+    string idRow = "rowTipo" + index.ToString();
+    string style =
+                     ((PGD.Application.ViewModels.ItemAvaliacaoViewModel)Model.Value).Inativo ||
+                     ((PGD.Application.ViewModels.ItemAvaliacaoViewModel)Model.Value).Excluir ? "display: none;" : "";
+}
+
+<tr id="@idRow" style="@style">
+    @Html.Hidden("ItensAvaliacao[" + index + "].IdItemAvaliacao", itemAva.IdItemAvaliacao)
+    @Html.Hidden("ItensAvaliacao[" + index + "].Excluir", itemAva.Excluir)
+    <td>
+        @Html.TextBox("ItensAvaliacao[" + index + "].DescItemAvaliacao", itemAva.DescItemAvaliacao, new { @class = "form-control" })
+    </td>
+    <td>
+        @Html.TextBox("ItensAvaliacao[" + index + "].ImpactoNota", itemAva.ImpactoNota, new { @class = "form-control impacto-nota", @value = "0" })
+    </td>
+    <td>
+        @Html.DropDownListCGUFor(model => model.Value.IdNotaMaxima, new SelectList((List<NotaAvaliacaoViewModel>)TempData["lstNotasAvaliacao"], "IdNotaAvaliacao", "DescNotaAvaliacao"),
+                                          new { @class = "form-control", Name = "ItensAvaliacao[" + index + "].IdNotaMaxima" }).Selectize()
+    </td>
+    <td>
+        <button type="button" class="btn btn-xs btn-danger" onclick="RemoveRow('@idRow', '@index.ToString()');"><em class="glyphicon glyphicon-remove"></em></button>
+    </td>
+</tr>
+

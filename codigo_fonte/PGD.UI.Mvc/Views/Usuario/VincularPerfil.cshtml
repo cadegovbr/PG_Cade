@@ -1,0 +1,96 @@
+﻿@using PGD.Application.ViewModels
+@using PGD.Domain.Entities.RH
+@model VincularPerfilUsuarioViewModel
+
+@{
+    ViewBag.Title = "Vincular Perfil";
+}
+
+<h1 class="">@ViewBag.Title</h1>
+
+<div class="well">
+    <form id="frm-vincular">
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(x => x.IdUsuario, new { id = "hdn-id-usuario" })
+        @Html.HiddenFor(x => x.IdUnidade, new { id = "hdn-id-unidade" })
+
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label for="">Nome do Servidor</label>
+                @Html.TextBoxFor(m => m.Nome, new { @class = "form-control", @readonly = true })
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="">Matrícula</label>
+                @Html.TextBoxFor(m => m.Matricula, new { @class = "form-control", @readonly = true })
+            </div>
+            <div class="form-group col-md-6">
+                <label for="">CPF</label>
+                @Html.TextBoxFor(m => m.Cpf, new { @class = "form-control", @readonly = true })
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="">Perfil*:</label>
+                @Html.DropDownListFor(m => m.IdPerfil, new SelectList((List<PerfilViewModel>)TempData["lstPerfil"], "IdPerfil", "Nome"), "-- Selecione --",
+                    new { @class = "form-control", id = "slt-perfil" })
+                @Html.ValidationMessageFor(c => c.IdPerfil)
+            </div>
+        </div>
+        <div class="row" id="div-slt-unidade">
+            <div class="form-group col-md-6">
+                <label for="">Unidade*:</label>
+                @Html.DropDownListFor(m => m.IdUnidade, new SelectList(new List<Unidade>(), "IdUnidade", "Nome"),
+                    new { @class = "form-control", id = "slt-unidade", placeholder = "Digite o nome ou a sigla da unidade" })
+                @Html.ValidationMessageFor(c => c.IdUnidade)
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-3" style='float: right'>
+                <button type="button" onclick="vincular()" class="btn btn-primary btn-block" id="btn-vincular"><span class="glyphicon glyphicon-plus"></span> Vincular</button>
+            </div>
+        </div>
+    </form>
+    <div class="clearfix"></div>
+</div>
+
+<div id="div-table-perfil-unidade">
+
+    <table class="table table-bordered tableFilter"
+           id="tbl-perfil-unidade"
+           data-side-pagination="server"
+           data-ajax="ajaxTablePerfilUnidade"
+           data-pagination="true"
+           data-search="false">
+        <thead>
+            <tr>
+                <th data-field="MatriculaUsuario" data-align="center" class="text-center">
+                    <div class="th-inner ">Matrícula</div>
+                </th>
+                <th data-field="NomeUsuario" class="text-center">
+                    <div class="th-inner ">Nome</div>
+                </th>
+                <th data-field="CpfUsuario" class="text-center" data-align="center">
+                    <div class="th-inner ">CPF</div>
+                </th>
+                <th data-field="NomeUnidade" class="text-center" data-formatter="formatterUnidade">
+                    <div class="th-inner ">Unidade</div>
+                </th>
+                <th data-field="NomePerfil" class="text-center">
+                    <div class="th-inner ">Perfil</div>
+                </th>
+                <th class="text-center" data-formatter="formatterAcoes">
+                    <div class="th-inner "></div>
+                </th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/Site/Usuario/VincularPerfil.js"></script>
+}

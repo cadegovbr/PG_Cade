@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F7DB9DC-6635-4C81-AEFA-0B20A17CCE0E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PGD.Domain</RootNamespace>
+    <AssemblyName>PGD.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>PGD.Domain.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>PGD.Domain.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Homologacao|AnyCPU'">
+    <OutputPath>bin\Homologacao\</OutputPath>
+    <CodeAnalysisRuleSet>PGD.Domain.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DomainValidation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DomainValidation.1.0.0\lib\net45\DomainValidation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.0\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.SqlClient, Version=1.0.19269.1, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.SqlClient.1.0.19269.1\lib\net46\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.3.1.5\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Abstractions, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Abstractions.3.1.5\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Relational, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Relational.3.1.5\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Relational.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.SqlServer, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.SqlServer.3.1.5\lib\netstandard2.0\Microsoft.EntityFrameworkCore.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.3.1.5\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.3.1.5\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.3.1.5\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.3.1.5\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.3.1.5\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.3.1.5\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.5\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.3.1.5\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.3.1.5\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.3.1.5\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.3.1.5\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=3.0.8.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.3.0.8\lib\net45\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.7.1\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constantes\Mensagens.cs" />
+    <Compile Include="Entities\Administrador.cs" />
+    <Compile Include="Entities\AvaliacaoDetalhadaProduto.cs" />
+    <Compile Include="Entities\AvaliacaoProduto.cs" />
+    <Compile Include="Entities\AnexoProduto.cs" />
+    <Compile Include="Entities\SituacaoProduto.cs" />
+    <Compile Include="Entities\ItemAvaliacao.cs" />
+    <Compile Include="Entities\CronogramaPacto.cs" />
+    <Compile Include="Entities\ArquivoDadoBruto.cs" />
+    <Compile Include="Entities\Atividade.cs" />
+    <Compile Include="Entities\GrupoAtividade.cs" />
+    <Compile Include="Entities\Historico.cs" />
+    <Compile Include="Entities\IniciativaPlanoOperacional.cs" />
+    <Compile Include="Entities\IniciativaPlanoOperacionalProduto.cs" />
+    <Compile Include="Entities\NotaAvaliacao.cs" />
+    <Compile Include="Entities\CriterioAvaliacao.cs" />
+    <Compile Include="Entities\OS_ItemAvaliacao.cs" />
+    <Compile Include="Entities\OS_CriterioAvaliacao.cs" />
+    <Compile Include="Entities\NivelAvaliacao.cs" />
+    <Compile Include="Entities\Perfil.cs" />
+    <Compile Include="Entities\Permissao.cs" />
+    <Compile Include="Entities\PermissaoPerfil.cs" />
+    <Compile Include="Entities\Unidade_TipoPacto.cs" />
+    <Compile Include="Entities\ParametroSistema.cs" />
+    <Compile Include="Entities\SituacaoPacto.cs" />
+    <Compile Include="Entities\Log.cs" />
+    <Compile Include="Entities\OrdemServico.cs" />
+    <Compile Include="Entities\OS_Atividade.cs" />
+    <Compile Include="Entities\OS_GrupoAtividade.cs" />
+    <Compile Include="Entities\OS_TipoAtividade.cs" />
+    <Compile Include="Entities\Produto.cs" />
+    <Compile Include="Entities\Pacto.cs" />
+    <Compile Include="Entities\RH\Feriado.cs" />
+    <Compile Include="Entities\Cronograma.cs" />
+    <Compile Include="Entities\Justificativa.cs" />
+    <Compile Include="Entities\TipoPacto.cs" />
+    <Compile Include="Entities\TipoAtividade.cs" />
+    <Compile Include="Entities\RH\Unidade.cs" />
+    <Compile Include="Entities\UsuarioPerfilUnidade.cs" />
+    <Compile Include="Entities\Usuario\Usuario.cs" />
+    <Compile Include="Enums\Enums.cs" />
+    <Compile Include="Filtros\Base\BaseFiltro.cs" />
+    <Compile Include="Filtros\PermissaoFiltro.cs" />
+    <Compile Include="Filtros\UnidadeTipoPactoFiltro.cs" />
+    <Compile Include="Filtros\UnidadeFiltro.cs" />
+    <Compile Include="Filtros\UsuarioFiltro.cs" />
+    <Compile Include="Filtros\UsuarioPerfilUnidadeFiltro.cs" />
+    <Compile Include="Interfaces\Repository\IAnexoProdutoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IAvaliacaoDetalhadaProdutoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IFeriadoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IItemAvaliacaoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IAvaliacaoProdutoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IAdministradorRepository.cs" />
+    <Compile Include="Interfaces\Repository\IArquivoDadoBrutoRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICriterioAvaliacaoRepository.cs" />
+    <Compile Include="Interfaces\Repository\INotaAvaliacaoRepository.cs" />
+    <Compile Include="Interfaces\Repository\ISituacaoProdutoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IOS_ItemAvaliacaoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IOS_CriterioAvaliacaoRepository.cs" />
+    <Compile Include="Interfaces\Repository\INivelAvaliacaoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPerfilRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPermissaoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IUsuarioPerfilUnidadeRepository.cs" />
+    <Compile Include="Interfaces\Repository\IUnidadeRepository.cs" />
+    <Compile Include="Interfaces\Repository\IUnidade_TipoPactoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IIniciativaPlanoOperacionalRepository.cs" />
+    <Compile Include="Interfaces\Repository\IParametroSistemaRepository .cs" />
+    <Compile Include="Interfaces\Repository\ITipoPactoRepository.cs" />
+    <Compile Include="Interfaces\Repository\ISituacaoPactoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IJustificativaRepository.cs" />
+    <Compile Include="Interfaces\Service\IFeriadoService.cs" />
+    <Compile Include="Interfaces\Service\IItemAvaliacaoService.cs" />
+    <Compile Include="Interfaces\Service\IAvaliacaoProdutoService.cs" />
+    <Compile Include="Interfaces\Service\IArquivoDadoBrutoService.cs" />
+    <Compile Include="Interfaces\Repository\IAtividadeRepository.cs" />
+    <Compile Include="Interfaces\Repository\IGrupoAtividadeRepository.cs" />
+    <Compile Include="Interfaces\Repository\IHistoricoRepository.cs" />
+    <Compile Include="Interfaces\Repository\ILogRepository.cs" />
+    <Compile Include="Interfaces\Repository\IOrdemServicoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IOS_GrupoAtividadeRepository.cs" />
+    <Compile Include="Interfaces\Repository\IProdutoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPactoRepository.cs" />
+    <Compile Include="Interfaces\Repository\IRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICronogramaRepository.cs" />
+    <Compile Include="Interfaces\Repository\ITipoAtividadeRepository.cs" />
+    <Compile Include="Interfaces\Repository\IUsuarioRepository.cs" />
+    <Compile Include="Interfaces\Service\IAdministradorService.cs" />
+    <Compile Include="Interfaces\Service\IAtividadeService.cs" />
+    <Compile Include="Interfaces\Service\ICriterioAvaliacaoService.cs" />
+    <Compile Include="Interfaces\Service\INotaAvaliacaoService.cs" />
+    <Compile Include="Interfaces\Service\IAnexoProdutoService.cs" />
+    <Compile Include="Interfaces\Service\IOS_ItemAvaliacaoService.cs" />
+    <Compile Include="Interfaces\Service\IOS_CriterioAvaliacaoService.cs" />
+    <Compile Include="Interfaces\Service\INivelAvaliacaoService.cs" />
+    <Compile Include="Interfaces\Service\IPerfilService.cs" />
+    <Compile Include="Interfaces\Service\IPermissaoService.cs" />
+    <Compile Include="Interfaces\Service\ISituacaoProdutoService.cs" />
+    <Compile Include="Interfaces\Service\IUsuarioPerfilUnidadeService.cs" />
+    <Compile Include="Interfaces\Service\IUnidadeService.cs" />
+    <Compile Include="Interfaces\Service\IUnidade_TipoPactoService.cs" />
+    <Compile Include="Interfaces\Service\IGrupoAtividadeService.cs" />
+    <Compile Include="Interfaces\Service\IHistoricoService.cs" />
+    <Compile Include="Interfaces\Service\IIniciativaPlanoOperacionalService.cs" />
+    <Compile Include="Interfaces\Service\IParametroSistemaService.cs" />
+    <Compile Include="Interfaces\Service\ITipoPactoService.cs" />
+    <Compile Include="Interfaces\Service\ISituacaoPactoService.cs" />
+    <Compile Include="Interfaces\Service\ILogService.cs" />
+    <Compile Include="Interfaces\Service\IOrdemServicoService.cs" />
+    <Compile Include="Interfaces\Service\IOS_GrupoAtividadeService.cs" />
+    <Compile Include="Interfaces\Service\IPactoService.cs" />
+    <Compile Include="Interfaces\Service\IProdutoService.cs" />
+    <Compile Include="Interfaces\Service\IRHService.cs" />
+    <Compile Include="Interfaces\Service\IService.cs" />
+    <Compile Include="Interfaces\Service\ICronogramaService.cs" />
+    <Compile Include="Interfaces\Service\IJustificativaService.cs" />
+    <Compile Include="Interfaces\Service\ITipoAtividadeService.cs" />
+    <Compile Include="Interfaces\Service\IUsuarioService.cs" />
+    <Compile Include="Paginacao\Paginacao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AnexoProdutoService.cs" />
+    <Compile Include="Services\FeriadoRepository.cs" />
+    <Compile Include="Services\FeriadoService.cs" />
+    <Compile Include="Services\ItemAvaliacaoService.cs" />
+    <Compile Include="Services\AvaliacaoProdutoService.cs" />
+    <Compile Include="Services\AdministradorService.cs" />
+    <Compile Include="Services\ArquivoDadoBrutoService.cs" />
+    <Compile Include="Services\AtividadeService.cs" />
+    <Compile Include="Services\CriterioAvaliacaoService.cs" />
+    <Compile Include="Services\NotaAvaliacaoService.cs" />
+    <Compile Include="Services\OS_ItemAvaliacaoService.cs" />
+    <Compile Include="Services\OS_CriterioAvaliacaoService.cs" />
+    <Compile Include="Services\NivelAvaliacaoService.cs" />
+    <Compile Include="Services\PerfilRepository.cs" />
+    <Compile Include="Services\PerfilService.cs" />
+    <Compile Include="Services\PermissaoService.cs" />
+    <Compile Include="Services\SituacaoProdutoService.cs" />
+    <Compile Include="Services\UnidadeService.cs" />
+    <Compile Include="Services\Unidade_TipoPactoService.cs" />
+    <Compile Include="Services\GrupoAtividadeService.cs" />
+    <Compile Include="Services\HistoricoService.cs" />
+    <Compile Include="Services\HistoricoViewModel.cs" />
+    <Compile Include="Services\IniciativaPlanoOperacionalService.cs" />
+    <Compile Include="Services\ParametroSistemaService.cs" />
+    <Compile Include="Services\TipoPactoService.cs" />
+    <Compile Include="Services\SituacaoPactoService.cs" />
+    <Compile Include="Services\LogService.cs" />
+    <Compile Include="Services\OrdemServicoService.cs" />
+    <Compile Include="Services\OS_GrupoAtividadeService.cs" />
+    <Compile Include="Services\PactoService.cs" />
+    <Compile Include="Services\ProdutoService.cs" />
+    <Compile Include="Services\RHService.cs" />
+    <Compile Include="Services\CronogramaService.cs" />
+    <Compile Include="Services\JustificativaService.cs" />
+    <Compile Include="Services\TipoAtividadeService.cs" />
+    <Compile Include="Services\UsuarioPerfilUnidadeService.cs" />
+    <Compile Include="Services\UsuarioService.cs" />
+    <Compile Include="Specifications\Atividade\PercentualZeroACemSpecification.cs" />
+    <Compile Include="Specifications\Atividade\PercentualInteiroSpecification.cs" />
+    <Compile Include="Specifications\Atividade\TipoAtividadeUnicaSpecification.cs" />
+    <Compile Include="Specifications\Cronogramas\DiaCronogramaNaoSobrepoeProximoPacto.cs" />
+    <Compile Include="Specifications\Cronogramas\DiaCronogramaNaoExcedeHorasFeriado.cs" />
+    <Compile Include="Specifications\Cronogramas\DiaCronogramaNaoExcedeHorasDiarias.cs" />
+    <Compile Include="Specifications\Cronogramas\CronogramaNaoPossuiHorasADistribuir.cs" />
+    <Compile Include="Specifications\Cronogramas\CronogramaNaoPossuiHorasExcedentes.cs" />
+    <Compile Include="Specifications\ItemAvaliacao\ImpactoNotaZeroACemSpecification.cs" />
+    <Compile Include="Specifications\OrdensServico\DataDeveSerMaiorQueAtualSpecification.cs" />
+    <Compile Include="Specifications\Pactos\CamposObrigatoriosSuspensao.cs" />
+    <Compile Include="Specifications\Pactos\AvaliacaoDetalhadaValida.cs" />
+    <Compile Include="Specifications\Pactos\DataInicioSuspensao.cs" />
+    <Compile Include="Specifications\Pactos\JustificativaPactoVisualizacaoRestrita.cs" />
+    <Compile Include="Specifications\Pactos\PactoNoExterior.cs" />
+    <Compile Include="Specifications\Pactos\TAPPacto.cs" />
+    <Compile Include="Specifications\Pactos\CargaHorariaCronogramaDiferentePacto.cs" />
+    <Compile Include="Specifications\Pactos\DataRetornoSuspensaoDeveSerMaiorQueInicio.cs" />
+    <Compile Include="Specifications\Pactos\ProdutosAvaliadosComResultado.cs" />
+    <Compile Include="Specifications\Pactos\ReducaoDeveSerMenorQueOito.cs" />
+    <Compile Include="Specifications\Pactos\NumerodeHorasCronogramaDiferentePacto.cs" />
+    <Compile Include="Specifications\Pactos\DevemExistirProdutosNoPacto.cs" />
+    <Compile Include="Specifications\Pactos\PeloMenosUmTelefone.cs" />
+    <Compile Include="Specifications\Pactos\DataDeveSerMaiorQueAtual.cs" />
+    <Compile Include="Specifications\Pactos\Suspender_Pacto.cs" />
+    <Compile Include="Specifications\Pactos\Suspender_Pacto_Data.cs" />
+    <Compile Include="Specifications\TiposAtividade\DuracaoFaixaPGDNumericoSpecification.cs" />
+    <Compile Include="Specifications\TiposAtividade\DuracaoFaixaPresencialNumericoSpecification.cs" />
+    <Compile Include="Validations\Administrador\AdminstradorValidation.cs" />
+    <Compile Include="Validations\Atividades\AtividadeValidation.cs" />
+    <Compile Include="Validations\CriterioAvaliacao\CriterioAvaliacaoValidation.cs" />
+    <Compile Include="Validations\Cronogramas\CronogramaPactoValidation.cs" />
+    <Compile Include="Validations\Cronogramas\CronogramaValidation.cs" />
+    <Compile Include="Validations\GruposAtividade\GrupoAtividadeValidation.cs" />
+    <Compile Include="Validations\ItemAvaliacao\ItemAvaliacaoValidation.cs" />
+    <Compile Include="Validations\OrdensServico\OrdemServicoValidation.cs" />
+    <Compile Include="Validations\OS_CriterioAvaliacao\OS_CriterioAvaliacaoValidation.cs" />
+    <Compile Include="Validations\OS_GrupoAtividade\OS_GrupoAtividadeValidation.cs" />
+    <Compile Include="Validations\OS_ItemAvaliacao\OS_ItemAvaliacaoValidation.cs" />
+    <Compile Include="Validations\Pactos\PactoValidation.cs" />
+    <Compile Include="Validations\Pactos\SuspenderPactoValidation.cs" />
+    <Compile Include="Validations\Produtos\ProdutoValidation.cs" />
+    <Compile Include="Validations\TiposAtividade\TipoAtividadeValidation.cs" />
+    <Compile Include="Validations\UsuarioPerfilUnidade\UsuarioPerfilUnidadeValidation.cs" />
+    <Compile Include="Validations\Usuarios\UsuarioValidation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="PGD.Domain.ruleset" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.1.0.19235.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.0.19235.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.0.19235.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.1.0.19235.1\build\net46\Microsoft.Data.SqlClient.SNI.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

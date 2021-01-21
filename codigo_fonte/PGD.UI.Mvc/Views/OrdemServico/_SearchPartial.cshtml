@@ -1,0 +1,33 @@
+﻿@model PGD.Application.ViewModels.SearchOrdemServicoViewModel
+<div class="well">
+    @using (Html.BeginForm("Index", "OrdemServico", FormMethod.Post, htmlAttributes: new { @class = "form col-md-12" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-group col-md-4">
+            <label for="exampleInputName2">Código Tabela de Atividade</label>
+            @Html.TextBoxFor(x => x.IdOrdemServico, new { @class="form-control", @placeholder="", @type = "number" })
+        </div>
+        <div class="form-group col-md-8">
+            <label for="exampleInputEmail2" class="col-md-12"> Período</label>
+            <div class="col-md-5">
+                @Html.TextBoxFor(x => x.DataInicial, new { @class = "form-control datepicker", @placeholder = "", @Value = Model.DataInicial.ToString("dd/MM/yyyy") })
+            </div>
+            <div class="col-md-1 text-center text-vertical-line  no-padding">a</div>
+            <div class="col-md-5">
+                @Html.TextBoxFor(x => x.DataFinal, new { @class = "form-control col-md datepicker", @placeholder = "", @Value = Model.DataFinal.ToString("dd/MM/yyyy") })
+            </div>
+        </div>
+        <div class="form-group col-md-7">
+            <label for="exampleInputEmail2">Descrição</label>
+            @Html.TextBoxFor(x => x.Descricao, new { @class = "form-control", @placeholder = "" })
+        </div>
+        <div class="col-md-3 ">
+            <button type="submit" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-search"></span> Consultar</button>
+        </div>
+        <div class="col-md-2 ">
+            <button type="button" onclick="location.href='@Url.Action("Create","OrdemServico")'" id="btnNovo" class="btn btn-success btn-block"><span class="glyphicon glyphicon-plus"></span> Novo</button>
+        </div>
+    }
+
+    <div class="clearfix"></div>
+</div>

@@ -1,0 +1,31 @@
+﻿------- 1 - Adicionar ao projeto a seção de configuração do NLOG ------------------
+
+ <configSections>
+    <section name="nlog" type="NLog.Config.ConfigSectionHandler, NLog"/>
+ </configSections>
+
+
+ ------ 2 - Configurar a criação do Log no web.config, lembrando de alterar a sigla da origem para a aplicação que utilizará o log --------------------------
+  <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" autoReload="true" internalLogLevel="Info" internalLogFile="c:\temp\internal-nlog.txt" throwExceptions="true">
+    <targets>
+      <!-- database target -->
+      <target name="database" xsi:type="Database" connectionString="xxxxx" 
+              commandText="insert into dbo.LogComum                           
+                          (DataLog, SiglaOrigem, LoginUsuario, Mensagem, StackTrace, NivelLog)
+                          values (@dataLog,@sigOrigem,@loginUsuario,@mensagem,@stackTrace,@level)">
+        <parameter name="@dataLog" layout="${date:format=yyyy-MM-dd HH\:mm\:ss.fff}" />
+        <parameter name="@sigOrigem" layout="Comum" />
+        <parameter name="@loginUsuario" layout="${aspnet-user-identity}" />
+        <parameter name="@mensagem" layout="${message:withException=false}" />
+        <parameter name="@level" layout="${level:uppercase=true}" />
+        <parameter name="@stackTrace" layout="${exception:format=tostring:maxInnerExceptionLevel=5:separator=\r\n}" />
+      </target>
+    </targets>
+    <rules>
+      <!-- database logger -->
+      <logger levels="Error,Warn,Info,Debug" name="*" writeTo="database" />
+    </rules>
+  </nlog>
+
+
+  ------ 3 - Lembrar de alterar o transform do Web.Config para apontar para a connection string apropriada ------------------------

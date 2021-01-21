@@ -1,0 +1,22 @@
+﻿bin/
+obj/
+packages/
+*.suo
+.suo
+logs/
+/.vs/config
+Debug/
+Homologacao/
+roslyn/
+bin/
+*.user
+/TestResults
+/PGD.UI.Mvc/Scripts/jquery.selectBoxIt.min.js
+/PGD.UI.Mvc/Content/css/jquery.selectBoxIt.css
+/PGD.UI.Mvc/Scripts/jquery.selectBoxIt.js
+/.vs/PGD-DDD/v15/Server/sqlite3
+/PGD.UI.Mvc/Web.Homologacao.config
+/PGD.Services.REST.SIGRHAPI/Web.Homologacao.config
+/.vs
+/DocumentosSprints
+/relatorio com erro.PNG

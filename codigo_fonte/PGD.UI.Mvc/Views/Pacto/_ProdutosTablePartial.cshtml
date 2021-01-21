@@ -1,0 +1,105 @@
+﻿@model List<PGD.Application.ViewModels.ProdutoViewModel>
+
+@if (Model != null && Model.Any())
+{
+    @Html.EditorFor(x => x, "AddProdutoHiddens")
+}
+
+<table class="table table-bordered table-responsive" id="tblProdutos" data-paging="true" data-sorting="true" data-page-size="5" style="table-layout: fixed;word-wrap: break-word;">
+    <thead>
+    @if (Model != null && Model.Count > 0 && Model[0] != null && Model[0].PodeVisualizarPactuadoAvaliado)
+    {
+        <tr>
+            <!--
+    <th class="text-center hidden-xs hidden-sm" style="border:none;width: 10%"></th>
+    <th class="text-center" style="border:none;width: 10%"></th>
+    <th class="text-center hidden-xs hidden-sm" style="border:none;width: 10%"></th>
+    -->
+            <th class="text-center label-primary" colspan="5" style="width: 30%">PACTUADO</th>
+            @if (Model != null && Model[0].Avaliacoes != null && Model[0].Avaliacoes.Count > 0)
+            {
+                <th class="text-center label-primary" colspan="8" style="width: 50%">AVALIADO</th>
+                <th class="text-center" style="border:none;width: 0%"></th>
+                <th class="text-center" style="border:none;width: 0%"></th>
+                <th class="text-center" style="border:none;width: 0%"></th>
+                <th class="text-center" style="border:none;width: 0%"></th>
+                <th class="text-center" style="border:none;width: 0%"></th>
+
+            }
+            else
+            {
+                <th class="text-center label-primary" colspan="8" style="width: 90%">AVALIADO</th>
+                <th class="text-center" style="border:none;width: 0%"></th>
+                <th class="text-center" style="border:none;width: 0%"></th>
+                <th class="text-center" style="border:none;width: 0%"></th>
+                <th class="text-center" style="border:none;width: 0%"></th>
+                <th class="text-center" style="border:none;width: 0%"></th>
+                <!--
+              <th class="text-center label-primary" colspan="2" style="width: 20%">AVALIADO</th>
+              <th class="text-center" style="border:none;width: 20%"></th>
+              <th class="text-center" style="border:none;width: 15%"></th>
+              <th class="text-center" style="border:none;width: 10%"></th>
+        -->
+            }
+
+        </tr>
+    }
+    <tr>
+        <th class="hidden-xs hidden-sm">Grupo de atividade</th>
+        <th>Atividade plano de trabalho</th>
+        <th class="hidden-xs hidden-sm">Complexidade / Esforço</th>
+        @if (Model != null && (Model.Count == 0 || (Model[0] != null && !Model[0].PodeVisualizarPactuadoAvaliado)))
+        {
+            <th class="text-center">Quantidade de produtos</th>
+            <th class="text-center">Carga Horária</th>
+            <th class="text-center">Quantidade de Produtos</th>
+            <th class="text-center">Carga Horária Avaliada</th>
+
+            <th class="text-center">Entr. no Prazo</th>
+            <th class="text-center">Nota</th>
+            <th class="text-center">Descrição Avaliação</th>
+        }
+        else if (Model != null && Model[0] != null && Model[0].PodeVisualizarPactuadoAvaliado)
+        {
+            <th class="text-center">Quantidade de Produtos</th>
+            <th class="text-center">Carga Horária</th>
+            <th class="text-center">Quantidade de Produtos</th>
+            <th class="text-center">Carga Horária Avaliada</th>
+            // if (Model != null && Model[0].Avaliacoes != null && Model[0].Avaliacoes.Count > 0)
+            // {
+            <th class="text-center">Entr. no Prazo</th>
+            <th class="text-center">Nota</th>
+            <th class="text-center">Descrição Avaliação</th>
+            //  }
+
+        }
+        <th class="text-center">Detalhamento</th>
+        <th class="text-center">Situação</th>
+        <th class="text-center">Opções</th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (Model != null && Model.Count > 0)
+    {
+        foreach (var modelProduto in Model)
+        {
+            @Html.Partial("_ProdutoRowPartial", modelProduto)
+        }
+    }
+    else
+    {
+        if (Model != null && (Model.Count == 0 || (Model[0] != null && !Model[0].PodeVisualizarPactuadoAvaliado)))
+        {
+            <tr>
+                <td colspan="7">Nenhum registro encontrado</td>
+            </tr>
+        }
+        else if (Model != null && Model[0] != null && Model[0].PodeVisualizarPactuadoAvaliado)
+        {
+            <tr>
+                <td colspan="9">Nenhum registro encontrado</td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>

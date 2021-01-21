@@ -1,0 +1,72 @@
+﻿@using PGD.Application.ViewModels;
+@using PGD.UI.Mvc.Controllers
+@model PGD.Application.ViewModels.SearchPactoViewModel
+<div class="well">
+    @using (Html.BeginForm("Index", "Pacto", FormMethod.Post, htmlAttributes: new { @id = "frmConsultaPacto", @class = "form col-md-12" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="row">
+            <div class="form-group col-md-4">
+                @Html.LabelFor(m => m.IdPacto)
+                @Html.TextBoxFor(m => m.IdPacto, new { @class = "form-control", @placeholder = "" })
+            </div>
+            <div class="form-group col-md-8">
+                <label for="exampleInputName2">Nome Servidor</label>
+                @Html.DropDownListCGUFor(model => Model.NomeServidor, new SelectList((List<UsuarioViewModel>)TempData["NomesSubordinados"], "Nome", "Nome"), new { @class = "form-control" }).Selectize()
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-12">
+                @Html.Label("Unidade", new { @class = "col-md-2 control-label" })
+                @Html.DropDownListCGUFor(m => m.UnidadeId, new SelectList(Model.lstUnidade, "IdUnidade", "Nome"), new { @class = "form-control" }).Selectize()
+
+                <div class="form-check">
+                    <label class="form-check-label">
+                        @Html.CheckBoxCGUFor(m => m.ObterPactosUnidadesSubordinadas, new { @class = "form-check-input" })
+                        Incluir Planos de Trabalho de Unidades Subordinadas
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="exampleInputName3">Situação do Plano de Trabalho</label>
+                @Html.DropDownListCGUFor(m => m.idSituacao, new SelectList((List<SituacaoPactoViewModel>)TempData["Situacoes"], "IdSituacaoPacto", "DescSituacaoPacto"),
+                                              new { @class = "form-control" }).Selectize()
+            </div>
+            <div class="form-group col-md-4">
+                <!--
+    <label for="exampleInputName3">Tipo do Plano de Trabalho</label>
+    @Html.DropDownListCGUFor(m => m.idTipoPacto, new SelectList((List<TipoPactoViewModel>)TempData["TiposPacto"], "IdTipoPacto", "DescTipoPacto"),
+                                  new { @class = "form-control" }).Selectize()
+    -->
+                <input id="iidTipoPacto" name="idTipoPacto" type="hidden" value="1">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-8 no-padding">
+                <label for="exampleInputEmail2" class="col-md-12"> Período</label>
+                <div class="col-md-5">
+                    @Html.TextBoxFor(x => x.DataInicial, new { @class = "form-control datepicker", @placeholder = "" })
+                </div>
+                <div class="col-md-1 text-center text-vertical-line  no-padding">a</div>
+                <div class="col-md-5">
+                    @Html.TextBoxFor(x => x.DataFinal, new { @class = "form-control col-md datepicker", @placeholder = "" })
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-3" style='float: right'>
+                <button type="submit" onclick="submeteConsulta('@Url.Action("Index", "Pacto")')" class="btn btn-primary btn-block" id="btnConsultar"><span class="glyphicon glyphicon-search"></span> Consultar</button>
+            </div>
+        </div>
+
+    }
+
+    <div class="clearfix"></div>
+</div>
+<script type="text/javascript">
+
+</script>
+

@@ -1,0 +1,1673 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,Latency,IdleTime,Connect
+1486143330467,1509,Post Grupo Atividade,200,OK,For Each User 1-1,text,false,Test failed: text expected to contain /sucesso!/,31101,1328,1,1,1508,0,13
+1486144198024,1315,Post Grupo Atividade,200,OK,For Each User 1-1,text,false,Test failed: text expected to contain /sucesso!/,31101,1322,1,1,1312,0,12
+1486144403228,1328,Post Grupo Atividade,200,OK,For Each User 1-1,text,false,Test failed: text expected to contain /sucesso!/,31101,1322,1,1,1325,0,13
+1486144611237,1402,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,12767,2315,1,1,1027,0,14
+1486144835532,1236,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,15540,2316,2,2,917,0,12
+1486144837922,153,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,18313,2316,2,2,119,0,11
+1486144842417,135,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,21086,2316,2,2,91,0,23
+1486144842808,238,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,23859,2316,1,1,183,0,11
+1486145139365,1589,Post Grupo Atividade,200,OK,For Each User 1-1,text,false,Test failed: text expected to contain /sucesso!/,31132,1353,2,2,1587,0,13
+1486145139663,1486,Post Grupo Atividade,200,OK,For Each User 1-2,text,false,Test failed: text expected to contain /sucesso!/,31132,1353,2,2,1484,0,12
+1486145146242,1474,Post Grupo Atividade,200,OK,For Each User 1-1,text,false,Test failed: text expected to contain /sucesso!/,31132,1353,2,2,1472,0,15
+1486145146642,1482,Post Grupo Atividade,200,OK,For Each User 1-2,text,false,Test failed: text expected to contain /sucesso!/,31132,1353,1,1,1480,0,13
+1486145191555,925,Post Grupo Atividade,200,OK,For Each User 1-1,text,false,Test failed: text expected to contain /sucesso!/,31125,1340,2,2,923,0,11
+1486145192600,890,Post Grupo Atividade,200,OK,For Each User 1-2,text,false,Test failed: text expected to contain /sucesso!/,31125,1340,2,2,886,0,10
+1486145198641,1165,Post Grupo Atividade,200,OK,For Each User 1-1,text,false,Test failed: text expected to contain /sucesso!/,31125,1340,2,2,1163,0,12
+1486145199525,1104,Post Grupo Atividade,200,OK,For Each User 1-2,text,false,Test failed: text expected to contain /sucesso!/,31125,1340,1,1,1102,0,9
+1486145330998,1084,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,12767,2334,2,2,854,0,13
+1486145330478,1936,Post Grupo Atividade,200,OK,For Each User 1-1,text,false,Test failed: text expected to contain /sucesso!/,31110,1345,2,2,1935,0,12
+1486145336932,308,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,15540,2334,2,2,284,0,14
+1486145338330,909,Post Grupo Atividade,200,OK,For Each User 1-1,text,false,Test failed: text expected to contain /sucesso!/,31110,1345,1,1,907,0,12
+1486145410844,1156,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,21086,2316,2,2,825,0,12
+1486145411212,792,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,21086,2316,2,2,459,0,60
+1486145415282,509,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,26646,2316,2,2,453,0,12
+1486145415346,449,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,26646,2316,1,1,390,0,11
+1486145615805,1452,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,12774,2316,1,1,1013,0,14
+1486145623003,99,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,15554,2316,1,1,73,0,12
+1486145628167,101,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,18334,2316,1,1,69,0,10
+1486145634722,122,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,21114,2316,1,1,92,0,16
+1486145728061,14,Post Grupo Atividade,503,Service Unavailable,For Each User 1-1,text,false,Test failed: text expected to contain /sucesso!/,513,351,4,4,14,0,11
+1486145728549,1012,Post Grupo Atividade,Non HTTP response code: java.net.ConnectException,Non HTTP response message: Connection refused: connect,For Each User 1-3,text,false,Test failed: text expected to contain /sucesso!/,2461,0,3,3,0,0,1012
+1486145728559,1008,Post Grupo Atividade,Non HTTP response code: java.net.ConnectException,Non HTTP response message: Connection refused: connect,For Each User 1-4,text,false,Test failed: text expected to contain /sucesso!/,2461,0,2,2,0,0,1008
+1486145728560,1007,Post Grupo Atividade,Non HTTP response code: java.net.ConnectException,Non HTTP response message: Connection refused: connect,For Each User 1-2,text,false,Test failed: text expected to contain /sucesso!/,2461,0,2,2,0,0,1007
+1486145759872,1222,Post Grupo Atividade,200,OK,For Each User 1-3,text,true,,23894,2316,4,4,857,0,9
+1486145761210,102,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,26674,2316,3,3,42,0,9
+1486145762081,136,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,29454,2316,2,2,77,0,10
+1486145762654,148,Post Grupo Atividade,200,OK,For Each User 1-4,text,true,,32234,2316,1,1,76,0,11
+1486145903147,116,Post Grupo Atividade,200,OK,For Each User 1-3,text,false,Test failed: text expected to contain /sucesso!/,16321,754,4,4,91,0,14
+1486145903476,84,Post Grupo Atividade,200,OK,For Each User 1-2,text,false,Test failed: text expected to contain /sucesso!/,16321,754,3,3,60,0,9
+1486145904272,114,Post Grupo Atividade,200,OK,For Each User 1-1,text,false,Test failed: text expected to contain /sucesso!/,16321,754,2,2,88,0,78
+1486145908356,1116,Post Grupo Atividade,200,OK,For Each User 1-4,text,false,Test failed: text expected to contain /sucesso!/,31131,1352,1,1,1113,0,12
+1486145942928,1305,Post Grupo Atividade,200,OK,For Each User 1-2,text,false,Test failed: text expected to contain /sucesso!/,31131,1352,4,4,1303,0,10
+1486145943742,1211,Post Grupo Atividade,200,OK,For Each User 1-1,text,false,Test failed: text expected to contain /sucesso!/,31131,1352,3,3,1209,0,5
+1486145945087,1223,Post Grupo Atividade,200,OK,For Each User 1-3,text,false,Test failed: text expected to contain /sucesso!/,31131,1352,2,2,1221,0,9
+1486145945114,1214,Post Grupo Atividade,200,OK,For Each User 1-4,text,false,Test failed: text expected to contain /sucesso!/,31131,1352,1,1,1212,0,11
+1486146085402,1164,Post Grupo Atividade,200,OK,For Each User 1-4,text,true,,39742,2334,4,4,783,0,13
+1486146086964,129,Post Grupo Atividade,200,OK,For Each User 1-3,text,true,,43502,2334,3,3,55,0,9
+1486146087214,137,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,47262,2334,2,2,46,0,9
+1486146089285,191,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,51022,2334,1,1,85,0,10
+1486146190675,1542,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,13754,2334,4,4,1123,0,10
+1486146191841,433,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,17514,2334,4,4,402,0,56
+1486146192898,114,Post Grupo Atividade,200,OK,For Each User 1-3,text,true,,21274,2334,4,4,70,0,10
+1486146193195,167,Post Grupo Atividade,200,OK,For Each User 1-4,text,true,,25034,2334,4,4,71,0,9
+1486146197845,179,Post Grupo Atividade,200,OK,For Each User 1-4,text,true,,28794,2334,4,4,118,0,9
+1486146198839,157,Post Grupo Atividade,200,OK,For Each User 1-3,text,true,,32554,2334,3,3,89,0,11
+1486146198967,132,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,36314,2334,2,2,75,0,24
+1486146199141,133,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,40074,2334,1,1,74,0,12
+1486146267363,68,Post Grupo Atividade,200,OK,For Each User 1-1,text,false,Test failed: text expected to contain /sucesso!/,7201,2797,2,2,18,0,11
+1486146268747,62,Post Grupo Atividade,200,OK,For Each User 1-2,text,false,Test failed: text expected to contain /sucesso!/,7201,2797,2,2,15,0,10
+1486146269491,68,Post Grupo Atividade,200,OK,For Each User 1-2,text,false,Test failed: text expected to contain /sucesso!/,7201,2797,2,2,28,0,0
+1486146269491,85,Post Grupo Atividade,200,OK,For Each User 1-1,text,false,Test failed: text expected to contain /sucesso!/,7201,2797,1,1,34,0,10
+1486146331765,1079,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,17514,2333,2,2,685,0,12
+1486146331435,1415,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,17514,2334,2,2,1017,0,11
+1486146336410,136,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,21274,2334,2,2,90,0,9
+1486146336842,129,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,25034,2333,1,1,88,0,13
+1486146407694,1128,Open Grupo Atividade Page,200,OK,For Each User 1-2,text,true,,30857,926,2,2,1126,0,11
+1486146407699,1149,Open Grupo Atividade Page,200,OK,For Each User 1-1,text,true,,30857,926,2,2,1147,0,80
+1486146415203,556,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,32554,2334,2,2,332,0,87
+1486146415074,685,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,32554,2334,2,2,461,0,35
+1486146420967,710,Open Grupo Atividade Page,200,OK,For Each User 1-1,text,true,,30674,1071,2,2,708,0,8
+1486146421107,762,Open Grupo Atividade Page,200,OK,For Each User 1-2,text,true,,30674,1071,2,2,761,0,11
+1486146428355,164,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,36314,2334,2,2,73,0,11
+1486146429404,126,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,40074,2334,1,1,51,0,11
+1486146486873,6313,Autenticação - Pagina Inicial,200,OK,For Each User 1-36,text,true,,16258,606,100,100,5264,0,127
+1486146487163,6027,Autenticação - Pagina Inicial,200,OK,For Each User 1-64,text,true,,16258,606,100,100,4989,0,106
+1486146487101,6090,Autenticação - Pagina Inicial,200,OK,For Each User 1-56,text,true,,16258,606,100,100,5063,0,208
+1486146487132,6063,Autenticação - Pagina Inicial,200,OK,For Each User 1-61,text,true,,16258,606,100,100,5024,0,167
+1486146487228,5973,Autenticação - Pagina Inicial,200,OK,For Each User 1-70,text,true,,16258,606,100,100,4940,0,215
+1486146486913,6291,Autenticação - Pagina Inicial,200,OK,For Each User 1-40,text,true,,16258,606,100,100,5232,0,133
+1486146487052,6157,Autenticação - Pagina Inicial,200,OK,For Each User 1-52,text,true,,16258,606,100,100,5090,0,161
+1486146487072,6139,Autenticação - Pagina Inicial,200,OK,For Each User 1-54,text,true,,16258,606,100,100,5079,0,169
+1486146487030,6194,Autenticação - Pagina Inicial,200,OK,For Each User 1-51,text,true,,16258,606,100,100,5110,0,176
+1486146486871,6356,Autenticação - Pagina Inicial,200,OK,For Each User 1-34,text,true,,16258,606,100,100,5265,0,83
+1486146486492,6751,Autenticação - Pagina Inicial,200,OK,For Each User 1-5,text,true,,16258,606,100,100,5628,0,134
+1486146487010,6276,Autenticação - Pagina Inicial,200,OK,For Each User 1-48,text,true,,16258,606,100,100,5133,0,214
+1486146486937,6363,Autenticação - Pagina Inicial,200,OK,For Each User 1-42,text,true,,16258,606,100,100,5201,0,114
+1486146486714,6596,Autenticação - Pagina Inicial,200,OK,For Each User 1-26,text,true,,16258,606,100,100,5417,0,124
+1486146487183,6141,Autenticação - Pagina Inicial,200,OK,For Each User 1-66,text,true,,16258,606,100,100,4973,0,112
+1486146487143,6194,Autenticação - Pagina Inicial,200,OK,For Each User 1-62,text,true,,16258,606,100,100,5013,0,157
+1486146486645,6696,Autenticação - Pagina Inicial,200,OK,For Each User 1-19,text,true,,16258,606,100,100,5483,0,127
+1486146487531,5810,Autenticação - Pagina Inicial,200,OK,For Each User 1-100,text,true,,16258,606,100,100,4742,0,111
+1486146486886,6466,Autenticação - Pagina Inicial,200,OK,For Each User 1-37,text,true,,16258,606,100,100,5250,0,115
+1486146486484,6876,Autenticação - Pagina Inicial,200,OK,For Each User 1-4,text,true,,16258,606,100,100,5637,0,139
+1486146486524,6839,Autenticação - Pagina Inicial,200,OK,For Each User 1-8,text,true,,16258,606,100,100,5601,0,129
+1486146487491,5878,Autenticação - Pagina Inicial,200,OK,For Each User 1-96,text,true,,16258,606,100,100,4883,0,227
+1486146487377,5997,Autenticação - Pagina Inicial,200,OK,For Each User 1-85,text,true,,16258,606,100,100,4793,0,118
+1486146487400,5974,Autenticação - Pagina Inicial,200,OK,For Each User 1-87,text,true,,16258,606,100,100,4941,0,167
+1486146486967,6411,Autenticação - Pagina Inicial,200,OK,For Each User 1-45,text,true,,16258,606,100,100,5175,0,257
+1486146487357,6025,Autenticação - Pagina Inicial,200,OK,For Each User 1-83,text,true,,16258,606,100,100,4815,0,250
+1486146486609,6778,Autenticação - Pagina Inicial,200,OK,For Each User 1-16,text,true,,16258,606,100,100,5516,0,131
+1486146486728,6667,Autenticação - Pagina Inicial,200,OK,For Each User 1-27,text,true,,16258,606,100,100,5404,0,112
+1486146486442,6961,Autenticação - Pagina Inicial,200,OK,For Each User 1-1,text,true,,16258,606,100,100,5676,0,176
+1486146487479,5925,Autenticação - Pagina Inicial,200,OK,For Each User 1-94,text,true,,16258,606,100,100,4792,0,172
+1486146487449,5971,Autenticação - Pagina Inicial,200,OK,For Each User 1-92,text,true,,16258,606,100,100,4822,0,192
+1486146486739,6691,Autenticação - Pagina Inicial,200,OK,For Each User 1-28,text,true,,16258,606,100,100,5395,0,117
+1486146486514,6926,Autenticação - Pagina Inicial,200,OK,For Each User 1-7,text,true,,16258,606,100,100,5604,0,98
+1486146486685,6757,Autenticação - Pagina Inicial,200,OK,For Each User 1-23,text,true,,16258,606,100,100,5445,0,134
+1486146487489,5955,Autenticação - Pagina Inicial,200,OK,For Each User 1-95,text,true,,16258,606,100,100,4782,0,229
+1486146487005,6441,Autenticação - Pagina Inicial,200,OK,For Each User 1-46,text,true,,16258,606,100,100,5135,0,207
+1486146486661,6791,Autenticação - Pagina Inicial,200,OK,For Each User 1-21,text,true,,16258,606,100,100,5467,0,110
+1486146487413,6052,Autenticação - Pagina Inicial,200,OK,For Each User 1-88,text,true,,16258,606,100,100,4927,0,198
+1486146487523,5944,Autenticação - Pagina Inicial,200,OK,For Each User 1-99,text,true,,16258,606,100,100,4748,0,118
+1486146486587,6882,Autenticação - Pagina Inicial,200,OK,For Each User 1-14,text,true,,16258,606,100,100,5538,0,124
+1486146486558,6913,Autenticação - Pagina Inicial,200,OK,For Each User 1-11,text,true,,16258,606,100,100,5566,0,154
+1486146486529,6951,Autenticação - Pagina Inicial,200,OK,For Each User 1-9,text,true,,16258,606,100,100,5593,0,114
+1486146487510,5977,Autenticação - Pagina Inicial,200,OK,For Each User 1-98,text,true,,16258,606,100,100,4793,0,131
+1486146486513,6978,Autenticação - Pagina Inicial,200,OK,For Each User 1-6,text,true,,16258,606,100,100,5610,0,139
+1486146487275,6220,Autenticação - Pagina Inicial,200,OK,For Each User 1-75,text,true,,16258,606,100,100,4898,0,236
+1486146486929,6573,Autenticação - Pagina Inicial,200,OK,For Each User 1-41,text,true,,16258,606,100,100,5208,0,122
+1486146486654,6853,Autenticação - Pagina Inicial,200,OK,For Each User 1-20,text,true,,16258,606,100,100,5475,0,165
+1486146486598,6924,Autenticação - Pagina Inicial,200,OK,For Each User 1-15,text,true,,16258,606,100,100,5529,0,148
+1486146487439,6084,Autenticação - Pagina Inicial,200,OK,For Each User 1-91,text,true,,16258,606,100,100,4933,0,197
+1486146486761,6772,Autenticação - Pagina Inicial,200,OK,For Each User 1-29,text,true,,16258,606,100,100,5372,0,140
+1486146486694,6841,Autenticação - Pagina Inicial,200,OK,For Each User 1-24,text,true,,16258,606,100,100,5438,0,146
+1486146487429,6109,Autenticação - Pagina Inicial,200,OK,For Each User 1-90,text,true,,16258,606,100,100,4936,0,186
+1486146486570,6983,Autenticação - Pagina Inicial,200,OK,For Each User 1-12,text,true,,16258,606,100,100,5556,0,153
+1486146487388,6167,Autenticação - Pagina Inicial,200,OK,For Each User 1-86,text,true,,16258,606,100,100,4787,0,136
+1486146486464,7092,Autenticação - Pagina Inicial,200,OK,For Each User 1-2,text,true,,16258,606,100,100,5654,0,157
+1486146487005,6569,Autenticação - Pagina Inicial,200,OK,For Each User 1-47,text,true,,16258,606,100,100,5135,0,202
+1486146487255,6323,Autenticação - Pagina Inicial,200,OK,For Each User 1-73,text,true,,16258,606,100,100,4904,0,162
+1486146486577,7005,Autenticação - Pagina Inicial,200,OK,For Each User 1-13,text,true,,16258,606,100,100,5550,0,163
+1486146486621,7004,Autenticação - Pagina Inicial,200,OK,For Each User 1-17,text,true,,16258,606,100,100,5505,0,141
+1486146487246,6407,Autenticação - Pagina Inicial,200,OK,For Each User 1-72,text,true,,16258,606,100,100,4915,0,260
+1486146486473,7182,Autenticação - Pagina Inicial,200,OK,For Each User 1-3,text,true,,16258,606,100,100,5647,0,147
+1486146493375,283,Autenticação - Post AD FS,200,OK,For Each User 1-85,text,true,,8994,2613,100,100,187,0,0
+1486146493508,165,Autenticação - Post AD FS,200,OK,For Each User 1-20,text,true,,8974,2593,100,100,102,0,0
+1486146493388,288,Autenticação - Post AD FS,200,OK,For Each User 1-16,text,true,,8994,2613,100,100,162,0,0
+1486146487307,6373,Autenticação - Pagina Inicial,200,OK,For Each User 1-78,text,true,,16258,606,100,100,4864,0,266
+1486146493187,497,Autenticação - Post AD FS,200,OK,For Each User 1-36,text,true,,8974,2593,100,100,230,0,0
+1486146486759,6934,Autenticação - Pagina Inicial,200,OK,For Each User 1-30,text,true,,16258,606,100,100,5373,0,96
+1486146493205,505,Autenticação - Post AD FS,200,OK,For Each User 1-40,text,true,,8994,2613,100,100,148,0,0
+1486146487017,6698,Autenticação - Pagina Inicial,200,OK,For Each User 1-49,text,true,,16258,606,100,100,5132,0,219
+1486146487327,6389,Autenticação - Pagina Inicial,200,OK,For Each User 1-80,text,true,,16258,606,100,100,4849,0,237
+1486146487215,6509,Autenticação - Pagina Inicial,200,OK,For Each User 1-69,text,true,,16258,606,100,100,4951,0,145
+1486146486546,7186,Autenticação - Pagina Inicial,200,OK,For Each User 1-10,text,true,,16258,606,100,100,5577,0,123
+1486146486863,6897,Autenticação - Pagina Inicial,200,OK,For Each User 1-35,text,true,,16258,606,100,100,5273,0,92
+1486146487072,6707,Autenticação - Pagina Inicial,200,OK,For Each User 1-55,text,true,,16258,606,100,100,5076,0,163
+1486146493654,124,Autenticação - Post AD FS,200,OK,For Each User 1-72,text,true,,8974,2593,100,100,61,0,0
+1486146487137,6664,Autenticação - Pagina Inicial,200,OK,For Each User 1-60,text,true,,16258,606,100,100,5022,0,189
+1486146487205,6603,Autenticação - Pagina Inicial,200,OK,For Each User 1-68,text,true,,16258,606,100,100,4963,0,173
+1486146486894,6919,Autenticação - Pagina Inicial,200,OK,For Each User 1-38,text,true,,16258,606,100,100,5437,0,120
+1486146486841,6985,Autenticação - Pagina Inicial,200,OK,For Each User 1-33,text,true,,16258,606,100,100,5293,0,84
+1486146487062,6769,Autenticação - Pagina Inicial,200,OK,For Each User 1-53,text,true,,16258,606,100,100,5085,0,172
+1486146493431,415,Autenticação - Post AD FS,200,OK,For Each User 1-28,text,true,,8974,2593,100,100,118,0,0
+1486146487348,6521,Autenticação - Pagina Inicial,200,OK,For Each User 1-82,text,true,,16258,606,100,100,4825,0,291
+1486146487298,6585,Autenticação - Pagina Inicial,200,OK,For Each User 1-77,text,true,,16258,606,100,100,4866,0,252
+1486146486957,6944,Autenticação - Pagina Inicial,200,OK,For Each User 1-44,text,true,,16258,606,100,100,5190,0,166
+1486146487174,6734,Autenticação - Pagina Inicial,200,OK,For Each User 1-65,text,true,,16258,606,100,100,4991,0,174
+1486146493724,184,Autenticação - Post AD FS,200,OK,For Each User 1-69,text,true,,8974,2593,100,100,80,0,0
+1486146486631,7296,Autenticação - Pagina Inicial,200,OK,For Each User 1-18,text,true,,16258,606,100,100,5497,0,131
+1486146486672,7281,Autenticação - Pagina Inicial,200,OK,For Each User 1-22,text,true,,16258,606,100,100,5458,0,147
+1486146487367,6615,Autenticação - Pagina Inicial,200,OK,For Each User 1-84,text,true,,16258,606,100,100,4809,0,206
+1486146487238,6748,Autenticação - Pagina Inicial,200,OK,For Each User 1-71,text,true,,16258,606,100,100,4933,0,262
+1486146493556,428,Autenticação - Post AD FS,200,OK,For Each User 1-86,text,true,,8974,2593,100,100,319,0,0
+1486146493579,408,Autenticação - Post AD FS,200,OK,For Each User 1-73,text,true,,8974,2593,100,100,214,0,0
+1486146493396,594,Autenticação - Post AD FS,200,OK,For Each User 1-27,text,true,,8994,2613,100,100,93,0,0
+1486146486832,7195,Autenticação - Pagina Inicial,200,OK,For Each User 1-32,text,true,,16258,606,100,100,5303,0,92
+1486146493496,553,Autenticação - Post AD FS,200,OK,For Each User 1-75,text,true,,8994,2613,100,100,417,0,0
+1486146493383,669,Autenticação - Post AD FS,200,OK,For Each User 1-83,text,true,,8994,2613,100,100,322,0,0
+1486146486703,7360,Autenticação - Pagina Inicial,200,OK,For Each User 1-25,text,true,,16258,606,100,100,5427,0,116
+1486146493503,588,Autenticação - Post AD FS,200,OK,For Each User 1-41,text,true,,8974,2593,100,100,277,0,0
+1486146487110,6995,Autenticação - Pagina Inicial,200,OK,For Each User 1-57,text,true,,16258,606,100,100,5044,0,173
+1486146493983,143,Autenticação - Post AD FS,200,OK,For Each User 1-84,text,true,,8974,2593,100,100,93,0,0
+1486146493553,614,Autenticação - Post AD FS,200,OK,For Each User 1-12,text,true,,8974,2593,100,100,399,0,0
+1486146493802,374,Autenticação - Post AD FS,200,OK,For Each User 1-60,text,true,,8974,2593,100,100,111,0,0
+1486146493536,656,Autenticação - Post AD FS,200,OK,For Each User 1-24,text,true,,8974,2593,100,100,534,0,0
+1486146493538,684,Autenticação - Post AD FS,200,OK,For Each User 1-90,text,true,,8974,2593,100,100,464,0,0
+1486146487336,6899,Autenticação - Pagina Inicial,200,OK,For Each User 1-81,text,true,,16258,606,100,100,4842,0,243
+1486146487130,7107,Autenticação - Pagina Inicial,200,OK,For Each User 1-58,text,true,,16258,606,100,100,5034,0,199
+1486146487153,7085,Autenticação - Pagina Inicial,200,OK,For Each User 1-63,text,true,,16258,606,100,100,5005,0,153
+1486146486820,7471,Autenticação - Pagina Inicial,200,OK,For Each User 1-31,text,true,,16258,606,100,100,5314,0,82
+1486146493492,799,Autenticação - Post AD FS,200,OK,For Each User 1-6,text,true,,8974,2593,100,100,185,0,0
+1486146487019,7274,Autenticação - Pagina Inicial,200,OK,For Each User 1-50,text,true,,16258,606,100,100,5130,0,221
+1486146493693,598,Autenticação - Post AD FS,200,OK,For Each User 1-30,text,true,,8974,2593,100,100,520,0,0
+1486146487286,7012,Autenticação - Pagina Inicial,200,OK,For Each User 1-76,text,true,,16258,606,100,100,4876,0,249
+1486146486947,7352,Autenticação - Pagina Inicial,200,OK,For Each User 1-43,text,true,,16258,606,100,100,5198,0,149
+1486146493716,581,Autenticação - Post AD FS,200,OK,For Each User 1-80,text,true,,8974,2593,100,100,237,0,0
+1486146487459,6844,Autenticação - Pagina Inicial,200,OK,For Each User 1-93,text,true,,16258,606,100,100,4882,0,181
+1486146493375,921,Autenticação - Post AD FS,200,OK,For Each User 1-87,text,true,,8974,2593,100,100,98,0,0
+1486146487265,7044,Autenticação - Pagina Inicial,200,OK,For Each User 1-74,text,true,,16258,606,100,100,4904,0,210
+1486146487131,7178,Autenticação - Pagina Inicial,200,OK,For Each User 1-59,text,true,,16258,606,100,100,5035,0,228
+1486146493884,441,Autenticação - Post AD FS,200,OK,For Each User 1-77,text,true,,8974,2593,100,100,68,0,0
+1486146487422,6924,Autenticação - Pagina Inicial,200,OK,For Each User 1-89,text,true,,16258,606,100,100,4913,0,185
+1486146487316,7030,Autenticação - Pagina Inicial,200,OK,For Each User 1-79,text,true,,16258,606,100,100,4846,0,202
+1486146493209,1171,Autenticação - Post AD FS,200,OK,For Each User 1-52,text,true,,8974,2593,100,100,117,0,0
+1486146493524,862,Autenticação - Post AD FS,200,OK,For Each User 1-91,text,true,,8974,2593,100,100,668,0,0
+1486146486903,7492,Autenticação - Pagina Inicial,200,OK,For Each User 1-39,text,true,,16258,606,100,100,5241,0,142
+1486146493681,717,Autenticação - Post AD FS,200,OK,For Each User 1-78,text,true,,8994,2613,100,100,612,0,0
+1486146493196,1219,Autenticação - Post AD FS,200,OK,For Each User 1-61,text,true,,8974,2593,100,100,237,0,0
+1486146493444,979,Autenticação - Post AD FS,200,OK,For Each User 1-23,text,true,,8974,2593,100,100,927,0,0
+1486146494063,362,Autenticação - Post AD FS,200,OK,For Each User 1-25,text,true,,8994,2613,100,100,228,0,0
+1486146493325,1105,Autenticação - Post AD FS,200,OK,For Each User 1-66,text,true,,8974,2593,100,100,1062,0,0
+1486146494310,140,Autenticação - Post AD FS,200,OK,For Each User 1-74,text,true,,8974,2593,100,100,100,0,24
+1486146493780,715,Autenticação - Post AD FS,200,OK,For Each User 1-55,text,true,,8974,2593,100,100,415,0,0
+1486146493195,1348,Autenticação - Post AD FS,200,OK,For Each User 1-56,text,true,,8994,2613,100,100,134,0,0
+1486146493533,1051,Autenticação - Post AD FS,200,OK,For Each User 1-29,text,true,,8974,2593,100,100,704,0,0
+1486146493470,1115,Autenticação - Post AD FS,200,OK,For Each User 1-14,text,true,,8974,2593,100,100,731,0,0
+1486146493986,612,Autenticação - Post AD FS,200,OK,For Each User 1-71,text,true,,8994,2613,100,100,354,0,0
+1486146493211,1392,Autenticação - Post AD FS,200,OK,For Each User 1-54,text,true,,8974,2593,100,100,149,0,0
+1486146493202,1428,Autenticação - Post AD FS,200,OK,For Each User 1-70,text,true,,8974,2593,100,100,161,0,0
+1486146487194,7453,Autenticação - Pagina Inicial,200,OK,For Each User 1-67,text,true,,16258,606,100,100,4966,0,226
+1486146493195,1458,Autenticação - Post AD FS,200,OK,For Each User 1-64,text,true,,8994,2613,100,100,194,0,0
+1486146487500,7162,Autenticação - Pagina Inicial,200,OK,For Each User 1-97,text,true,,16258,606,100,100,4830,0,140
+1486146493225,1441,Autenticação - Post AD FS,200,OK,For Each User 1-51,text,true,,8994,2613,100,100,1109,0,0
+1486146493370,1353,Autenticação - Post AD FS,200,OK,For Each User 1-96,text,true,,8974,2593,100,100,297,0,0
+1486146493488,1271,Autenticação - Post AD FS,200,OK,For Each User 1-98,text,true,,8994,2613,100,100,235,0,0
+1486146493466,1300,Autenticação - Post AD FS,200,OK,For Each User 1-88,text,true,,8974,2593,100,100,868,0,0
+1486146493557,1224,Autenticação - Post AD FS,200,OK,For Each User 1-2,text,true,,8974,2593,100,100,267,0,0
+1486146493809,977,Autenticação - Post AD FS,200,OK,For Each User 1-68,text,true,,8974,2593,100,100,61,0,0
+1486146493480,1325,Autenticação - Post AD FS,200,OK,For Each User 1-9,text,true,,8974,2593,100,100,617,0,0
+1486146493909,902,Autenticação - Post AD FS,200,OK,For Each User 1-65,text,true,,8974,2593,100,100,92,0,0
+1486146493716,1098,Autenticação - Post AD FS,200,OK,For Each User 1-49,text,true,,8974,2593,100,100,284,0,0
+1486146493901,922,Autenticação - Post AD FS,200,OK,For Each User 1-44,text,true,,8974,2593,100,100,198,0,0
+1486146493471,1355,Autenticação - Post AD FS,200,OK,For Each User 1-11,text,true,,8974,2593,100,100,702,0,0
+1486146493760,1072,Autenticação - Post AD FS,200,OK,For Each User 1-35,text,true,,8994,2613,100,100,464,0,0
+1486146494106,726,Autenticação - Post AD FS,200,OK,For Each User 1-57,text,true,,8974,2593,100,100,117,0,0
+1486146494027,881,Autenticação - Post AD FS,200,OK,For Each User 1-32,text,true,,8974,2593,100,100,285,0,0
+1486146493468,1444,Autenticação - Post AD FS,200,OK,For Each User 1-99,text,true,,8994,2613,100,100,764,0,0
+1486146493311,1629,Autenticação - Post AD FS,200,OK,For Each User 1-26,text,true,,8974,2593,100,100,1118,0,0
+1486146494304,641,Autenticação - Post AD FS,200,OK,For Each User 1-93,text,true,,8974,2593,100,100,88,0,0
+1486146493228,1721,Autenticação - Post AD FS,200,OK,For Each User 1-34,text,true,,8974,2593,100,100,1125,0,0
+1486146493301,1664,Autenticação - Post AD FS,200,OK,For Each User 1-42,text,true,,8974,2593,100,100,1139,0,0
+1486146493364,1609,Autenticação - Post AD FS,200,OK,For Each User 1-8,text,true,,8974,2593,100,100,1094,0,0
+1486146493342,1631,Autenticação - Post AD FS,200,OK,For Each User 1-100,text,true,,8994,2613,100,100,1152,0,0
+1486146493361,1613,Autenticação - Post AD FS,200,OK,For Each User 1-4,text,true,,8974,2593,100,100,1198,0,0
+1486146493244,1731,Autenticação - Post AD FS,200,OK,For Each User 1-5,text,true,,8974,2593,100,100,1323,0,0
+1486146493441,1540,Autenticação - Post AD FS,200,OK,For Each User 1-7,text,true,,8974,2593,100,100,1128,0,0
+1486146493341,1655,Autenticação - Post AD FS,200,OK,For Each User 1-19,text,true,,8974,2593,100,100,1240,0,0
+1486146493353,1656,Autenticação - Post AD FS,200,OK,For Each User 1-37,text,true,,8974,2593,100,100,1243,0,0
+1486146493452,1560,Autenticação - Post AD FS,200,OK,For Each User 1-21,text,true,,8994,2613,100,100,1170,0,0
+1486146493404,1610,Autenticação - Post AD FS,200,OK,For Each User 1-1,text,true,,8974,2593,100,100,1226,0,0
+1486146493379,1653,Autenticação - Post AD FS,200,OK,For Each User 1-45,text,true,,8974,2593,100,100,1242,0,0
+1486146493405,1644,Autenticação - Post AD FS,200,OK,For Each User 1-94,text,true,,8994,2613,100,100,1232,0,0
+1486146493421,1630,Autenticação - Post AD FS,200,OK,For Each User 1-92,text,true,,8974,2593,100,100,1211,0,0
+1486146493447,1626,Autenticação - Post AD FS,200,OK,For Each User 1-46,text,true,,8974,2593,100,100,1208,0,0
+1486146493575,1505,Autenticação - Post AD FS,200,OK,For Each User 1-47,text,true,,8974,2593,100,100,1119,0,0
+1486146493523,1558,Autenticação - Post AD FS,200,OK,For Each User 1-15,text,true,,8974,2593,100,100,1168,0,0
+1486146493626,1463,Autenticação - Post AD FS,200,OK,For Each User 1-17,text,true,,8974,2593,100,100,1096,0,0
+1486146493656,1442,Autenticação - Post AD FS,200,OK,For Each User 1-3,text,true,,8974,2593,100,100,1051,0,0
+1486146493445,1659,Autenticação - Post AD FS,200,OK,For Each User 1-95,text,true,,8994,2613,100,100,1301,0,0
+1486146493826,1290,Autenticação - Post AD FS,200,OK,For Each User 1-33,text,true,,8994,2613,100,100,927,0,0
+1486146493287,1830,Autenticação - Post AD FS,200,OK,For Each User 1-48,text,true,,8974,2593,100,100,1453,0,0
+1486146493583,1542,Autenticação - Post AD FS,200,OK,For Each User 1-13,text,true,,8974,2593,100,100,1181,0,0
+1486146493732,1399,Autenticação - Post AD FS,200,OK,For Each User 1-10,text,true,,8974,2593,100,100,1035,0,0
+1486146493831,1311,Autenticação - Post AD FS,200,OK,For Each User 1-53,text,true,,8974,2593,100,100,945,0,0
+1486146493814,1338,Autenticação - Post AD FS,200,OK,For Each User 1-38,text,true,,8974,2593,100,100,964,0,0
+1486146493954,1198,Autenticação - Post AD FS,200,OK,For Each User 1-22,text,true,,8974,2593,100,100,845,0,0
+1486146493869,1300,Autenticação - Post AD FS,200,OK,For Each User 1-82,text,true,,8974,2593,100,100,938,0,0
+1486146493928,1295,Autenticação - Post AD FS,200,OK,For Each User 1-18,text,true,,8974,2593,100,100,881,0,0
+1486146493337,1886,Autenticação - Post AD FS,200,OK,For Each User 1-62,text,true,,8994,2613,100,100,1536,0,0
+1486146494347,887,Autenticação - Post AD FS,200,OK,For Each User 1-89,text,true,,8994,2613,100,100,495,0,13
+1486146494238,997,Autenticação - Post AD FS,200,OK,For Each User 1-58,text,true,,8994,2613,100,100,633,0,86
+1486146494292,949,Autenticação - Post AD FS,200,OK,For Each User 1-31,text,true,,8994,2613,100,100,616,0,27
+1486146494294,949,Autenticação - Post AD FS,200,OK,For Each User 1-50,text,true,,8974,2593,100,100,601,0,31
+1486146494298,947,Autenticação - Post AD FS,200,OK,For Each User 1-76,text,true,,8974,2593,100,100,601,0,29
+1486146494235,1013,Autenticação - Post AD FS,200,OK,For Each User 1-81,text,true,,8974,2593,100,100,636,0,61
+1486146494310,938,Autenticação - Post AD FS,200,OK,For Each User 1-59,text,true,,8974,2593,100,100,624,0,26
+1486146494299,955,Autenticação - Post AD FS,200,OK,For Each User 1-43,text,true,,8974,2593,100,100,594,0,35
+1486146494396,865,Autenticação - Post AD FS,200,OK,For Each User 1-39,text,true,,8994,2613,100,100,546,0,11
+1486146494347,949,Autenticação - Post AD FS,200,OK,For Each User 1-79,text,true,,8994,2613,100,100,599,0,13
+1486146494239,1057,Autenticação - Post AD FS,200,OK,For Each User 1-63,text,true,,8974,2593,100,100,713,0,84
+1486146494648,658,Autenticação - Post AD FS,200,OK,For Each User 1-67,text,true,,8974,2593,100,100,401,0,13
+1486146494662,651,Autenticação - Post AD FS,200,OK,For Each User 1-97,text,true,,8994,2613,100,100,418,0,9
+1486146493676,71318,Autenticação - Post Home PGD,200,OK,For Each User 1-20,text,true,,9697,7963,100,100,213,0,20
+1486146493661,71337,Autenticação - Post Home PGD,200,OK,For Each User 1-85,text,true,,9697,7965,100,100,193,0,6
+1486146493679,71323,Autenticação - Post Home PGD,200,OK,For Each User 1-16,text,true,,9697,7963,100,100,316,0,17
+1486146493848,78023,Autenticação - Post Home PGD,200,OK,For Each User 1-28,text,true,,9697,7959,100,100,6656,0,8
+1486146493911,77990,Autenticação - Post Home PGD,200,OK,For Each User 1-69,text,true,,9697,7959,100,100,6593,0,8
+1486146493713,78192,Autenticação - Post Home PGD,200,OK,For Each User 1-40,text,true,,9697,7959,100,100,4522,0,9
+1486146493781,78134,Autenticação - Post Home PGD,200,OK,For Each User 1-72,text,true,,9697,7963,100,100,4495,0,5
+1486146493687,78239,Autenticação - Post Home PGD,200,OK,For Each User 1-36,text,true,,9697,7965,100,100,4589,0,9
+1486146493987,78537,Autenticação - Post Home PGD,200,OK,For Each User 1-86,text,true,,9697,7963,100,100,7776,0,12
+1486146493990,78539,Autenticação - Post Home PGD,200,OK,For Each User 1-73,text,true,,9697,7963,100,100,7773,0,11
+1486146494169,78366,Autenticação - Post Home PGD,200,OK,For Each User 1-12,text,true,,9697,7973,100,100,8205,0,6
+1486146494128,78415,Autenticação - Post Home PGD,200,OK,For Each User 1-84,text,true,,9697,7977,100,100,8246,0,7
+1486146494726,77862,Autenticação - Post Home PGD,200,OK,For Each User 1-96,text,true,,9697,7961,100,100,7699,0,50
+1486146494051,78592,Autenticação - Post Home PGD,200,OK,For Each User 1-75,text,true,,9697,7955,100,100,8318,0,11
+1486146494055,78593,Autenticação - Post Home PGD,200,OK,For Each User 1-83,text,true,,9697,7957,100,100,8314,0,9
+1486146494382,78282,Autenticação - Post Home PGD,200,OK,For Each User 1-52,text,true,,9697,7961,100,100,7990,0,6
+1486146494294,78376,Autenticação - Post Home PGD,200,OK,For Each User 1-30,text,true,,9697,7967,100,100,8077,0,32
+1486146494497,78177,Autenticação - Post Home PGD,200,OK,For Each User 1-55,text,true,,9697,7955,100,100,7883,0,7
+1486146494389,78289,Autenticação - Post Home PGD,200,OK,For Each User 1-91,text,true,,9697,7971,100,100,8026,0,9
+1486146494655,78028,Autenticação - Post Home PGD,200,OK,For Each User 1-64,text,true,,9697,7959,100,100,7764,0,120
+1486146494452,78246,Autenticação - Post Home PGD,200,OK,For Each User 1-74,text,true,,9697,7971,100,100,7928,0,5
+1486146494294,78410,Autenticação - Post Home PGD,200,OK,For Each User 1-6,text,true,,9697,7973,100,100,8082,0,33
+1486146495054,77654,Autenticação - Post Home PGD,200,OK,For Each User 1-92,text,true,,9697,7963,100,100,7430,0,11
+1486146494178,78537,Autenticação - Post Home PGD,200,OK,For Each User 1-60,text,true,,9697,7963,100,100,8197,0,8
+1486146494948,77772,Autenticação - Post Home PGD,200,OK,For Each User 1-93,text,true,,9697,7979,100,100,7531,0,12
+1486146494428,78297,Autenticação - Post Home PGD,200,OK,For Each User 1-25,text,true,,9697,7963,100,100,7954,0,8
+1486146494417,78313,Autenticação - Post Home PGD,200,OK,For Each User 1-61,text,true,,9697,7957,100,100,7962,0,8
+1486146494977,77757,Autenticação - Post Home PGD,200,OK,For Each User 1-100,text,true,,9697,7959,100,100,7505,0,11
+1486146494600,78139,Autenticação - Post Home PGD,200,OK,For Each User 1-71,text,true,,9697,7963,100,100,7783,0,172
+1486146494226,78520,Autenticação - Post Home PGD,200,OK,For Each User 1-90,text,true,,9697,7963,100,100,8185,0,15
+1486146494633,78119,Autenticação - Post Home PGD,200,OK,For Each User 1-70,text,true,,9697,7977,100,100,7750,0,141
+1486146494094,78717,Autenticação - Post Home PGD,200,OK,For Each User 1-41,text,true,,9697,7965,100,100,8279,0,7
+1486146495052,77764,Autenticação - Post Home PGD,200,OK,For Each User 1-94,text,true,,9697,7965,100,100,7432,0,13
+1486146494328,78492,Autenticação - Post Home PGD,200,OK,For Each User 1-77,text,true,,9697,7961,100,100,8050,0,23
+1486146494426,78399,Autenticação - Post Home PGD,200,OK,For Each User 1-23,text,true,,9697,7959,100,100,7956,0,8
+1486146494768,78062,Autenticação - Post Home PGD,200,OK,For Each User 1-88,text,true,,9697,7971,100,100,7656,0,8
+1486146495075,77759,Autenticação - Post Home PGD,200,OK,For Each User 1-46,text,true,,9697,7967,100,100,7377,0,8
+1486146494978,77862,Autenticação - Post Home PGD,200,OK,For Each User 1-5,text,true,,9697,7971,100,100,7469,0,10
+1486146494910,77934,Autenticação - Post Home PGD,200,OK,For Each User 1-32,text,true,,9697,7985,100,100,7534,0,6
+1486146494915,77934,Autenticação - Post Home PGD,200,OK,For Each User 1-99,text,true,,9697,7963,100,100,7564,0,6
+1486146494669,78185,Autenticação - Post Home PGD,200,OK,For Each User 1-51,text,true,,9697,7959,100,100,7714,0,105
+1486146495034,77823,Autenticação - Post Home PGD,200,OK,For Each User 1-45,text,true,,9697,7971,100,100,7418,0,6
+1486146494826,78036,Autenticação - Post Home PGD,200,OK,For Each User 1-44,text,true,,9697,7975,100,100,7616,0,16
+1486146495083,77783,Autenticação - Post Home PGD,200,OK,For Each User 1-47,text,true,,9697,7961,100,100,7369,0,11
+1486146495017,77853,Autenticação - Post Home PGD,200,OK,For Each User 1-1,text,true,,9697,7971,100,100,7434,0,6
+1486146494835,78039,Autenticação - Post Home PGD,200,OK,For Each User 1-35,text,true,,9697,7971,100,100,7604,0,11
+1486146494304,78575,Autenticação - Post Home PGD,200,OK,For Each User 1-87,text,true,,9697,7973,100,100,8109,0,33
+1486146494762,78123,Autenticação - Post Home PGD,200,OK,For Each User 1-98,text,true,,9697,7947,100,100,7638,0,12
+1486146495263,77625,Autenticação - Post Home PGD,200,OK,For Each User 1-39,text,true,,9697,7965,100,100,7545,0,15
+1486146564993,7934,Autenticação - Seleção de Perfil,200,OK,For Each User 1-20,text,true,,8731,1774,100,100,7552,0,15
+1486146495244,77689,Autenticação - Post Home PGD,200,OK,For Each User 1-31,text,true,,9697,7965,100,100,7575,0,15
+1486146495257,77711,Autenticação - Post Home PGD,200,OK,For Each User 1-43,text,true,,9697,7975,100,100,7552,0,16
+1486146494984,77989,Autenticação - Post Home PGD,200,OK,For Each User 1-7,text,true,,9697,7963,100,100,7464,0,7
+1486146494814,78163,Autenticação - Post Home PGD,200,OK,For Each User 1-65,text,true,,9697,7961,100,100,7623,0,12
+1486146495251,77730,Autenticação - Post Home PGD,200,OK,For Each User 1-59,text,true,,9697,7961,100,100,7557,0,9
+1486146495298,77689,Autenticação - Post Home PGD,200,OK,For Each User 1-79,text,true,,9697,7967,100,100,7512,0,6
+1486146571871,1129,Autenticação - Seleção de Perfil,200,OK,For Each User 1-28,text,true,,8731,1774,100,100,777,0,11
+1486146571913,1093,Autenticação - Seleção de Perfil,200,OK,For Each User 1-72,text,true,,8731,1774,100,100,739,0,26
+1486146571924,1086,Autenticação - Seleção de Perfil,200,OK,For Each User 1-36,text,true,,8731,1774,100,100,732,0,18
+1486146571900,1146,Autenticação - Seleção de Perfil,200,OK,For Each User 1-69,text,true,,8731,1774,100,100,789,0,35
+1486146571903,1160,Autenticação - Seleção de Perfil,200,OK,For Each User 1-40,text,true,,8731,1774,100,100,804,0,33
+1486146494943,78181,Autenticação - Post Home PGD,200,OK,For Each User 1-26,text,true,,9697,7969,100,100,7501,0,9
+1486146565000,8130,Autenticação - Seleção de Perfil,200,OK,For Each User 1-16,text,true,,8731,1774,100,100,7513,0,14
+1486146564996,8141,Autenticação - Seleção de Perfil,200,OK,For Each User 1-85,text,true,,8731,1774,100,100,7511,0,18
+1486146572642,535,Autenticação - Seleção de Perfil,200,OK,For Each User 1-75,text,true,,8731,1774,100,100,348,0,0
+1486146572647,534,Autenticação - Seleção de Perfil,200,OK,For Each User 1-83,text,true,,8731,1774,100,100,347,0,0
+1486146572663,523,Autenticação - Seleção de Perfil,200,OK,For Each User 1-52,text,true,,8731,1774,100,100,349,0,0
+1486146572668,521,Autenticação - Seleção de Perfil,200,OK,For Each User 1-30,text,true,,8731,1774,100,100,357,0,0
+1486146572672,522,Autenticação - Seleção de Perfil,200,OK,For Each User 1-55,text,true,,8731,1774,100,100,356,0,0
+1486146572677,522,Autenticação - Seleção de Perfil,200,OK,For Each User 1-91,text,true,,8731,1774,100,100,354,0,0
+1486146572682,521,Autenticação - Seleção de Perfil,200,OK,For Each User 1-64,text,true,,8731,1774,100,100,354,0,0
+1486146572696,511,Autenticação - Seleção de Perfil,200,OK,For Each User 1-74,text,true,,8731,1774,100,100,351,0,0
+1486146572702,510,Autenticação - Seleção de Perfil,200,OK,For Each User 1-6,text,true,,8731,1774,100,100,349,0,0
+1486146572706,513,Autenticação - Seleção de Perfil,200,OK,For Each User 1-92,text,true,,8731,1774,100,100,349,0,0
+1486146572714,513,Autenticação - Seleção de Perfil,200,OK,For Each User 1-60,text,true,,8731,1774,100,100,350,0,0
+1486146572718,563,Autenticação - Seleção de Perfil,200,OK,For Each User 1-93,text,true,,8731,1774,100,100,350,0,0
+1486146572724,574,Autenticação - Seleção de Perfil,200,OK,For Each User 1-25,text,true,,8731,1774,100,100,347,0,0
+1486146572729,575,Autenticação - Seleção de Perfil,200,OK,For Each User 1-61,text,true,,8731,1774,100,100,346,0,0
+1486146572733,576,Autenticação - Seleção de Perfil,200,OK,For Each User 1-100,text,true,,8731,1774,100,100,345,0,0
+1486146572738,577,Autenticação - Seleção de Perfil,200,OK,For Each User 1-71,text,true,,8731,1774,100,100,344,0,0
+1486146572751,577,Autenticação - Seleção de Perfil,200,OK,For Each User 1-70,text,true,,8731,1774,100,100,387,0,0
+1486146572528,808,Autenticação - Seleção de Perfil,200,OK,For Each User 1-73,text,true,,8731,1774,100,100,614,0,224
+1486146572522,821,Autenticação - Seleção de Perfil,200,OK,For Each User 1-86,text,true,,8731,1774,100,100,624,0,230
+1486146572534,816,Autenticação - Seleção de Perfil,200,OK,For Each User 1-12,text,true,,8731,1774,100,100,616,0,219
+1486146572541,814,Autenticação - Seleção de Perfil,200,OK,For Each User 1-84,text,true,,8731,1774,100,100,611,0,212
+1486146572966,394,Autenticação - Seleção de Perfil,200,OK,For Each User 1-43,text,true,,8731,1774,100,100,190,0,0
+1486146572972,392,Autenticação - Seleção de Perfil,200,OK,For Each User 1-7,text,true,,8731,1774,100,100,187,0,0
+1486146572975,397,Autenticação - Seleção de Perfil,200,OK,For Each User 1-65,text,true,,8731,1774,100,100,188,0,0
+1486146572980,399,Autenticação - Seleção de Perfil,200,OK,For Each User 1-59,text,true,,8731,1774,100,100,186,0,0
+1486146572985,400,Autenticação - Seleção de Perfil,200,OK,For Each User 1-79,text,true,,8731,1774,100,100,184,0,0
+1486146572744,798,Autenticação - Seleção de Perfil,200,OK,For Each User 1-90,text,true,,8731,1774,100,100,369,0,0
+1486146572587,1042,Autenticação - Seleção de Perfil,200,OK,For Each User 1-96,text,true,,8731,1774,100,100,400,0,0
+1486146573122,527,Autenticação - Seleção de Perfil,200,OK,For Each User 1-26,text,true,,8731,1774,100,100,198,0,0
+1486146572810,844,Autenticação - Seleção de Perfil,200,OK,For Each User 1-41,text,true,,8731,1774,100,100,578,0,0
+1486146572824,841,Autenticação - Seleção de Perfil,200,OK,For Each User 1-23,text,true,,8731,1774,100,100,578,0,0
+1486146572829,842,Autenticação - Seleção de Perfil,200,OK,For Each User 1-88,text,true,,8731,1774,100,100,579,0,0
+1486146572833,851,Autenticação - Seleção de Perfil,200,OK,For Each User 1-46,text,true,,8731,1774,100,100,581,0,0
+1486146572838,854,Autenticação - Seleção de Perfil,200,OK,For Each User 1-5,text,true,,8731,1774,100,100,583,0,0
+1486146572843,856,Autenticação - Seleção de Perfil,200,OK,For Each User 1-32,text,true,,8731,1774,100,100,583,0,0
+1486146572848,859,Autenticação - Seleção de Perfil,200,OK,For Each User 1-99,text,true,,8731,1774,100,100,584,0,0
+1486146572852,860,Autenticação - Seleção de Perfil,200,OK,For Each User 1-51,text,true,,8731,1774,100,100,632,0,0
+1486146572855,865,Autenticação - Seleção de Perfil,200,OK,For Each User 1-45,text,true,,8731,1774,100,100,634,0,0
+1486146572861,864,Autenticação - Seleção de Perfil,200,OK,For Each User 1-44,text,true,,8731,1774,100,100,635,0,0
+1486146572865,866,Autenticação - Seleção de Perfil,200,OK,For Each User 1-47,text,true,,8731,1774,100,100,636,0,0
+1486146572869,868,Autenticação - Seleção de Perfil,200,OK,For Each User 1-1,text,true,,8731,1774,100,100,637,0,0
+1486146572873,870,Autenticação - Seleção de Perfil,200,OK,For Each User 1-35,text,true,,8731,1774,100,100,638,0,0
+1486146572878,872,Autenticação - Seleção de Perfil,200,OK,For Each User 1-87,text,true,,8731,1774,100,100,639,0,0
+1486146572884,872,Autenticação - Seleção de Perfil,200,OK,For Each User 1-98,text,true,,8731,1774,100,100,637,0,0
+1486146572887,874,Autenticação - Seleção de Perfil,200,OK,For Each User 1-39,text,true,,8731,1774,100,100,640,0,0
+1486146572932,836,Autenticação - Seleção de Perfil,200,OK,For Each User 1-31,text,true,,8731,1774,100,100,601,0,0
+1486146572815,957,Autenticação - Seleção de Perfil,200,OK,For Each User 1-94,text,true,,8731,1774,100,100,729,0,0
+1486146494976,78806,Autenticação - Post Home PGD,200,OK,For Each User 1-8,text,true,,9697,7955,100,100,7470,0,9
+1486146494195,79641,Autenticação - Post Home PGD,200,OK,For Each User 1-24,text,true,,9697,7967,100,100,8175,0,11
+1486146494606,79237,Autenticação - Post Home PGD,200,OK,For Each User 1-54,text,true,,9697,7977,100,100,7843,0,166
+1486146495119,78731,Autenticação - Post Home PGD,200,OK,For Each User 1-33,text,true,,9697,7963,100,100,9096,0,8
+1486146495155,78701,Autenticação - Post Home PGD,200,OK,For Each User 1-22,text,true,,9697,7979,100,100,9062,0,10
+1486146495225,78637,Autenticação - Post Home PGD,200,OK,For Each User 1-62,text,true,,9697,7957,100,100,8994,0,5
+1486146495236,78631,Autenticação - Post Home PGD,200,OK,For Each User 1-89,text,true,,9697,7961,100,100,7607,0,26
+1486146494998,78875,Autenticação - Post Home PGD,200,OK,For Each User 1-19,text,true,,9697,7979,100,100,7822,0,16
+1486146494968,78916,Autenticação - Post Home PGD,200,OK,For Each User 1-42,text,true,,9697,7961,100,100,7478,0,10
+1486146494587,79302,Autenticação - Post Home PGD,200,OK,For Each User 1-29,text,true,,9697,7973,100,100,7794,0,19
+1486146495251,78650,Autenticação - Post Home PGD,200,OK,For Each User 1-81,text,true,,9697,7959,100,100,8969,0,8
+1486146493994,79915,Autenticação - Post Home PGD,200,OK,For Each User 1-27,text,true,,9697,7957,100,100,8374,0,8
+1486146494400,79517,Autenticação - Post Home PGD,200,OK,For Each User 1-78,text,true,,9697,7961,100,100,7978,0,14
+1486146494807,79115,Autenticação - Post Home PGD,200,OK,For Each User 1-9,text,true,,9697,7963,100,100,7630,0,15
+1486146495014,78916,Autenticação - Post Home PGD,200,OK,For Each User 1-21,text,true,,9697,7955,100,100,7436,0,8
+1486146495100,78839,Autenticação - Post Home PGD,200,OK,For Each User 1-3,text,true,,9697,7977,100,100,9122,0,10
+1486146572819,1198,Autenticação - Seleção de Perfil,200,OK,For Each User 1-77,text,true,,8731,1774,100,100,577,0,0
+1486146573780,291,Autenticação - Seleção de Perfil,200,OK,For Each User 1-8,text,true,,8731,1774,100,100,149,0,0
+1486146495245,78899,Autenticação - Post Home PGD,200,OK,For Each User 1-50,text,true,,9697,7969,100,100,7562,0,14
+1486146573907,286,Autenticação - Seleção de Perfil,200,OK,For Each User 1-27,text,true,,8731,1774,100,100,144,0,0
+1486146573915,290,Autenticação - Seleção de Perfil,200,OK,For Each User 1-78,text,true,,8731,1774,100,100,140,0,0
+1486146573920,293,Autenticação - Seleção de Perfil,200,OK,For Each User 1-9,text,true,,8731,1774,100,100,140,0,0
+1486146573929,300,Autenticação - Seleção de Perfil,200,OK,For Each User 1-21,text,true,,8731,1774,100,100,135,0,0
+1486146573938,300,Autenticação - Seleção de Perfil,200,OK,For Each User 1-3,text,true,,8731,1774,100,100,135,0,0
+1486146573834,413,Autenticação - Seleção de Perfil,200,OK,For Each User 1-24,text,true,,8731,1774,100,100,287,0,0
+1486146495091,79207,Autenticação - Post Home PGD,200,OK,For Each User 1-17,text,true,,9697,7975,100,100,7363,0,10
+1486146494588,79719,Autenticação - Post Home PGD,200,OK,For Each User 1-14,text,true,,9697,7977,100,100,8223,0,18
+1486146494829,79491,Autenticação - Post Home PGD,200,OK,For Each User 1-11,text,true,,9697,7963,100,100,7613,0,13
+1486146495309,79019,Autenticação - Post Home PGD,200,OK,For Each User 1-67,text,true,,9697,7973,100,100,7502,0,7
+1486146494300,80035,Autenticação - Post Home PGD,200,OK,For Each User 1-80,text,true,,9697,7949,100,100,8076,0,31
+1486146495120,79220,Autenticação - Post Home PGD,200,OK,For Each User 1-48,text,true,,9697,7959,100,100,7691,0,7
+1486146495012,79334,Autenticação - Post Home PGD,200,OK,For Each User 1-37,text,true,,9697,7961,100,100,7438,0,8
+1486146494433,79923,Autenticação - Post Home PGD,200,OK,For Each User 1-66,text,true,,9697,7963,100,100,7947,0,9
+1486146495133,79231,Autenticação - Post Home PGD,200,OK,For Each User 1-10,text,true,,9697,7965,100,100,9082,0,8
+1486146494789,79581,Autenticação - Post Home PGD,200,OK,For Each User 1-68,text,true,,9697,7961,100,100,7648,0,18
+1486146494817,79558,Autenticação - Post Home PGD,200,OK,For Each User 1-49,text,true,,9697,7969,100,100,7623,0,9
+1486146495299,79082,Autenticação - Post Home PGD,200,OK,For Each User 1-63,text,true,,9697,7965,100,100,7511,0,5
+1486146495084,79301,Autenticação - Post Home PGD,200,OK,For Each User 1-15,text,true,,9697,7955,100,100,7369,0,10
+1486146494783,79608,Autenticação - Post Home PGD,200,OK,For Each User 1-2,text,true,,9697,7971,100,100,7654,0,19
+1486146495171,79224,Autenticação - Post Home PGD,200,OK,For Each User 1-82,text,true,,9697,7959,100,100,9046,0,6
+1486146494978,79421,Autenticação - Post Home PGD,200,OK,For Each User 1-4,text,true,,9697,7971,100,100,7471,0,10
+1486146494952,79452,Autenticação - Post Home PGD,200,OK,For Each User 1-34,text,true,,9697,7979,100,100,7493,0,14
+1486146495248,79160,Autenticação - Post Home PGD,200,OK,For Each User 1-76,text,true,,9697,7961,100,100,7559,0,12
+1486146494545,79868,Autenticação - Post Home PGD,200,OK,For Each User 1-56,text,true,,9697,7967,100,100,7835,0,7
+1486146494835,79583,Autenticação - Post Home PGD,200,OK,For Each User 1-57,text,true,,9697,7969,100,100,7607,0,12
+1486146495107,79316,Autenticação - Post Home PGD,200,OK,For Each User 1-95,text,true,,9697,7961,100,100,7736,0,6
+1486146573854,570,Autenticação - Seleção de Perfil,200,OK,For Each User 1-22,text,true,,8731,1774,100,100,165,0,0
+1486146573866,562,Autenticação - Seleção de Perfil,200,OK,For Each User 1-89,text,true,,8731,1774,100,100,157,0,0
+1486146573842,590,Autenticação - Seleção de Perfil,200,OK,For Each User 1-54,text,true,,8731,1774,100,100,167,0,0
+1486146573861,576,Autenticação - Seleção de Perfil,200,OK,For Each User 1-62,text,true,,8731,1774,100,100,164,0,0
+1486146573848,593,Autenticação - Seleção de Perfil,200,OK,For Each User 1-33,text,true,,8731,1774,100,100,179,0,0
+1486146573871,577,Autenticação - Seleção de Perfil,200,OK,For Each User 1-19,text,true,,8731,1774,100,100,156,0,0
+1486146573883,566,Autenticação - Seleção de Perfil,200,OK,For Each User 1-42,text,true,,8731,1774,100,100,151,0,0
+1486146573888,599,Autenticação - Seleção de Perfil,200,OK,For Each User 1-29,text,true,,8731,1774,100,100,155,0,0
+1486146495128,79367,Autenticação - Post Home PGD,200,OK,For Each User 1-13,text,true,,9697,7967,100,100,9087,0,11
+1486146573899,598,Autenticação - Seleção de Perfil,200,OK,For Each User 1-81,text,true,,8731,1774,100,100,148,0,0
+1486146495316,79188,Autenticação - Post Home PGD,200,OK,For Each User 1-97,text,true,,9697,7957,100,100,7515,0,54
+1486146495145,79364,Autenticação - Post Home PGD,200,OK,For Each User 1-53,text,true,,9697,7971,100,100,9070,0,9
+1486146495225,79289,Autenticação - Post Home PGD,200,OK,For Each User 1-18,text,true,,9697,7965,100,100,8993,0,5
+1486146495236,79283,Autenticação - Post Home PGD,200,OK,For Each User 1-58,text,true,,9697,7961,100,100,8984,0,22
+1486146495155,79368,Autenticação - Post Home PGD,200,OK,For Each User 1-38,text,true,,9697,7973,100,100,9078,0,6
+1486146574142,383,Autenticação - Seleção de Perfil,200,OK,For Each User 1-50,text,true,,8731,1774,100,100,133,0,0
+1486146574384,230,Autenticação - Seleção de Perfil,200,OK,For Each User 1-15,text,true,,8731,1774,100,100,187,0,0
+1486146574389,232,Autenticação - Seleção de Perfil,200,OK,For Each User 1-2,text,true,,8731,1774,100,100,185,0,0
+1486146574393,233,Autenticação - Seleção de Perfil,200,OK,For Each User 1-82,text,true,,8731,1774,100,100,184,0,0
+1486146574398,232,Autenticação - Seleção de Perfil,200,OK,For Each User 1-4,text,true,,8731,1774,100,100,183,0,0
+1486146574402,233,Autenticação - Seleção de Perfil,200,OK,For Each User 1-34,text,true,,8731,1774,100,100,182,0,0
+1486146574407,231,Autenticação - Seleção de Perfil,200,OK,For Each User 1-76,text,true,,8731,1774,100,100,187,0,0
+1486146574411,232,Autenticação - Seleção de Perfil,200,OK,For Each User 1-56,text,true,,8731,1774,100,100,187,0,0
+1486146574416,234,Autenticação - Seleção de Perfil,200,OK,For Each User 1-57,text,true,,8731,1774,100,100,188,0,0
+1486146574297,378,Autenticação - Seleção de Perfil,200,OK,For Each User 1-17,text,true,,8731,1774,100,100,230,0,0
+1486146574305,374,Autenticação - Seleção de Perfil,200,OK,For Each User 1-14,text,true,,8731,1774,100,100,226,0,0
+1486146574319,364,Autenticação - Seleção de Perfil,200,OK,For Each User 1-11,text,true,,8731,1774,100,100,218,0,0
+1486146574326,361,Autenticação - Seleção de Perfil,200,OK,For Each User 1-67,text,true,,8731,1774,100,100,216,0,0
+1486146574333,359,Autenticação - Seleção de Perfil,200,OK,For Each User 1-80,text,true,,8731,1774,100,100,212,0,0
+1486146574339,358,Autenticação - Seleção de Perfil,200,OK,For Each User 1-48,text,true,,8731,1774,100,100,209,0,0
+1486146574345,356,Autenticação - Seleção de Perfil,200,OK,For Each User 1-37,text,true,,8731,1774,100,100,207,0,0
+1486146574354,353,Autenticação - Seleção de Perfil,200,OK,For Each User 1-66,text,true,,8731,1774,100,100,200,0,0
+1486146574363,373,Autenticação - Seleção de Perfil,200,OK,For Each User 1-10,text,true,,8731,1774,100,100,195,0,0
+1486146574368,375,Autenticação - Seleção de Perfil,200,OK,For Each User 1-68,text,true,,8731,1774,100,100,192,0,0
+1486146574374,375,Autenticação - Seleção de Perfil,200,OK,For Each User 1-49,text,true,,8731,1774,100,100,190,0,0
+1486146574380,375,Autenticação - Seleção de Perfil,200,OK,For Each User 1-63,text,true,,8731,1774,100,100,188,0,0
+1486146574421,347,Autenticação - Seleção de Perfil,200,OK,For Each User 1-95,text,true,,8731,1774,100,100,186,0,0
+1486146574494,283,Autenticação - Seleção de Perfil,200,OK,For Each User 1-13,text,true,,8731,1774,100,100,159,0,0
+1486146574502,281,Autenticação - Seleção de Perfil,200,OK,For Each User 1-97,text,true,,8731,1774,100,100,156,0,0
+1486146574517,273,Autenticação - Seleção de Perfil,200,OK,For Each User 1-58,text,true,,8731,1774,100,100,147,0,0
+1486146574522,275,Autenticação - Seleção de Perfil,200,OK,For Each User 1-38,text,true,,8731,1774,100,100,146,0,0
+1486146574507,295,Autenticação - Seleção de Perfil,200,OK,For Each User 1-53,text,true,,8731,1774,100,100,252,0,0
+1486146574512,295,Autenticação - Seleção de Perfil,200,OK,For Each User 1-18,text,true,,8731,1774,100,100,149,0,0
+1486146576746,2969,Open Grupo Atividade Page,200,OK,For Each User 1-85,text,true,,30857,926,100,100,2968,0,9
+1486146577074,3016,Open Grupo Atividade Page,200,OK,For Each User 1-79,text,true,,30857,926,100,100,3014,0,9
+1486146576150,5754,Open Grupo Atividade Page,200,OK,For Each User 1-43,text,true,,30857,926,100,100,5752,0,12
+1486146577700,5052,Open Grupo Atividade Page,200,OK,For Each User 1-63,text,true,,30857,926,100,100,5051,0,7
+1486146577414,6669,Open Grupo Atividade Page,200,OK,For Each User 1-36,text,true,,30857,926,100,100,6666,0,9
+1486146577124,8234,Open Grupo Atividade Page,200,OK,For Each User 1-45,text,true,,30857,926,100,100,8232,0,8
+1486146577083,9738,Open Grupo Atividade Page,200,OK,For Each User 1-46,text,true,,30857,926,100,100,9736,0,14
+1486146577321,9674,Open Grupo Atividade Page,200,OK,For Each User 1-26,text,true,,30857,926,100,100,9673,0,8
+1486146578026,11256,Open Grupo Atividade Page,200,OK,For Each User 1-55,text,true,,30857,926,100,100,11255,0,29
+1486146577352,12288,Open Grupo Atividade Page,200,OK,For Each User 1-59,text,true,,30857,926,100,100,12287,0,11
+1486146577365,12989,Open Grupo Atividade Page,200,OK,For Each User 1-60,text,true,,30857,926,100,100,12987,0,22
+1486146577858,12869,Open Grupo Atividade Page,200,OK,For Each User 1-93,text,true,,30857,926,100,100,12867,0,13
+1486146577740,13367,Open Grupo Atividade Page,200,OK,For Each User 1-20,text,true,,30857,926,100,100,13364,0,8
+1486146577416,13824,Open Grupo Atividade Page,200,OK,For Each User 1-90,text,true,,30857,926,100,100,13823,0,47
+1486146577642,13768,Open Grupo Atividade Page,200,OK,For Each User 1-9,text,true,,30857,926,100,100,13767,0,9
+1486146577903,14126,Open Grupo Atividade Page,200,OK,For Each User 1-44,text,true,,30857,926,100,100,14124,0,21
+1486146577909,15140,Open Grupo Atividade Page,200,OK,For Each User 1-7,text,true,,30857,926,100,100,15139,0,21
+1486146577857,15244,Open Grupo Atividade Page,200,OK,For Each User 1-71,text,true,,30857,926,100,100,15243,0,14
+1486146577917,15445,Open Grupo Atividade Page,200,OK,For Each User 1-76,text,true,,30857,926,100,100,15444,0,19
+1486146578040,15436,Open Grupo Atividade Page,200,OK,For Each User 1-21,text,true,,30857,926,100,100,15435,0,11
+1486146578061,17260,Open Grupo Atividade Page,200,OK,For Each User 1-16,text,true,,30857,926,100,100,17258,0,19
+1486146578029,17779,Open Grupo Atividade Page,200,OK,For Each User 1-47,text,true,,30857,926,100,100,17778,0,31
+1486146578141,17796,Open Grupo Atividade Page,200,OK,For Each User 1-24,text,true,,30857,926,100,100,17794,0,10
+1486146578135,17979,Open Grupo Atividade Page,200,OK,For Each User 1-61,text,true,,30857,926,100,100,17977,0,6
+1486146579394,17095,Open Grupo Atividade Page,200,OK,For Each User 1-33,text,true,,30857,926,100,100,17093,0,10
+1486146578119,18661,Open Grupo Atividade Page,200,OK,For Each User 1-5,text,true,,30857,926,100,100,18660,0,6
+1486146578570,18342,Open Grupo Atividade Page,200,OK,For Each User 1-50,text,true,,30857,926,100,100,18341,0,8
+1486146578156,18811,Open Grupo Atividade Page,200,OK,For Each User 1-51,text,true,,30857,926,100,100,18810,0,12
+1486146577934,19200,Open Grupo Atividade Page,200,OK,For Each User 1-73,text,true,,30857,926,100,100,19199,0,20
+1486146578294,18939,Open Grupo Atividade Page,200,OK,For Each User 1-82,text,true,,30857,926,100,100,18937,0,5
+1486146578079,19316,Open Grupo Atividade Page,200,OK,For Each User 1-28,text,true,,30857,926,100,100,19314,0,16
+1486146577994,19505,Open Grupo Atividade Page,200,OK,For Each User 1-66,text,true,,30857,926,100,100,19503,0,8
+1486146578003,19566,Open Grupo Atividade Page,200,OK,For Each User 1-25,text,true,,30857,926,100,100,19565,0,43
+1486146578771,18822,Open Grupo Atividade Page,200,OK,For Each User 1-94,text,true,,30857,926,100,100,18821,0,9
+1486146578023,19779,Open Grupo Atividade Page,200,OK,For Each User 1-87,text,true,,30857,926,100,100,19777,0,25
+1486146578121,19825,Open Grupo Atividade Page,200,OK,For Each User 1-98,text,true,,30857,926,100,100,19823,0,9
+1486146578420,19838,Open Grupo Atividade Page,200,OK,For Each User 1-92,text,true,,30857,926,100,100,19836,0,11
+1486146578235,21243,Open Grupo Atividade Page,200,OK,For Each User 1-40,text,true,,30857,926,100,100,21242,0,5
+1486146578139,21997,Open Grupo Atividade Page,200,OK,For Each User 1-70,text,true,,30857,926,100,100,21996,0,17
+1486146578456,21701,Open Grupo Atividade Page,200,OK,For Each User 1-22,text,true,,30857,926,100,100,21700,0,7
+1486146578406,21794,Open Grupo Atividade Page,200,OK,For Each User 1-39,text,true,,30857,926,100,100,21792,0,9
+1486146578175,22559,Open Grupo Atividade Page,200,OK,For Each User 1-52,text,true,,30857,926,100,100,22558,0,6
+1486146578619,22585,Open Grupo Atividade Page,200,OK,For Each User 1-32,text,true,,30857,926,100,100,22584,0,10
+1486146578806,22801,Open Grupo Atividade Page,200,OK,For Each User 1-35,text,true,,30857,926,100,100,22799,0,8
+1486146578461,24055,Open Grupo Atividade Page,200,OK,For Each User 1-72,text,true,,30857,926,100,100,24048,0,129
+1486146578641,24046,Open Grupo Atividade Page,200,OK,For Each User 1-91,text,true,,30857,926,100,100,24045,0,9
+1486146578739,25162,Open Grupo Atividade Page,200,OK,For Each User 1-89,text,true,,30857,926,100,100,25160,0,9
+1486146578423,26369,Open Grupo Atividade Page,200,OK,For Each User 1-42,text,true,,30857,926,100,100,26367,0,13
+1486146578518,26623,Open Grupo Atividade Page,200,OK,For Each User 1-64,text,true,,30857,926,100,100,26621,0,71
+1486146578839,26360,Open Grupo Atividade Page,200,OK,For Each User 1-83,text,true,,30857,926,100,100,26358,0,8
+1486146579176,26842,Open Grupo Atividade Page,200,OK,For Each User 1-4,text,true,,30857,926,100,100,26840,0,11
+1486146579197,26932,Open Grupo Atividade Page,200,OK,For Each User 1-67,text,true,,30857,926,100,100,26930,0,11
+1486146578893,27264,Open Grupo Atividade Page,200,OK,For Each User 1-48,text,true,,30857,926,100,100,27262,0,13
+1486146578808,27503,Open Grupo Atividade Page,200,OK,For Each User 1-81,text,true,,30857,926,100,100,27503,0,14
+1486146578824,27539,Open Grupo Atividade Page,200,OK,For Each User 1-65,text,true,,30857,926,100,100,27538,0,9
+1486146578949,27573,Open Grupo Atividade Page,200,OK,For Each User 1-11,text,true,,30857,926,100,100,27572,0,12
+1486146578484,28894,Open Grupo Atividade Page,200,OK,For Each User 1-27,text,true,,30857,926,100,100,28892,0,105
+1486146578924,29819,Open Grupo Atividade Page,200,OK,For Each User 1-68,text,true,,30857,926,100,100,29817,0,11
+1486146579002,29899,Open Grupo Atividade Page,200,OK,For Each User 1-6,text,true,,30857,926,100,100,29898,0,46
+1486146578906,30083,Open Grupo Atividade Page,200,OK,For Each User 1-34,text,true,,30857,926,100,100,30082,0,12
+1486146579046,29955,Open Grupo Atividade Page,200,OK,For Each User 1-74,text,true,,30857,926,100,100,29954,0,15
+1486146578959,30234,Open Grupo Atividade Page,200,OK,For Each User 1-8,text,true,,30857,926,100,100,30233,0,19
+1486146579003,30244,Open Grupo Atividade Page,200,OK,For Each User 1-62,text,true,,30857,926,100,100,30242,0,49
+1486146580791,28854,Open Grupo Atividade Page,200,OK,For Each User 1-97,text,true,,30857,926,100,100,28852,0,5
+1486146579476,30202,Open Grupo Atividade Page,200,OK,For Each User 1-96,text,true,,30857,926,100,100,30200,0,12
+1486146579258,30721,Open Grupo Atividade Page,200,OK,For Each User 1-31,text,true,,30857,926,100,100,30719,0,12
+1486146579039,31201,Open Grupo Atividade Page,200,OK,For Each User 1-99,text,true,,30857,926,100,100,31198,0,13
+1486146578996,31489,Open Grupo Atividade Page,200,OK,For Each User 1-80,text,true,,30857,926,100,100,31487,0,13
+1486146580010,30653,Open Grupo Atividade Page,200,OK,For Each User 1-3,text,true,,30857,926,100,100,30650,0,9
+1486146580814,30921,Open Grupo Atividade Page,200,OK,For Each User 1-29,text,true,,30857,926,100,100,30920,0,5
+1486146579891,31865,Open Grupo Atividade Page,200,OK,For Each User 1-12,text,true,,30857,926,100,100,31864,0,8
+1486146579956,31823,Open Grupo Atividade Page,200,OK,For Each User 1-100,text,true,,30857,926,100,100,31822,0,8
+1486146579890,31979,Open Grupo Atividade Page,200,OK,For Each User 1-78,text,true,,30857,926,100,100,31977,0,28
+1486146579695,32360,Open Grupo Atividade Page,200,OK,For Each User 1-86,text,true,,30857,926,100,100,32359,0,45
+1486146580211,32758,Open Grupo Atividade Page,200,OK,For Each User 1-18,text,true,,30857,926,100,100,32757,0,9
+1486146580136,33354,Open Grupo Atividade Page,200,OK,For Each User 1-57,text,true,,30857,926,100,100,33352,0,9
+1486146579828,33992,Open Grupo Atividade Page,200,OK,For Each User 1-1,text,true,,30857,926,100,100,33991,0,7
+1486146579020,35572,Open Grupo Atividade Page,200,OK,For Each User 1-38,text,true,,30857,926,100,100,35571,0,34
+1486146579056,36350,Open Grupo Atividade Page,200,OK,For Each User 1-56,text,true,,30857,926,100,100,36349,0,17
+1486146581132,34617,Open Grupo Atividade Page,200,OK,For Each User 1-54,text,true,,30857,926,100,100,34616,0,12
+1486146580159,35921,Open Grupo Atividade Page,200,OK,For Each User 1-17,text,true,,30857,926,100,100,35920,0,18
+1486146580609,35774,Open Grupo Atividade Page,200,OK,For Each User 1-53,text,true,,30857,926,100,100,35771,0,4
+1486146580219,36253,Open Grupo Atividade Page,200,OK,For Each User 1-58,text,true,,30857,926,100,100,36250,0,11
+1486146579430,37103,Open Grupo Atividade Page,200,OK,For Each User 1-75,text,true,,30857,926,100,100,37102,0,12
+1486146579112,38450,Open Grupo Atividade Page,200,OK,For Each User 1-2,text,true,,30857,926,100,100,38448,0,11
+1486146580152,37910,Open Grupo Atividade Page,200,OK,For Each User 1-88,text,true,,30857,926,100,100,37908,0,15
+1486146579456,38928,Open Grupo Atividade Page,200,OK,For Each User 1-19,text,true,,30857,926,100,100,38926,0,10
+1486146580569,38261,Open Grupo Atividade Page,200,OK,For Each User 1-84,text,true,,30857,926,100,100,38259,0,12
+1486146580585,38385,Open Grupo Atividade Page,200,OK,For Each User 1-10,text,true,,30857,926,100,100,38383,0,13
+1486146581950,37172,Open Grupo Atividade Page,200,OK,For Each User 1-14,text,true,,30857,926,100,100,37171,0,57
+1486146581452,38510,Open Grupo Atividade Page,200,OK,For Each User 1-37,text,true,,30857,926,100,100,38509,0,6
+1486146579257,83282,Open Grupo Atividade Page,500,Internal Server Error,For Each User 1-30,text,false,,8455,926,100,100,83282,0,19
+1486146579350,83196,Open Grupo Atividade Page,500,Internal Server Error,For Each User 1-23,text,false,,8455,926,100,100,83196,0,9
+1486146579634,82916,Open Grupo Atividade Page,500,Internal Server Error,For Each User 1-13,text,false,,8455,926,100,100,82916,0,96
+1486146579624,82928,Open Grupo Atividade Page,500,Internal Server Error,For Each User 1-95,text,false,,8455,926,100,100,82928,0,101
+1486146579593,82961,Open Grupo Atividade Page,500,Internal Server Error,For Each User 1-77,text,false,,8455,926,100,100,82961,0,10
+1486146579675,82885,Open Grupo Atividade Page,500,Internal Server Error,For Each User 1-69,text,false,,8455,926,100,100,82885,0,59
+1486146579734,82827,Open Grupo Atividade Page,500,Internal Server Error,For Each User 1-15,text,false,,8455,926,100,100,82827,0,15
+1486146578244,84320,Open Grupo Atividade Page,500,Internal Server Error,For Each User 1-41,text,false,,8455,926,100,100,84319,0,13
+1486146579208,83541,Open Grupo Atividade Page,500,Internal Server Error,For Each User 1-49,text,false,,8455,926,100,100,83541,0,12
+1486146593799,69185,Post Grupo Atividade,200,OK,For Each User 1-26,text,true,,103995,2334,100,100,14031,0,9
+1486146596475,66515,Post Grupo Atividade,200,OK,For Each User 1-93,text,true,,119035,2333,100,100,11362,0,105
+1486146604098,58999,Post Grupo Atividade,200,OK,For Each User 1-92,text,true,,119035,2333,100,100,3786,0,53
+1486146591661,71646,Post Grupo Atividade,200,OK,For Each User 1-36,text,true,,119035,2334,100,100,16189,0,9
+1486146594781,68529,Post Grupo Atividade,200,OK,For Each User 1-90,text,true,,119035,2333,100,100,13090,0,9
+1486146598317,65011,Post Grupo Atividade,200,OK,For Each User 1-76,text,true,,149115,2333,100,100,9608,0,7
+1486146595772,67641,Post Grupo Atividade,200,OK,For Each User 1-60,text,true,,130315,2334,100,100,12136,0,9
+1486146604032,59431,Post Grupo Atividade,200,OK,For Each User 1-94,text,true,,220555,2334,100,100,4039,0,8
+1486146596995,66557,Post Grupo Atividade,200,OK,For Each User 1-9,text,true,,220555,2334,100,100,11081,0,8
+1486146602103,61555,Post Grupo Atividade,200,OK,For Each User 1-87,text,true,,220555,2334,100,100,6046,0,8
+1486146602327,61332,Post Grupo Atividade,200,OK,For Each User 1-98,text,true,,220555,2334,100,100,6023,0,7
+1486146605815,57901,Post Grupo Atividade,200,OK,For Each User 1-39,text,true,,220555,2334,100,100,3875,0,44
+1486146591451,72355,Post Grupo Atividade,200,OK,For Each User 1-46,text,true,,220555,2334,100,100,17278,0,4
+1486146606586,57238,Post Grupo Atividade,200,OK,For Each User 1-91,text,true,,220555,2334,100,100,1580,0,6
+1486146600163,63675,Post Grupo Atividade,200,OK,For Each User 1-16,text,true,,220555,2334,100,100,8460,0,12
+1486146601106,62734,Post Grupo Atividade,200,OK,For Each User 1-51,text,true,,220555,2334,100,100,7458,0,12
+1486146598607,65240,Post Grupo Atividade,200,OK,For Each User 1-28,text,true,,220555,2334,100,100,10132,0,9
+1486146602373,61526,Post Grupo Atividade,200,OK,For Each User 1-82,text,true,,220555,2333,100,100,5744,0,8
+1486146583169,80734,Post Grupo Atividade,200,OK,For Each User 1-85,text,true,,220555,2334,100,100,25462,0,21
+1486146602149,61772,Post Grupo Atividade,200,OK,For Each User 1-24,text,true,,220555,2334,100,100,6234,0,115
+1486146606326,57623,Post Grupo Atividade,200,OK,For Each User 1-35,text,true,,220555,2334,100,100,3149,0,5
+1486146607812,56138,Post Grupo Atividade,200,OK,For Each User 1-89,text,true,,220555,2333,100,100,1117,0,10
+1486146590311,73714,Post Grupo Atividade,200,OK,For Each User 1-45,text,true,,220555,2334,100,100,18254,0,14
+1486146605671,58356,Post Grupo Atividade,200,OK,For Each User 1-40,text,true,,220555,2334,100,100,3259,0,42
+1486146600088,63964,Post Grupo Atividade,200,OK,For Each User 1-33,text,true,,220555,2334,100,100,8536,0,7
+1486146599874,64197,Post Grupo Atividade,200,OK,For Each User 1-21,text,true,,220555,2334,100,100,9580,0,8
+1486146605639,58457,Post Grupo Atividade,200,OK,For Each User 1-52,text,true,,220555,2334,100,100,2895,0,8
+1486146610314,53784,Post Grupo Atividade,200,OK,For Each User 1-4,text,true,,235595,2334,100,100,1350,0,10
+1486146604207,59929,Post Grupo Atividade,200,OK,For Each User 1-25,text,true,,220555,2333,100,100,3885,0,8
+1486146601906,62230,Post Grupo Atividade,200,OK,For Each User 1-66,text,true,,220555,2334,100,100,6831,0,9
+1486146601920,62294,Post Grupo Atividade,200,OK,For Each User 1-50,text,true,,220555,2334,100,100,6682,0,80
+1486146605509,58710,Post Grupo Atividade,200,OK,For Each User 1-32,text,true,,220555,2334,100,100,3096,0,26
+1486146593938,70289,Post Grupo Atividade,200,OK,For Each User 1-59,text,true,,220555,2334,100,100,15436,0,8
+1486146607209,57018,Post Grupo Atividade,200,OK,For Each User 1-72,text,true,,220555,2333,100,100,1721,0,9
+1486146610167,54077,Post Grupo Atividade,200,OK,For Each User 1-42,text,true,,235595,2334,100,100,1363,0,9
+1486146605746,58503,Post Grupo Atividade,200,OK,For Each User 1-22,text,true,,220555,2334,100,100,3183,0,43
+1486146598364,65910,Post Grupo Atividade,200,OK,For Each User 1-44,text,true,,220555,2334,100,100,11084,0,8
+1486146599155,65139,Post Grupo Atividade,200,OK,For Each User 1-7,text,true,,220555,2334,100,100,9769,0,9
+1486146600173,64140,Post Grupo Atividade,200,OK,For Each User 1-47,text,true,,220555,2334,100,100,8232,0,76
+1486146599019,65299,Post Grupo Atividade,200,OK,For Each User 1-71,text,true,,220555,2334,100,100,9601,0,8
+1486146600689,63644,Post Grupo Atividade,200,OK,For Each User 1-73,text,true,,220555,2334,100,100,8761,0,10
+1486146587478,76857,Post Grupo Atividade,200,OK,For Each User 1-43,text,true,,220555,2334,100,100,21246,0,10
+1486146596265,68092,Post Grupo Atividade,200,OK,For Each User 1-20,text,true,,220555,2334,100,100,12643,0,4
+1486146594931,69448,Post Grupo Atividade,200,OK,For Each User 1-55,text,true,,220555,2333,100,100,13695,0,9
+1486146604260,60148,Post Grupo Atividade,200,OK,For Each User 1-70,text,true,,220555,2334,100,100,3804,0,81
+1486146614725,49707,Post Grupo Atividade,200,OK,For Each User 1-68,text,true,,299585,2334,100,100,4697,0,7
+1486146609440,54992,Post Grupo Atividade,200,OK,For Each User 1-64,text,true,,235595,2334,100,100,2739,0,9
+1486146612409,52124,Post Grupo Atividade,200,OK,For Each User 1-65,text,true,,261915,2333,100,100,262,0,6
+1486146617216,47386,Post Grupo Atividade,200,OK,For Each User 1-99,text,true,,333488,2334,100,100,2415,0,7
+1486146616230,48481,Post Grupo Atividade,200,OK,For Each User 1-3,text,true,,341022,2334,100,100,3538,0,7
+1486146611692,53046,Post Grupo Atividade,200,OK,For Each User 1-48,text,true,,261915,2334,100,100,975,0,5
+1486146607474,57284,Post Grupo Atividade,200,OK,For Each User 1-83,text,true,,220555,2334,100,100,943,0,8
+1486146614020,50760,Post Grupo Atividade,200,OK,For Each User 1-96,text,true,,273216,2334,100,100,995,0,8
+1486146610790,53994,Post Grupo Atividade,200,OK,For Each User 1-81,text,true,,243115,2334,100,100,935,0,8
+1486146601311,63515,Post Grupo Atividade,200,OK,For Each User 1-61,text,true,,220555,2334,100,100,8140,0,6
+1486146585880,79002,Post Grupo Atividade,200,OK,For Each User 1-79,text,true,,220555,2334,100,100,22930,0,10
+1486146617422,47484,Post Grupo Atividade,200,OK,For Each User 1-100,text,true,,333488,2333,100,100,2196,0,6
+1486146614317,50604,Post Grupo Atividade,200,OK,For Each User 1-74,text,true,,333488,2334,100,100,5393,0,8
+1486146619487,45444,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,348556,2334,100,100,796,0,32
+1486146601180,63939,Post Grupo Atividade,200,OK,For Each User 1-5,text,true,,220555,2334,100,100,8272,0,6
+1486146611509,53612,Post Grupo Atividade,200,OK,For Each User 1-67,text,true,,261915,2333,100,100,1162,0,6
+1486146615707,49422,Post Grupo Atividade,200,OK,For Each User 1-62,text,true,,333488,2334,100,100,3975,0,37
+1486146612277,52864,Post Grupo Atividade,200,OK,For Each User 1-27,text,true,,250635,2334,100,100,386,0,10
+1486146616797,48374,Post Grupo Atividade,200,OK,For Each User 1-29,text,true,,337255,2334,100,100,2919,0,10
+1486146616350,48845,Post Grupo Atividade,200,OK,For Each User 1-78,text,true,,341022,2333,100,100,3430,0,5
+1486146618026,47177,Post Grupo Atividade,200,OK,For Each User 1-57,text,true,,341022,2334,100,100,1599,0,8
+1486146617123,48084,Post Grupo Atividade,200,OK,For Each User 1-12,text,true,,333488,2334,100,100,2525,0,9
+1486146623352,41913,Post Grupo Atividade,200,OK,For Each User 1-14,text,true,,382459,2334,100,100,8906,0,8
+1486146612574,52697,Post Grupo Atividade,200,OK,For Each User 1-11,text,true,,265682,2334,100,100,2425,0,7
+1486146614517,50761,Post Grupo Atividade,200,OK,For Each User 1-80,text,true,,295818,2334,100,100,4870,0,9
+1486146619732,45545,Post Grupo Atividade,200,OK,For Each User 1-17,text,true,,348556,2334,100,100,748,0,27
+1486146620742,44538,Post Grupo Atividade,200,OK,For Each User 1-53,text,true,,382459,2334,100,100,7580,0,32
+1486146617953,47255,Post Grupo Atividade,200,OK,For Each User 1-18,text,true,,341022,2334,100,100,1830,0,8
+1486146614952,50349,Post Grupo Atividade,200,OK,For Each User 1-34,text,true,,333488,2334,100,100,4682,0,8
+1486146623892,41432,Post Grupo Atividade,200,OK,For Each User 1-37,text,true,,382459,2334,100,100,8536,0,12
+1486146623855,41472,Post Grupo Atividade,200,OK,For Each User 1-58,text,true,,382459,2334,100,100,8456,0,10
+1486146624071,41262,Post Grupo Atividade,200,OK,For Each User 1-84,text,true,,382459,2334,100,100,8398,0,8
+1486146613281,52065,Post Grupo Atividade,200,OK,For Each User 1-6,text,true,,273216,2334,100,100,1729,0,8
+1486146586042,79342,Post Grupo Atividade,200,OK,For Each User 1-63,text,true,,220555,2334,100,100,22550,0,9
+1486146615187,50289,Post Grupo Atividade,200,OK,For Each User 1-86,text,true,,341022,2334,100,100,4344,0,8
+1486146615682,49803,Post Grupo Atividade,200,OK,For Each User 1-31,text,true,,337255,2334,100,100,4058,0,13
+1486146622803,42690,Post Grupo Atividade,200,OK,For Each User 1-10,text,true,,382459,2334,100,100,9406,0,360
+1486146619392,46353,Post Grupo Atividade,200,OK,For Each User 1-56,text,true,,341022,2334,100,100,536,0,64
+1486146619318,46437,Post Grupo Atividade,200,OK,For Each User 1-38,text,true,,341022,2334,100,100,461,0,17
+1486146622058,43725,Post Grupo Atividade,200,OK,For Each User 1-19,text,true,,382459,2334,100,100,9827,0,19
+1486146622755,43036,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,382459,2334,100,100,9376,0,408
+1486146615521,50275,Post Grupo Atividade,200,OK,For Each User 1-8,text,true,,341022,2334,100,100,4455,0,7
+1486146623059,42750,Post Grupo Atividade,200,OK,For Each User 1-75,text,true,,382459,2334,100,100,8951,0,17
+1486146622577,43236,Post Grupo Atividade,200,OK,For Each User 1-88,text,true,,382459,2334,100,100,9382,0,8
+1486146620466,45344,Post Grupo Atividade,200,OK,For Each User 1-54,text,true,,382459,2334,100,100,7820,0,29
+1486146665730,90,Post Grupo Atividade,500,Internal Server Error,For Each User 1-15,text,false,Test failed: text expected to contain /sucesso!/,8455,1084,100,100,90,0,32
+1486146614407,51608,Post Grupo Atividade,200,OK,For Each User 1-97,text,true,,295818,2334,100,100,4949,0,8
+1486146667057,26,Post Grupo Atividade,500,Internal Server Error,For Each User 1-77,text,false,Test failed: text expected to contain /sucesso!/,8455,1084,100,100,26,0,10
+1486146667203,37,Post Grupo Atividade,500,Internal Server Error,For Each User 1-13,text,false,Test failed: text expected to contain /sucesso!/,8455,1084,100,100,37,0,14
+1486146666215,1405,Open Grupo Atividade Page,200,OK,For Each User 1-76,text,true,,30674,1071,100,100,1404,0,7
+1486146667487,303,Post Grupo Atividade,500,Internal Server Error,For Each User 1-41,text,false,Test failed: text expected to contain /sucesso!/,8455,1084,100,100,303,0,15
+1486146667620,223,Post Grupo Atividade,500,Internal Server Error,For Each User 1-95,text,false,Test failed: text expected to contain /sucesso!/,8455,1084,100,100,223,0,10
+1486146667994,562,Post Grupo Atividade,500,Internal Server Error,For Each User 1-23,text,false,Test failed: text expected to contain /sucesso!/,8455,1084,100,100,562,0,12
+1486146667700,890,Post Grupo Atividade,500,Internal Server Error,For Each User 1-49,text,false,Test failed: text expected to contain /sucesso!/,8455,1084,100,100,890,0,9
+1486146668223,1431,Post Grupo Atividade,500,Internal Server Error,For Each User 1-69,text,false,Test failed: text expected to contain /sucesso!/,8455,1084,100,100,1431,0,17
+1486146668268,1520,Post Grupo Atividade,500,Internal Server Error,For Each User 1-30,text,false,Test failed: text expected to contain /sucesso!/,8455,1084,100,100,1520,0,24
+1486146667398,19367,Open Grupo Atividade Page,200,OK,For Each User 1-94,text,true,,30674,1071,100,100,19365,0,14
+1486146667655,19225,Open Grupo Atividade Page,200,OK,For Each User 1-33,text,true,,30674,1071,100,100,19224,0,7
+1486146667927,22800,Open Grupo Atividade Page,200,OK,For Each User 1-34,text,true,,30674,1071,100,100,22799,0,19
+1486146669563,21639,Open Grupo Atividade Page,200,OK,For Each User 1-67,text,true,,30674,1071,100,100,21638,0,114
+1486146667339,23966,Open Grupo Atividade Page,200,OK,For Each User 1-98,text,true,,30674,1071,100,100,23965,0,19
+1486146667377,24497,Open Grupo Atividade Page,200,OK,For Each User 1-21,text,true,,30674,1071,100,100,24495,0,20
+1486146667946,24786,Open Grupo Atividade Page,200,OK,For Each User 1-26,text,true,,30674,1071,100,100,24785,0,19
+1486146669758,23240,Open Grupo Atividade Page,200,OK,For Each User 1-53,text,true,,30674,1071,100,100,23238,0,9
+1486146668983,24148,Open Grupo Atividade Page,200,OK,For Each User 1-40,text,true,,30674,1071,100,100,24147,0,20
+1486146668470,24715,Open Grupo Atividade Page,200,OK,For Each User 1-91,text,true,,30674,1071,100,100,24713,0,48
+1486146669502,24229,Open Grupo Atividade Page,200,OK,For Each User 1-39,text,true,,30674,1071,100,100,24228,0,9
+1486146668826,24993,Open Grupo Atividade Page,200,OK,For Each User 1-36,text,true,,30674,1071,100,100,24992,0,17
+1486146669480,24424,Open Grupo Atividade Page,200,OK,For Each User 1-2,text,true,,30674,1071,100,100,24423,0,12
+1486146669232,24931,Open Grupo Atividade Page,200,OK,For Each User 1-60,text,true,,30674,1071,100,100,24929,0,14
+1486146670085,24162,Open Grupo Atividade Page,200,OK,For Each User 1-8,text,true,,30674,1071,100,100,24161,0,23
+1486146669236,25061,Open Grupo Atividade Page,200,OK,For Each User 1-50,text,true,,30674,1071,100,100,25059,0,16
+1486146669335,26149,Open Grupo Atividade Page,200,OK,For Each User 1-81,text,true,,30674,1071,100,100,26147,0,9
+1486146669176,26740,Open Grupo Atividade Page,200,OK,For Each User 1-24,text,true,,30674,1071,100,100,26738,0,18
+1486146668431,27617,Open Grupo Atividade Page,200,OK,For Each User 1-84,text,true,,30674,1071,100,100,27617,0,32
+1486146670740,25393,Open Grupo Atividade Page,200,OK,For Each User 1-38,text,true,,30674,1071,100,100,25392,0,24
+1486146669233,26960,Open Grupo Atividade Page,200,OK,For Each User 1-48,text,true,,30674,1071,100,100,26959,0,17
+1486146669551,26686,Open Grupo Atividade Page,200,OK,For Each User 1-56,text,true,,30674,1071,100,100,26685,0,105
+1486146669708,26733,Open Grupo Atividade Page,200,OK,For Each User 1-80,text,true,,30674,1071,100,100,26732,0,10
+1486146669864,26716,Open Grupo Atividade Page,200,OK,For Each User 1-9,text,true,,30674,1071,100,100,26715,0,21
+1486146667925,29007,Open Grupo Atividade Page,200,OK,For Each User 1-72,text,true,,30674,1071,100,100,29006,0,18
+1486146667605,29427,Open Grupo Atividade Page,200,OK,For Each User 1-25,text,true,,30674,1071,100,100,29426,0,18
+1486146669934,27163,Open Grupo Atividade Page,200,OK,For Each User 1-57,text,true,,30674,1071,100,100,27162,0,11
+1486146670135,27156,Open Grupo Atividade Page,200,OK,For Each User 1-20,text,true,,30674,1071,100,100,27154,0,13
+1486146668725,28614,Open Grupo Atividade Page,200,OK,For Each User 1-70,text,true,,30674,1071,100,100,28613,0,13
+1486146669525,27859,Open Grupo Atividade Page,200,OK,For Each User 1-51,text,true,,30674,1071,100,100,27858,0,10
+1486146669840,28060,Open Grupo Atividade Page,200,OK,For Each User 1-100,text,true,,30674,1071,100,100,28056,0,17
+1486146668758,29314,Open Grupo Atividade Page,200,OK,For Each User 1-43,text,true,,30674,1071,100,100,29311,0,10
+1486146669508,28733,Open Grupo Atividade Page,200,OK,For Each User 1-85,text,true,,30674,1071,100,100,28731,0,11
+1486146668168,30126,Open Grupo Atividade Page,200,OK,For Each User 1-44,text,true,,30674,1071,100,100,30123,0,21
+1486146668926,29504,Open Grupo Atividade Page,200,OK,For Each User 1-87,text,true,,30674,1071,100,100,29503,0,18
+1486146669302,29342,Open Grupo Atividade Page,200,OK,For Each User 1-16,text,true,,30674,1071,100,100,29341,0,12
+1486146669242,29500,Open Grupo Atividade Page,200,OK,For Each User 1-64,text,true,,30674,1071,100,100,29498,0,14
+1486146669654,29227,Open Grupo Atividade Page,200,OK,For Each User 1-59,text,true,,30674,1071,100,100,29226,0,21
+1486146669932,29043,Open Grupo Atividade Page,200,OK,For Each User 1-3,text,true,,30674,1071,100,100,29042,0,13
+1486146669525,29719,Open Grupo Atividade Page,200,OK,For Each User 1-73,text,true,,30674,1071,100,100,29718,0,12
+1486146670087,29305,Open Grupo Atividade Page,200,OK,For Each User 1-74,text,true,,30674,1071,100,100,29304,0,25
+1486146670484,29539,Open Grupo Atividade Page,200,OK,For Each User 1-11,text,true,,30674,1071,100,100,29538,0,42
+1486146668241,32349,Open Grupo Atividade Page,200,OK,For Each User 1-65,text,true,,30674,1071,100,100,32347,0,24
+1486146670405,30365,Open Grupo Atividade Page,200,OK,For Each User 1-99,text,true,,30674,1071,100,100,30364,0,17
+1486146671345,29791,Open Grupo Atividade Page,200,OK,For Each User 1-95,text,true,,30857,926,100,100,29790,0,21
+1486146670725,30520,Open Grupo Atividade Page,200,OK,For Each User 1-83,text,true,,30674,1071,100,100,30518,0,29
+1486146670660,30695,Open Grupo Atividade Page,200,OK,For Each User 1-17,text,true,,30674,1071,100,100,30694,0,22
+1486146669654,31764,Open Grupo Atividade Page,200,OK,For Each User 1-42,text,true,,30674,1071,100,100,31762,0,20
+1486146669861,31582,Open Grupo Atividade Page,200,OK,For Each User 1-7,text,true,,30674,1071,100,100,31581,0,20
+1486146667911,33829,Open Grupo Atividade Page,200,OK,For Each User 1-92,text,true,,30674,1071,100,100,33828,0,13
+1486146669698,32143,Open Grupo Atividade Page,200,OK,For Each User 1-78,text,true,,30674,1071,100,100,32143,0,8
+1486146668274,33865,Open Grupo Atividade Page,200,OK,For Each User 1-46,text,true,,30674,1071,100,100,33864,0,24
+1486146668368,33950,Open Grupo Atividade Page,200,OK,For Each User 1-82,text,true,,30674,1071,100,100,33949,0,17
+1486146670061,32584,Open Grupo Atividade Page,200,OK,For Each User 1-12,text,true,,30674,1071,100,100,32583,0,13
+1486146668143,34722,Open Grupo Atividade Page,200,OK,For Each User 1-89,text,true,,30674,1071,100,100,34720,0,23
+1486146669545,33336,Open Grupo Atividade Page,200,OK,For Each User 1-5,text,true,,30674,1071,100,100,33335,0,10
+1486146670712,32580,Open Grupo Atividade Page,200,OK,For Each User 1-54,text,true,,30674,1071,100,100,32578,0,17
+1486146668829,34736,Open Grupo Atividade Page,200,OK,For Each User 1-4,text,true,,30674,1071,100,100,34735,0,23
+1486146667706,36145,Open Grupo Atividade Page,200,OK,For Each User 1-55,text,true,,30674,1071,100,100,36143,0,9
+1486146669549,34322,Open Grupo Atividade Page,200,OK,For Each User 1-71,text,true,,30674,1071,100,100,34319,0,11
+1486146670732,33248,Open Grupo Atividade Page,200,OK,For Each User 1-18,text,true,,30674,1071,100,100,33246,0,24
+1486146668457,35524,Open Grupo Atividade Page,200,OK,For Each User 1-22,text,true,,30674,1071,100,100,35521,0,61
+1486146668294,35707,Open Grupo Atividade Page,200,OK,For Each User 1-62,text,true,,30674,1071,100,100,35705,0,22
+1486146670111,33953,Open Grupo Atividade Page,200,OK,For Each User 1-75,text,true,,30674,1071,100,100,33951,0,12
+1486146672914,31269,Open Grupo Atividade Page,200,OK,For Each User 1-13,text,true,,30857,926,100,100,31268,0,44
+1486146670232,34004,Open Grupo Atividade Page,200,OK,For Each User 1-27,text,true,,30674,1071,100,100,34002,0,12
+1486146668855,35599,Open Grupo Atividade Page,200,OK,For Each User 1-29,text,true,,30674,1071,100,100,35598,0,18
+1486146668035,36948,Open Grupo Atividade Page,200,OK,For Each User 1-61,text,true,,30674,1071,100,100,36946,0,14
+1486146668444,36567,Open Grupo Atividade Page,200,OK,For Each User 1-45,text,true,,30674,1071,100,100,36566,0,30
+1486146670397,34635,Open Grupo Atividade Page,200,OK,For Each User 1-14,text,true,,30674,1071,100,100,34632,0,21
+1486146670674,34647,Open Grupo Atividade Page,200,OK,For Each User 1-47,text,true,,30674,1071,100,100,34645,0,14
+1486146668583,36765,Open Grupo Atividade Page,200,OK,For Each User 1-35,text,true,,30674,1071,100,100,36764,0,23
+1486146668465,36899,Open Grupo Atividade Page,200,OK,For Each User 1-93,text,true,,30674,1071,100,100,36897,0,62
+1486146668458,36969,Open Grupo Atividade Page,200,OK,For Each User 1-90,text,true,,30674,1071,100,100,36967,0,36
+1486146670239,35356,Open Grupo Atividade Page,200,OK,For Each User 1-66,text,true,,30674,1071,100,100,35355,0,15
+1486146671374,34264,Open Grupo Atividade Page,200,OK,For Each User 1-88,text,true,,30674,1071,100,100,34263,0,30
+1486146668970,36745,Open Grupo Atividade Page,200,OK,For Each User 1-28,text,true,,30674,1071,100,100,36744,0,17
+1486146668976,36923,Open Grupo Atividade Page,200,OK,For Each User 1-96,text,true,,30674,1071,100,100,36922,0,13
+1486146670598,35421,Open Grupo Atividade Page,200,OK,For Each User 1-19,text,true,,30674,1071,100,100,35420,0,8
+1486146670192,36152,Open Grupo Atividade Page,200,OK,For Each User 1-52,text,true,,30674,1071,100,100,36150,0,7
+1486146668623,37760,Open Grupo Atividade Page,200,OK,For Each User 1-32,text,true,,30674,1071,100,100,37758,0,9
+1486146671072,35438,Open Grupo Atividade Page,200,OK,For Each User 1-1,text,true,,30674,1071,100,100,35437,0,17
+1486146671582,35163,Open Grupo Atividade Page,200,OK,For Each User 1-10,text,true,,30674,1071,100,100,35162,0,64
+1486146675118,31663,Open Grupo Atividade Page,200,OK,For Each User 1-23,text,true,,30857,926,100,100,31663,0,112
+1486146671079,35743,Open Grupo Atividade Page,200,OK,For Each User 1-63,text,true,,30674,1071,100,100,35742,0,14
+1486146671272,35649,Open Grupo Atividade Page,200,OK,For Each User 1-31,text,true,,30674,1071,100,100,35648,0,20
+1486146672351,34719,Open Grupo Atividade Page,200,OK,For Each User 1-41,text,true,,30857,926,100,100,34717,0,58
+1486146671655,35960,Open Grupo Atividade Page,200,OK,For Each User 1-79,text,true,,30674,1071,100,100,35959,0,66
+1486146671455,36239,Open Grupo Atividade Page,200,OK,For Each User 1-58,text,true,,30674,1071,100,100,36237,0,57
+1486146671702,36029,Open Grupo Atividade Page,200,OK,For Each User 1-68,text,true,,30674,1071,100,100,36027,0,52
+1486146671845,35945,Open Grupo Atividade Page,200,OK,For Each User 1-97,text,true,,30674,1071,100,100,35942,0,71
+1486146675779,32024,Open Grupo Atividade Page,200,OK,For Each User 1-69,text,true,,30857,926,100,100,32022,0,59
+1486146672158,35765,Open Grupo Atividade Page,200,OK,For Each User 1-86,text,true,,30674,1071,100,100,35764,0,72
+1486146673452,34491,Open Grupo Atividade Page,200,OK,For Each User 1-49,text,true,,30857,926,100,100,34489,0,50
+1486146671716,36366,Open Grupo Atividade Page,200,OK,For Each User 1-15,text,true,,30857,926,100,100,36365,0,67
+1486146672844,36171,Open Grupo Atividade Page,200,OK,For Each User 1-77,text,true,,30857,926,100,100,36169,0,80
+1486146670166,39019,Post Grupo Atividade,200,OK,For Each User 1-76,text,true,,386226,2334,100,100,11457,0,19
+1486146671871,37357,Open Grupo Atividade Page,200,OK,For Each User 1-6,text,true,,30674,1071,99,99,37356,0,98
+1486146675604,36793,Open Grupo Atividade Page,200,OK,For Each User 1-30,text,true,,30857,926,99,99,36792,0,121
+1486146671855,40592,Open Grupo Atividade Page,200,OK,For Each User 1-37,text,true,,30674,1071,99,99,40591,0,86
+1486146706610,19145,Post Grupo Atividade,200,OK,For Each User 1-82,text,true,,597178,2334,99,99,1565,0,11
+1486146703428,23150,Post Grupo Atividade,200,OK,For Each User 1-85,text,true,,484168,2334,98,98,3843,0,8
+1486146703073,23564,Post Grupo Atividade,200,OK,For Each User 1-59,text,true,,597178,2334,97,97,5304,0,9
+1486146701030,26005,Post Grupo Atividade,200,OK,For Each User 1-84,text,true,,593411,2334,96,96,7180,0,13
+1486146706034,21148,Post Grupo Atividade,200,OK,For Each User 1-83,text,true,,593411,2334,95,95,2129,0,32
+1486146699990,27261,Post Grupo Atividade,200,OK,For Each User 1-39,text,true,,574576,2333,94,94,8089,0,41
+1486146703638,23618,Post Grupo Atividade,200,OK,For Each User 1-43,text,true,,585877,2333,94,94,4476,0,7
+1486146692201,35974,Post Grupo Atividade,200,OK,For Each User 1-94,text,true,,408828,2334,92,92,6460,0,132
+1486146697007,31219,Post Grupo Atividade,200,OK,For Each User 1-40,text,true,,585877,2334,91,91,11102,0,31
+1486146696726,31598,Post Grupo Atividade,200,OK,For Each User 1-98,text,true,,506770,2334,90,90,10589,0,19
+1486146695578,33010,Post Grupo Atividade,200,OK,For Each User 1-33,text,true,,484168,2334,89,89,11716,0,11
+1486146703096,27786,Post Grupo Atividade,200,OK,For Each User 1-48,text,true,,480401,2334,88,88,4165,0,8
+1486146701524,29422,Post Grupo Atividade,200,OK,For Each User 1-25,text,true,,653683,2334,87,87,7709,0,8
+1486146701781,29209,Post Grupo Atividade,200,OK,For Each User 1-3,text,true,,616013,2334,86,86,7492,0,5
+1486146701898,29207,Post Grupo Atividade,200,OK,For Each User 1-56,text,true,,597178,2334,85,85,6453,0,5
+1486146701260,29890,Post Grupo Atividade,200,OK,For Each User 1-24,text,true,,593411,2334,84,84,6958,0,12
+1486146699943,31249,Post Grupo Atividade,200,OK,For Each User 1-9,text,true,,570809,2334,83,83,8090,0,21
+1486146696944,34268,Post Grupo Atividade,200,OK,For Each User 1-26,text,true,,717722,2334,82,82,10416,0,22
+1486146705752,26899,Post Grupo Atividade,200,OK,For Each User 1-95,text,true,,570809,2334,81,81,1753,0,6
+1486146706862,25798,Post Grupo Atividade,200,OK,For Each User 1-65,text,true,,570809,2334,81,81,733,0,19
+1486146705960,26703,Post Grupo Atividade,200,OK,For Each User 1-92,text,true,,570809,2334,81,81,1587,0,28
+1486146699111,34174,Post Grupo Atividade,200,OK,For Each User 1-81,text,true,,593411,2334,78,78,9039,0,17
+1486146698558,35273,Post Grupo Atividade,200,OK,For Each User 1-36,text,true,,585877,2334,77,77,9539,0,9
+1486146705989,29136,Post Grupo Atividade,200,OK,For Each User 1-17,text,true,,570809,2333,76,76,1591,0,65
+1486146701744,33794,Post Grupo Atividade,200,OK,For Each User 1-80,text,true,,616013,2334,75,75,7526,0,7
+1486146703764,31908,Post Grupo Atividade,200,OK,For Each User 1-16,text,true,,585877,2334,74,74,4349,0,8
+1486146699499,36181,Post Grupo Atividade,200,OK,For Each User 1-53,text,true,,570809,2334,73,73,8509,0,10
+1486146705789,29895,Post Grupo Atividade,200,OK,For Each User 1-46,text,true,,570809,2334,72,72,1721,0,5
+1486146703975,31729,Post Grupo Atividade,200,OK,For Each User 1-73,text,true,,717722,2334,71,71,3477,0,11
+1486146704239,31530,Post Grupo Atividade,200,OK,For Each User 1-11,text,true,,717722,2334,70,70,3201,0,15
+1486146704104,31855,Post Grupo Atividade,200,OK,For Each User 1-57,text,true,,717722,2334,69,69,3340,0,8
+1486146700220,35745,Post Grupo Atividade,200,OK,For Each User 1-70,text,true,,574576,2334,68,68,7859,0,16
+1486146705152,30876,Post Grupo Atividade,200,OK,For Each User 1-99,text,true,,593411,2334,67,67,2964,0,9
+1486146706842,29476,Post Grupo Atividade,200,OK,For Each User 1-12,text,true,,597178,2333,66,66,1316,0,16
+1486146708291,28034,Post Grupo Atividade,200,OK,For Each User 1-18,text,true,,631081,2334,66,66,1348,0,18
+1486146698739,37601,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,717722,2334,65,65,8696,0,16
+1486146699553,36796,Post Grupo Atividade,200,OK,For Each User 1-8,text,true,,570809,2334,64,64,8451,0,12
+1486146710183,26620,Post Grupo Atividade,200,OK,For Each User 1-93,text,true,,691353,2334,62,62,1397,0,19
+1486146711009,25819,Post Grupo Atividade,200,OK,For Each User 1-66,text,true,,691353,2334,61,61,516,0,21
+1486146710494,26392,Post Grupo Atividade,200,OK,For Each User 1-63,text,true,,691353,2334,60,60,1003,0,23
+1486146698851,38041,Post Grupo Atividade,200,OK,For Each User 1-60,text,true,,717722,2333,60,60,8597,0,38
+1486146709065,27831,Post Grupo Atividade,200,OK,For Each User 1-61,text,true,,631081,2334,59,59,849,0,12
+1486146699963,37331,Post Grupo Atividade,200,OK,For Each User 1-50,text,true,,570809,2334,57,57,8076,0,67
+1486146707027,30272,Post Grupo Atividade,200,OK,For Each User 1-42,text,true,,570809,2334,57,57,587,0,14
+1486146701299,36002,Post Grupo Atividade,200,OK,For Each User 1-51,text,true,,593411,2334,57,57,6915,0,25
+1486146712568,25835,Post Grupo Atividade,200,OK,For Each User 1-68,text,true,,721489,2334,54,54,812,0,15
+1486146703091,36414,Post Grupo Atividade,200,OK,For Each User 1-87,text,true,,476634,2334,53,53,4133,0,9
+1486146707619,31900,Post Grupo Atividade,200,OK,For Each User 1-89,text,true,,597178,2334,52,52,603,0,17
+1486146709818,29854,Post Grupo Atividade,200,OK,For Each User 1-45,text,true,,691353,2334,51,51,1679,0,30
+1486146711116,28567,Post Grupo Atividade,200,OK,For Each User 1-14,text,true,,691353,2334,50,50,410,0,19
+1486146709287,30719,Post Grupo Atividade,200,OK,For Each User 1-55,text,true,,661217,2334,49,49,2016,0,14
+1486146711745,28342,Post Grupo Atividade,200,OK,For Each User 1-58,text,true,,721489,2334,49,49,2917,0,9
+1486146711919,28168,Post Grupo Atividade,200,OK,For Each User 1-41,text,true,,721489,2334,49,49,2815,0,5
+1486146700268,39736,Post Grupo Atividade,200,OK,For Each User 1-38,text,true,,570809,2334,49,49,7776,0,19
+1486146714348,25783,Post Grupo Atividade,200,OK,For Each User 1-49,text,true,,732790,2334,45,45,3567,0,17
+1486146698719,41445,Post Grupo Atividade,200,OK,For Each User 1-91,text,true,,717722,2334,44,44,8668,0,30
+1486146707306,32991,Post Grupo Atividade,200,OK,For Each User 1-13,text,true,,597178,2334,43,43,1725,0,16
+1486146712049,28387,Post Grupo Atividade,200,OK,For Each User 1-69,text,true,,721489,2334,42,42,2694,0,10
+1486146702310,38314,Post Grupo Atividade,200,OK,For Each User 1-72,text,true,,597178,2333,41,41,6060,0,9
+1486146707943,32728,Post Grupo Atividade,200,OK,For Each User 1-4,text,true,,619780,2334,40,40,1294,0,16
+1486146714552,26226,Post Grupo Atividade,200,OK,For Each User 1-77,text,true,,732790,2334,39,39,3375,0,38
+1486146711991,28829,Post Grupo Atividade,200,OK,For Each User 1-79,text,true,,725256,2334,38,38,3148,0,8
+1486146696528,44334,Post Grupo Atividade,200,OK,For Each User 1-34,text,true,,717722,2334,37,37,10829,0,16
+1486146712650,28246,Post Grupo Atividade,200,OK,For Each User 1-31,text,true,,721489,2334,36,36,849,0,21
+1486146705588,35329,Post Grupo Atividade,200,OK,For Each User 1-54,text,true,,653683,2334,35,35,2591,0,7
+1486146704367,36587,Post Grupo Atividade,200,OK,For Each User 1-64,text,true,,721489,2334,34,34,3127,0,8
+1486146707943,33067,Post Grupo Atividade,200,OK,For Each User 1-35,text,true,,623547,2334,33,33,1297,0,12
+1486146709818,31196,Post Grupo Atividade,200,OK,For Each User 1-75,text,true,,691353,2334,33,33,1616,0,23
+1486146712179,28879,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,721489,2333,31,31,1559,0,12
+1486146711340,29718,Post Grupo Atividade,200,OK,For Each User 1-28,text,true,,721489,2334,31,31,3764,0,10
+1486146696541,44820,Post Grupo Atividade,200,OK,For Each User 1-67,text,true,,495469,2334,29,29,10758,0,18
+1486146704343,37051,Post Grupo Atividade,200,OK,For Each User 1-74,text,true,,717722,2333,28,28,3141,0,10
+1486146702745,38821,Post Grupo Atividade,200,OK,For Each User 1-100,text,true,,721489,2334,27,27,11244,0,8
+1486146711455,30111,Post Grupo Atividade,200,OK,For Each User 1-23,text,true,,721489,2334,27,27,3653,0,15
+1486146716658,24911,Post Grupo Atividade,200,OK,For Each User 1-37,text,true,,736557,2334,27,27,2287,0,9
+1486146709012,32560,Post Grupo Atividade,200,OK,For Each User 1-5,text,true,,631081,2334,27,27,908,0,15
+1486146709429,32238,Post Grupo Atividade,200,OK,For Each User 1-62,text,true,,691353,2334,23,23,1931,0,9
+1486146709728,32029,Post Grupo Atividade,200,OK,For Each User 1-88,text,true,,691353,2334,22,22,1699,0,107
+1486146715022,26951,Post Grupo Atividade,200,OK,For Each User 1-6,text,true,,736557,2334,21,21,1758,0,12
+1486146695003,46976,Post Grupo Atividade,200,OK,For Each User 1-21,text,true,,559508,2334,20,20,12651,0,8
+1486146710579,31451,Post Grupo Atividade,200,OK,For Each User 1-90,text,true,,691353,2334,19,19,946,0,20
+1486146701477,40757,Post Grupo Atividade,200,OK,For Each User 1-20,text,true,,544440,2334,18,18,6040,0,6
+1486146708812,33652,Post Grupo Atividade,200,OK,For Each User 1-71,text,true,,631081,2334,17,17,1030,0,15
+1486146709623,32843,Post Grupo Atividade,200,OK,For Each User 1-29,text,true,,725256,2334,17,17,6724,0,12
+1486146712655,29819,Post Grupo Atividade,200,OK,For Each User 1-97,text,true,,721489,2334,15,15,846,0,23
+1486146708413,34076,Post Grupo Atividade,200,OK,For Each User 1-27,text,true,,631081,2334,14,14,1406,0,23
+1486146708525,34509,Post Grupo Atividade,200,OK,For Each User 1-78,text,true,,631081,2334,13,13,1296,0,21
+1486146704845,38410,Post Grupo Atividade,200,OK,For Each User 1-44,text,true,,736557,2334,12,12,8179,0,8
+1486146711243,32168,Post Grupo Atividade,200,OK,For Each User 1-32,text,true,,744091,2334,11,11,2017,0,7
+1486146708329,35315,Post Grupo Atividade,200,OK,For Each User 1-22,text,true,,736557,2334,10,10,4752,0,19
+1486146711188,32517,Post Grupo Atividade,200,OK,For Each User 1-96,text,true,,747858,2334,9,9,2312,0,8
+1486146707261,36456,Post Grupo Atividade,200,OK,For Each User 1-7,text,true,,744091,2334,9,9,6080,0,15
+1486146711136,33051,Post Grupo Atividade,200,OK,For Each User 1-47,text,true,,744091,2334,7,7,2178,0,19
+1486146713618,30752,Post Grupo Atividade,200,OK,For Each User 1-86,text,true,,759159,2334,6,6,26996,0,15
+1486146716260,28223,Post Grupo Atividade,200,OK,For Each User 1-30,text,true,,759159,2334,5,5,26197,0,14
+1486146713536,31015,Post Grupo Atividade,200,OK,For Each User 1-52,text,true,,759159,2334,4,4,27076,0,14
+1486146712900,31781,Post Grupo Atividade,200,OK,For Each User 1-15,text,true,,755392,2334,3,3,27462,0,11
+1486146713040,31808,Post Grupo Atividade,200,OK,For Each User 1-19,text,true,,755392,2334,2,2,27329,0,32
+1486146713257,31756,Post Grupo Atividade,200,OK,For Each User 1-10,text,true,,759159,2334,1,1,27196,0,10
+1486147071357,5227,Autenticação - Pagina Inicial,200,OK,For Each User 1-29,text,true,,16258,606,100,100,4267,0,98
+1486147071420,5170,Autenticação - Pagina Inicial,200,OK,For Each User 1-35,text,true,,16258,606,100,100,4205,0,168
+1486147071525,5071,Autenticação - Pagina Inicial,200,OK,For Each User 1-44,text,true,,16258,606,100,100,4108,0,194
+1486147071564,5035,Autenticação - Pagina Inicial,200,OK,For Each User 1-49,text,true,,16258,606,100,100,4074,0,98
+1486147071440,5168,Autenticação - Pagina Inicial,200,OK,For Each User 1-37,text,true,,16258,606,100,100,4196,0,150
+1486147071389,5220,Autenticação - Pagina Inicial,200,OK,For Each User 1-32,text,true,,16258,606,100,100,4242,0,109
+1486147071280,5334,Autenticação - Pagina Inicial,200,OK,For Each User 1-22,text,true,,16258,606,100,100,4349,0,103
+1486147071193,5424,Autenticação - Pagina Inicial,200,OK,For Each User 1-15,text,true,,16258,606,100,100,4435,0,189
+1486147071347,5272,Autenticação - Pagina Inicial,200,OK,For Each User 1-28,text,true,,16258,606,100,100,4284,0,111
+1486147071637,4987,Autenticação - Pagina Inicial,200,OK,For Each User 1-56,text,true,,16258,606,100,100,3997,0,145
+1486147071891,4749,Autenticação - Pagina Inicial,200,OK,For Each User 1-81,text,true,,16258,606,100,100,3762,0,123
+1486147071172,5475,Autenticação - Pagina Inicial,200,OK,For Each User 1-13,text,true,,16258,606,100,100,4449,0,187
+1486147071523,5128,Autenticação - Pagina Inicial,200,OK,For Each User 1-45,text,true,,16258,606,100,100,4119,0,199
+1486147071585,5066,Autenticação - Pagina Inicial,200,OK,For Each User 1-51,text,true,,16258,606,100,100,4048,0,146
+1486147071204,5451,Autenticação - Pagina Inicial,200,OK,For Each User 1-16,text,true,,16258,606,100,100,4425,0,179
+1486147071318,5340,Autenticação - Pagina Inicial,200,OK,For Each User 1-25,text,true,,16258,606,100,100,4306,0,105
+1486147072013,4648,Autenticação - Pagina Inicial,200,OK,For Each User 1-93,text,true,,16258,606,100,100,3643,0,80
+1486147071327,5336,Autenticação - Pagina Inicial,200,OK,For Each User 1-26,text,true,,16258,606,100,100,4297,0,104
+1486147071735,4961,Autenticação - Pagina Inicial,200,OK,For Each User 1-65,text,true,,16258,606,100,100,3902,0,139
+1486147071482,5220,Autenticação - Pagina Inicial,200,OK,For Each User 1-41,text,true,,16258,606,100,100,4143,0,92
+1486147071575,5134,Autenticação - Pagina Inicial,200,OK,For Each User 1-50,text,true,,16258,606,100,100,4065,0,147
+1486147071821,4891,Autenticação - Pagina Inicial,200,OK,For Each User 1-74,text,true,,16258,606,100,100,3824,0,126
+1486147071216,5499,Autenticação - Pagina Inicial,200,OK,For Each User 1-17,text,true,,16258,606,100,100,4413,0,179
+1486147071250,5469,Autenticação - Pagina Inicial,200,OK,For Each User 1-20,text,true,,16258,606,100,100,4412,0,110
+1486147071337,5384,Autenticação - Pagina Inicial,200,OK,For Each User 1-27,text,true,,16258,606,100,100,4293,0,92
+1486147071368,5358,Autenticação - Pagina Inicial,200,OK,For Each User 1-30,text,true,,16258,606,100,100,4257,0,88
+1486147071305,5423,Autenticação - Pagina Inicial,200,OK,For Each User 1-24,text,true,,16258,606,100,100,4319,0,102
+1486147072086,4647,Autenticação - Pagina Inicial,200,OK,For Each User 1-100,text,true,,16258,606,100,100,3572,0,97
+1486147072065,4675,Autenticação - Pagina Inicial,200,OK,For Each User 1-98,text,true,,16258,606,100,100,3594,0,99
+1486147071779,4963,Autenticação - Pagina Inicial,200,OK,For Each User 1-70,text,true,,16258,606,100,100,3868,0,126
+1486147071472,5271,Autenticação - Pagina Inicial,200,OK,For Each User 1-40,text,true,,16258,606,100,100,4153,0,99
+1486147070953,5797,Autenticação - Pagina Inicial,200,OK,For Each User 1-1,text,true,,16258,606,100,100,4706,0,140
+1486147071109,5651,Autenticação - Pagina Inicial,200,OK,For Each User 1-8,text,true,,16258,606,100,100,4551,0,161
+1486147071616,5146,Autenticação - Pagina Inicial,200,OK,For Each User 1-54,text,true,,16258,606,100,100,4024,0,102
+1486147071378,5402,Autenticação - Pagina Inicial,200,OK,For Each User 1-31,text,true,,16258,606,100,100,4253,0,90
+1486147070983,5813,Autenticação - Pagina Inicial,200,OK,For Each User 1-2,text,true,,16258,606,100,100,4657,0,125
+1486147071399,5405,Autenticação - Pagina Inicial,200,OK,For Each User 1-33,text,true,,16258,606,100,100,4232,0,101
+1486147072043,4773,Autenticação - Pagina Inicial,200,OK,For Each User 1-96,text,true,,16258,606,100,100,3615,0,120
+1486147071239,5577,Autenticação - Pagina Inicial,200,OK,For Each User 1-19,text,true,,16258,606,100,100,4382,0,120
+1486147071942,4880,Autenticação - Pagina Inicial,200,OK,For Each User 1-86,text,true,,16258,606,100,100,3711,0,104
+1486147071021,5814,Autenticação - Pagina Inicial,200,OK,For Each User 1-5,text,true,,16258,606,100,100,4595,0,119
+1486147071430,5406,Autenticação - Pagina Inicial,200,OK,For Each User 1-36,text,true,,16258,606,100,100,4197,0,164
+1486147071493,5344,Autenticação - Pagina Inicial,200,OK,For Each User 1-42,text,true,,16258,606,100,100,4134,0,166
+1486147071678,5165,Autenticação - Pagina Inicial,200,OK,For Each User 1-60,text,true,,16258,606,100,100,3964,0,171
+1486147071724,5126,Autenticação - Pagina Inicial,200,OK,For Each User 1-61,text,true,,16258,606,100,100,3911,0,145
+1486147071936,4923,Autenticação - Pagina Inicial,200,OK,For Each User 1-85,text,true,,16258,606,100,100,3718,0,110
+1486147071506,5360,Autenticação - Pagina Inicial,200,OK,For Each User 1-43,text,true,,16258,606,100,100,4131,0,155
+1486147071992,4884,Autenticação - Pagina Inicial,200,OK,For Each User 1-91,text,true,,16258,606,100,100,3662,0,101
+1486147071029,5864,Autenticação - Pagina Inicial,200,OK,For Each User 1-6,text,true,,16258,606,100,100,4590,0,97
+1486147071870,5032,Autenticação - Pagina Inicial,200,OK,For Each User 1-79,text,true,,16258,606,100,100,3781,0,93
+1486147071720,5204,Autenticação - Pagina Inicial,200,OK,For Each User 1-63,text,true,,16258,606,100,100,3926,0,180
+1486147071097,5842,Autenticação - Pagina Inicial,200,OK,For Each User 1-7,text,true,,16258,606,100,100,4518,0,144
+1486147071769,5176,Autenticação - Pagina Inicial,200,OK,For Each User 1-69,text,true,,16258,606,100,100,3878,0,135
+1486147071136,5810,Autenticação - Pagina Inicial,200,OK,For Each User 1-10,text,true,,16258,606,100,100,4479,0,177
+1486147071002,5950,Autenticação - Pagina Inicial,200,OK,For Each User 1-3,text,true,,16258,606,100,100,4617,0,122
+1486147076602,363,Autenticação - Post AD FS,200,OK,For Each User 1-49,text,true,,8974,2593,100,100,131,0,0
+1486147071972,5006,Autenticação - Pagina Inicial,200,OK,For Each User 1-89,text,true,,16258,606,100,100,3683,0,107
+1486147072053,4925,Autenticação - Pagina Inicial,200,OK,For Each User 1-97,text,true,,16258,606,100,100,3605,0,110
+1486147071604,5385,Autenticação - Pagina Inicial,200,OK,For Each User 1-53,text,true,,16258,606,100,100,4035,0,113
+1486147076805,186,Autenticação - Post AD FS,200,OK,For Each User 1-33,text,true,,8994,2613,100,100,79,0,0
+1486147071596,5403,Autenticação - Pagina Inicial,200,OK,For Each User 1-52,text,true,,16258,606,100,100,4036,0,123
+1486147071656,5343,Autenticação - Pagina Inicial,200,OK,For Each User 1-58,text,true,,16258,606,100,100,3978,0,186
+1486147076760,252,Autenticação - Post AD FS,200,OK,For Each User 1-8,text,true,,8974,2593,100,100,66,0,0
+1486147071008,6016,Autenticação - Pagina Inicial,200,OK,For Each User 1-4,text,true,,16258,606,100,100,4607,0,115
+1486147071182,5852,Autenticação - Pagina Inicial,200,OK,For Each User 1-14,text,true,,16258,606,100,100,4439,0,177
+1486147072003,5039,Autenticação - Pagina Inicial,200,OK,For Each User 1-92,text,true,,16258,606,100,100,3651,0,90
+1486147071911,5162,Autenticação - Pagina Inicial,200,OK,For Each User 1-83,text,true,,16258,606,100,100,3738,0,124
+1486147071962,5117,Autenticação - Pagina Inicial,200,OK,For Each User 1-88,text,true,,16258,606,100,100,3688,0,102
+1486147071884,5205,Autenticação - Pagina Inicial,200,OK,For Each User 1-80,text,true,,16258,606,100,100,3768,0,121
+1486147071952,5141,Autenticação - Pagina Inicial,200,OK,For Each User 1-87,text,true,,16258,606,100,100,3698,0,124
+1486147076836,268,Autenticação - Post AD FS,200,OK,For Each User 1-36,text,true,,8994,2613,100,100,75,0,0
+1486147071737,5373,Autenticação - Pagina Inicial,200,OK,For Each User 1-62,text,true,,16258,606,100,100,3908,0,138
+1486147076867,243,Autenticação - Post AD FS,200,OK,For Each User 1-43,text,true,,8974,2593,100,100,69,0,0
+1486147071668,5445,Autenticação - Pagina Inicial,200,OK,For Each User 1-59,text,true,,16258,606,100,100,3976,0,205
+1486147071161,5977,Autenticação - Pagina Inicial,200,OK,For Each User 1-12,text,true,,16258,606,100,100,4457,0,164
+1486147071263,5876,Autenticação - Pagina Inicial,200,OK,For Each User 1-21,text,true,,16258,606,100,100,4364,0,119
+1486147071852,5292,Autenticação - Pagina Inicial,200,OK,For Each User 1-77,text,true,,16258,606,100,100,3796,0,118
+1486147076587,559,Autenticação - Post AD FS,200,OK,For Each User 1-29,text,true,,8974,2593,100,100,205,0,0
+1486147071534,5619,Autenticação - Pagina Inicial,200,OK,For Each User 1-46,text,true,,16258,606,100,100,4098,0,183
+1486147071789,5371,Autenticação - Pagina Inicial,200,OK,For Each User 1-71,text,true,,16258,606,100,100,3854,0,157
+1486147072074,5091,Autenticação - Pagina Inicial,200,OK,For Each User 1-99,text,true,,16258,606,100,100,3583,0,90
+1486147077024,147,Autenticação - Post AD FS,200,OK,For Each User 1-4,text,true,,8974,2593,100,100,92,0,0
+1486147076744,431,Autenticação - Post AD FS,200,OK,For Each User 1-40,text,true,,8974,2593,100,100,79,0,0
+1486147071125,6063,Autenticação - Pagina Inicial,200,OK,For Each User 1-9,text,true,,16258,606,100,100,4490,0,174
+1486147076979,207,Autenticação - Post AD FS,200,OK,For Each User 1-97,text,true,,8974,2593,100,100,116,0,0
+1486147071149,6046,Autenticação - Pagina Inicial,200,OK,For Each User 1-11,text,true,,16258,606,100,100,4469,0,103
+1486147076859,336,Autenticação - Post AD FS,200,OK,For Each User 1-85,text,true,,8994,2613,100,100,70,0,0
+1486147071409,5793,Autenticação - Pagina Inicial,200,OK,For Each User 1-34,text,true,,16258,606,100,100,4226,0,94
+1486147076823,384,Autenticação - Post AD FS,200,OK,For Each User 1-86,text,true,,8974,2593,100,100,320,0,0
+1486147071647,5573,Autenticação - Pagina Inicial,200,OK,For Each User 1-57,text,true,,16258,606,100,100,3989,0,222
+1486147071452,5790,Autenticação - Pagina Inicial,200,OK,For Each User 1-38,text,true,,16258,606,100,100,4185,0,147
+1486147071461,5803,Autenticação - Pagina Inicial,200,OK,For Each User 1-39,text,true,,16258,606,100,100,4166,0,136
+1486147071829,5435,Autenticação - Pagina Inicial,200,OK,For Each User 1-75,text,true,,16258,606,100,100,3818,0,116
+1486147071227,6040,Autenticação - Pagina Inicial,200,OK,For Each User 1-18,text,true,,16258,606,100,100,4391,0,107
+1486147071733,5554,Autenticação - Pagina Inicial,200,OK,For Each User 1-64,text,true,,16258,606,100,100,3910,0,119
+1486147077094,197,Autenticação - Post AD FS,200,OK,For Each User 1-87,text,true,,8994,2613,100,100,53,0,0
+1486147071758,5537,Autenticação - Pagina Inicial,200,OK,For Each User 1-68,text,true,,16258,606,100,100,3883,0,123
+1486147071553,5747,Autenticação - Pagina Inicial,200,OK,For Each User 1-48,text,true,,16258,606,100,100,4085,0,108
+1486147076797,506,Autenticação - Post AD FS,200,OK,For Each User 1-2,text,true,,8994,2613,100,100,134,0,0
+1486147077001,304,Autenticação - Post AD FS,200,OK,For Each User 1-58,text,true,,8974,2593,100,100,82,0,0
+1486147071748,5575,Autenticação - Pagina Inicial,200,OK,For Each User 1-67,text,true,,16258,606,100,100,3894,0,140
+1486147071982,5368,Autenticação - Pagina Inicial,200,OK,For Each User 1-90,text,true,,16258,606,100,100,3673,0,97
+1486147071627,5730,Autenticação - Pagina Inicial,200,OK,For Each User 1-55,text,true,,16258,606,100,100,4007,0,153
+1486147071799,5567,Autenticação - Pagina Inicial,200,OK,For Each User 1-72,text,true,,16258,606,100,100,3845,0,147
+1486147071923,5454,Autenticação - Pagina Inicial,200,OK,For Each User 1-84,text,true,,16258,606,100,100,3726,0,87
+1486147077296,83,Autenticação - Post AD FS,200,OK,For Each User 1-68,text,true,,8994,2613,100,100,34,0,0
+1486147071543,5846,Autenticação - Pagina Inicial,200,OK,For Each User 1-47,text,true,,16258,606,100,100,4096,0,174
+1486147071901,5518,Autenticação - Pagina Inicial,200,OK,For Each User 1-82,text,true,,16258,606,100,100,3751,0,113
+1486147077035,384,Autenticação - Post AD FS,200,OK,For Each User 1-14,text,true,,8974,2593,100,100,48,0,0
+1486147076622,805,Autenticação - Post AD FS,200,OK,For Each User 1-28,text,true,,8974,2593,100,100,591,0,0
+1486147077265,170,Autenticação - Post AD FS,200,OK,For Each User 1-39,text,true,,8994,2613,100,100,89,0,0
+1486147076656,813,Autenticação - Post AD FS,200,OK,For Each User 1-16,text,true,,8994,2613,100,100,699,0,0
+1486147071860,5611,Autenticação - Pagina Inicial,200,OK,For Each User 1-78,text,true,,16258,606,100,100,3789,0,140
+1486147072023,5462,Autenticação - Pagina Inicial,200,OK,For Each User 1-94,text,true,,16258,606,100,100,3633,0,99
+1486147076642,858,Autenticação - Post AD FS,200,OK,For Each User 1-81,text,true,,8994,2613,100,100,675,0,0
+1486147076653,849,Autenticação - Post AD FS,200,OK,For Each User 1-51,text,true,,8974,2593,100,100,703,0,0
+1486147076697,808,Autenticação - Post AD FS,200,OK,For Each User 1-65,text,true,,8974,2593,100,100,681,0,0
+1486147076612,893,Autenticação - Post AD FS,200,OK,For Each User 1-37,text,true,,8974,2593,100,100,641,0,0
+1486147071740,5768,Autenticação - Pagina Inicial,200,OK,For Each User 1-66,text,true,,16258,606,100,100,3906,0,136
+1486147076595,930,Autenticação - Post AD FS,200,OK,For Each User 1-35,text,true,,8974,2593,100,100,620,0,0
+1486147071814,5713,Autenticação - Pagina Inicial,200,OK,For Each User 1-73,text,true,,16258,606,100,100,3829,0,102
+1486147076659,881,Autenticação - Post AD FS,200,OK,For Each User 1-25,text,true,,8974,2593,100,100,682,0,0
+1486147071839,5722,Autenticação - Pagina Inicial,200,OK,For Each User 1-76,text,true,,16258,606,100,100,3811,0,124
+1486147077243,349,Autenticação - Post AD FS,200,OK,For Each User 1-38,text,true,,8994,2613,100,100,70,0,0
+1486147071294,6310,Autenticação - Pagina Inicial,200,OK,For Each User 1-23,text,true,,16258,606,100,100,4367,0,101
+1486147077166,457,Autenticação - Post AD FS,200,OK,For Each User 1-99,text,true,,8974,2593,100,100,49,0,0
+1486147076613,1018,Autenticação - Post AD FS,200,OK,For Each User 1-32,text,true,,8994,2613,100,100,729,0,0
+1486147076742,917,Autenticação - Post AD FS,200,OK,For Each User 1-98,text,true,,8994,2613,100,100,803,0,0
+1486147076724,951,Autenticação - Post AD FS,200,OK,For Each User 1-20,text,true,,8974,2593,100,100,838,0,0
+1486147076734,971,Autenticação - Post AD FS,200,OK,For Each User 1-100,text,true,,8974,2593,100,100,73,0,0
+1486147077073,644,Autenticação - Post AD FS,200,OK,For Each User 1-83,text,true,,8974,2593,100,100,568,0,0
+1486147076781,951,Autenticação - Post AD FS,200,OK,For Each User 1-31,text,true,,8974,2593,100,100,866,0,0
+1486147076837,907,Autenticação - Post AD FS,200,OK,For Each User 1-42,text,true,,8994,2613,100,100,848,0,0
+1486147076599,1150,Autenticação - Post AD FS,200,OK,For Each User 1-44,text,true,,8994,2613,100,100,369,0,0
+1486147076836,957,Autenticação - Post AD FS,200,OK,For Each User 1-5,text,true,,8974,2593,100,100,849,0,0
+1486147076729,1069,Autenticação - Post AD FS,200,OK,For Each User 1-24,text,true,,8974,2593,100,100,833,0,0
+1486147076817,1010,Autenticação - Post AD FS,200,OK,For Each User 1-19,text,true,,8994,2613,100,100,66,0,0
+1486147076924,904,Autenticação - Post AD FS,200,OK,For Each User 1-63,text,true,,8974,2593,100,100,129,0,0
+1486147077472,357,Autenticação - Post AD FS,200,OK,For Each User 1-78,text,true,,8974,2593,100,100,63,0,0
+1486147076978,911,Autenticação - Post AD FS,200,OK,For Each User 1-89,text,true,,8974,2593,100,100,157,0,0
+1486147077090,800,Autenticação - Post AD FS,200,OK,For Each User 1-80,text,true,,8994,2613,100,100,452,0,0
+1486147077042,848,Autenticação - Post AD FS,200,OK,For Each User 1-92,text,true,,8974,2593,100,100,637,0,0
+1486147076945,948,Autenticação - Post AD FS,200,OK,For Each User 1-69,text,true,,8994,2613,100,100,88,0,0
+1486147076940,959,Autenticação - Post AD FS,200,OK,For Each User 1-7,text,true,,8994,2613,100,100,56,0,0
+1486147076953,942,Autenticação - Post AD FS,200,OK,For Each User 1-3,text,true,,8974,2593,100,100,131,0,0
+1486147076990,911,Autenticação - Post AD FS,200,OK,For Each User 1-53,text,true,,8974,2593,100,100,65,0,0
+1486147077139,787,Autenticação - Post AD FS,200,OK,For Each User 1-12,text,true,,8974,2593,100,100,44,0,0
+1486147076817,1118,Autenticação - Post AD FS,200,OK,For Each User 1-96,text,true,,8994,2613,100,100,444,0,0
+1486147076714,1235,Autenticação - Post AD FS,200,OK,For Each User 1-74,text,true,,8974,2593,100,100,806,0,0
+1486147076844,1112,Autenticação - Post AD FS,200,OK,For Each User 1-60,text,true,,8974,2593,100,100,837,0,0
+1486147072034,5935,Autenticação - Pagina Inicial,200,OK,For Each User 1-95,text,true,,16258,606,100,100,3623,0,88
+1486147076621,1375,Autenticação - Post AD FS,200,OK,For Each User 1-15,text,true,,8974,2593,100,100,632,0,0
+1486147077113,889,Autenticação - Post AD FS,200,OK,For Each User 1-59,text,true,,8994,2613,100,100,176,0,0
+1486147077265,773,Autenticação - Post AD FS,200,OK,For Each User 1-75,text,true,,8974,2593,100,100,48,0,0
+1486147076617,1449,Autenticação - Post AD FS,200,OK,For Each User 1-22,text,true,,8974,2593,100,100,133,0,0
+1486147076654,1413,Autenticação - Post AD FS,200,OK,For Each User 1-45,text,true,,8994,2613,100,100,678,0,0
+1486147076894,1177,Autenticação - Post AD FS,200,OK,For Each User 1-6,text,true,,8974,2593,100,100,59,0,0
+1486147077377,714,Autenticação - Post AD FS,200,OK,For Each User 1-84,text,true,,8994,2613,100,100,68,0,0
+1486147077358,746,Autenticação - Post AD FS,200,OK,For Each User 1-55,text,true,,8974,2593,100,100,58,0,0
+1486147076662,1443,Autenticação - Post AD FS,200,OK,For Each User 1-93,text,true,,8974,2593,100,100,750,0,0
+1486147077486,625,Autenticação - Post AD FS,200,OK,For Each User 1-94,text,true,,8974,2593,100,100,49,0,0
+1486147076727,1386,Autenticação - Post AD FS,200,OK,For Each User 1-30,text,true,,8974,2593,100,100,782,0,0
+1486147077528,599,Autenticação - Post AD FS,200,OK,For Each User 1-73,text,true,,8974,2593,100,100,67,0,0
+1486147076717,1414,Autenticação - Post AD FS,200,OK,For Each User 1-17,text,true,,8974,2593,100,100,881,0,0
+1486147076722,1414,Autenticação - Post AD FS,200,OK,For Each User 1-27,text,true,,8974,2593,100,100,788,0,0
+1486147076710,1433,Autenticação - Post AD FS,200,OK,For Each User 1-50,text,true,,8994,2613,100,100,895,0,0
+1486147077080,1069,Autenticação - Post AD FS,200,OK,For Each User 1-88,text,true,,8974,2593,100,100,536,0,0
+1486147076743,1414,Autenticação - Post AD FS,200,OK,For Each User 1-70,text,true,,8974,2593,100,100,889,0,0
+1486147076751,1411,Autenticação - Post AD FS,200,OK,For Each User 1-1,text,true,,8994,2613,100,100,879,0,0
+1486147077562,601,Autenticação - Post AD FS,200,OK,For Each User 1-76,text,true,,8974,2593,100,100,79,0,0
+1486147076851,1324,Autenticação - Post AD FS,200,OK,For Each User 1-61,text,true,,8974,2593,100,100,826,0,0
+1486147076649,1526,Autenticação - Post AD FS,200,OK,For Each User 1-13,text,true,,8974,2593,100,100,992,0,0
+1486147076664,1519,Autenticação - Post AD FS,200,OK,For Each User 1-26,text,true,,8994,2613,100,100,1018,0,0
+1486147076626,1558,Autenticação - Post AD FS,200,OK,For Each User 1-56,text,true,,8974,2593,100,100,1090,0,0
+1486147076946,1249,Autenticação - Post AD FS,200,OK,For Each User 1-10,text,true,,8974,2593,100,100,799,0,0
+1486147076704,1516,Autenticação - Post AD FS,200,OK,For Each User 1-41,text,true,,8994,2613,100,100,1111,0,0
+1486147076903,1321,Autenticação - Post AD FS,200,OK,For Each User 1-79,text,true,,8974,2593,100,100,921,0,0
+1486147077154,1095,Autenticação - Post AD FS,200,OK,For Each User 1-46,text,true,,8974,2593,100,100,749,0,0
+1486147076876,1379,Autenticação - Post AD FS,200,OK,For Each User 1-91,text,true,,8974,2593,100,100,1021,0,0
+1486147077139,1128,Autenticação - Post AD FS,200,OK,For Each User 1-21,text,true,,8974,2593,100,100,750,0,0
+1486147077189,1079,Autenticação - Post AD FS,200,OK,For Each User 1-9,text,true,,8974,2593,100,100,718,0,0
+1486147077221,1052,Autenticação - Post AD FS,200,OK,For Each User 1-57,text,true,,8974,2593,100,100,713,0,0
+1486147077203,1071,Autenticação - Post AD FS,200,OK,For Each User 1-34,text,true,,8994,2613,100,100,731,0,0
+1486147077111,1165,Autenticação - Post AD FS,200,OK,For Each User 1-62,text,true,,8974,2593,100,100,780,0,0
+1486147077145,1133,Autenticação - Post AD FS,200,OK,For Each User 1-77,text,true,,8994,2613,100,100,744,0,0
+1486147077000,1294,Autenticação - Post AD FS,200,OK,For Each User 1-52,text,true,,8974,2593,100,100,830,0,0
+1486147077268,1026,Autenticação - Post AD FS,200,OK,For Each User 1-18,text,true,,8974,2593,100,100,693,0,0
+1486147077161,1136,Autenticação - Post AD FS,200,OK,For Each User 1-71,text,true,,8974,2593,100,100,743,0,0
+1486147076763,1536,Autenticação - Post AD FS,200,OK,For Each User 1-54,text,true,,8974,2593,100,100,1198,0,0
+1486147077196,1117,Autenticação - Post AD FS,200,OK,For Each User 1-11,text,true,,8974,2593,100,100,761,0,0
+1486147077288,1041,Autenticação - Post AD FS,200,OK,For Each User 1-64,text,true,,8974,2593,100,100,732,0,0
+1486147077390,940,Autenticação - Post AD FS,200,OK,For Each User 1-47,text,true,,8974,2593,100,100,664,0,0
+1486147077324,1022,Autenticação - Post AD FS,200,OK,For Each User 1-67,text,true,,8994,2613,100,100,739,0,0
+1486147077301,1045,Autenticação - Post AD FS,200,OK,For Each User 1-48,text,true,,8994,2613,100,100,759,0,0
+1486147077366,983,Autenticação - Post AD FS,200,OK,For Each User 1-72,text,true,,8974,2593,100,100,694,0,0
+1486147077420,930,Autenticação - Post AD FS,200,OK,For Each User 1-82,text,true,,8974,2593,100,100,666,0,0
+1486147077351,1000,Autenticação - Post AD FS,200,OK,For Each User 1-90,text,true,,8974,2593,100,100,737,0,0
+1486147077509,861,Autenticação - Post AD FS,200,OK,For Each User 1-66,text,true,,8994,2613,100,100,604,0,0
+1486147077605,768,Autenticação - Post AD FS,200,OK,For Each User 1-23,text,true,,8994,2613,100,100,534,0,0
+1486147077970,498,Autenticação - Post AD FS,200,OK,For Each User 1-95,text,true,,8994,2613,100,100,357,0,18
+1486147077014,11844,Autenticação - Post Home PGD,200,OK,For Each User 1-8,text,true,,9697,7969,100,100,286,0,8
+1486147076993,11877,Autenticação - Post Home PGD,200,OK,For Each User 1-33,text,true,,9697,7967,100,100,300,0,12
+1486147076971,11910,Autenticação - Post Home PGD,200,OK,For Each User 1-49,text,true,,9697,7967,100,100,322,0,6
+1486147077106,36920,Autenticação - Post Home PGD,200,OK,For Each User 1-36,text,true,,9697,7979,100,100,195,0,11
+1486147077199,68317,Autenticação - Post Home PGD,200,OK,For Each User 1-85,text,true,,9697,7967,100,100,4474,0,13
+1486147077113,68910,Autenticação - Post Home PGD,200,OK,For Each User 1-43,text,true,,9697,7961,100,100,4342,0,9
+1486147077149,69862,Autenticação - Post Home PGD,200,OK,For Each User 1-29,text,true,,9697,7965,100,100,4522,0,13
+1486147077210,69812,Autenticação - Post Home PGD,200,OK,For Each User 1-86,text,true,,9697,7971,100,100,4465,0,11
+1486147077190,69838,Autenticação - Post Home PGD,200,OK,For Each User 1-97,text,true,,9697,7959,100,100,4481,0,8
+1486147077178,74837,Autenticação - Post Home PGD,200,OK,For Each User 1-40,text,true,,9697,7967,100,100,4493,0,9
+1486147077308,74722,Autenticação - Post Home PGD,200,OK,For Each User 1-58,text,true,,9697,7991,100,100,6999,0,15
+1486147077173,75881,Autenticação - Post Home PGD,200,OK,For Each User 1-4,text,true,,9697,7957,100,100,4498,0,9
+1486147077307,75759,Autenticação - Post Home PGD,200,OK,For Each User 1-2,text,true,,9697,7961,100,100,7000,0,12
+1486147077382,75691,Autenticação - Post Home PGD,200,OK,For Each User 1-68,text,true,,9697,7963,100,100,6925,0,8
+1486147077437,75648,Autenticação - Post Home PGD,200,OK,For Each User 1-39,text,true,,9697,7955,100,100,7766,0,12
+1486147077430,75664,Autenticação - Post Home PGD,200,OK,For Each User 1-28,text,true,,9697,7969,100,100,7772,0,14
+1486147077422,75754,Autenticação - Post Home PGD,200,OK,For Each User 1-14,text,true,,9697,7965,100,100,7780,0,8
+1486147077508,75681,Autenticação - Post Home PGD,200,OK,For Each User 1-37,text,true,,9697,7967,100,100,9461,0,13
+1486147077508,76461,Autenticação - Post Home PGD,200,OK,For Each User 1-65,text,true,,9697,7957,100,100,9506,0,13
+1486147077506,76474,Autenticação - Post Home PGD,200,OK,For Each User 1-51,text,true,,9697,7963,100,100,9513,0,17
+1486147077294,76753,Autenticação - Post Home PGD,200,OK,For Each User 1-87,text,true,,9697,7961,100,100,9720,0,168
+1486147077528,76526,Autenticação - Post Home PGD,200,OK,For Each User 1-35,text,true,,9697,7969,100,100,9488,0,26
+1486147088860,65264,Autenticação - Seleção de Perfil,200,OK,For Each User 1-8,text,true,,8731,1774,100,100,64476,0,0
+1486147088871,65259,Autenticação - Seleção de Perfil,200,OK,For Each User 1-33,text,true,,8731,1774,100,100,64477,0,0
+1486147088883,65261,Autenticação - Seleção de Perfil,200,OK,For Each User 1-49,text,true,,8731,1774,100,100,64469,0,0
+1486147077471,76687,Autenticação - Post Home PGD,200,OK,For Each User 1-16,text,true,,9697,7957,100,100,9549,0,28
+1486147077543,76625,Autenticação - Post Home PGD,200,OK,For Each User 1-25,text,true,,9697,7959,100,100,9478,0,16
+1486147077747,76427,Autenticação - Post Home PGD,200,OK,For Each User 1-42,text,true,,9697,7961,100,100,9283,0,12
+1486147077831,76349,Autenticação - Post Home PGD,200,OK,For Each User 1-63,text,true,,9697,7965,100,100,9205,0,246
+1486147078269,75913,Autenticação - Post Home PGD,200,OK,For Each User 1-21,text,true,,9697,7983,100,100,8789,0,49
+1486147077625,76566,Autenticação - Post Home PGD,200,OK,For Each User 1-99,text,true,,9697,7953,100,100,9401,0,11
+1486147078276,75924,Autenticação - Post Home PGD,200,OK,For Each User 1-57,text,true,,9697,7961,100,100,8781,0,43
+1486147078282,75921,Autenticação - Post Home PGD,200,OK,For Each User 1-77,text,true,,9697,7975,100,100,8778,0,39
+1486147077661,76545,Autenticação - Post Home PGD,200,OK,For Each User 1-98,text,true,,9697,7967,100,100,9366,0,7
+1486147077707,76521,Autenticação - Post Home PGD,200,OK,For Each User 1-100,text,true,,9697,7965,100,100,9322,0,7
+1486147078353,75881,Autenticação - Post Home PGD,200,OK,For Each User 1-82,text,true,,9697,7967,100,100,8757,0,76
+1486147077753,76486,Autenticação - Post Home PGD,200,OK,For Each User 1-44,text,true,,9697,7955,100,100,9279,0,6
+1486147114027,40228,Autenticação - Seleção de Perfil,200,OK,For Each User 1-36,text,true,,8731,1774,100,100,39612,0,13
+1486147078257,76005,Autenticação - Post Home PGD,200,OK,For Each User 1-91,text,true,,9697,7967,100,100,8799,0,62
+1486147077939,76346,Autenticação - Post Home PGD,200,OK,For Each User 1-96,text,true,,9697,7961,100,100,9103,0,144
+1486147077895,76394,Autenticação - Post Home PGD,200,OK,For Each User 1-92,text,true,,9697,7953,100,100,9141,0,183
+1486147077502,76797,Autenticação - Post Home PGD,200,OK,For Each User 1-81,text,true,,9697,7961,100,100,9517,0,21
+1486147078146,76160,Autenticação - Post Home PGD,200,OK,For Each User 1-50,text,true,,9697,7953,100,100,8905,0,167
+1486147077832,76479,Autenticação - Post Home PGD,200,OK,For Each User 1-78,text,true,,9697,7963,100,100,9207,0,247
+1486147078178,76138,Autenticação - Post Home PGD,200,OK,For Each User 1-61,text,true,,9697,7957,100,100,8875,0,136
+1486147078296,76025,Autenticação - Post Home PGD,200,OK,For Each User 1-18,text,true,,9697,7987,100,100,8751,0,13
+1486147078300,76026,Autenticação - Post Home PGD,200,OK,For Each User 1-71,text,true,,9697,7955,100,100,8749,0,12
+1486147077998,76339,Autenticação - Post Home PGD,200,OK,For Each User 1-15,text,true,,9697,7971,100,100,9046,0,85
+1486147078108,76237,Autenticação - Post Home PGD,200,OK,For Each User 1-93,text,true,,9697,7959,100,100,8939,0,201
+1486147077734,76615,Autenticação - Post Home PGD,200,OK,For Each User 1-31,text,true,,9697,7967,100,100,9298,0,7
+1486147078117,76239,Autenticação - Post Home PGD,200,OK,For Each User 1-30,text,true,,9697,7969,100,100,8931,0,193
+1486147078068,76291,Autenticação - Post Home PGD,200,OK,For Each User 1-22,text,true,,9697,7971,100,100,8977,0,17
+1486147078373,75988,Autenticação - Post Home PGD,200,OK,For Each User 1-66,text,true,,9697,7963,100,100,8739,0,63
+1486147078197,76231,Autenticação - Post Home PGD,200,OK,For Each User 1-10,text,true,,9697,7963,100,100,8857,0,119
+1486147078222,76210,Autenticação - Post Home PGD,200,OK,For Each User 1-41,text,true,,9697,7971,100,100,8839,0,100
+1486147078352,76108,Autenticação - Post Home PGD,200,OK,For Each User 1-72,text,true,,9697,7969,100,100,8759,0,77
+1486147146022,8505,Autenticação - Seleção de Perfil,200,OK,For Each User 1-43,text,true,,8731,1774,100,100,7855,0,11
+1486147147021,7511,Autenticação - Seleção de Perfil,200,OK,For Each User 1-86,text,true,,8731,1774,100,100,6863,0,10
+1486147077904,76635,Autenticação - Post Home PGD,200,OK,For Each User 1-3,text,true,,9697,7965,100,100,9136,0,176
+1486147147010,7529,Autenticação - Seleção de Perfil,200,OK,For Each User 1-29,text,true,,8731,1774,100,100,6880,0,21
+1486147078070,76475,Autenticação - Post Home PGD,200,OK,For Each User 1-45,text,true,,9697,7957,100,100,8976,0,15
+1486147077634,76922,Autenticação - Post Home PGD,200,OK,For Each User 1-32,text,true,,9697,7971,100,100,9390,0,14
+1486147077595,76962,Autenticação - Post Home PGD,200,OK,For Each User 1-38,text,true,,9697,7957,100,100,9428,0,11
+1486147078185,76372,Autenticação - Post Home PGD,200,OK,For Each User 1-26,text,true,,9697,7955,100,100,8870,0,132
+1486147078074,76487,Autenticação - Post Home PGD,200,OK,For Each User 1-6,text,true,,9697,7967,100,100,8969,0,226
+1486147078178,76494,Autenticação - Post Home PGD,200,OK,For Each User 1-13,text,true,,9697,7969,100,100,8882,0,138
+1486147154320,370,Autenticação - Seleção de Perfil,200,OK,For Each User 1-18,text,true,,8731,1774,100,100,139,0,0
+1486147154325,372,Autenticação - Seleção de Perfil,200,OK,For Each User 1-71,text,true,,8731,1774,100,100,138,0,0
+1486147154336,366,Autenticação - Seleção de Perfil,200,OK,For Each User 1-15,text,true,,8731,1774,100,100,127,0,0
+1486147152015,2716,Autenticação - Seleção de Perfil,200,OK,For Each User 1-40,text,true,,8731,1774,100,100,2435,0,13
+1486147078277,76471,Autenticação - Post Home PGD,200,OK,For Each User 1-34,text,true,,9697,7963,100,100,8780,0,43
+1486147078093,76661,Autenticação - Post Home PGD,200,OK,For Each User 1-84,text,true,,9697,7963,100,100,8956,0,215
+1486147154347,414,Autenticação - Seleção de Perfil,200,OK,For Each User 1-31,text,true,,8731,1774,100,100,139,0,0
+1486147154354,412,Autenticação - Seleção de Perfil,200,OK,For Each User 1-30,text,true,,8731,1774,100,100,135,0,0
+1486147077892,76882,Autenticação - Post Home PGD,200,OK,For Each User 1-89,text,true,,9697,7955,100,100,9146,0,187
+1486147154358,418,Autenticação - Seleção de Perfil,200,OK,For Each User 1-22,text,true,,8731,1774,100,100,136,0,0
+1486147077952,76831,Autenticação - Post Home PGD,200,OK,For Each User 1-74,text,true,,9697,7947,100,100,9090,0,131
+1486147147026,7760,Autenticação - Seleção de Perfil,200,OK,For Each User 1-97,text,true,,8731,1774,100,100,6870,0,6
+1486147078165,76635,Autenticação - Post Home PGD,200,OK,For Each User 1-1,text,true,,9697,7967,100,100,8890,0,149
+1486147078376,76430,Autenticação - Post Home PGD,200,OK,For Each User 1-23,text,true,,9697,7965,100,100,8737,0,60
+1486147078167,76639,Autenticação - Post Home PGD,200,OK,For Each User 1-76,text,true,,9697,7965,100,100,8886,0,149
+1486147078251,76567,Autenticação - Post Home PGD,200,OK,For Each User 1-46,text,true,,9697,7965,100,100,8805,0,67
+1486147145515,9318,Autenticação - Seleção de Perfil,200,OK,For Each User 1-85,text,true,,8731,1774,100,100,8357,0,56
+1486147153051,1787,Autenticação - Seleção de Perfil,200,OK,For Each User 1-4,text,true,,8731,1774,100,100,869,0,10
+1486147153064,1775,Autenticação - Seleção de Perfil,200,OK,For Each User 1-2,text,true,,8731,1774,100,100,863,0,9
+1486147153072,1770,Autenticação - Seleção de Perfil,200,OK,For Each User 1-68,text,true,,8731,1774,100,100,869,0,11
+1486147153084,1761,Autenticação - Seleção de Perfil,200,OK,For Each User 1-39,text,true,,8731,1774,100,100,875,0,7
+1486147153092,1756,Autenticação - Seleção de Perfil,200,OK,For Each User 1-28,text,true,,8731,1774,100,100,868,0,7
+1486147153175,1677,Autenticação - Seleção de Perfil,200,OK,For Each User 1-14,text,true,,8731,1774,100,100,796,0,8
+1486147153187,1673,Autenticação - Seleção de Perfil,200,OK,For Each User 1-37,text,true,,8731,1774,100,100,793,0,18
+1486147154431,522,Autenticação - Seleção de Perfil,200,OK,For Each User 1-41,text,true,,8731,1774,100,100,250,0,0
+1486147154458,498,Autenticação - Seleção de Perfil,200,OK,For Each User 1-72,text,true,,8731,1774,100,100,228,0,0
+1486147078187,76795,Autenticação - Post Home PGD,200,OK,For Each User 1-56,text,true,,9697,7965,100,100,8867,0,129
+1486147077795,77190,Autenticação - Post Home PGD,200,OK,For Each User 1-5,text,true,,9697,7963,100,100,9239,0,7
+1486147078227,76770,Autenticação - Post Home PGD,200,OK,For Each User 1-79,text,true,,9697,7957,100,100,8827,0,90
+1486147078349,76652,Autenticação - Post Home PGD,200,OK,For Each User 1-48,text,true,,9697,7957,100,100,8716,0,78
+1486147078271,76741,Autenticação - Post Home PGD,200,OK,For Each User 1-9,text,true,,9697,7959,100,100,8788,0,48
+1486147078296,76720,Autenticação - Post Home PGD,200,OK,For Each User 1-52,text,true,,9697,7963,100,100,8752,0,14
+1486147077905,77115,Autenticação - Post Home PGD,200,OK,For Each User 1-53,text,true,,9697,7959,100,100,9136,0,177
+1486147153968,1104,Autenticação - Seleção de Perfil,200,OK,For Each User 1-65,text,true,,8731,1774,100,100,880,0,0
+1486147153978,1098,Autenticação - Seleção de Perfil,200,OK,For Each User 1-51,text,true,,8731,1774,100,100,875,0,0
+1486147154046,1035,Autenticação - Seleção de Perfil,200,OK,For Each User 1-87,text,true,,8731,1774,100,100,813,0,0
+1486147154052,1033,Autenticação - Seleção de Perfil,200,OK,For Each User 1-35,text,true,,8731,1774,100,100,823,0,0
+1486147154157,933,Autenticação - Seleção de Perfil,200,OK,For Each User 1-16,text,true,,8731,1774,100,100,720,0,0
+1486147154360,734,Autenticação - Seleção de Perfil,200,OK,For Each User 1-66,text,true,,8731,1774,100,100,138,0,0
+1486147078332,76768,Autenticação - Post Home PGD,200,OK,For Each User 1-64,text,true,,9697,7969,100,100,8730,0,87
+1486147154343,756,Autenticação - Seleção de Perfil,200,OK,For Each User 1-93,text,true,,8731,1774,100,100,172,0,0
+1486147154427,707,Autenticação - Seleção de Perfil,200,OK,For Each User 1-10,text,true,,8731,1774,100,100,251,0,0
+1486147154261,878,Autenticação - Seleção de Perfil,200,OK,For Each User 1-91,text,true,,8731,1774,100,100,664,0,0
+1486147154284,859,Autenticação - Seleção de Perfil,200,OK,For Each User 1-96,text,true,,8731,1774,100,100,643,0,0
+1486147154288,857,Autenticação - Seleção de Perfil,200,OK,For Each User 1-92,text,true,,8731,1774,100,100,641,0,0
+1486147154298,890,Autenticação - Seleção de Perfil,200,OK,For Each User 1-81,text,true,,8731,1774,100,100,633,0,0
+1486147154305,886,Autenticação - Seleção de Perfil,200,OK,For Each User 1-50,text,true,,8731,1774,100,100,629,0,0
+1486147154310,884,Autenticação - Seleção de Perfil,200,OK,For Each User 1-78,text,true,,8731,1774,100,100,630,0,0
+1486147154315,881,Autenticação - Seleção de Perfil,200,OK,For Each User 1-61,text,true,,8731,1774,100,100,629,0,0
+1486147078151,77051,Autenticação - Post Home PGD,200,OK,For Each User 1-88,text,true,,9697,7965,100,100,8900,0,162
+1486147078040,77164,Autenticação - Post Home PGD,200,OK,For Each User 1-75,text,true,,9697,7965,100,100,9004,0,45
+1486147078279,76933,Autenticação - Post Home PGD,200,OK,For Each User 1-62,text,true,,9697,7959,100,100,8779,0,41
+1486147154746,494,Autenticação - Seleção de Perfil,200,OK,For Each User 1-34,text,true,,8731,1774,100,100,274,0,0
+1486147154752,491,Autenticação - Seleção de Perfil,200,OK,For Each User 1-84,text,true,,8731,1774,100,100,292,0,0
+1486147154773,474,Autenticação - Seleção de Perfil,200,OK,For Each User 1-89,text,true,,8731,1774,100,100,274,0,0
+1486147154781,469,Autenticação - Seleção de Perfil,200,OK,For Each User 1-74,text,true,,8731,1774,100,100,268,0,0
+1486147154799,456,Autenticação - Seleção de Perfil,200,OK,For Each User 1-1,text,true,,8731,1774,100,100,252,0,0
+1486147154804,454,Autenticação - Seleção de Perfil,200,OK,For Each User 1-23,text,true,,8731,1774,100,100,254,0,0
+1486147154805,456,Autenticação - Seleção de Perfil,200,OK,For Each User 1-76,text,true,,8731,1774,100,100,256,0,0
+1486147154816,448,Autenticação - Seleção de Perfil,200,OK,For Each User 1-46,text,true,,8731,1774,100,100,250,0,0
+1486147154537,753,Autenticação - Seleção de Perfil,200,OK,For Each User 1-3,text,true,,8731,1774,100,100,565,0,0
+1486147154544,752,Autenticação - Seleção de Perfil,200,OK,For Each User 1-45,text,true,,8731,1774,100,100,561,0,0
+1486147154555,746,Autenticação - Seleção de Perfil,200,OK,For Each User 1-32,text,true,,8731,1774,100,100,553,0,0
+1486147154556,748,Autenticação - Seleção de Perfil,200,OK,For Each User 1-38,text,true,,8731,1774,100,100,559,0,0
+1486147154556,754,Autenticação - Seleção de Perfil,200,OK,For Each User 1-26,text,true,,8731,1774,100,100,561,0,0
+1486147154560,755,Autenticação - Seleção de Perfil,200,OK,For Each User 1-6,text,true,,8731,1774,100,100,560,0,0
+1486147154670,649,Autenticação - Seleção de Perfil,200,OK,For Each User 1-13,text,true,,8731,1774,100,100,452,0,0
+1486147154167,1154,Autenticação - Seleção de Perfil,200,OK,For Each User 1-25,text,true,,8731,1774,100,100,713,0,0
+1486147154174,1151,Autenticação - Seleção de Perfil,200,OK,For Each User 1-42,text,true,,8731,1774,100,100,707,0,0
+1486147154180,1149,Autenticação - Seleção de Perfil,200,OK,For Each User 1-63,text,true,,8731,1774,100,100,705,0,0
+1486147154181,1152,Autenticação - Seleção de Perfil,200,OK,For Each User 1-21,text,true,,8731,1774,100,100,707,0,0
+1486147154190,1147,Autenticação - Seleção de Perfil,200,OK,For Each User 1-99,text,true,,8731,1774,100,100,700,0,0
+1486147154199,1141,Autenticação - Seleção de Perfil,200,OK,For Each User 1-57,text,true,,8731,1774,100,100,707,0,0
+1486147154202,1142,Autenticação - Seleção de Perfil,200,OK,For Each User 1-77,text,true,,8731,1774,100,100,706,0,0
+1486147154205,1142,Autenticação - Seleção de Perfil,200,OK,For Each User 1-98,text,true,,8731,1774,100,100,706,0,0
+1486147154227,1122,Autenticação - Seleção de Perfil,200,OK,For Each User 1-100,text,true,,8731,1774,100,100,692,0,0
+1486147154234,1119,Autenticação - Seleção de Perfil,200,OK,For Each User 1-82,text,true,,8731,1774,100,100,687,0,0
+1486147154238,1120,Autenticação - Seleção de Perfil,200,OK,For Each User 1-44,text,true,,8731,1774,100,100,685,0,0
+1486147078302,77059,Autenticação - Post Home PGD,200,OK,For Each User 1-54,text,true,,9697,7961,100,100,8759,0,24
+1486147152029,3339,Autenticação - Seleção de Perfil,200,OK,For Each User 1-58,text,true,,8731,1774,100,100,1886,0,10
+1486147077801,77571,Autenticação - Post Home PGD,200,OK,For Each User 1-24,text,true,,9697,7963,100,100,9233,0,7
+1486147154981,409,Autenticação - Seleção de Perfil,200,OK,For Each User 1-56,text,true,,8731,1774,100,100,232,0,0
+1486147154984,408,Autenticação - Seleção de Perfil,200,OK,For Each User 1-5,text,true,,8731,1774,100,100,237,0,0
+1486147154996,399,Autenticação - Seleção de Perfil,200,OK,For Each User 1-79,text,true,,8731,1774,100,100,227,0,0
+1486147155010,390,Autenticação - Seleção de Perfil,200,OK,For Each User 1-9,text,true,,8731,1774,100,100,219,0,0
+1486147155015,388,Autenticação - Seleção de Perfil,200,OK,For Each User 1-52,text,true,,8731,1774,100,100,218,0,0
+1486147155019,393,Autenticação - Seleção de Perfil,200,OK,For Each User 1-53,text,true,,8731,1774,100,100,217,0,0
+1486147155098,316,Autenticação - Seleção de Perfil,200,OK,For Each User 1-64,text,true,,8731,1774,100,100,168,0,0
+1486147155000,421,Autenticação - Seleção de Perfil,200,OK,For Each User 1-48,text,true,,8731,1774,100,100,226,0,0
+1486147077719,77709,Autenticação - Post Home PGD,200,OK,For Each User 1-83,text,true,,9697,7983,100,100,9311,0,8
+1486147077904,77553,Autenticação - Post Home PGD,200,OK,For Each User 1-7,text,true,,9697,7965,100,100,9136,0,177
+1486147078471,76990,Autenticação - Post Home PGD,200,OK,For Each User 1-95,text,true,,9697,7965,100,100,8644,0,10
+1486147078134,77331,Autenticação - Post Home PGD,200,OK,For Each User 1-17,text,true,,9697,7963,100,100,8917,0,179
+1486147077905,77568,Autenticação - Post Home PGD,200,OK,For Each User 1-69,text,true,,9697,7969,100,100,9134,0,175
+1486147155200,276,Autenticação - Seleção de Perfil,200,OK,For Each User 1-88,text,true,,8731,1774,100,100,183,0,0
+1486147155203,277,Autenticação - Seleção de Perfil,200,OK,For Each User 1-75,text,true,,8731,1774,100,100,181,0,0
+1486147155210,272,Autenticação - Seleção de Perfil,200,OK,For Each User 1-62,text,true,,8731,1774,100,100,176,0,0
+1486147155360,127,Autenticação - Seleção de Perfil,200,OK,For Each User 1-54,text,true,,8731,1774,100,100,56,0,0
+1486147078160,77342,Autenticação - Post Home PGD,200,OK,For Each User 1-70,text,true,,9697,7969,100,100,8892,0,154
+1486147078355,77156,Autenticação - Post Home PGD,200,OK,For Each User 1-90,text,true,,9697,7957,100,100,8755,0,75
+1486147078106,77425,Autenticação - Post Home PGD,200,OK,For Each User 1-55,text,true,,9697,7967,100,100,8940,0,202
+1486147078114,77421,Autenticação - Post Home PGD,200,OK,For Each User 1-94,text,true,,9697,7975,100,100,8934,0,196
+1486147077929,77612,Autenticação - Post Home PGD,200,OK,For Each User 1-12,text,true,,9697,7961,100,100,9111,0,153
+1486147078129,77417,Autenticação - Post Home PGD,200,OK,For Each User 1-73,text,true,,9697,7963,100,100,8920,0,183
+1486147078349,77204,Autenticação - Post Home PGD,200,OK,For Each User 1-67,text,true,,9697,7967,100,100,8715,0,78
+1486147155371,202,Autenticação - Seleção de Perfil,200,OK,For Each User 1-24,text,true,,8731,1774,100,100,123,0,0
+1486147077893,77694,Autenticação - Post Home PGD,200,OK,For Each User 1-80,text,true,,9697,7967,100,100,9143,0,184
+1486147155427,165,Autenticação - Seleção de Perfil,200,OK,For Each User 1-83,text,true,,8731,1774,100,100,86,0,0
+1486147155456,142,Autenticação - Seleção de Perfil,200,OK,For Each User 1-7,text,true,,8731,1774,100,100,63,0,0
+1486147155472,129,Autenticação - Seleção de Perfil,200,OK,For Each User 1-69,text,true,,8731,1774,100,100,51,0,0
+1486147155459,152,Autenticação - Seleção de Perfil,200,OK,For Each User 1-95,text,true,,8731,1774,100,100,60,0,0
+1486147078317,77297,Autenticação - Post Home PGD,200,OK,For Each User 1-11,text,true,,9697,7961,100,100,8744,0,95
+1486147078139,77479,Autenticação - Post Home PGD,200,OK,For Each User 1-27,text,true,,9697,7965,100,100,8910,0,173
+1486147155463,156,Autenticação - Seleção de Perfil,200,OK,For Each User 1-17,text,true,,8731,1774,100,100,75,0,0
+1486147155501,126,Autenticação - Seleção de Perfil,200,OK,For Each User 1-70,text,true,,8731,1774,100,100,76,0,0
+1486147078332,77303,Autenticação - Post Home PGD,200,OK,For Each User 1-47,text,true,,9697,7963,100,100,8731,0,88
+1486147155510,126,Autenticação - Seleção de Perfil,200,OK,For Each User 1-90,text,true,,8731,1774,100,100,77,0,0
+1486147155530,116,Autenticação - Seleção de Perfil,200,OK,For Each User 1-55,text,true,,8731,1774,100,100,76,0,0
+1486147077831,77822,Autenticação - Post Home PGD,200,OK,For Each User 1-19,text,true,,9697,7975,100,100,9209,0,248
+1486147155533,123,Autenticação - Seleção de Perfil,200,OK,For Each User 1-94,text,true,,8731,1774,100,100,83,0,0
+1486147155539,131,Autenticação - Seleção de Perfil,200,OK,For Each User 1-12,text,true,,8731,1774,100,100,81,0,0
+1486147155544,130,Autenticação - Seleção de Perfil,200,OK,For Each User 1-73,text,true,,8731,1774,100,100,78,0,0
+1486147155551,127,Autenticação - Seleção de Perfil,200,OK,For Each User 1-67,text,true,,8731,1774,100,100,73,0,0
+1486147077959,77733,Autenticação - Post Home PGD,200,OK,For Each User 1-60,text,true,,9697,7953,100,100,9084,0,123
+1486147155586,107,Autenticação - Seleção de Perfil,200,OK,For Each User 1-80,text,true,,8731,1774,100,100,47,0,0
+1486147077677,78029,Autenticação - Post Home PGD,200,OK,For Each User 1-20,text,true,,9697,7967,100,100,9350,0,10
+1486147155616,92,Autenticação - Seleção de Perfil,200,OK,For Each User 1-27,text,true,,8731,1774,100,100,35,0,0
+1486147078004,77714,Autenticação - Post Home PGD,200,OK,For Each User 1-59,text,true,,9697,7963,100,100,9040,0,80
+1486147155633,85,Autenticação - Seleção de Perfil,200,OK,For Each User 1-47,text,true,,8731,1774,100,100,62,0,0
+1486147155613,110,Autenticação - Seleção de Perfil,200,OK,For Each User 1-11,text,true,,8731,1774,100,100,83,0,0
+1486147155651,77,Autenticação - Seleção de Perfil,200,OK,For Each User 1-19,text,true,,8731,1774,100,100,57,0,0
+1486147155691,40,Autenticação - Seleção de Perfil,200,OK,For Each User 1-60,text,true,,8731,1774,100,100,19,0,0
+1486147155704,31,Autenticação - Seleção de Perfil,200,OK,For Each User 1-20,text,true,,8731,1774,100,100,21,0,0
+1486147155716,21,Autenticação - Seleção de Perfil,200,OK,For Each User 1-59,text,true,,8731,1774,100,100,16,0,0
+1486147157737,7088,Open Grupo Atividade Page,200,OK,For Each User 1-8,text,true,,30857,926,100,100,7087,0,26
+1486147158063,7322,Open Grupo Atividade Page,200,OK,For Each User 1-94,text,true,,30857,926,100,100,7320,0,6
+1486147157321,8139,Open Grupo Atividade Page,200,OK,For Each User 1-71,text,true,,30857,926,100,100,8138,0,12
+1486147157491,9152,Open Grupo Atividade Page,200,OK,For Each User 1-49,text,true,,30857,926,100,100,9151,0,52
+1486147158112,8922,Open Grupo Atividade Page,200,OK,For Each User 1-18,text,true,,30857,926,100,100,8920,0,13
+1486147158357,10201,Open Grupo Atividade Page,200,OK,For Each User 1-39,text,true,,30857,926,100,100,10198,0,21
+1486147158001,10819,Open Grupo Atividade Page,200,OK,For Each User 1-36,text,true,,30857,926,100,100,10817,0,16
+1486147158757,11113,Open Grupo Atividade Page,200,OK,For Each User 1-1,text,true,,30857,926,100,100,11112,0,21
+1486147158483,11789,Open Grupo Atividade Page,200,OK,For Each User 1-42,text,true,,30857,926,100,100,11787,0,19
+1486147159207,11639,Open Grupo Atividade Page,200,OK,For Each User 1-37,text,true,,30857,926,100,100,11637,0,16
+1486147159357,12347,Open Grupo Atividade Page,200,OK,For Each User 1-77,text,true,,30857,926,100,100,12345,0,15
+1486147159276,12643,Open Grupo Atividade Page,200,OK,For Each User 1-97,text,true,,30857,926,100,100,12642,0,44
+1486147159354,12761,Open Grupo Atividade Page,200,OK,For Each User 1-4,text,true,,30857,926,100,100,12760,0,15
+1486147158771,14236,Open Grupo Atividade Page,200,OK,For Each User 1-44,text,true,,30857,926,100,100,14236,0,24
+1486147159256,13799,Open Grupo Atividade Page,200,OK,For Each User 1-91,text,true,,30857,926,100,100,13798,0,18
+1486147158873,14401,Open Grupo Atividade Page,200,OK,For Each User 1-28,text,true,,30857,926,100,100,14399,0,21
+1486147159561,13942,Open Grupo Atividade Page,200,OK,For Each User 1-10,text,true,,30857,926,100,100,13941,0,29
+1486147159491,14196,Open Grupo Atividade Page,200,OK,For Each User 1-14,text,true,,30857,926,100,100,14195,0,64
+1486147159493,14238,Open Grupo Atividade Page,200,OK,For Each User 1-72,text,true,,30857,926,100,100,14236,0,86
+1486147159310,14798,Open Grupo Atividade Page,200,OK,For Each User 1-82,text,true,,30857,926,100,100,14796,0,45
+1486147159416,14801,Open Grupo Atividade Page,200,OK,For Each User 1-80,text,true,,30857,926,100,100,14800,0,30
+1486147159317,15124,Open Grupo Atividade Page,200,OK,For Each User 1-29,text,true,,30857,926,100,100,15122,0,47
+1486147159492,15045,Open Grupo Atividade Page,200,OK,For Each User 1-87,text,true,,30857,926,100,100,15044,0,75
+1486147159798,14901,Open Grupo Atividade Page,200,OK,For Each User 1-31,text,true,,30857,926,100,100,14900,0,13
+1486147159487,15236,Open Grupo Atividade Page,200,OK,For Each User 1-90,text,true,,30857,926,100,100,15235,0,58
+1486147159582,15484,Open Grupo Atividade Page,200,OK,For Each User 1-79,text,true,,30857,926,100,100,15483,0,35
+1486147159226,16229,Open Grupo Atividade Page,200,OK,For Each User 1-89,text,true,,30857,926,100,100,16227,0,30
+1486147159541,16389,Open Grupo Atividade Page,200,OK,For Each User 1-13,text,true,,30857,926,100,100,16388,0,39
+1486147159322,16727,Open Grupo Atividade Page,200,OK,For Each User 1-22,text,true,,30857,926,100,100,16725,0,47
+1486147158993,17506,Open Grupo Atividade Page,200,OK,For Each User 1-76,text,true,,30857,926,100,100,17505,0,22
+1486147159386,17439,Open Grupo Atividade Page,200,OK,For Each User 1-23,text,true,,30857,926,100,100,17436,0,33
+1486147159565,17640,Open Grupo Atividade Page,200,OK,For Each User 1-45,text,true,,30857,926,100,100,17639,0,41
+1486147159583,17672,Open Grupo Atividade Page,200,OK,For Each User 1-48,text,true,,30857,926,100,100,17671,0,33
+1486147159685,17607,Open Grupo Atividade Page,200,OK,For Each User 1-35,text,true,,30857,926,100,100,17606,0,15
+1486147160064,18148,Open Grupo Atividade Page,200,OK,For Each User 1-58,text,true,,30857,926,100,100,18147,0,23
+1486147160017,18471,Open Grupo Atividade Page,200,OK,For Each User 1-62,text,true,,30857,926,100,100,18469,0,37
+1486147160009,19265,Open Grupo Atividade Page,200,OK,For Each User 1-60,text,true,,30857,926,100,100,19264,0,34
+1486147160164,20593,Open Grupo Atividade Page,200,OK,For Each User 1-51,text,true,,30857,926,100,100,20592,0,19
+1486147159766,21868,Open Grupo Atividade Page,200,OK,For Each User 1-53,text,true,,30857,926,100,100,21867,0,12
+1486147160267,21449,Open Grupo Atividade Page,200,OK,For Each User 1-50,text,true,,30857,926,100,100,21448,0,18
+1486147159977,22181,Open Grupo Atividade Page,200,OK,For Each User 1-38,text,true,,30857,926,100,100,22177,0,30
+1486147159859,22357,Open Grupo Atividade Page,200,OK,For Each User 1-33,text,true,,30857,926,100,100,22355,0,24
+1486147160136,22186,Open Grupo Atividade Page,200,OK,For Each User 1-34,text,true,,30857,926,100,100,22182,0,15
+1486147160045,22751,Open Grupo Atividade Page,200,OK,For Each User 1-26,text,true,,30857,926,100,100,22748,0,86
+1486147159832,23126,Open Grupo Atividade Page,200,OK,For Each User 1-74,text,true,,30857,926,100,100,23125,0,36
+1486147159933,23454,Open Grupo Atividade Page,200,OK,For Each User 1-86,text,true,,30857,926,100,100,23453,0,64
+1486147159817,24058,Open Grupo Atividade Page,200,OK,For Each User 1-41,text,true,,30857,926,100,100,24056,0,15
+1486147160186,24153,Open Grupo Atividade Page,200,OK,For Each User 1-98,text,true,,30857,926,100,100,24151,0,14
+1486147160366,24229,Open Grupo Atividade Page,200,OK,For Each User 1-69,text,true,,30857,926,100,100,24227,0,20
+1486147160031,24800,Open Grupo Atividade Page,200,OK,For Each User 1-99,text,true,,30857,926,100,100,24798,0,25
+1486147160058,25235,Open Grupo Atividade Page,200,OK,For Each User 1-68,text,true,,30857,926,100,100,25233,0,16
+1486147160070,25330,Open Grupo Atividade Page,200,OK,For Each User 1-27,text,true,,30857,926,100,100,25329,0,44
+1486147160031,25504,Open Grupo Atividade Page,200,OK,For Each User 1-46,text,true,,30857,926,100,100,25502,0,23
+1486147160429,25705,Open Grupo Atividade Page,200,OK,For Each User 1-40,text,true,,30857,926,100,100,25704,0,16
+1486147160803,27052,Open Grupo Atividade Page,200,OK,For Each User 1-30,text,true,,30857,926,100,100,27050,0,32
+1486147160583,27297,Open Grupo Atividade Page,200,OK,For Each User 1-24,text,true,,30857,926,100,100,27293,0,40
+1486147160477,27839,Open Grupo Atividade Page,200,OK,For Each User 1-85,text,true,,30857,926,100,100,27838,0,147
+1486147160357,28325,Open Grupo Atividade Page,200,OK,For Each User 1-2,text,true,,30857,926,100,100,28324,0,26
+1486147161394,27571,Open Grupo Atividade Page,200,OK,For Each User 1-32,text,true,,30857,926,100,100,27570,0,11
+1486147161072,28603,Open Grupo Atividade Page,200,OK,For Each User 1-25,text,true,,30857,926,100,100,28601,0,9
+1486147161282,28488,Open Grupo Atividade Page,200,OK,For Each User 1-17,text,true,,30857,926,100,100,28487,0,33
+1486147160610,29228,Open Grupo Atividade Page,200,OK,For Each User 1-78,text,true,,30857,926,100,100,29227,0,13
+1486147160255,29814,Open Grupo Atividade Page,200,OK,For Each User 1-16,text,true,,30857,926,100,100,29812,0,30
+1486147161805,28306,Open Grupo Atividade Page,200,OK,For Each User 1-95,text,true,,30857,926,100,100,28303,0,8
+1486147161400,28850,Open Grupo Atividade Page,200,OK,For Each User 1-67,text,true,,30857,926,100,100,28849,0,28
+1486147178051,12349,Post Grupo Atividade,200,OK,For Each User 1-82,text,true,,74033,2334,100,100,6490,0,4
+1486147176135,14266,Post Grupo Atividade,200,OK,For Each User 1-97,text,true,,74033,2333,100,100,8403,0,8
+1486147175708,14694,Post Grupo Atividade,200,OK,For Each User 1-4,text,true,,74033,2334,100,100,8359,0,104
+1486147161224,29167,Open Grupo Atividade Page,200,OK,For Each User 1-5,text,true,,30857,926,100,100,29166,0,90
+1486147178407,12075,Post Grupo Atividade,200,OK,For Each User 1-79,text,true,,74033,2334,100,100,6132,0,3
+1486147177650,12833,Post Grupo Atividade,200,OK,For Each User 1-44,text,true,,74033,2334,100,100,6888,0,10
+1486147176560,13924,Post Grupo Atividade,200,OK,For Each User 1-37,text,true,,74033,2334,100,100,7979,0,8
+1486147177709,12777,Post Grupo Atividade,200,OK,For Each User 1-91,text,true,,74033,2334,100,100,6827,0,9
+1486147175566,14920,Post Grupo Atividade,200,OK,For Each User 1-77,text,true,,74033,2334,100,100,8500,0,12
+1486147160379,30169,Open Grupo Atividade Page,200,OK,For Each User 1-84,text,true,,30857,926,100,100,30168,0,20
+1486147161163,29483,Open Grupo Atividade Page,200,OK,For Each User 1-6,text,true,,30857,926,100,100,29483,0,9
+1486147160451,30221,Open Grupo Atividade Page,200,OK,For Each User 1-81,text,true,,30857,926,100,100,30220,0,29
+1486147161253,29441,Open Grupo Atividade Page,200,OK,For Each User 1-63,text,true,,30857,926,100,100,29440,0,61
+1486147161372,29409,Open Grupo Atividade Page,200,OK,For Each User 1-3,text,true,,30857,926,100,100,29407,0,10
+1486147161248,29664,Open Grupo Atividade Page,200,OK,For Each User 1-52,text,true,,30857,926,100,100,29663,0,66
+1486147161812,29128,Open Grupo Atividade Page,200,OK,For Each User 1-83,text,true,,30857,926,100,100,29127,0,33
+1486147160634,30335,Open Grupo Atividade Page,200,OK,For Each User 1-54,text,true,,30857,926,100,100,30334,0,11
+1486147161400,29668,Open Grupo Atividade Page,200,OK,For Each User 1-93,text,true,,30857,926,100,100,29667,0,47
+1486147160583,30522,Open Grupo Atividade Page,200,OK,For Each User 1-43,text,true,,30857,926,100,100,30521,0,41
+1486147161781,29550,Open Grupo Atividade Page,200,OK,For Each User 1-59,text,true,,30857,926,100,100,29548,0,7
+1486147160428,30819,Open Grupo Atividade Page,200,OK,For Each User 1-47,text,true,,30857,926,100,100,30817,0,17
+1486147161320,30012,Open Grupo Atividade Page,200,OK,For Each User 1-15,text,true,,30857,926,100,100,30010,0,7
+1486147160584,30747,Open Grupo Atividade Page,200,OK,For Each User 1-88,text,true,,30857,926,100,100,30745,0,39
+1486147161376,29981,Open Grupo Atividade Page,200,OK,For Each User 1-12,text,true,,30857,926,100,100,29980,0,19
+1486147186221,5242,Post Grupo Atividade,200,OK,For Each User 1-33,text,true,,115471,2334,100,100,951,0,6
+1486147186099,5369,Post Grupo Atividade,200,OK,For Each User 1-51,text,true,,115471,2334,100,100,1233,0,4
+1486147160835,30921,Open Grupo Atividade Page,200,OK,For Each User 1-9,text,true,,30857,926,100,100,30920,0,17
+1486147161551,30394,Open Grupo Atividade Page,200,OK,For Each User 1-55,text,true,,30857,926,100,100,30393,0,12
+1486147161340,30747,Open Grupo Atividade Page,200,OK,For Each User 1-56,text,true,,30857,926,100,100,30746,0,11
+1486147161970,30247,Open Grupo Atividade Page,200,OK,For Each User 1-64,text,true,,30857,926,100,100,30246,0,7
+1486147160858,31468,Open Grupo Atividade Page,200,OK,For Each User 1-66,text,true,,30857,926,100,100,31467,0,8
+1486147161004,31408,Open Grupo Atividade Page,200,OK,For Each User 1-65,text,true,,30857,926,100,100,31407,0,10
+1486147161931,30659,Open Grupo Atividade Page,200,OK,For Each User 1-19,text,true,,30857,926,100,100,30657,0,10
+1486147161743,30858,Open Grupo Atividade Page,200,OK,For Each User 1-100,text,true,,30857,926,100,100,30856,0,7
+1486147188040,4783,Post Grupo Atividade,200,OK,For Each User 1-98,text,true,,153141,2334,100,100,419,0,3
+1486147162920,30132,Open Grupo Atividade Page,200,OK,For Each User 1-96,text,true,,30857,926,100,100,30131,0,11
+1486147160329,32840,Open Grupo Atividade Page,200,OK,For Each User 1-75,text,true,,30857,926,100,100,32839,0,24
+1486147162025,31182,Open Grupo Atividade Page,200,OK,For Each User 1-61,text,true,,30857,926,100,100,31181,0,11
+1486147185511,7799,Post Grupo Atividade,200,OK,For Each User 1-34,text,true,,92868,2334,100,100,1659,0,9
+1486147162827,30481,Open Grupo Atividade Page,200,OK,For Each User 1-92,text,true,,30857,926,100,100,30480,0,5
+1486147161625,31709,Open Grupo Atividade Page,200,OK,For Each User 1-20,text,true,,30857,926,100,100,31708,0,9
+1486147160989,32492,Open Grupo Atividade Page,200,OK,For Each User 1-7,text,true,,30857,926,100,100,32491,0,6
+1486147174665,19155,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,168209,2334,100,100,9378,0,10
+1486147161935,32209,Open Grupo Atividade Page,200,OK,For Each User 1-57,text,true,,30857,926,100,100,32207,0,9
+1486147180916,13332,Post Grupo Atividade,200,OK,For Each User 1-87,text,true,,156908,2334,100,100,8278,0,16
+1486147180704,13558,Post Grupo Atividade,200,OK,For Each User 1-22,text,true,,156908,2334,100,100,8447,0,8
+1486147179377,15112,Post Grupo Atividade,200,OK,For Each User 1-14,text,true,,156908,2334,100,100,9686,0,11
+1486147172052,22441,Post Grupo Atividade,200,OK,For Each User 1-18,text,true,,168209,2334,100,100,11786,0,7
+1486147162156,32370,Open Grupo Atividade Page,200,OK,For Each User 1-70,text,true,,30857,926,100,100,32369,0,7
+1486147181344,13208,Post Grupo Atividade,200,OK,For Each User 1-23,text,true,,156908,2334,100,100,7851,0,63
+1486147161165,33429,Open Grupo Atividade Page,200,OK,For Each User 1-21,text,true,,30857,926,100,100,33428,0,16
+1486147161907,32711,Open Grupo Atividade Page,200,OK,For Each User 1-73,text,true,,30857,926,100,100,32710,0,18
+1486147179192,15523,Post Grupo Atividade,200,OK,For Each User 1-10,text,true,,153141,2334,100,100,9812,0,7
+1486147179000,15718,Post Grupo Atividade,200,OK,For Each User 1-80,text,true,,153141,2334,100,100,9772,0,12
+1486147181063,13657,Post Grupo Atividade,200,OK,For Each User 1-31,text,true,,156908,2334,100,100,8147,0,9
+1486147182915,11839,Post Grupo Atividade,200,OK,For Each User 1-62,text,true,,175743,2334,100,100,8598,0,1210
+1486147162476,32388,Open Grupo Atividade Page,200,OK,For Each User 1-11,text,true,,30857,926,100,100,32387,0,7
+1486147168610,26323,Post Grupo Atividade,200,OK,For Each User 1-8,text,true,,156908,2334,100,100,15223,0,8
+1486147182330,12609,Post Grupo Atividade,200,OK,For Each User 1-13,text,true,,175743,2334,100,100,9160,0,1796
+1486147169640,25410,Post Grupo Atividade,200,OK,For Each User 1-94,text,true,,160675,2334,100,100,14195,0,8
+1486147171649,23402,Post Grupo Atividade,200,OK,For Each User 1-49,text,true,,168209,2334,100,100,12188,0,9
+1486147179117,16128,Post Grupo Atividade,200,OK,For Each User 1-89,text,true,,153141,2334,100,100,9770,0,9
+1486147170248,25011,Post Grupo Atividade,200,OK,For Each User 1-71,text,true,,164442,2334,100,100,13590,0,36
+1486147191861,3402,Post Grupo Atividade,200,OK,For Each User 1-68,text,true,,183277,2334,100,100,1377,0,23
+1486147173393,21881,Post Grupo Atividade,200,OK,For Each User 1-39,text,true,,171976,2334,100,100,10671,0,36
+1486147191482,3803,Post Grupo Atividade,200,OK,For Each User 1-40,text,true,,183277,2334,100,100,1415,0,4
+1486147175458,19981,Post Grupo Atividade,200,OK,For Each User 1-42,text,true,,168209,2334,100,100,8611,0,10
+1486147180452,15097,Post Grupo Atividade,200,OK,For Each User 1-45,text,true,,156908,2334,100,100,8661,0,6
+1486147181617,13964,Post Grupo Atividade,200,OK,For Each User 1-35,text,true,,156908,2334,100,100,7601,0,98
+1486147181803,13943,Post Grupo Atividade,200,OK,For Each User 1-76,text,true,,156908,2334,100,100,7427,0,49
+1486147173144,22602,Post Grupo Atividade,200,OK,For Each User 1-36,text,true,,168209,2334,100,100,10696,0,5
+1486147181132,14815,Post Grupo Atividade,200,OK,For Each User 1-90,text,true,,156908,2334,100,100,8098,0,11
+1486147186553,9400,Post Grupo Atividade,200,OK,For Each User 1-74,text,true,,183277,2333,100,100,6655,0,10
+1486147183122,12839,Post Grupo Atividade,200,OK,For Each User 1-60,text,true,,175743,2334,100,100,9211,0,1009
+1486147191465,4499,Post Grupo Atividade,200,OK,For Each User 1-24,text,true,,187044,2334,100,100,2251,0,6
+1486147182129,13859,Post Grupo Atividade,200,OK,For Each User 1-58,text,true,,175743,2334,100,100,9395,0,1998
+1486147193529,2566,Post Grupo Atividade,200,OK,For Each User 1-6,text,true,,198345,2334,100,100,504,0,10
+1486147187673,8549,Post Grupo Atividade,200,OK,For Each User 1-53,text,true,,198345,2334,100,100,6352,0,7
+1486147194382,3029,Post Grupo Atividade,200,OK,For Each User 1-25,text,true,,217180,2334,100,100,314,0,15
+1486147187654,10657,Post Grupo Atividade,200,OK,For Each User 1-38,text,true,,232248,2334,100,100,6622,0,15
+1486147194027,4372,Post Grupo Atividade,200,OK,For Each User 1-78,text,true,,217180,2334,100,100,640,0,14
+1486147194586,4040,Post Grupo Atividade,200,OK,For Each User 1-12,text,true,,228481,2334,100,100,312,0,8
+1486147194796,3831,Open Grupo Atividade Page,200,OK,For Each User 1-33,text,true,,30674,1071,100,100,3829,0,6
+1486147194418,4317,Post Grupo Atividade,200,OK,For Each User 1-52,text,true,,217180,2334,100,100,282,0,14
+1486147194140,4834,Open Grupo Atividade Page,200,OK,For Each User 1-44,text,true,,30674,1071,100,100,4833,0,56
+1486147177930,21193,Post Grupo Atividade,200,OK,For Each User 1-28,text,true,,187044,2334,100,100,9376,0,7
+1486147194651,4665,Open Grupo Atividade Page,200,OK,For Each User 1-91,text,true,,30674,1071,100,100,4664,0,13
+1486147194820,4542,Post Grupo Atividade,200,OK,For Each User 1-85,text,true,,232248,2334,100,100,304,0,13
+1486147181243,18126,Post Grupo Atividade,200,OK,For Each User 1-29,text,true,,232248,2334,100,100,7991,0,8
+1486147194711,4664,Post Grupo Atividade,200,OK,For Each User 1-17,text,true,,232248,2333,100,100,433,0,7
+1486147195314,4043,Open Grupo Atividade Page,200,OK,For Each User 1-4,text,true,,30674,1071,100,100,4041,0,11
+1486147193795,5788,Open Grupo Atividade Page,200,OK,For Each User 1-37,text,true,,30674,1071,100,100,5786,0,10
+1486147193796,5900,Post Grupo Atividade,200,OK,For Each User 1-32,text,true,,213413,2334,100,100,696,0,12
+1486147194945,4790,Post Grupo Atividade,200,OK,For Each User 1-81,text,true,,232248,2334,100,100,571,0,7
+1486147187941,11802,Post Grupo Atividade,200,OK,For Each User 1-26,text,true,,232248,2334,100,100,2081,0,6
+1486147188231,11522,Post Grupo Atividade,200,OK,For Each User 1-86,text,true,,232248,2334,100,100,6812,0,21
+1486147179940,19814,Post Grupo Atividade,200,OK,For Each User 1-72,text,true,,232248,2334,100,100,10332,0,12
+1486147195661,4105,Open Grupo Atividade Page,200,OK,For Each User 1-51,text,true,,30674,1071,100,100,4104,0,27
+1486147195883,3898,Open Grupo Atividade Page,200,OK,For Each User 1-97,text,true,,30674,1071,100,100,3896,0,17
+1486147195738,4068,Open Grupo Atividade Page,200,OK,For Each User 1-79,text,true,,30674,1071,100,100,4066,0,15
+1486147188294,11804,Post Grupo Atividade,200,OK,For Each User 1-50,text,true,,232248,2334,100,100,2517,0,29
+1486147189853,10281,Post Grupo Atividade,200,OK,For Each User 1-46,text,true,,273685,2334,100,100,5902,0,16
+1486147189274,10864,Post Grupo Atividade,200,OK,For Each User 1-27,text,true,,273685,2334,100,100,6473,0,518
+1486147195412,4837,Post Grupo Atividade,200,OK,For Each User 1-83,text,true,,273685,2334,100,100,323,0,13
+1486147196113,4951,Open Grupo Atividade Page,200,OK,For Each User 1-77,text,true,,30674,1071,100,100,4949,0,19
+1486147195022,7226,Post Grupo Atividade,200,OK,For Each User 1-84,text,true,,273685,2334,100,100,805,0,121
+1486147189543,12724,Post Grupo Atividade,200,OK,For Each User 1-41,text,true,,273685,2334,100,100,6205,0,253
+1486147195494,6773,Post Grupo Atividade,200,OK,For Each User 1-67,text,true,,273685,2334,100,100,242,0,11
+1486147180140,22132,Post Grupo Atividade,200,OK,For Each User 1-48,text,true,,232248,2334,100,100,9907,0,5
+1486147190398,11899,Post Grupo Atividade,200,OK,For Each User 1-99,text,true,,273685,2334,100,100,5358,0,16
+1486147199274,4465,Open Grupo Atividade Page,200,OK,For Each User 1-80,text,true,,30674,1071,100,100,4464,0,39
+1486147191327,13374,Post Grupo Atividade,200,OK,For Each User 1-30,text,true,,273685,2334,100,100,4430,0,35
+1486147189690,15024,Post Grupo Atividade,200,OK,For Each User 1-69,text,true,,288753,2334,100,100,6060,0,109
+1486147195980,9144,Post Grupo Atividade,200,OK,For Each User 1-64,text,true,,303821,2334,100,100,756,0,18
+1486147195819,9312,Post Grupo Atividade,200,OK,For Each User 1-5,text,true,,300054,2334,100,100,911,0,18
+1486147196041,10593,Post Grupo Atividade,200,OK,For Each User 1-95,text,true,,337724,2334,100,100,2277,0,23
+1486147198376,11042,Open Grupo Atividade Page,200,OK,For Each User 1-14,text,true,,30674,1071,100,100,11040,0,10
+1486147195625,15049,Post Grupo Atividade,200,OK,For Each User 1-3,text,true,,300054,2334,100,100,668,0,32
+1486147202633,11731,Open Grupo Atividade Page,200,OK,For Each User 1-26,text,true,,30674,1071,100,100,11729,0,36
+1486147197762,17777,Open Grupo Atividade Page,200,OK,For Each User 1-98,text,true,,30674,1071,100,100,17776,0,16
+1486147196988,19061,Open Grupo Atividade Page,200,OK,For Each User 1-82,text,true,,30674,1071,100,100,19060,0,15
+1486147197312,20261,Post Grupo Atividade,200,OK,For Each User 1-56,text,true,,375394,2334,100,100,2645,0,13
+1486147195977,21605,Post Grupo Atividade,200,OK,For Each User 1-47,text,true,,303821,2334,100,100,758,0,17
+1486147199841,17748,Post Grupo Atividade,200,OK,For Each User 1-57,text,true,,367860,2334,100,100,408,0,6
+1486147199729,17824,Open Grupo Atividade Page,200,OK,For Each User 1-42,text,true,,30674,1071,100,100,17822,0,10
+1486147201704,16272,Open Grupo Atividade Page,200,OK,For Each User 1-71,text,true,,30674,1071,100,100,16271,0,15
+1486147198311,19938,Open Grupo Atividade Page,200,OK,For Each User 1-35,text,true,,30674,1071,100,100,19934,0,6
+1486147204447,14307,Open Grupo Atividade Page,200,OK,For Each User 1-78,text,true,,30674,1071,100,100,14304,0,13
+1486147201262,17968,Open Grupo Atividade Page,200,OK,For Each User 1-53,text,true,,30674,1071,100,100,17966,0,8
+1486147198490,21087,Open Grupo Atividade Page,200,OK,For Each User 1-13,text,true,,30674,1071,100,100,21086,0,9
+1486147199681,19936,Open Grupo Atividade Page,200,OK,For Each User 1-36,text,true,,30674,1071,100,100,19935,0,14
+1486147198825,20863,Open Grupo Atividade Page,200,OK,For Each User 1-24,text,true,,30674,1071,100,100,20862,0,14
+1486147199971,20256,Open Grupo Atividade Page,200,OK,For Each User 1-87,text,true,,30674,1071,100,100,20255,0,10
+1486147200625,19626,Open Grupo Atividade Page,200,OK,For Each User 1-49,text,true,,30674,1071,100,100,19625,0,18
+1486147199682,20727,Open Grupo Atividade Page,200,OK,For Each User 1-90,text,true,,30674,1071,100,100,20726,0,14
+1486147201467,18989,Open Grupo Atividade Page,200,OK,For Each User 1-18,text,true,,30674,1071,100,100,18988,0,11
+1486147200406,20138,Open Grupo Atividade Page,200,OK,For Each User 1-45,text,true,,30674,1071,100,100,20137,0,31
+1486147199272,21389,Open Grupo Atividade Page,200,OK,For Each User 1-31,text,true,,30674,1071,100,100,21388,0,22
+1486147206124,14684,Open Grupo Atividade Page,200,OK,For Each User 1-27,text,true,,30674,1071,100,100,14683,0,43
+1486147199082,21815,Open Grupo Atividade Page,200,OK,For Each User 1-1,text,true,,30674,1071,100,100,21814,0,13
+1486147204169,16879,Open Grupo Atividade Page,200,OK,For Each User 1-85,text,true,,30674,1071,100,100,16877,0,12
+1486147203844,17355,Open Grupo Atividade Page,200,OK,For Each User 1-32,text,true,,30674,1071,100,100,17353,0,15
+1486147197949,23278,Open Grupo Atividade Page,200,OK,For Each User 1-94,text,true,,30674,1071,100,100,23276,0,9
+1486147199510,21751,Open Grupo Atividade Page,200,OK,For Each User 1-22,text,true,,30674,1071,100,100,21748,0,13
+1486147200659,20692,Open Grupo Atividade Page,200,OK,For Each User 1-6,text,true,,30674,1071,100,100,20691,0,19
+1486147200278,21110,Open Grupo Atividade Page,200,OK,For Each User 1-76,text,true,,30674,1071,100,100,21109,0,7
+1486147197752,23722,Open Grupo Atividade Page,200,OK,For Each User 1-34,text,true,,30674,1071,100,100,23721,0,9
+1486147199159,22370,Open Grupo Atividade Page,200,OK,For Each User 1-39,text,true,,30674,1071,100,100,22369,0,10
+1486147199865,21889,Open Grupo Atividade Page,200,OK,For Each User 1-60,text,true,,30674,1071,100,100,21887,0,19
+1486147205472,16283,Open Grupo Atividade Page,200,OK,For Each User 1-46,text,true,,30674,1071,100,100,16282,0,19
+1486147201654,20101,Open Grupo Atividade Page,200,OK,For Each User 1-8,text,true,,30674,1071,100,100,20100,0,13
+1486147201360,20448,Open Grupo Atividade Page,200,OK,For Each User 1-58,text,true,,30674,1071,100,100,20447,0,14
+1486147205385,16464,Open Grupo Atividade Page,200,OK,For Each User 1-28,text,true,,30674,1071,100,100,16463,0,25
+1486147198521,23364,Open Grupo Atividade Page,200,OK,For Each User 1-23,text,true,,30674,1071,100,100,23362,0,11
+1486147201600,20352,Open Grupo Atividade Page,200,OK,For Each User 1-10,text,true,,30674,1071,100,100,20350,0,11
+1486147203078,18963,Open Grupo Atividade Page,200,OK,For Each User 1-29,text,true,,30674,1071,100,100,18963,0,8
+1486147199075,23005,Open Grupo Atividade Page,200,OK,For Each User 1-62,text,true,,30674,1071,100,100,23004,0,11
+1486147205684,16492,Open Grupo Atividade Page,200,OK,For Each User 1-83,text,true,,30674,1071,100,100,16492,0,20
+1486147202058,20270,Open Grupo Atividade Page,200,OK,For Each User 1-25,text,true,,30674,1071,100,100,20269,0,19
+1486147205644,16703,Open Grupo Atividade Page,200,OK,For Each User 1-38,text,true,,30674,1071,100,100,16702,0,30
+1486147198956,23415,Open Grupo Atividade Page,200,OK,For Each User 1-74,text,true,,30674,1071,100,100,23413,0,17
+1486147200466,22093,Open Grupo Atividade Page,200,OK,For Each User 1-89,text,true,,30674,1071,100,100,22092,0,19
+1486147202274,20335,Open Grupo Atividade Page,200,OK,For Each User 1-68,text,true,,30674,1071,100,100,20334,0,64
+1486147204778,18111,Open Grupo Atividade Page,200,OK,For Each User 1-12,text,true,,30674,1071,100,100,18109,0,7
+1486147206447,16483,Open Grupo Atividade Page,200,OK,For Each User 1-41,text,true,,30674,1071,100,100,16480,0,23
+1486147202366,20590,Open Grupo Atividade Page,200,OK,For Each User 1-40,text,true,,30674,1071,100,100,20589,0,27
+1486147207042,15941,Open Grupo Atividade Page,200,OK,For Each User 1-72,text,true,,30674,1071,100,100,15940,0,67
+1486147205248,17742,Open Grupo Atividade Page,200,OK,For Each User 1-50,text,true,,30674,1071,100,100,17741,0,24
+1486147204477,18546,Open Grupo Atividade Page,200,OK,For Each User 1-52,text,true,,30674,1071,100,100,18545,0,14
+1486147204546,18551,Open Grupo Atividade Page,200,OK,For Each User 1-81,text,true,,30674,1071,100,100,18550,0,153
+1486147204786,18373,Open Grupo Atividade Page,200,OK,For Each User 1-86,text,true,,30674,1071,100,100,18373,0,7
+1486147205161,18016,Open Grupo Atividade Page,200,OK,For Each User 1-99,text,true,,30674,1071,100,100,18009,0,6
+1486147208141,15077,Open Grupo Atividade Page,200,OK,For Each User 1-84,text,true,,30674,1071,100,100,15077,0,4
+1486147207364,15891,Open Grupo Atividade Page,200,OK,For Each User 1-48,text,true,,30674,1071,100,100,15888,0,11
+1486147208442,14821,Open Grupo Atividade Page,200,OK,For Each User 1-69,text,true,,30674,1071,100,100,14820,0,4
+1486147197866,25616,Post Grupo Atividade,200,OK,For Each User 1-66,text,true,,360326,2334,100,100,2585,0,12
+1486147199003,24760,Post Grupo Atividade,200,OK,For Each User 1-20,text,true,,386695,2334,100,100,3033,0,18
+1486147195605,28159,Post Grupo Atividade,200,OK,For Each User 1-55,text,true,,300054,2334,100,100,680,0,32
+1486147199506,24262,Post Grupo Atividade,200,OK,For Each User 1-7,text,true,,367860,2334,100,100,692,0,10
+1486147198727,25134,Post Grupo Atividade,200,OK,For Each User 1-75,text,true,,386695,2334,100,100,3178,0,20
+1486147196902,27084,Post Grupo Atividade,200,OK,For Each User 1-54,text,true,,367860,2334,100,100,3990,0,13
+1486147195770,28253,Post Grupo Atividade,200,OK,For Each User 1-63,text,true,,300054,2334,100,100,957,0,8
+1486147197612,26456,Post Grupo Atividade,200,OK,For Each User 1-96,text,true,,386695,2334,100,100,2647,0,13
+1486147196030,28270,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,337724,2334,100,100,1997,0,14
+1486147197685,26627,Post Grupo Atividade,200,OK,For Each User 1-100,text,true,,360326,2333,100,100,2704,0,16
+1486147196987,27327,Post Grupo Atividade,200,OK,For Each User 1-43,text,true,,375394,2334,100,100,2966,0,14
+1486147203927,20413,Post Grupo Atividade,200,OK,For Each User 1-97,text,true,,386695,2334,100,100,1842,0,14
+1486147201069,23274,Post Grupo Atividade,200,OK,For Each User 1-73,text,true,,375394,2334,100,100,1031,0,8
+1486147196276,28318,Post Grupo Atividade,200,OK,For Each User 1-93,text,true,,326423,2334,99,99,3580,0,23
+1486147198218,26381,Post Grupo Atividade,200,OK,For Each User 1-61,text,true,,360326,2334,99,99,2239,0,5
+1486147198543,26057,Post Grupo Atividade,200,OK,For Each User 1-11,text,true,,367860,2334,99,99,2969,0,13
+1486147197399,27233,Post Grupo Atividade,200,OK,For Each User 1-15,text,true,,386695,2334,99,99,2939,0,11
+1486147197367,27286,Post Grupo Atividade,200,OK,For Each User 1-9,text,true,,386695,2334,99,99,2592,0,10
+1486147198745,25907,Post Grupo Atividade,200,OK,For Each User 1-19,text,true,,386695,2334,99,99,3175,0,18
+1486147204260,20397,Post Grupo Atividade,200,OK,For Each User 1-79,text,true,,386695,2334,99,99,1522,0,18
+1486147198394,26355,Post Grupo Atividade,200,OK,For Each User 1-65,text,true,,360326,2334,98,98,2077,0,10
+1486147195716,29076,Post Grupo Atividade,200,OK,For Each User 1-88,text,true,,330190,2334,98,98,1741,0,15
+1486147196306,28488,Post Grupo Atividade,200,OK,For Each User 1-59,text,true,,337724,2334,98,98,3565,0,15
+1486147212294,12614,Open Grupo Atividade Page,200,OK,For Each User 1-95,text,true,,30674,1071,98,98,12614,0,8
+1486147204418,20534,Post Grupo Atividade,200,OK,For Each User 1-37,text,true,,386695,2334,98,98,1365,0,19
+1486147197686,27270,Post Grupo Atividade,200,OK,For Each User 1-16,text,true,,386695,2334,97,97,2649,0,17
+1486147200376,25176,Post Grupo Atividade,200,OK,For Each User 1-21,text,true,,450734,2334,97,97,14510,0,27
+1486147208583,17157,Open Grupo Atividade Page,200,OK,For Each User 1-30,text,true,,30674,1071,97,97,17154,0,11
+1486147210719,15183,Open Grupo Atividade Page,200,OK,For Each User 1-64,text,true,,30674,1071,97,97,15182,0,9
+1486147223487,3298,Open Grupo Atividade Page,200,OK,For Each User 1-57,text,true,,30674,1071,97,97,3297,0,11
+1486147209042,17920,Open Grupo Atividade Page,200,OK,For Each User 1-67,text,true,,30674,1071,97,97,17919,0,7
+1486147221764,8240,Post Grupo Atividade,200,OK,For Each User 1-98,text,true,,439433,2334,97,97,1574,0,20
+1486147200107,30351,Post Grupo Atividade,200,OK,For Each User 1-92,text,true,,446967,2334,96,96,13160,0,28
+1486147209863,24275,Open Grupo Atividade Page,200,OK,For Each User 1-5,text,true,,30674,1071,96,96,24274,0,9
+1486147204845,30096,Open Grupo Atividade Page,200,OK,For Each User 1-17,text,true,,30674,1071,96,96,30095,0,7
+1486147221851,15374,Open Grupo Atividade Page,200,OK,For Each User 1-47,text,true,,30674,1071,96,96,15372,0,30
+1486147215412,21966,Open Grupo Atividade Page,200,OK,For Each User 1-3,text,true,,30674,1071,96,96,21965,0,7
+1486147222188,19699,Post Grupo Atividade,200,OK,For Each User 1-42,text,true,,439433,2334,96,96,1210,0,6
+1486147222772,19165,Post Grupo Atividade,200,OK,For Each User 1-13,text,true,,439433,2334,95,95,630,0,8
+1486147204722,37216,Post Grupo Atividade,200,OK,For Each User 1-4,text,true,,450734,2333,95,95,10651,0,9
+1486147221134,22587,Open Grupo Atividade Page,200,OK,For Each User 1-56,text,true,,30674,1071,93,93,22586,0,7
+1486147202368,44657,Post Grupo Atividade,200,OK,For Each User 1-33,text,true,,450734,2334,93,93,13575,0,36
+1486147222659,24803,Post Grupo Atividade,200,OK,For Each User 1-35,text,true,,439433,2334,92,92,790,0,5
+1486147223179,24368,Post Grupo Atividade,200,OK,For Each User 1-78,text,true,,458268,2334,91,91,704,0,10
+1486147200305,47251,Post Grupo Atividade,200,OK,For Each User 1-70,text,true,,450734,2333,91,91,14983,0,52
+1486147205310,42253,Post Grupo Atividade,200,OK,For Each User 1-44,text,true,,450734,2334,90,90,10481,0,18
+1486147223471,24100,Post Grupo Atividade,200,OK,For Each User 1-71,text,true,,458268,2334,89,89,405,0,4
+1486147204975,42603,Post Grupo Atividade,200,OK,For Each User 1-77,text,true,,450734,2334,89,89,10733,0,7
+1486147208002,39578,Post Grupo Atividade,200,OK,For Each User 1-80,text,true,,450734,2334,88,88,8020,0,9
+1486147223628,24125,Post Grupo Atividade,200,OK,For Each User 1-53,text,true,,458268,2334,86,86,312,0,13
+1486147206432,41646,Post Grupo Atividade,200,OK,For Each User 1-51,text,true,,450734,2333,85,85,8461,0,22
+1486147223906,24468,Post Grupo Atividade,200,OK,For Each User 1-27,text,true,,522307,2334,84,84,2936,0,4
+1486147225303,23079,Post Grupo Atividade,200,OK,For Each User 1-94,text,true,,522307,2333,83,83,1175,0,8
+1486147224789,23640,Post Grupo Atividade,200,OK,For Each User 1-86,text,true,,522307,2334,82,82,1659,0,5
+1486147220759,27679,Post Grupo Atividade,200,OK,For Each User 1-82,text,true,,507239,2334,81,81,5573,0,8
+1486147215219,33528,Post Grupo Atividade,200,OK,For Each User 1-14,text,true,,507239,2334,80,80,10949,0,7
+1486147225315,23506,Post Grupo Atividade,200,OK,For Each User 1-23,text,true,,522307,2334,79,79,1186,0,7
+1486147224739,24084,Post Grupo Atividade,200,OK,For Each User 1-90,text,true,,522307,2334,79,79,1722,0,7
+1486147228721,21254,Open Grupo Atividade Page,200,OK,For Each User 1-65,text,true,,30674,1071,77,77,21253,0,15
+1486147228841,21140,Open Grupo Atividade Page,200,OK,For Each User 1-54,text,true,,30674,1071,77,77,21139,0,29
+1486147228643,21383,Open Grupo Atividade Page,200,OK,For Each User 1-75,text,true,,30674,1071,77,77,21381,0,17
+1486147228773,21220,Open Grupo Atividade Page,200,OK,For Each User 1-7,text,true,,30674,1071,77,77,21217,0,16
+1486147229861,20197,Open Grupo Atividade Page,200,OK,For Each User 1-2,text,true,,30674,1071,77,77,20195,0,10
+1486147228890,21130,Open Grupo Atividade Page,200,OK,For Each User 1-66,text,true,,30674,1071,77,77,21128,0,15
+1486147228694,21346,Open Grupo Atividade Page,200,OK,For Each User 1-11,text,true,,30674,1071,77,77,21343,0,24
+1486147229060,21043,Open Grupo Atividade Page,200,OK,For Each User 1-96,text,true,,30674,1071,77,77,21038,0,15
+1486147225168,27054,Post Grupo Atividade,200,OK,For Each User 1-34,text,true,,522307,2334,77,77,1297,0,8
+1486147205094,47160,Post Grupo Atividade,200,OK,For Each User 1-91,text,true,,450734,2334,76,76,10628,0,8
+1486147225904,27228,Post Grupo Atividade,200,OK,For Each User 1-62,text,true,,522307,2334,75,75,3069,0,11
+1486147225442,27693,Post Grupo Atividade,200,OK,For Each User 1-87,text,true,,522307,2334,75,75,1506,0,17
+1486147219394,33952,Post Grupo Atividade,200,OK,For Each User 1-26,text,true,,522307,2333,73,73,7435,0,7
+1486147224009,29342,Post Grupo Atividade,200,OK,For Each User 1-24,text,true,,522307,2334,72,72,2894,0,13
+1486147225569,27783,Post Grupo Atividade,200,OK,For Each User 1-31,text,true,,522307,2334,72,72,957,0,7
+1486147229585,24642,Open Grupo Atividade Page,200,OK,For Each User 1-20,text,true,,30674,1071,70,70,24641,0,128
+1486147229917,24771,Open Grupo Atividade Page,200,OK,For Each User 1-88,text,true,,30674,1071,70,70,24770,0,9
+1486147229232,25733,Open Grupo Atividade Page,200,OK,For Each User 1-100,text,true,,30674,1071,70,70,25732,0,15
+1486147230062,25293,Open Grupo Atividade Page,200,OK,For Each User 1-93,text,true,,30674,1071,70,70,25292,0,16
+1486147229121,26288,Open Grupo Atividade Page,200,OK,For Each User 1-16,text,true,,30674,1071,70,70,26286,0,25
+1486147230000,25824,Open Grupo Atividade Page,200,OK,For Each User 1-61,text,true,,30674,1071,70,70,25823,0,7
+1486147230169,25719,Open Grupo Atividade Page,200,OK,For Each User 1-43,text,true,,30674,1071,70,70,25718,0,8
+1486147229253,26766,Open Grupo Atividade Page,200,OK,For Each User 1-63,text,true,,30674,1071,70,70,26765,0,7
+1486147229866,26795,Open Grupo Atividade Page,200,OK,For Each User 1-21,text,true,,30674,1071,70,70,26793,0,11
+1486147229220,27570,Open Grupo Atividade Page,200,OK,For Each User 1-55,text,true,,30674,1071,70,70,27569,0,27
+1486147229888,27349,Open Grupo Atividade Page,200,OK,For Each User 1-19,text,true,,30674,1071,70,70,27348,0,9
+1486147233960,23521,Open Grupo Atividade Page,200,OK,For Each User 1-92,text,true,,30674,1071,70,70,23520,0,9
+1486147229726,28132,Open Grupo Atividade Page,200,OK,For Each User 1-73,text,true,,30674,1071,70,70,28131,0,10
+1486147226663,33391,Post Grupo Atividade,200,OK,For Each User 1-45,text,true,,639084,2334,70,70,5483,0,15
+1486147230905,29465,Open Grupo Atividade Page,200,OK,For Each User 1-9,text,true,,30674,1071,69,69,29463,0,21
+1486147226154,34292,Post Grupo Atividade,200,OK,For Each User 1-81,text,true,,627783,2334,69,69,2973,0,10
+1486147231279,29662,Open Grupo Atividade Page,200,OK,For Each User 1-15,text,true,,30674,1071,68,68,29659,0,7
+1486147227605,33465,Post Grupo Atividade,200,OK,For Each User 1-99,text,true,,639084,2334,68,68,4621,0,22
+1486147229737,31703,Post Grupo Atividade,200,OK,For Each User 1-84,text,true,,639084,2334,67,67,2497,0,8
+1486147226653,34809,Post Grupo Atividade,200,OK,For Each User 1-22,text,true,,639084,2334,66,66,5489,0,8
+1486147227470,34078,Post Grupo Atividade,200,OK,For Each User 1-28,text,true,,639084,2334,65,65,4752,0,8
+1486147227176,34387,Post Grupo Atividade,200,OK,For Each User 1-1,text,true,,639084,2334,64,64,4974,0,10
+1486147226583,35087,Post Grupo Atividade,200,OK,For Each User 1-49,text,true,,639084,2334,63,63,5555,0,10
+1486147229393,32435,Post Grupo Atividade,200,OK,For Each User 1-95,text,true,,646618,2334,62,62,8027,0,28
+1486147226657,35189,Post Grupo Atividade,200,OK,For Each User 1-29,text,true,,639084,2334,61,61,5490,0,11
+1486147227917,34030,Post Grupo Atividade,200,OK,For Each User 1-6,text,true,,639084,2333,60,60,4321,0,25
+1486147226046,37148,Post Grupo Atividade,200,OK,For Each User 1-76,text,true,,627783,2334,59,59,3068,0,11
+1486147232257,31677,Post Grupo Atividade,200,OK,For Each User 1-67,text,true,,657919,2334,58,58,10758,0,7
+1486147226598,37369,Post Grupo Atividade,200,OK,For Each User 1-89,text,true,,639084,2334,57,57,5542,0,23
+1486147224268,39993,Post Grupo Atividade,200,OK,For Each User 1-58,text,true,,639084,2334,56,56,7943,0,3073
+1486147227282,36983,Post Grupo Atividade,200,OK,For Each User 1-39,text,true,,639084,2334,56,56,4942,0,7
+1486147226844,38953,Post Grupo Atividade,200,OK,For Each User 1-85,text,true,,639084,2334,54,54,5303,0,17
+1486147227606,38274,Post Grupo Atividade,200,OK,For Each User 1-69,text,true,,639084,2334,53,53,4623,0,28
+1486147227451,38588,Post Grupo Atividade,200,OK,For Each User 1-38,text,true,,639084,2334,52,52,4774,0,8
+1486147228663,37681,Post Grupo Atividade,200,OK,For Each User 1-52,text,true,,635317,2334,51,51,3474,0,12
+1486147228052,38389,Post Grupo Atividade,200,OK,For Each User 1-41,text,true,,639084,2333,50,50,4187,0,9
+1486147228327,38148,Post Grupo Atividade,200,OK,For Each User 1-12,text,true,,657919,2334,49,49,2521,0,16
+1486147229212,37347,Post Grupo Atividade,200,OK,For Each User 1-72,text,true,,646618,2334,48,48,8219,0,35
+1486147229744,36913,Post Grupo Atividade,200,OK,For Each User 1-30,text,true,,639084,2334,47,47,2492,0,7
+1486147225743,40939,Post Grupo Atividade,200,OK,For Each User 1-46,text,true,,639084,2334,46,46,4936,0,9
+1486147257401,9303,Post Grupo Atividade,200,OK,For Each User 1-100,text,true,,676754,2334,45,45,936,0,68
+1486147227343,39526,Post Grupo Atividade,200,OK,For Each User 1-83,text,true,,639084,2334,44,44,4890,0,9
+1486147230896,36455,Open Grupo Atividade Page,200,OK,For Each User 1-59,text,true,,30674,1071,43,43,36454,0,30
+1486147228357,39072,Post Grupo Atividade,200,OK,For Each User 1-74,text,true,,657919,2334,43,43,2466,0,32
+1486147226336,41119,Post Grupo Atividade,200,OK,For Each User 1-60,text,true,,676754,2334,42,42,5790,0,10
+1486147239135,28346,Post Grupo Atividade,200,OK,For Each User 1-5,text,true,,657919,2334,41,41,6517,0,6
+1486147228669,38820,Post Grupo Atividade,200,OK,For Each User 1-10,text,true,,669220,2334,40,40,3468,0,13
+1486147228425,39288,Post Grupo Atividade,200,OK,For Each User 1-50,text,true,,657919,2334,39,39,2389,0,16
+1486147229862,37992,Post Grupo Atividade,200,OK,For Each User 1-68,text,true,,646618,2334,38,38,8141,0,10
+1486147256073,11817,Post Grupo Atividade,200,OK,For Each User 1-96,text,true,,669220,2334,37,37,529,0,15
+1486147257420,10603,Post Grupo Atividade,200,OK,For Each User 1-11,text,true,,676754,2334,36,36,917,0,66
+1486147225907,42164,Post Grupo Atividade,200,OK,For Each User 1-25,text,true,,669220,2334,35,35,6216,0,10
+1486147225840,42263,Post Grupo Atividade,200,OK,For Each User 1-18,text,true,,669220,2334,34,34,6291,0,7
+1486147259600,8960,Post Grupo Atividade,200,OK,For Each User 1-93,text,true,,688055,2334,33,33,397,0,24
+1486147227022,41542,Post Grupo Atividade,200,OK,For Each User 1-32,text,true,,639084,2334,33,33,5191,0,7
+1486147231775,36948,Post Grupo Atividade,200,OK,For Each User 1-57,text,true,,657919,2334,31,31,11262,0,7
+1486147259487,9271,Post Grupo Atividade,200,OK,For Each User 1-88,text,true,,688055,2334,30,30,483,0,25
+1486147228572,40254,Post Grupo Atividade,200,OK,For Each User 1-8,text,true,,669220,2334,29,29,3558,0,44
+1486147260778,8074,Post Grupo Atividade,200,OK,For Each User 1-55,text,true,,706890,2334,28,28,731,0,12
+1486147227701,41218,Post Grupo Atividade,200,OK,For Each User 1-40,text,true,,639084,2334,27,27,4529,0,20
+1486147240472,28608,Post Grupo Atividade,200,OK,For Each User 1-3,text,true,,706890,2334,26,26,5517,0,8
+1486147259886,9325,Post Grupo Atividade,200,OK,For Each User 1-63,text,true,,691822,2333,25,25,510,0,14
+1486147261672,7585,Post Grupo Atividade,200,OK,For Each User 1-61,text,true,,706890,2334,24,24,520,0,11
+1486147228572,40688,Post Grupo Atividade,200,OK,For Each User 1-48,text,true,,669220,2334,24,24,3558,0,38
+1486147240982,28309,Post Grupo Atividade,200,OK,For Each User 1-17,text,true,,706890,2334,22,22,5028,0,8
+1486147260259,9120,Post Grupo Atividade,200,OK,For Each User 1-16,text,true,,706890,2334,21,21,1839,0,29
+1486147262534,6866,Post Grupo Atividade,200,OK,For Each User 1-73,text,true,,721958,2333,20,20,1671,0,33
+1486147261099,8314,Post Grupo Atividade,200,OK,For Each User 1-19,text,true,,706890,2334,19,19,1037,0,8
+1486147250700,18849,Open Grupo Atividade Page,200,OK,For Each User 1-70,text,true,,30674,1071,18,18,18843,0,9
+1486147265756,3824,Post Grupo Atividade,200,OK,For Each User 1-9,text,true,,729492,2334,18,18,555,0,9
+1486147226378,43485,Post Grupo Atividade,200,OK,For Each User 1-36,text,true,,669220,2334,17,17,5747,0,8
+1486147262726,7192,Post Grupo Atividade,200,OK,For Each User 1-92,text,true,,725725,2334,16,16,1594,0,8
+1486147260160,9783,Post Grupo Atividade,200,OK,For Each User 1-20,text,true,,695589,2334,15,15,1309,0,20
+1486147243588,27795,Post Grupo Atividade,200,OK,For Each User 1-47,text,true,,729492,2334,14,14,4832,0,5
+1486147261878,10858,Post Grupo Atividade,200,OK,For Each User 1-43,text,true,,752094,2334,13,13,2327,0,15
+1486147231237,41590,Post Grupo Atividade,200,OK,For Each User 1-64,text,true,,752094,2334,12,12,25339,0,9
+1486147254071,19832,Post Grupo Atividade,200,OK,For Each User 1-2,text,true,,755861,2334,11,11,14960,0,14
+1486147263519,10488,Post Grupo Atividade,200,OK,For Each User 1-21,text,true,,752094,2334,10,10,795,0,18
+1486147254891,19193,Post Grupo Atividade,200,OK,For Each User 1-75,text,true,,755861,2334,9,9,14309,0,68
+1486147254266,19831,Post Grupo Atividade,200,OK,For Each User 1-7,text,true,,755861,2334,8,8,14858,0,9
+1486147255691,18495,Post Grupo Atividade,200,OK,For Each User 1-66,text,true,,755861,2333,7,7,13650,0,13
+1486147250090,24362,Post Grupo Atividade,200,OK,For Each User 1-56,text,true,,755861,2334,6,6,18159,0,12
+1486147265745,8774,Post Grupo Atividade,200,OK,For Each User 1-15,text,true,,755861,2334,5,5,540,0,8
+1486147254820,19736,Post Grupo Atividade,200,OK,For Each User 1-54,text,true,,755861,2334,4,4,14380,0,73
+1486147272606,1983,Post Grupo Atividade,200,OK,For Each User 1-59,text,true,,759628,2334,3,3,204,0,46
+1486147254652,19945,Post Grupo Atividade,200,OK,For Each User 1-65,text,true,,755861,2334,2,2,14475,0,15
+1486147276476,2109,Post Grupo Atividade,200,OK,For Each User 1-70,text,true,,763395,2334,1,1,722,0,11

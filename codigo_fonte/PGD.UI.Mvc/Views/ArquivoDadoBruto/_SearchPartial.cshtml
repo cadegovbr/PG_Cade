@@ -1,0 +1,25 @@
+﻿@model PGD.Application.ViewModels.SearchArquivosDadosBrutosViewModel
+<div class="well">
+
+    @using (Html.BeginForm("Index", "ArquivoDadoBruto", FormMethod.Post, htmlAttributes: new { @class = "form col-md-12" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="row col-md-12">
+            <div class="form-group col-md-12">
+                @Html.Label("Ano", new { @class = "col-md-12 control-label" })
+                <div class="col-md-12">                    
+                    @Html.TextBoxFor(x => x.Ano, new { @class = "form-control", @placeholder = "", @type = "number" })                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-3" style='float: right'>                
+                    <button type="submit" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-search"></span> Consultar</button>                
+            </div>
+        </div>
+    }
+
+    <div class="clearfix"></div>
+</div>

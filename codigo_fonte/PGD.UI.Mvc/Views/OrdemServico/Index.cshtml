@@ -1,0 +1,98 @@
+﻿@using PGD.Application.ViewModels
+@model IEnumerable<OrdemServicoViewModel>
+@{
+    ViewBag.Title = "Tabela de Atividades";
+}
+<h1 class="col-md-12">Tabela de Atividades </h1>
+
+<div class="clearfix"></div>
+@Html.Partial("_SearchPartial", new PGD.Application.ViewModels.SearchOrdemServicoViewModel())
+
+@if (Model.Count() == 0)
+{
+    <h4 class="col-md-12 text-center">@PGD.Domain.Constantes.Mensagens.ME_003</h4>
+}
+else
+{
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        @foreach (var os in Model.OrderBy(a => a.IdOrdemServico))
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="grup_@os.IdOrdemServico">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_@os.IdOrdemServico" aria-expanded="true" aria-controls="collapse_@os.IdOrdemServico">
+                            Tabela de Atividade nº @os.IdOrdemServico (@os.DatInicioSistema.ToString("dd/MM/yyyy"))
+                            <div class="pull-right">
+                                @{var ov = ((OrdemServicoViewModel)ViewBag.OrdemVigente);}
+                                @*Desabilitado até decidir se pode editar ou não OS - Work Item 3819*@
+                                @*@if (os.DatInicioSistema > ov.DatInicioSistema || os.IdOrdemServico == ov.IdOrdemServico)
+                                    {
+                                        <a href="@Url.Action("Create", "OrdemServico", new { id = os.IdOrdemServico })" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
+                                    }*@
+                                <a href="@Url.Action("Delete",new { id = @os.IdOrdemServico })" class="btn btn-xs btn-danger" onclick="return confirm('@PGD.Domain.Constantes.Mensagens.MD_002');"><span class="glyphicon glyphicon-remove"></span></a>
+                            </div>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse_@os.IdOrdemServico" class="panel-collapse collapse" role="tabpanel" aria-labelledby="grup_@os.IdOrdemServico">
+                    <div class="panel-body no-padding ">
+                        <table class="table table-stripe table-center">
+                            <thead>
+                                <tr style="background-color: #7f7f7f; color: #fff">
+                                    <th class="text-center">Grupo de Atividade</th>
+                                    <th class="text-center">Atividade</th>
+                                    <th class="text-center">Nível de Complexidade / Esforço</th>
+                                    <th class="text-center">Tempo Atividade PGD</th>
+                                    <th class="text-center">Tempo Atividade Presencial</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var grupo in os.Grupos.OrderBy(a => a.NomGrupoAtividade))
+                                {
+                                    foreach (var ativ in grupo.Atividades.OrderBy(a => a.NomAtividade))
+                                    {
+                                        <tr>
+                                            <td class="text-center">@grupo.NomGrupoAtividade</td>
+                                            <td>@ativ.NomAtividade</td>
+                                            <td class="text-center">
+                                                <ul>
+                                                    @foreach (var faixa in ativ.Tipos)
+                                                    {
+                                                        <li>@faixa.Faixa</li>
+                                                    }
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul>
+                                                    @foreach (var duracaoPGD in ativ.Tipos)
+                                                    {
+                                                        <li>@duracaoPGD.DuracaoFaixa</li>
+                                                    }
+                                                </ul>
+                                            </td>
+                                            <td class="text-center">
+                                                <ul>
+                                                    @foreach (var duracaoPresencial in ativ.Tipos)
+                                                    {
+                                                        <li>@duracaoPresencial.DuracaoFaixaPresencial</li>
+                                                    }
+                                                </ul>
+                                            </td>
+
+                                        </tr>
+                                    }
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+    <button type="button" onclick="javascript:location.href = '@Url.Action("GerarExcel", "OrdemServico")';" class="btn btn-primary" aria-label="Left Align" title="Emitir Rol de Atividades em Vigor">
+        Emitir Rol de Atividades em Vigor
+    </button>
+}

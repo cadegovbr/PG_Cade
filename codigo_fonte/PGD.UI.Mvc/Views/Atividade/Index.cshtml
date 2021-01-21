@@ -1,0 +1,101 @@
+﻿@model IEnumerable<PGD.Application.ViewModels.AtividadeViewModel>
+
+@{
+    ViewBag.Title = "Atividades";
+}
+
+<h1 class="">
+    Atividade
+
+</h1>
+
+<div class="clearfix"></div>
+<div class="well">
+    @using (Html.BeginForm("Index", "Atividade", FormMethod.Post, htmlAttributes: new { @class = "form col-md-10" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-group col-md-7">
+            <label>Nome da Atividade</label>
+            @Html.TextBox("NomAtividade", "", new { @class = "form-control", @placeholder = "" })
+        </div>
+        <div class="col-md-3">
+            <button type="submit" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-search"></span> Consultar</button>
+        </div>
+        <div class="col-md-2">
+            <label>&nbsp;</label>
+            <a id="btnNovo" href="@Url.Action("Create")" class="btn btn-primary btn-block ">Novo</a>
+        </div>
+    }
+
+    <div class="clearfix"></div>
+</div>
+
+@if (Model.Count() == 0)
+{
+    <h4 class="col-md-12 text-center">@PGD.Domain.Constantes.Mensagens.ME_003</h4>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-bordered tableFilter">
+        <thead>
+            <tr>
+                <th class="text-center">Atividade</th>
+                <th class="text-center">Percentual Mínimo de Redução</th>
+                <th class="text-center">Nível de Complexidade / Esforço</th>
+                <th class="text-center">Tempo Atividade PGD</th>
+                <th class="text-center">Tempo Atividade Presencial</th>
+                <th class="text-center">Opções</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model)
+            {
+                <tr>
+                    <td class="text-center">@obj.NomAtividade</td>
+                    <td class="text-center">@obj.PctMinimoReducao %</td>
+                    <td class="text-center">
+
+                        <ul class="text-center">
+                            @foreach (var tipo in obj.Tipos.OrderBy(a => a.IdTipoAtividade))
+                            {
+                                <li>@tipo.Faixa</li>
+                            }
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="text-center">
+                            @foreach (var tipo in obj.Tipos.OrderBy(a => a.IdTipoAtividade))
+                            {
+                                <li>@tipo.DuracaoFaixa</li>
+                            }
+                        </ul>
+
+                    </td>
+                    <td class="text-center">
+                        <ul>
+                            @foreach (var tipo in obj.Tipos.OrderBy(a => a.IdTipoAtividade))
+                            {
+                                <li>@tipo.DuracaoFaixaPresencial</li>
+                            }
+                        </ul>
+                    </td>
+                    <td class="text-center">
+                        <a href="@Url.Action("Create", new { id = obj.IdAtividade })" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-pencil" aria-hidden="true"></i></a>
+                        <a href="@Url.Action("Delete", new { id = obj.IdAtividade })" class="btn btn-xs btn-danger" onclick="return confirm('@PGD.Domain.Constantes.Mensagens.MD_002');"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+    </div>   
+}
+
+@section Scripts{
+
+    <script src="~/Scripts/datatables.min.js"></script>
+    <script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+    <script src="~/Scripts/datatables.globalization.js"></script>
+}

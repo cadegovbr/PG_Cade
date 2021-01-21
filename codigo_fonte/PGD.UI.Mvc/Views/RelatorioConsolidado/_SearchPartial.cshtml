@@ -1,0 +1,32 @@
+﻿@model PGD.Application.ViewModels.RelatorioConsolidadoViewModel
+
+<div class="well">
+    @Html.AntiForgeryToken()
+    <div class="row col-md-12">
+        <div class="form-group col-md-8">
+            <label for="exampleInputEmail2" class="col-md-12"> Período</label>
+            <div class="col-md-5">
+                @Html.TextBoxFor(x => x.DataInicial, new { @class = "form-control datepicker", @placeholder = "" })
+            </div>
+            <div class="col-md-1 text-center text-vertical-line  no-padding">a</div>
+            <div class="col-md-5">
+                @Html.TextBoxFor(x => x.DataFinal, new { @class = "form-control col-md datepicker", @placeholder = "" })
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row col-md-12">
+        <div class="col-md-3" style='float: right'>
+            <button type="button" id="btnExportarWord" class="btn btn-primary btn-block" aria-label="Left Align" title="Gerar Relatório">
+                Exportar Word
+            </button>
+        </div>
+        <div class="col-md-3" style='float: right'>
+            <button type="button" id="btnExportarPdf" class="btn btn-primary btn-block" aria-label="Left Align" title="Gerar Relatório">
+                Exportar PDF
+            </button>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

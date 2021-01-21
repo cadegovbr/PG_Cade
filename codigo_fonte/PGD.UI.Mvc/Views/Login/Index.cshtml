@@ -1,0 +1,61 @@
+﻿@model PGD.Application.ViewModels.LoginViewModel
+@{
+    ViewBag.Title = "Login";
+}
+
+<br /><br />
+
+<div class="well col-md-6 col-md-offset-3 col-xs-12">
+    <h2 class="col-md-12 text-center">Conselho Administrativo de Defesa Econômica</h2>
+    <br /><br /><br />
+    <h2 class="col-md-12 text-center">@ViewBag.Title</h2>
+    
+    <br /><br />
+
+    @using (Html.BeginForm("Index", "Login", FormMethod.Post, htmlAttributes: new { @class = "form col-md-12" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="row col-md-12">
+            <div class="form-group col-md-12">
+             
+                 @Html.Label("Sigla", "Digite seu Usuário*:", new { @class = "col-md-12 control-label" })
+                <div class="col-md-12">
+                   
+            
+                @Html.TextBoxFor(x => x.Sigla, new { @class = "form-control", @type = "text" })
+                @Html.ValidationMessageFor(c => c.Sigla)
+    
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="form-group col-md-12">
+                @Html.Label("Senha", "Digite sua senha*:", new { @class = "col-md-12 control-label" })
+                <div class="col-md-12">
+                    @Html.TextBoxFor(x => x.Senha, new { @class = "form-control", @type = "password" })
+                    @Html.ValidationMessageFor(c => c.Senha)
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <button class="btn btn-primary">Entrar</button>
+            </div>
+        </div>
+    }
+
+    <div class="clearfix"></div>
+</div>
+
+@section Scripts{
+
+
+    <script>
+        $(document).ready(function () {
+        //    $("#Cpf").mask("999.999.999-99");
+        });
+    </script>
+}

@@ -1,0 +1,60 @@
+﻿@using PGD.Application.ViewModels;
+
+@{
+    ViewBag.Title = "Solicitar o plano de trabalho";
+}
+
+
+
+<h1 class="">Cronograma</h1>
+<div class="clearfix"></div>
+
+
+
+
+
+    <div class="panel-group" role="tablist">
+     
+        <div class="panel panel-default">
+            
+
+            @using (Ajax.BeginForm("ExibirCronograma", "Cronograma", new AjaxOptions()
+            {
+                HttpMethod = "Post",
+                UpdateTargetId = "divConteudoCronograma",
+                OnSuccess = "exibirPopup",
+                OnFailure = "defaultFailureHandler"
+            }))
+            { 
+           
+                @Html.TextBox("strDataInicio", "2018-03-21", new { @type = "date", @class = "form-control" })
+                @Html.TextBox("strCargaHorariaTotal", "35", new { @type = "number", @class = "form-control" })
+                @Html.TextBox("strCargaHorariaDiaria", "8", new { @type = "number", @class = "form-control" })
+                @Html.TextBox("strPodeEditar", "true", new { @class = "form-control" })
+                @Html.TextBox("strDataInicioSuspensao", "2018-03-24", new { @type = "date", @class = "form-control" })
+                @Html.TextBox("strDataFimSuspensao", "2018-03-26", new { @type = "date", @class = "form-control" })
+
+                <button type="submit" class="btn btn-default" id="verAjustar">ver/ajustar cronograma</button>
+
+            }
+            
+                <div class="modal fade" id="modalCronograma" data-backdrop="static" data-keyboard="false">
+                    <div id="divConteudoCronograma">
+                    </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+@section Scripts{
+
+    <script>
+        function exibirPopup()
+        {
+            $('#modalCronograma').modal('show');
+        }
+</script>
+}
+

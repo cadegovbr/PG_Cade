@@ -1,0 +1,64 @@
+﻿@model  PGD.Application.ViewModels.RelatorioConsolidadoViewModel
+@{
+    ViewBag.Title = "Relatório Consolidado";
+}
+<h1 class="">Relatório Consolidado</h1>
+
+<div class="clearfix"></div>
+<div id="editor"></div>
+@Html.Partial("_SearchPartial", Model)
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div id="divConsolidado">
+        @Html.Partial("_RelatorioConsolidado", Model)
+    </div>
+    <div></div>
+</div>
+@section Scripts{
+
+    <script src="~/Scripts/Pacto.js"></script>
+    <script src="~/Scripts/datatables.min.js"></script>
+    <script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+    <script src="~/Scripts/datatables.globalization.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+        });
+        var cache_width = $('#divConsolidado').width(); //Criado um cache do CSS
+        var a4 = [595.28, 841.89]; 
+        $("#divConsolidado").width((a4[0] * 1.33333) - 80).css('max-width', 'none');
+      // Widht e Height de uma folha a4
+        $("#btnExportarWord").click(function () {
+            if ($("#DataInicial").val() !== "" && $("#DataFinal").val() !== "") {
+                RenderPartial("RelatorioConsolidado", "GerarRelatorioConsolidado", { datainicio: $("#DataInicial").val(), datafim: $("#DataFinal").val() }, "get").done(function (success) {
+                    $("#divConsolidado").html(success);
+                    $("#divConsolidado").wordExport();
+                });
+            }
+            else
+                alert("O período é de preenchimento obrigatório.")
+        });
+        $("#btnExportarPdf").click(function () {
+            if ($("#DataInicial").val() !== "" && $("#DataFinal").val() !== "") {
+                RenderPartial("RelatorioConsolidado", "GerarRelatorioConsolidado", { datainicio: $("#DataInicial").val(), datafim: $("#DataFinal").val() }, "get").done(function (success) {
+                    $("#divConsolidado").html(success);
+                    getPDF();
+
+                });
+            }
+            else
+                alert("O período é de preenchimento obrigatório.")
+
+            function getPDF() {
+                html2canvas($('#divConsolidado'), {
+                    onrendered: function (canvas) {
+                        var img = canvas.toDataURL("image/png", 1.0);
+                        var doc = new jsPDF({ unit: 'px', format: 'a4' });
+                        doc.addImage(img, 'JPEG', 10, 10);
+                        doc.save('RelatorioConsolidado.pdf');
+                        $('#renderPDF').width(cache_width);
+                    }
+                });
+            }
+        });
+    </script>
+}

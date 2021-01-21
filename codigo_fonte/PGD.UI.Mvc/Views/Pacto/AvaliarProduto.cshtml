@@ -1,0 +1,125 @@
+﻿@model PGD.Application.ViewModels.PactoViewModel
+@using PGD.Application.ViewModels;
+
+@{
+    ViewBag.Title = "Avaliar plano de trabalho";
+}
+
+
+<div>
+
+    <div class="modal-body" style="display:inline">
+
+        @Html.Partial("_VisualizarDadosPactoPartial", Model)
+
+        @Html.Partial("_VisualizarAtividadesPactuadasPartial", Model)
+
+        <div id="containerRealizarAvaliacao">
+
+        </div>
+
+        @Html.Partial("_VisualizarHistoricoAvaliacoesPartial", Model.Avaliacoes, new ViewDataDictionary { { "modoSomenteLeitura", Model.modoSomenteLeitura } })
+
+        <div id="containerExibirAvaliacao">
+
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+        <div class="row">
+            <div class="col-md-6">
+                @if (Model.IdOrigemAcao == (int)PGD.Domain.Enums.eOrigem.SolicitacaoPacto)
+                {
+                    <a href="@Url.Action("Solicitar", "Pacto", new { id = Model.IdPacto, idOrigemAcao = Model.IdOrigemAcao })" onclick="showLoading()" class='btn btn-md btn-primary pull-left'>Voltar</a>
+                }
+                else
+                {
+                    <a href="@Url.Action("Index", "Pacto", new { idOrigemAcao = Model.IdOrigemAcao })" onclick="showLoading()" class='btn btn-md btn-primary pull-left'>Voltar</a>
+                }
+            </div>
+        </div>
+
+        <div class="clearfix">
+
+        </div>
+    </div>
+
+</div>
+
+@section Scripts{
+
+    <script src="~/Scripts/Pacto.js"></script>
+    <script src="~/Scripts/datatables.min.js"></script>
+    <script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+    <script src="~/Scripts/datatables.globalization.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {            
+            $('#tblHistoricoAvaliacoes').dataTable({
+                "bFilter": false,
+                "bLengthChange": false,
+                "order": [[0, "desc"]],
+                "columnDefs": [{
+                    "targets": 7,
+                    "orderable": false
+                }],
+                "language": {
+                    "url": ROOT.concat("/", "Scripts/Portuguese-Brasil.json")
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $('#tblAtividadesPactuadas').dataTable({
+                "bAutoWidth": false,
+                "bFilter": false,
+                "bLengthChange": false,
+                "order": [[0, "asc"], [1, "asc"]],
+                "columnDefs": [{
+                    "targets": 7,
+                    "orderable": false
+                }],
+                "language": {
+                    "url": ROOT.concat("/", "Scripts/Portuguese-Brasil.json")
+                }
+            });
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#EntregueNoPrazo').val('1');
+        });
+
+        function preparaAvaliacaoProdutoSuccess() {
+            $('#containerRealizarAvaliacao').show();
+            hideLoading();
+        }
+
+        function preparaExibicaoAvaliacaoProdutoSuccess() {
+            $('#containerExibirAvaliacao').show();
+            hideLoading();
+        }
+
+    function cancelarAvaliacaoSuccess() {
+            
+             for (instance in CKEDITOR.instances) {
+                    $('#' + instance).val(CKEDITOR.instances[instance].getData());
+            }
+            $('#formAvaliacao').attr('action', '/Pacto/CancelarAvaliacao?idOrigemAcao=2');
+            $('#formAvaliacao').submit();
+             hideLoading();
+        }
+
+        function avaliarProdutoSuccess(retorno) {
+            @{
+                var urlAvaliacao = Html.Raw($"{Url.Action("AvaliarProduto")}?idPacto={Model.IdPacto}&idOrigemAcao={Model.IdOrigemAcao}");
+            }
+            location.href='@urlAvaliacao';
+        }
+
+    </script>
+}

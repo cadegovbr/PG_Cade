@@ -1,0 +1,120 @@
+﻿@model PGD.Application.ViewModels.ProdutoViewModel
+@using (Ajax.BeginForm("AtualizaObservacaoProduto", "Pacto", new AjaxOptions() { OnSuccess = "alterarObservacaoProdutoSuccess", OnFailure = "defaultFailureHandler", OnBegin = "showLoading" }))
+{
+    @Html.HiddenFor(m => m.IdProduto)
+    @Html.HiddenFor(m => m.IdPacto)
+
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                @Html.AntiForgeryToken()
+                <h4 class="modal-title">
+                    Alterar Detalhamento Produto
+                </h4>
+
+                <div id="page-content-wrapper" class="body-content">
+                    <div id="divAlertaSupender" class="form-group alert alert-danger fade in hidden">
+                        <label id="lblMsg"></label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-body">
+
+                <div class="clearfix">
+                    <div class="form-group">
+                        @Html.Label("Detalhamento")
+                        @Html.TextAreaFor(m => m.Observacoes, new { @class = "form-control", @type = "text", @cols = "5", @rows = "10", @required = "true", @id = "Observacao" })
+
+                        <script>CKEDITOR.replace("Observacao");</script>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+
+        <div style="border: 1px solid #DED8D8; width: 500px; font-family: Arial;">
+
+
+            <table>
+                <tr>
+                    <td style="width: 50px;">
+                        <b style="color: #FF5722">File:</b>
+                    </td>
+                    <td>
+                        <input type="file" name="files" id="files" multiple="multiple" />
+                    </td>
+                    <td>
+                        <button id="upload" class="btn btn-primary" onclick="uploadAnexoProduto()">Upload</button>
+                    </td>
+                </tr>
+
+            </table>
+
+            <table class="gridborder row-borderhover order-column dataTable no-footer">
+                <tr>
+                    <th class="sorting_asc">
+                        Arquivo
+                    </th>
+                    <th class="sorting">
+                        Tamanho
+                    </th>
+                    <th class="sorting">
+                        Tipo
+                    </th>
+                    <th class="sorting"></th>
+                </tr>
+
+                @foreach (var item in Model.AnexoProduto)
+                {
+                    <tr>
+                        <td class="sorting_1">
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td class="sorting_1">
+                            @Html.DisplayFor(modelItem => item.Tamanho)
+                        </td>
+                        <td class="sorting_1">
+                            @Html.DisplayFor(modelItem => item.Tipo)
+                        </td>
+                        <th class="sorting">
+                            @Html.ActionLink("Download", "Download", new { fileName = item.Nome })
+                        </th>
+                    </tr>
+                }
+            </table>
+
+        </div>
+        -->
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type='button' class='btn btn-md btn-primary pull-left' data-dismiss="modal">
+                            &nbsp;Cancelar
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="submit" class='btn btn-md btn-primary pull-right'>
+                            &nbsp;Atualizar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="clearfix">
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+}
+
+
+
+

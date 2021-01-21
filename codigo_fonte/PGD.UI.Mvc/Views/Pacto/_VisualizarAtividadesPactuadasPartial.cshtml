@@ -1,0 +1,82 @@
+﻿@model PGD.Application.ViewModels.PactoViewModel
+@using PGD.Application.ViewModels;
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="pacto_identificacao">
+        <h4 class="panel-title">
+            Atividades
+        </h4>
+    </div>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="table-responsive">
+            <table id="tblAtividadesPactuadas" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center hidden-xs hidden-sm" style="border:none;"></th>
+                        <th class="text-center" style="border:none;"></th>
+                        <th class="text-center hidden-xs hidden-sm" " style="border:none;"></th>
+                        <th class="text-center label-primary" colspan="2">PACTUADO</th>
+                        <th class="text-center label-primary" colspan="2">A AVALIAR</th>
+                        @if (!Model.modoSomenteLeitura)
+                        {
+                            <th class="text-center" style="border:none;"></th>
+                        }
+                    </tr>
+                    <tr>
+                        <th class="text-center hidden-xs hidden-sm">Grupo de Atividade</th>
+                        <th class="text-center">Atividade</th>
+                        <th class="text-center hidden-xs hidden-sm">Faixa</th>
+                        <th class="text-center">Quantidade de Produtos</th>
+                        <th class="text-center">Carga Horária</th>
+                        <th class="text-center">Quantidade de Produtos</th>
+                        <th class="text-center">Carga Horária a Avaliar</th>
+                        @if (!Model.modoSomenteLeitura)
+                        {
+                            <th class="text-center">&nbsp;</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < Model.Produtos.Count; i++)
+                    {
+                        <tr>
+                            @Html.HiddenFor(x => x.Produtos[i].IdPacto)
+                            @Html.HiddenFor(x => x.Produtos[i].IdProduto)
+                            @Html.HiddenFor(x => x.Produtos[i].IdAtividade)
+                            @Html.HiddenFor(x => x.Produtos[i].IdTipoAtividade)
+                            @Html.HiddenFor(x => x.Produtos[i].IdGrupoAtividade)
+                            @Html.HiddenFor(x => x.Produtos[i].CargaHoraria)
+                            @Html.HiddenFor(x => x.Produtos[i].CargaHorariaProduto)
+                            @Html.HiddenFor(x => x.Produtos[i].QuantidadeProduto)
+                            @Html.HiddenFor(x => x.Produtos[i].IdGrupoAtividade)
+                            <td class="text-center hidden-xs hidden-sm">@Model.Produtos[i].GrupoAtividade.NomGrupoAtividade</td>
+                            <td class="text-center">@Model.Produtos[i].Atividade.NomAtividade</td>
+                            <td class="text-center hidden-xs hidden-sm">@Model.Produtos[i].TipoAtividade.Faixa</td>
+                            <td class="text-center">@Model.Produtos[i].QuantidadeProduto</td>
+                            <td class="text-center">@Model.Produtos[i].CargaHorariaProdutoFormatada</td>
+                            <td class="text-center">@Model.Produtos[i].QuantidadeProdutosAAvaliar</td>
+                            <td class="text-center">@Model.Produtos[i].CargaHorariaAAvaliarFormatada</td>
+                            <td class="text-center">
+                                @if (!Model.modoSomenteLeitura && Model.Produtos[i].QuantidadeProdutosAAvaliar > 0)
+                                {
+                                    using (Ajax.BeginForm("PreparaAvaliacaoProduto", "Pacto", new { idProduto = Model.Produtos[i].IdProduto, idPacto = Model.IdPacto, idOrigemAcao = Model.IdOrigemAcao },
+                                        new AjaxOptions()
+                                        {
+                                            HttpMethod = "Post",
+                                            UpdateTargetId = "containerRealizarAvaliacao",
+                                            OnSuccess = "preparaAvaliacaoProdutoSuccess",
+                                            OnFailure = "defaultFailureHandler",
+                                        }))
+                                    {
+                                        <button type="submit" class="btn btn-xs btn-primary remPdt">Avaliar</button>
+                                    }
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,182 @@
+﻿@model PGD.Application.ViewModels.SuspenderPactoViewModel
+
+
+
+<div class="modal-dialog modal-lg" role="document" id="modalInternaRetornarSuspensao">
+    <div class="modal-content">
+
+        <div class="modal-header">
+            @Html.AntiForgeryToken()
+            <h4 class="modal-title">
+                Voltar Suspensão
+            </h4>
+        </div>
+
+        <div class="modal-body">
+            <div id="page-content-wrapper" class="body-content">
+                <div id="divAlertaRetorno" class="form-group alert alert-danger fade in @(ViewData.ModelState.IsValid ? "hidden" : "") ">
+                    @Html.ValidationSummary(false)
+                </div>
+            </div>
+
+            @using (Ajax.BeginForm("FinalizarSuspensao", null, new AjaxOptions() { UpdateTargetId = "modalRetornarSuspensao", OnSuccess = "retornarSuspenderSuccess", OnFailure = "defaultFailureHandler", HttpMethod = "Post", OnBegin = "showLoading" }, new { @id = "frmRetornarSuspensao" }))
+            {
+                @Html.HiddenFor(m => m.IdPacto)
+                <div class="clearfix">
+                    <div class="form-group">
+                        @Html.LabelFor(r => r.SuspensoAPartirDe): @Html.TextBoxCGUFor(r => r.SuspensoAPartirDe, new { @class = "textboxAsLabel" })
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="form-group">
+                        @Html.LabelFor(r => r.SuspensoAte): @Html.TextBoxCGUFor(r => r.SuspensoAte, new { @class = "datepicker", @onchange = "atualizaCronograma(false);" }).SetMask("99/99/9999")
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="form-group">
+                        @Html.LabelFor(r => r.DataTerminoPacto): <strong>@Html.TextBoxFor(r => r.DataTerminoPacto, new Dictionary<string, object>() { { "class", "textboxAsLabel" }, { "readonly", "readonly" } })</strong>
+                    </div>
+                </div>
+            }
+
+            <div class="clearfix">
+                <div class="form-group">
+                    @using (Ajax.BeginForm("ExibirCronograma", "Cronograma", new AjaxOptions()
+                    {
+                        HttpMethod = "Post",
+                        UpdateTargetId = "divConteudoCronograma",
+                        OnSuccess = "exibirPopupCronogramaSuspensao",
+                        OnFailure = "defaultFailureHandler",
+                        OnBegin = "showLoading"
+                    }))
+                    {
+
+                        @Html.Hidden("DataInicial", Model.DataInicioPacto.ToShortDateString(), new { })
+                        @Html.Hidden("HorasTotais", Model.CargaHorariaTotalPacto, new { })
+                        @Html.Hidden("HorasDiarias", Model.CargaHorariaDiaria, new { })
+                        @Html.Hidden("PodeEditar", Model.PodeEditar, new { })
+                        @Html.Hidden("DataInicioSuspensao", Model.SuspensoAPartirDe?.ToShortDateString(), new { })
+                        @Html.Hidden("DataFimSuspensao", Model.SuspensoAte?.ToShortDateString(), new { })
+                        @Html.Hidden("FecharCallbackFunction", "fecharCronograma", new { })
+                        @Html.Hidden("SalvarCallbackFunction", "submeterFinalizarSuspensao", new { })
+                        @Html.Hidden("CPFUsuario", Model.CPFUsuario, new { })
+                        @Html.Hidden("IdPacto", Model.IdPacto, new { })
+                        @Html.Hidden("CalcularCronogramaAPartirBanco", "false", new { })
+                        @Html.Hidden("ValidarHorasADistribuir", "false", new { })
+                        <button type="submit" class="buttonAsLink">ver/ajustar cronograma</button>
+
+                    }
+                </div>
+            </div>
+
+
+        </div>
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col-md-6">
+                    <button type='button' class='btn btn-md btn-primary pull-left' data-dismiss="modal">
+                        &nbsp;Cancelar
+                    </button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" onclick="submeterFinalizarSuspensao()" class='btn btn-md btn-primary pull-right' @(!Model.PodeEditar ? "disabled" : "")>
+                        &nbsp;Assinar
+                    </button>
+                </div>
+            </div>
+
+            <div class="clearfix">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    function exibirPopupCronogramaSuspensao() {
+        hideLoading();
+        $('#modalRetornarSuspensao').modal('hide');
+        $('#modalCronograma').modal('show');
+    }
+
+    // This just makes all bootstrap native .modals jive together
+    $('.modal').on("hidden.bs.modal", function (e) {
+        if ($('.modal:visible').length) {
+            $('.modal-backdrop').first().css('z-index', parseInt($('.modal:visible').last().css('z-index')) - 10);
+            $('body').addClass('modal-open');
+        }
+    }).on("show.bs.modal", function (e) {
+        if ($('.modal:visible').length) {
+            $('.modal-backdrop.in').first().css('z-index', parseInt($('.modal:visible').last().css('z-index')) + 10);
+            $(this).css('z-index', parseInt($('.modal-backdrop.in').first().css('z-index')) + 10);
+        }
+    });
+
+    $(document).ready(function () {
+        $(".datepicker").datepicker({
+            changeMonth: true,
+            dateFormat: 'dd/mm/yy',
+            nextText: '&rarr;',
+            prevText: '&larr;',
+            monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun',
+                'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+            dayNamesMin: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+            currentText: 'Hoje',
+            showOtherMonths: true,
+            numberOfMonths: 1,
+            changeYear: true,
+            //maxDate: "0",
+            defaultDate: new Date(),
+            beforeShow: function (textbox, instance) {
+                instance.dpDiv.css({
+                    marginTop: (-textbox.offsetHeight) + 'px',
+                    marginLeft: textbox.offsetWidth + 'px'
+                });
+            }
+        });
+    });
+
+    function fecharCronograma() {
+        $('#modalRetornarSuspensao').modal('show');
+        $('#modalCronograma').modal('hide');
+
+    }
+
+    function submeterFinalizarSuspensao() {
+        if (confirm('Deseja cadastrar o retorno da suspensão?')) {
+            $('#frmRetornarSuspensao').submit();
+        }
+    }
+
+    function atualizaCronograma() {
+        atualizaValorCampo('DataInicioSuspensao', $("#@Html.IdFor(m => m.SuspensoAPartirDe)").val());
+        atualizaValorCampo('DataFimSuspensao', $("#@Html.IdFor(m => m.SuspensoAte)").val());
+        var parametros = {
+            DataInicial: '@Model.DataInicioPacto.ToShortDateString()',
+            HorasTotais: $("#HorasTotais").val(),
+            HorasDiarias: $("#HorasDiarias").val(),
+            PodeEditar: $("#PodeEditar").val(),
+            DataInicioSuspensao: $("#DataInicioSuspensao").val(),
+            DataFimSuspensao: $("#DataFimSuspensao").val(),
+            FecharCallbackFunction: $("#FecharCallbackFunction").val(),
+            SalvarCallbackFunction: $("#SalvarCallbackFunction").val(),
+            CPFUsuario: '@Model.CPFUsuario',
+            IdPacto: @Model.IdPacto
+        };
+        console.log(parametros);
+        ExecutaJson('Cronograma', 'AtualizarCronograma', parametros, "post").done(function (retorno)
+        {
+            console.log(retorno);
+            $("[name*='@Html.IdFor(m => m.DataTerminoPacto)']").each(function () {
+                this.value = retorno["DataTermino"];
+            });
+        });
+    }
+
+    function retornarSuspenderSuccess() {
+        //Executa novamente a consulta;
+        submeteConsulta();
+    }
+</script>

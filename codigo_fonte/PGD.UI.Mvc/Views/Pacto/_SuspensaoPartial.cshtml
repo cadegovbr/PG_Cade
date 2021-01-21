@@ -1,0 +1,191 @@
+﻿@model PGD.Application.ViewModels.SuspenderPactoViewModel
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">
+                Suspender plano de trabalho
+            </h4>
+
+            <div id="page-content-wrapper" class="body-content">
+                <div id="divAlertaSupender" class="form-group alert alert-danger fade in hidden">
+                    <label id="lblMsg"></label>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-body">
+
+            @using (Ajax.BeginForm("Suspender", "Pacto",
+                new AjaxOptions() { UpdateTargetId = "divSuspensaoPartial", OnSuccess = "suspenderSuccess", OnFailure = "defaultFailureHandler", OnBegin = "showLoading" }, new { @id = "frmSuspenderPacto" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.IdPacto)
+                <div class="clearfix">
+                    <div class="form-group">
+                        <label for="Motivo">Motivo</label>
+                        @Html.TextAreaFor(m => m.Motivo, new { @class = "form-control", @type = "text", @cols = "5", @rows = "6", @required = "true" })
+                    </div>
+                </div>
+
+                <div class="clearfix">
+                    <div class="form-group">
+                        <label for="exampleInputEmail2">Suspenso a partir de:</label>
+                        @Html.TextBoxCGUFor(m => m.SuspensoAPartirDe, new { @class = "form-control datepicker", @placeholder = "", @onchange = "atualizaCronograma(true);", @Value = Model.SuspensoAPartirDe.GetValueOrDefault().ToShortDateString(), @required = "true" }).SetReadonly(false)
+                    </div>
+                </div>
+
+                <div class="clearfix">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.HorasMantidasParaDataSuspensao)
+                        @Html.TextBoxCGUFor(m => m.HorasMantidasParaDataSuspensao, new { @class = "qtdHoras timepicker form-control", @placeholder = "", @required = "true", @onchange = "atualizaCronograma(false);" }).SetReadonly(false)
+                    </div>
+                </div>
+
+                <div class="clearfix">
+                    <div class="form-group">
+                        @Html.LabelFor(r => r.SuspensoAte)
+                        @Html.TextBoxCGUFor(r => r.SuspensoAte, new { @class = "form-control datepicker", @onchange = "atualizaCronograma(false);" }).SetMask("99/99/9999")
+                    </div>
+                </div>
+                <div class="alert @Model.ClasseMensagem">
+                    @Model.Mensagem
+                </div>
+            }
+            <div class="clearfix">
+                <div class="form-group">
+                    @using (Ajax.BeginForm("ExibirCronograma", "Cronograma", new AjaxOptions()
+                    {
+                        HttpMethod = "Post",
+                        UpdateTargetId = "divConteudoCronograma",
+                        OnSuccess = "exibirPopupCronogramaSuspensao",
+                        OnFailure = "defaultFailureHandler",
+                        OnBegin = "showLoading"
+                    }))
+                    {
+
+                        @Html.Hidden("DataInicial", Model.DataInicioPacto.ToShortDateString(), new { })
+                        @Html.Hidden("HorasTotais", Model.CargaHorariaTotalPacto, new { })
+                        @Html.Hidden("HorasDiarias", Model.CargaHorariaDiaria, new { })
+                        @Html.Hidden("PodeEditar", true, new { })
+                        @Html.Hidden("DataInicioSuspensao", Model.SuspensoAPartirDe?.ToShortDateString(), new { })
+                        @Html.Hidden("DataFimSuspensao", Model.SuspensoAte?.ToShortDateString(), new { })
+                        @Html.Hidden("StrQuantidadeHorasDiasSuspensao", "0:00", new { })
+                        @Html.Hidden("FecharCallbackFunction", "fecharCronograma", new { })
+                        @Html.Hidden("SalvarCallbackFunction", "submeterSuspenderPacto", new { })
+                        @Html.Hidden("CPFUsuario", Model.CPFUsuario, new { })
+                        @Html.Hidden("IdPacto", Model.IdPacto, new { })
+                        @Html.Hidden("CalcularCronogramaAPartirBanco", "false", new { })
+                        @Html.Hidden("ValidarHorasADistribuir", "false", new { })
+
+                        <button type="submit" class="buttonAsLink">ver/ajustar cronograma</button>
+
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col-md-6">
+                    <button type='button' class='btn btn-md btn-primary pull-left' data-dismiss="modal">
+                        &nbsp;Cancelar
+                    </button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" onclick="submeterSuspenderPacto()" class='btn btn-md btn-primary pull-right'>
+                        &nbsp;Suspender
+                    </button>
+                </div>
+            </div>
+
+            <div class="clearfix">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#divSuspensaoPartial').modal({
+            backdrop: 'static'
+        });
+
+        $('#divSuspensaoPartial').modal('show');
+        $('.timepicker').mask('99:99');
+
+        $('#divSuspensaoPartial').find('.datepicker').mask('99/99/9999');
+
+        $('#divSuspensaoPartial').find('.datepicker').datepicker({
+            changeMonth: true,
+            dateFormat: 'dd/mm/yy',
+            nextText: '&rarr;',
+            prevText: '&larr;',
+            monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun',
+                'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+            dayNamesMin: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+            currentText: 'Hoje',
+            showOtherMonths: true,
+            numberOfMonths: 1,
+            changeYear: true,
+            //maxDate: "0",
+             defaultDate: new Date()
+        });
+
+
+    });
+
+    function exibirPopupCronogramaSuspensao() {
+        hideLoading();
+        $('#divSuspensaoPartial').modal('hide');
+        $('#modalCronograma').modal('show');
+    }
+
+    function atualizaCronograma(atualizarAPartirBanco) {
+        atualizaValorCampo('DataInicioSuspensao', $("#@Html.IdFor(m => m.SuspensoAPartirDe)").val());
+        atualizaValorCampo('DataFimSuspensao', $("#@Html.IdFor(m => m.SuspensoAte)").val());
+        atualizaValorCampo('StrQuantidadeHorasDiasSuspensao', $("#@Html.IdFor(m => m.HorasMantidasParaDataSuspensao)").val());
+        var parametros = {
+            DataInicial: '@Model.DataInicioPacto.ToShortDateString()',
+            HorasTotais: $("#HorasTotais").val(),
+            HorasDiarias: $("#HorasDiarias").val(),
+            PodeEditar: $("#PodeEditar").val(),
+            DataInicioSuspensao: $("#DataInicioSuspensao").val(),
+            StrQuantidadeHorasDiasSuspensao: $("#@Html.IdFor(m => m.HorasMantidasParaDataSuspensao)").val(),
+            DataFimSuspensao: $("#DataFimSuspensao").val(),
+            FecharCallbackFunction: $("#FecharCallbackFunction").val(),
+            SalvarCallbackFunction: $("#SalvarCallbackFunction").val(),
+            CPFUsuario: '@Model.CPFUsuario',
+            IdPacto: @Model.IdPacto,
+            CalcularCronogramaAPartirBanco: atualizarAPartirBanco
+        };
+
+        ExecutaJson('Cronograma', 'AtualizarCronograma', parametros, "post").done(function (retorno)
+        {
+            $("[name*='@Html.IdFor(m => m.DataTerminoPacto)']").each(function () {
+                this.value = retorno["DataTermino"];
+            });
+        });
+    }
+
+    function fecharCronograma() {
+        $('#divSuspensaoPartial').modal('show');
+        $('#modalCronograma').modal('hide');
+
+    }
+
+    function submeterSuspenderPacto() {
+        if (confirm('Deseja cadastrar a suspensão do pacto?')) {
+            $('#frmSuspenderPacto').submit();
+        }
+    }
+
+    function suspenderSuccess()
+    {
+        hideLoading();
+        //Executa novamente a consulta;
+        if ('@ViewData.ModelState.IsValid.ToString().ToLower()' == 'true') {
+            submeteConsulta();
+        }
+    }
+</script>

@@ -1,0 +1,5 @@
+Favor executar os scripts na sequência:
+script_criar
+Inserts_iniciais
+Insert_Nota_Avaliacao
+Alterar_collate

@@ -1,0 +1,52 @@
+﻿
+@model List<PGD.Application.ViewModels.RelatorioFolhaPontoResultsViewModel>
+
+@if (Model.Count == 0)
+{
+    <br />
+    <h3>Não há registros neste período.</h3>
+    <br/><br /><br /><br />
+}
+else
+{
+  <br /><br /><br /><br />
+  <table class="table table-bordered border-collapse:collapse tableFilter" id="tblExportaDirigente">
+    @foreach (var item in Model)
+    {
+      <thead id="@item.Servidor.CpfServidor">
+          <tr>
+              <th class="text-center">Nome do servidor: </th>
+              <th colspan="2">@item.Servidor.NomeServidor</th>
+          </tr>
+          <tr>
+              <th class="text-center">Unidade(s): </th>
+              <th colspan="2">@Html.Raw(item.Servidor.NomeUnidade)</th>
+          </tr>
+          <tr>
+              <th class="text-center">Planos de Trabalhos</th>
+              <th class="text-center">Data</th>
+              <th class="text-center">Carga horária total diária</th>
+          </tr>
+      </thead>
+        <tbody>
+            @foreach (var crn in item.ListCronogramas)
+            {
+            <tr @(crn.HorasCronograma.TotalHours == 0 ? "class=warning" : "")>
+                <td style="text-align:center;">@crn.IdsPacto</td>
+                <td style="text-align:center;">@crn.DataCronograma.ToShortDateString() (@crn.DiaCronograma) </td>
+                <td style="text-align:center;">@(crn.HorasCronograma.ToString())</td>
+            </tr>
+            }
+            <tr style="border:0"><td style="border:0" colspan="2">&nbsp;</td></tr>
+            <tr style="border:0"><td style="border:0" colspan="2">&nbsp;</td></tr>
+        </tbody>
+    }
+  </table>
+}
+<div class="row pull-right">
+    <button id="imprimir" onclick="window.print();" class="btn btn-primary">Imprimir</button>
+    <button id="voltar" onclick="history.back(); showLoading();" class="btn btn-primary">Voltar</button>
+</div>
+
+
+ 

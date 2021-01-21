@@ -1,0 +1,46 @@
+﻿@model PGD.Application.ViewModels.PactoViewModel
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="pacto_identificacao">
+        <h4 class="panel-title">
+            Dados do plano de trabalho
+        </h4>
+    </div>
+    <div role="tabpanel" id="conteudoIdentificacao">
+        <div class="panel-body ">
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <label>@Html.LabelFor(m => m.IdPacto):</label>
+                    @Html.DisplayFor(m => m.IdPacto)
+                </div>
+                <div class="form-group col-md-12">
+                    <label>@Html.LabelFor(m => m.SituacaoPacto.DescSituacaoPacto):</label>
+                    @Html.DisplayFor(m => m.SituacaoPacto.DescSituacaoPacto)
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <label>@Html.LabelFor(m => m.Nome):</label>
+                    @Html.DisplayFor(m => m.Nome)
+                </div>
+                <div class="form-group col-md-6">
+                    <label>@Html.LabelFor(m => m.DataPrevistaInicio):</label>
+                    @Html.DisplayFor(m => m.StrDataPrevistaInicio)
+                </div>
+                <div class="form-group col-md-6">
+                    <label>@Html.LabelFor(m => m.DataPrevistaTermino):</label>
+                    @Html.DisplayFor(m => m.StrDataPrevistaTermino)
+                </div>
+                <div class="form-group col-md-6">
+                    <label>@Html.LabelFor(m => m.CargaHorariaTotal):</label>
+                    @Html.DisplayFor(m => m.StrCargaHorariaTotal)
+                </div>
+                <div class="form-group col-md-6">
+                    <label>@Html.LabelFor(m => m.CargaHorariaTotalHomologada):</label>
+                    @Html.DisplayFor(m => m.StrCargaHorariaHomologada)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

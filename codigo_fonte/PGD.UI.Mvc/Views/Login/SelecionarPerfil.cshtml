@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Selecionar perfil";
+}
+
+<br /><br />
+
+      <div class="well col-md-6 col-md-offset-3 col-xs-12">
+          <h2 class="col-md-12 text-center">Conselho Administrativo de Defesa Econômica</h2>
+          <br /><br /><br />
+          <h2 class="col-md-12 text-center">Selecione o perfil desejado:</h2>
+          <br /><br />
+
+          @using (Html.BeginForm("SelecionarPerfil", "Login", FormMethod.Post, htmlAttributes: new { @class = "form col-md-12" }))
+          {
+              @Html.AntiForgeryToken()
+              <div class="panel panel-default" style="border: 2px solid black">
+                  <div class="panel-heading" style="background-image: none; background-color: #165abf"></div>
+                  <div class="panel-body text-center">
+                      <div class="row">
+                          @foreach (var item in (List<PGD.Domain.Enums.Perfil>)TempData["lstPerfil"])
+                          {
+                          <div class="col-md-4">
+                              @Html.RadioButton("Perfil", item, false, new { @id = "perfil" + item.ToString() })
+                              @if (item.ToString() == "Solicitante")
+                              {
+                                  @Html.Label("Participante")
+                              }
+                              else if (item.ToString() == "Dirigente")
+                              {
+                                  @Html.Label("Chefia")
+                              }
+                              else
+                              {
+                                  @Html.Label(item.ToString(), new { @for = "perfil" + item.ToString() })
+                              }
+
+                          </div>
+                          }
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col text-center">
+                      <button class="btn btn-primary">Entrar</button>
+                  </div>
+              </div>
+          }
+
+          <div class="clearfix"></div>
+      </div>

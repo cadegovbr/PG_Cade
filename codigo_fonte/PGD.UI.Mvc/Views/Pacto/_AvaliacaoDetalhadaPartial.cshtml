@@ -1,0 +1,101 @@
+﻿@using PGD.Application.ViewModels;
+
+@model PGD.Application.ViewModels.AvaliacaoProdutoViewModel
+
+
+<div class="panel panel-default">
+    
+
+    <div class="panel panel-body">
+
+        <div class="panel panel-default">
+
+            <div class="panel-heading" role="tab" id="criterios_avaliacao">
+                Critérios da Avaliação
+            </div>
+
+            <table id="tblCriteriosAvaliacao" class="table table-bordered">
+                <tbody>
+                    @for (int i = 0; i < Model.CriteriosAvaliacao.Count; i++)
+                    {
+
+                        string itemSelecionado = String.Empty;
+
+                        <tr>
+                            <td>
+                                @Html.Hidden(Model.CriteriosAvaliacao[i].IdCriterioAvaliacao.ToString(), Model.CriteriosAvaliacao[i].IdCriterioAvaliacao)
+                                @Model.CriteriosAvaliacao[i].DescCriterioAvaliacao <span title="@Model.CriteriosAvaliacao[i].StrTextoExplicativo" class="glyphicon glyphicon-question-sign"></span>
+                            </td>
+                            <td>                          
+                                @{ 
+                                    if (Model.AvaliacoesDetalhadas?.Count > 0)
+                                    {
+                                        OS_ItemAvaliacaoViewModel os_itemSelecionado = Model.AvaliacoesDetalhadas.Where(a => a.IdAvaliacaoProduto == Model.IdAvaliacaoProduto && a.IdOS_CriterioAvaliacao == Model.CriteriosAvaliacao[i].IdCriterioAvaliacao).SingleOrDefault().OS_ItemAvaliacao;
+                                        itemSelecionado = Model.CriteriosAvaliacao[i].IdCriterioAvaliacao + "-" + os_itemSelecionado?.IdItemAvaliacao;
+                                    }
+                                }
+
+                                @Html.DropDownListCGUFor(m => m.ItensAvaliados, 
+                                                              new SelectList((List<ItemAvaliacaoViewModel>)@Model.CriteriosAvaliacao[i].ItensAvaliacao, "IdCriterioAvaliacaoIdItemAvaliacao", "DescItemAvaliacao", itemSelecionado), 
+                                                              new { @class = "form-control selectize itensAvaliados" }).SetDisabled(!Model.HabilitarCampos)                             
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <div style="text-align:right; margin-right:10px; font-weight:bold">
+                @{ 
+                    string descricaoAvaliacao = Model.IdAvaliacaoProduto > 0 ? Model.DescricaoAvaliacao : "Não disponível";
+                }
+                Nota Final: <span id="resultaAvaliacao" style="color:red;"> @descricaoAvaliacao</span>
+            </div>
+        </div>
+        
+
+    </div>
+
+    
+
+</div>
+
+<script type="text/javascript">
+
+   $(function () {
+            
+       $(".itensAvaliados").change(function () {
+
+            var itensAvaliados = [];
+            var selecionouTodosOsItens = true;
+    
+            $("#tblCriteriosAvaliacao tr").each(function () {
+
+                var tdlist = $(this).find("td");                
+                var inputIdCriterioIdItem = $(tdlist[1]).find("select");  
+
+                if (inputIdCriterioIdItem.val() === '') {    
+                    selecionouTodosOsItens = false;
+                    document.getElementById("resultaAvaliacao").innerHTML = "Não disponível";
+                }
+                else {      
+                    var itemAvaliado = { IdCriterioIdItem: inputIdCriterioIdItem.val() };
+                    itensAvaliados.push(itemAvaliado);   
+                }
+
+                })
+
+            if (selecionouTodosOsItens) {
+
+                ExecutaJson("Pacto", "GetNotaAvaliacaoDetalhada", { itensAvaliados: JSON.stringify(itensAvaliados) }, 'post').done(function (retorno) {
+                    var notaFinal = retorno['notaFinal'];
+                    document.getElementById("resultaAvaliacao").innerHTML = notaFinal;
+                });
+            }
+            else {
+
+            }
+                
+        });
+   });
+    
+</script>

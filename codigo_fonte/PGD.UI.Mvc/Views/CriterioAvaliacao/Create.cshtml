@@ -1,0 +1,91 @@
+﻿@model PGD.Application.ViewModels.CriterioAvaliacaoViewModel
+
+@{
+    ViewBag.Title = "Novo Avaliação Detalhada";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <h1 class="col-md-12">Nova Avaliação Detalhada </h1>
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="form-horizontal">
+            @Html.HiddenFor(model => model.IdCriterioAvaliacao)
+            <div class="form-group">
+                @Html.LabelFor(model => model.DescCriterioAvaliacao, htmlAttributes: new { @class = "col-sm-4 control-label" })
+
+                <div class="col-sm-8">
+                    @Html.TextBoxFor(model => model.DescCriterioAvaliacao, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.StrTextoExplicativo, htmlAttributes: new { @class = "col-sm-4 control-label" })
+                <div class="col-sm-8">
+                    @Html.TextAreaFor(model => model.StrTextoExplicativo, 8, 10, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="form-group">
+
+                <table id="tableItensAvaliacao" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Item para Avaliação</th>
+                            <th class="text-center">Impacto na nota</th>
+                            <th class="text-center">Nota Máxima</th>
+                            <th class="text-center">Opção</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{int index = 0;}
+                        @for (index = 0; index < Model.ItensAvaliacao.Count; index++)
+                        {
+                            var modelItemAva = new KeyValuePair<int, PGD.Application.ViewModels.ItemAvaliacaoViewModel>(index, Model.ItensAvaliacao[index]);
+                            @Html.Partial("_ItemAvaliacaoPartial", modelItemAva)
+                        }
+                    </tbody>
+                </table>
+
+                <div class="col-md-2 pull-right">
+                    <button id="AddItemAva" type="button" class="btn btn-primary btn-block btn-xs" onclick="AddItemAvaliacao();"><span class="glyphicon glyphicon-plus"></span> Adicionar</button>
+                </div>
+            </div>
+
+
+
+            <hr class="col-md-12">
+            <div class="form-group">
+                <div class="col-md-2">
+                    <a href="@Url.Action("Index", "CriterioAvaliacao")" class="btn btn-danger btn-block">Cancelar</a>
+                </div>
+                <div class="col-sm-offset-8 col-md-2">
+                    <button id="salvar" type="submit" class="btn btn-success btn-block">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts{
+
+    <script src="~/Scripts/datatables.min.js"></script>
+    <script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+    <script src="~/Scripts/CriterioAvaliacao.js"></script>
+    <script src="~/Scripts/datatables.globalization.js"></script>
+
+    <script type="text/javascript">
+        var ItensAvaliacaoCount = @Model.ItensAvaliacao.Count;
+    </script>
+
+    <script>
+        $(document).ready(function () {    
+                
+                $(".impacto-nota").mask("-9,9");
+        });
+    </script>    
+}

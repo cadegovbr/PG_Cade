@@ -1,0 +1,233 @@
+﻿@model PGD.Application.ViewModels.RelatorioConsolidadoViewModel
+
+<div>
+    <span style="font-size:9px;">@Model.TextoInicialData</span>
+</div>
+<table class="table" style="border-collapse:collapse;border:1px solid #FF0000;" id="tblAvaliacaoAtividades">
+    <thead style="font-size:12px;">
+        <tr>
+            <th class="text-center" style="font-weight:bold;border:1px solid black;background-color:LightGrey;width:40%;font-size:10px;">Unidade</th>
+            <th class="text-center" style="font-weight:bold;border:1px solid black;background-color:LightGrey;font-size:11px;">Quantidade de servidores que participaram do Programa*</th>
+            <th class="text-center" style="font-weight:bold;border:1px solid black;background-color:LightGrey;font-size:11px;">Quantidade de planos de trabalhos celebrados</th>
+            <th class="text-center" style="font-weight:bold;border:1px solid black;background-color:LightGrey;font-size:11px;">Quantidade de planos de trabalhos entregues no prazo</th>
+            <th class="text-center" style="font-weight:bold;border:1px solid black;background-color:LightGrey;font-size:11px;">% de Atendimento de Prazo</th>
+        </tr>
+    </thead>
+    <tbody style="font-size:12px;">
+        @foreach (var atv in Model.listaAtividadesPgd)
+        {
+            <tr>
+                <td style="text-align:center;border:1px solid black;background-color:#E8E8E8;">@atv.nomeUnidade</td>
+                <td style="border:1px solid black;">@atv.QtdServPgd</td>
+                <td style="border:1px solid black;">@atv.QtdPctCelebrados</td>
+                <td style="border:1px solid black;">@atv.QtdPctEntreguePrazo</td>
+                <td style="border:1px solid black;">@atv.PercentEntreguePz</td>
+            </tr>
+        }
+        <tr>
+            <td style="text-align:center;font-weight:bold;border:1px solid black;background-color:LightGrey;">Totais</td>
+            <td style="border:1px solid black;background-color:LightGrey;">@Model.listaAtividadesPgd.Sum(a => a.QtdServPgd)</td>
+            <td style="border:1px solid black;background-color:LightGrey;">@Model.listaAtividadesPgd.Sum(a => a.QtdPctCelebrados)</td>
+            <td style="border:1px solid black;background-color:LightGrey;">@Model.listaAtividadesPgd.Sum(a => a.QtdPctEntreguePrazo)</td>
+            <td style="border:1px solid black;background-color:LightGrey;">@Model.listaAtividadesPgd.Sum(a => a.PercentEntreguePz)</td>
+        </tr>
+    </tbody>
+</table>
+<span style="text-align:center;">* O mesmo servidor pode ter executado mais de um plano de trabalho em PGD no período.</span>
+<br />
+<div>
+    <table class="table" id="tblAvaliacaoAtividades">
+        <thead style="font-size:12px;">
+            <tr>
+                <th colspan="9" style="text-align:center;background-color:LightGrey;">Nível de qualidade dos trabalhos por tipo de atividade</th>
+            </tr>
+            <tr>
+                <th colspan="3" style="text-align:center;background-color:LightGrey;">Atividades</th>
+                <th colspan="6" style="text-align:center;background-color:LightGrey;">Qualidade do Trabalho</th>
+            </tr>
+
+            <tr>
+                <th class="text-center" style="font-weight:bold;background-color:LightGrey;">Grupo de Atividade</th>
+                <th class="text-center" style="font-weight:bold;background-color:LightGrey;">Atividade</th>
+                <th class="text-center" style="font-weight:bold;background-color:LightGrey;">Faixa da Atividade</th>
+                <th class="text-center" style="font-weight:bold;background-color:LightGrey;">Excelente</th>
+                <th class="text-center" style="font-weight:bold;background-color:LightGrey;">Bom</th>
+                <th class="text-center" style="font-weight:bold;background-color:LightGrey;">Regular</th>
+                <th class="text-center" style="font-weight:bold;background-color:LightGrey;">Ruim</th>
+                <th class="text-center" style="font-weight:bold;background-color:LightGrey;">Pessímo</th>
+                <th class="text-center" style="font-weight:bold;background-color:LightGrey;">Total Geral</th>
+            </tr>
+        </thead>
+
+        @foreach (var gAtv in Model.listGrupoAtividades)
+        {
+            <tbody style="font-size:12px;">
+                <tr>
+                    <td style="text-align:center;vertical-align: middle !important;" rowspan="@gAtv.Atividades.Count()">@gAtv.NomGrupoAtividade</td>
+                    <td style="text-align:center;">
+                        <table class="table">
+                            @foreach (var atv in gAtv.Atividades)
+                            {
+                                <tr>
+                                    <td>
+                                        @atv.NomAtividade
+                                    </td>
+                                </tr>
+                            }
+                        </table>
+                    </td>
+                    <td style="text-align:center;">
+                        <table class="table">
+                            @foreach (var atv in gAtv.Atividades)
+                            {
+
+                                foreach (var fx in atv.Tipos)
+                                {
+                                    <tr>
+                                        <td>
+                                            @fx.Faixa
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </table>
+                    </td>
+                    @for (int i = 0; i <= 5; i++)
+                {
+                        <td style="text-align:center;">
+                            <table class="table ">
+                                @foreach (var atv in gAtv.Atividades)
+                                {
+                                    foreach (var fx in atv.Tipos)
+                                    {
+                                        var avaliacao = 0;
+                                        switch (i)
+                                        {
+                                            case 0:
+                                                avaliacao = 5;
+                                                break;
+                                            case 1:
+                                                avaliacao = 4;
+                                                break;
+                                            case 2:
+                                                avaliacao = 3;
+                                                break;
+                                            case 3:
+                                                avaliacao = 2;
+                                                break;
+                                            case 4:
+                                                avaliacao = 1;
+                                                break;
+                                            case 5:
+                                                avaliacao = 6;
+                                                break;
+                                        }
+                                        <tr>
+                                            @if (avaliacao != 6)
+                                            {
+                                                <td>
+                                                    @Model.listProdutosPgd.Where(a => a.IdTipoAtividade == fx.IdTipoAtividade && a.Avaliacao == avaliacao && a.IdAtividade == atv.IdAtividade && a.IdGrupoAtividade == gAtv.IdGrupoAtividade).ToList().Count()
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td>
+                                                    @Model.listProdutosPgd.Where(a => a.IdTipoAtividade == fx.IdTipoAtividade && a.IdAtividade == atv.IdAtividade && a.IdGrupoAtividade == gAtv.IdGrupoAtividade).ToList().Count()
+                                                </td>
+                                            }
+                                        </tr>
+                                    }
+                                }
+                            </table>
+                        </td>
+                    }
+                </tr>
+            </tbody>
+            <tbody style="font-size:12px;">
+                <tr>
+                    <td colspan="3" style="font-weight:bold;">SUBTOTAL</td>
+                    @for (int i = 0; i <= 5; i++)
+                    {
+                        var avaliacao = 0;
+                        switch (i)
+                        {
+                            case 0:
+                                avaliacao = 5;
+                                break;
+                            case 1:
+                                avaliacao = 4;
+                                break;
+                            case 2:
+                                avaliacao = 3;
+                                break;
+                            case 3:
+                                avaliacao = 2;
+                                break;
+                            case 4:
+                                avaliacao = 1;
+                                break;
+                            case 5:
+                                avaliacao = 6;
+                                break;
+                        }
+                        if (avaliacao != 6)
+                        {
+                            <td style="text-align:center;">
+                                @Model.listProdutosPgd.Where(a => a.IdGrupoAtividade == gAtv.IdGrupoAtividade && a.Avaliacao == avaliacao).ToList().Count()
+                            </td>
+                        }
+                        else
+                        {
+                            <td style="text-align:center;">
+                                @Model.listProdutosPgd.Where(a => a.IdGrupoAtividade == gAtv.IdGrupoAtividade).ToList().Count()
+                            </td>
+                        }
+                    }
+                </tr>
+            </tbody>
+        }
+        <tbody style="font-size:12px;">
+
+            <tr>
+                <td colspan="3" style="font-weight:bold;background-color:LightGrey;">Total Geral</td>
+                @for (int i = 0; i <= 5; i++)
+            {
+                var avaliacao = 0;
+                switch (i)
+                {
+                    case 0:
+                        avaliacao = 5;
+                        break;
+                    case 1:
+                        avaliacao = 4;
+                        break;
+                    case 2:
+                        avaliacao = 3;
+                        break;
+                    case 3:
+                        avaliacao = 2;
+                        break;
+                    case 4:
+                        avaliacao = 1;
+                        break;
+                    case 5:
+                        avaliacao = 6;
+                        break;
+                }
+                if (avaliacao != 6)
+                {
+                        <td style="text-align:center;background-color:LightGrey;">
+                            @Model.listProdutosPgd.Where(a => a.Avaliacao == avaliacao).ToList().Count()
+                        </td>
+                    }
+                    else
+                    {
+                        <td style="text-align:center;background-color:LightGrey;">
+                            @Model.listProdutosPgd.ToList().Count()
+                        </td>
+                    }
+                }
+            </tr>
+        </tbody>
+    </table>
+</div>

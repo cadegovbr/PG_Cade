@@ -1,0 +1,107 @@
+﻿@model PGD.Application.ViewModels.PactoViewModel
+@using PGD.Application.ViewModels;
+
+@{
+    ViewBag.Title = "Interromper plano de trabalho";
+}
+<h1 class="">Interromper Plano de Trabalho</h1>
+
+    <div>
+        <div class="modal-header">
+
+            <div class="modal-body">
+
+                @Html.Partial("_VisualizarDadosPactoPartial", Model)
+
+                @Html.Partial("_VisualizarAtividadesPactuadasPartial", Model)
+
+                <div id="containerRealizarAvaliacao">
+
+                </div>
+
+                @Html.Partial("_VisualizarHistoricoAvaliacoesPartial", Model.Avaliacoes, new ViewDataDictionary { { "modoSomenteLeitura", Model.modoSomenteLeitura } })
+
+                <div id="containerExibirAvaliacao">
+
+                </div>
+
+                @using (Html.BeginForm("Interromper", "Pacto", FormMethod.Post, new { @id = "frmInterrupcao" }))
+                {
+                    @Html.HiddenFor(x => x.IdPacto)
+                    @Html.HiddenFor(x => x.CpfUsuario)
+                    <div class="clearfix">
+                        <div class="form-group">
+                            <label for="exampleInputName2">Motivo</label>
+                            @Html.TextAreaFor(x => x.Motivo, new { @class = "form-control", @type = "text", @cols = "2", @rows = "3", @required = "true" })
+                        </div>
+                    </div>
+
+                    <div class="clearfix">
+                        <div class="form-group">
+                            <label for="exampleInputEmail2">Interrompido a partir de:</label>
+                            @Html.TextBoxCGUFor(m => m.DataInterrupcao, new { @class = "form-control datepicker", @placeholder = "", @Value = DateTime.Now.ToShortDateString(), @required = "true" }).SetReadonly(false)
+                        </div>
+                    </div>
+
+                    <div class="clearfix">
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.HorasMantidasParaDataInterrupcao)
+                            @Html.TextBoxCGUFor(m => m.HorasMantidasParaDataInterrupcao, new { @class = "qtdHoras form-control", @type = "time", @placeholder = "", @required = "true" }).SetReadonly(false)
+                        </div>
+                    </div>
+
+                }
+
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="@Url.Action("Index", "Pacto")" onclick="showLoading()" class='btn btn-md btn-primary pull-left'>Voltar</a>
+                </div>
+                <div class="col-md-6">
+                    <button type="submit" onclick="submeterInterrupcao()" class='btn btn-md btn-primary pull-right'>
+                        &nbsp;Confirmar Interrupção
+                    </button>
+                </div>
+            </div>
+
+            <div class="clearfix">
+
+            </div>
+        </div>
+
+    </div>
+
+
+    @section Scripts{
+
+        <script src="~/Scripts/Pacto.js"></script>
+        <script src="~/Scripts/datatables.min.js"></script>
+        <script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+        <script src="~/Scripts/datatables.globalization.js"></script>
+
+        <script type="text/javascript">
+            function preparaAvaliacaoProdutoSuccess() {
+                hideLoading();
+                $('#containerRealizarAvaliacao').show();
+            }
+
+            function preparaExibicaoAvaliacaoProdutoSuccess() {
+                hideLoading();
+                $('#containerExibirAvaliacao').show();
+            }
+
+            function submeterInterrupcao() {
+                $('#frmInterrupcao').submit();
+            }
+
+            function avaliarProdutoSuccess(retorno) {
+                @{
+                    var urlAvaliacao = Html.Raw($"{Url.Action("Interromper")}?idPacto={Model.IdPacto}");
+                }
+                location.href='@urlAvaliacao';
+            }
+        </script>
+    }

@@ -1,0 +1,44 @@
+﻿@using PGD.Application.ViewModels
+@model List<ProdutoViewModel>
+
+
+<form id="form-produtos-hidden">
+    @{
+        var lista = Model ?? new List<ProdutoViewModel>();
+    }
+    <div id="div-inputs-form-produto">
+        @for (int i = 0; i < lista.Count(); i++)
+        {
+            <input type="hidden" name="Produtos[@i].IdGrupoAtividade" value="@lista[i].IdGrupoAtividade">
+            <input type="hidden" name="Produtos[@i].IdAtividade" value="@lista[i].IdAtividade">
+            <input type="hidden" name="Produtos[@i].IdTipoAtividade" value="@lista[i].IdTipoAtividade">
+            <input type="hidden" name="Produtos[@i].QuantidadeProduto" value="@lista[i].QuantidadeProduto">
+            <input type="hidden" name="Produtos[@i].CargaHorariaTotalProdutoFormatada" value="@lista[i].CargaHorariaTotalProdutoFormatada">
+            <input type="hidden" name="Produtos[@i].CargaHorariaProduto" value="@lista[i].CargaHorariaProduto">
+            <input type="hidden" name="Produtos[@i].Observacoes" value="@lista[i].Observacoes">
+            <input type="hidden" name="Produtos[@i].Index" value="@lista[i].Index">
+            <input type="hidden" name="Produtos[@i].IdPacto" value="@lista[i].IdPacto">
+            <input type="hidden" name="Produtos[@i].IdPacto" value="@lista[i].IdPacto">
+            <input type="hidden" name="Produtos[@i].IdProduto" value="@lista[i].IdProduto">
+            <input type="hidden" name="Produtos[@i].PodeEditar" value="@lista[i].PodeEditar">
+            <input type="hidden" name="Produtos[@i].PodeEditarAndamento" value="@lista[i].PodeEditarAndamento">
+            <input type="hidden" name="Produtos[@i].IdTipoPacto" value="@lista[i].IdTipoPacto">
+            <input type="hidden" name="Produtos[@i].PodeEditar" value="@lista[i].PodeEditar">
+            <input type="hidden" name="Produtos[@i].PodeEditarAndamento" value="@lista[i].PodeEditarAndamento">
+
+            var iniciativas = lista[i].IniciativasPlanoOperacionalSelecionadas;
+            
+
+            if (lista[i].IniciativasPlanoOperacionalSelecionadas != null && lista[i].IniciativasPlanoOperacionalSelecionadas.Any())
+            {
+
+                for (var j = 0; j < iniciativas.Count; j++)
+                {
+
+                    <input type="hidden" name="Produtos[@i].IniciativasPlanoOperacionalSelecionadas[@j]" value="@lista[i].IniciativasPlanoOperacionalSelecionadas[j]">
+                }
+
+            }
+        }
+    </div>
+</form>

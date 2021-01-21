@@ -1,0 +1,48 @@
+﻿@using PGD.Application.ViewModels
+@using PGD.Domain.Entities
+@using PGD.Domain.Entities.RH
+@model IEnumerable<PGD.Application.ViewModels.Unidade_TipoPactoViewModel>
+
+@{
+    ViewBag.Title = "Gerenciar Tipos de Plano de Trabalho por Unidade";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Gerenciar tipos de plano de trabalho por unidade</h1>
+
+@Html.Partial("_SearchPartial", new SearchUnidadeTipoPactoViewModel())
+
+
+<div id="div-table-unidades-tipo-pacto" class="table-responsive">
+
+    <table class="table table-bordered"
+           id="tblUnidadeTipoPacto"
+           data-side-pagination="server"
+           data-ajax="ajaxTableUnidadesTipoPacto"
+           data-pagination="true"
+           data-search="false">
+        <thead>
+            <tr>
+                <th data-field="NomeUnidade" data-align="center" class="text-center" data-width="55%">
+                    <div class="th-inner ">Unidade</div>
+                </th>
+                <th data-field="DescTipoPacto" data-sortable="true" class="text-center" data-width="30%">
+                    <div class="th-inner ">Plano de Trabalho</div>
+                </th>
+                <th data-field="IndPermitePactoExterior" class="text-center" data-align="center" data-width="5%" data-formatter="formatterPermitePactoExterior">
+                    <div class="th-inner ">Permite plano de trabalho <br/> no exterior?</div>
+                </th>
+                <th class="text-center" data-width="10%" data-formatter="formatterAcoes">
+                    <div class="th-inner ">Ações</div>
+                </th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@section Scripts{
+    @*<script src="~/Scripts/datatables.min.js"></script>
+    <script src="~/Scripts/dataTables.bootstrap.min.js"></script>*@
+    @*<script src="~/Scripts/datatables.globalization.js"></script>*@
+    <script src="~/Scripts/Site/UnidadeTipoPacto/Index.js"></script>
+}

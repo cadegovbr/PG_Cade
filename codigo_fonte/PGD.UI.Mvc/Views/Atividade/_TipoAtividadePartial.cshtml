@@ -1,0 +1,28 @@
+﻿@model KeyValuePair<int, PGD.Application.ViewModels.TipoAtividadeViewModel>
+
+@{ 
+    int index = Model.Key;
+    var tipo = Model.Value;
+    string idRow = "rowTipo" + index.ToString();
+    string style = ((PGD.Application.ViewModels.TipoAtividadeViewModel)Model.Value).Excluir ? "display: none;" : "";
+}
+
+    <tr id="@idRow" style="@style">
+        @Html.Hidden("Tipos[" + index + "].IdTipoAtividade", tipo.IdTipoAtividade)
+        @Html.Hidden("Tipos[" + index + "].Excluir", tipo.Excluir)
+        <td>
+            @Html.TextBox("Tipos[" + index + "].Faixa", tipo.Faixa, new { @class = "form-control" })
+        </td>
+        <td>
+            @Html.TextBox("Tipos[" + index + "].TextoExplicativo", tipo.TextoExplicativo, new { @class = "form-control" })
+        </td>
+        <td>
+            @Html.TextBox("Tipos[" + index + "].DuracaoFaixa", tipo.DuracaoFaixa, new { @class = "form-control" })
+        </td>
+        <td>
+            @Html.TextBox("Tipos[" + index + "].DuracaoFaixaPresencial", tipo.DuracaoFaixaPresencial, new { @class = "form-control" })
+        </td>
+        <td>
+            <button type="button" class="btn btn-xs btn-danger" onclick="RemoveRow('@idRow', '@index.ToString()');"><em class="glyphicon glyphicon-remove"></em></button>
+        </td>
+    </tr>

@@ -1,0 +1,59 @@
+﻿@using PGD.Application.ViewModels
+
+@model IEnumerable<ArquivoDadoBrutoViewModel>
+
+@{
+    ViewBag.Title = "Dados Brutos";
+
+    String url = @System.Configuration.ConfigurationManager.AppSettings["URL_PGD"].ToString();
+}
+
+<h1 class="">Dados Brutos</h1>
+
+<div class="clearfix"></div>
+
+@Html.Partial("_SearchPartial", new PGD.Application.ViewModels.SearchArquivosDadosBrutosViewModel())
+
+@if (Model == null)
+{
+    <h4 class="col-md-12 text-center">@PGD.Domain.Constantes.Mensagens.ME_008</h4>
+}
+else if (Model.Count() == 0)
+{
+    <h4 class="col-md-12 text-center">@PGD.Domain.Constantes.Mensagens.ME_003</h4>
+}
+else
+{
+    <table class="table table-striped table-responsive">
+        <thead>
+            <tr>
+                <th>Ano</th>
+                <th>Nome do Arquivo</th>
+                <th>Data/Hora de Criação</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model.ToList().OrderByDescending(p => p.Ano))
+                {
+                <tr>
+                    <td> @item.Ano </td>
+                    <td> @item.NomeArquivo </td>
+                    <td> @item.DataArquivo </td>
+                    <td> <a href="@url/ArquivoDadoBruto/DownloadFilecd?filename=@item.NomeArquivo" target="_blank"><span class="glyphicon glyphicon-download-alt"></span></a> </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@section Scripts{    
+    <script src="~/Scripts/datatables.min.js"></script>
+    <script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+    <script src="~/Scripts/datatables.globalization.js"></script>
+    <script type="text/javascript">
+
+    </script>
+}
+

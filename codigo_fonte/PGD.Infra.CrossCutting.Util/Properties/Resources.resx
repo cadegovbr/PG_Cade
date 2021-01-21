@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ASSUNTO_EMAIL_NOTIFICACAO_ALTERACAO_PACTO" xml:space="preserve">
+    <value>[PGD] O plano de trabalho PGD {0} do servidor {1} foi alterado e requer assinatura</value>
+  </data>
+  <data name="ASSUNTO_EMAIL_NOTIFICACAO_ASSINATURA_PACTO_PELA_CHEFIA" xml:space="preserve">
+    <value>[PGD] O plano de trabalho PGD {0} do servidor {1} foi assinado pela chefia</value>
+  </data>
+  <data name="ASSUNTO_EMAIL_NOTIFICACAO_AVALIACAO_PACTO_PELA_CHEFIA" xml:space="preserve">
+    <value>[PGD] O plano de trabalho PGD {0} do servidor {1} foi avaliado por {2}.</value>
+  </data>
+  <data name="ASSUNTO_EMAIL_NOTIFICACAO_AVALIACAO_PARCIAL_PACTO_PELA_CHEFIA" xml:space="preserve">
+    <value>[PGD] O plano de trabalho PGD {0} do servidor {1} foi avaliado parcialmente por {2}.</value>
+  </data>
+  <data name="ASSUNTO_EMAIL_NOTIFICACAO_FIM_PACTO" xml:space="preserve">
+    <value>[PGD] O plano de trabalho PGD {0} do servidor {1} encerrou e requer avaliação</value>
+  </data>
+  <data name="ASSUNTO_EMAIL_NOTIFICACAO_INCLUSAO_PACTO" xml:space="preserve">
+    <value>[PGD] O servidor {0} criou novo plano de trabalho PGD {1}</value>
+  </data>
+  <data name="ASSUNTO_EMAIL_NOTIFICACAO_INCLUSAO_PACTO_PELA_CHEFIA" xml:space="preserve">
+    <value>[PGD] O chefe {0} criou novo plano de trabalho PGD {1} para o servidor {2}</value>
+  </data>
+  <data name="ASSUNTO_EMAIL_NOTIFICACAO_INTERRUPCAO_PACTO" xml:space="preserve">
+    <value>[PGD] O plano de trabalho PGD {0} do servidor {1} foi interrompido por {2}.</value>
+  </data>
+  <data name="ASSUNTO_EMAIL_NOTIFICACAO_PACTO_REINICIADO_APOS_SUSPENSAO" xml:space="preserve">
+    <value>[PGD] O plano de trabalho PGD {0} do servidor {1} foi reativado por {2}.</value>
+  </data>
+  <data name="ASSUNTO_EMAIL_NOTIFICACAO_PACTO_REINICIADO_AUTOMATICAMENTE" xml:space="preserve">
+    <value>[PGD] O plano de trabalho PGD {0} do servidor {1} foi reativado automaticamente pelo sistema.</value>
+  </data>
+  <data name="ASSUNTO_EMAIL_NOTIFICACAO_SUSPENSAO_PACTO" xml:space="preserve">
+    <value>[PGD] O plano de trabalho PGD {0} do servidor {1} foi suspenso por {2}.</value>
+  </data>
+  <data name="CORPO_EMAIL_NOTIFICACAO_ALTERACAO_PACTO" xml:space="preserve">
+    <value>&lt;b&gt;NOTIFICAÇÃO DO SISTEMA PGD&lt;/b&gt;
+
+&lt;br/&gt;&lt;br/&gt;
+
+O plano de trabalho PGD {0} do servidor {1} foi alterado e requer assinaturas.
+
+&lt;br/&gt;&lt;br/&gt;
+
+Período do plano de trabalho: {2} a {3}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Atividades:
+{4}
+
+&lt;br/&gt;&lt;br/&gt;
+
+O plano de trabalho deve ser assinado pelo servidor e chefia antes de seu início.
+
+&lt;br/&gt;&lt;br/&gt;
+
+Para acessar o plano de trabalho clique {5}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Obrigado!
+
+&lt;br/&gt;&lt;br/&gt;
+
+Sistema PGD</value>
+  </data>
+  <data name="CORPO_EMAIL_NOTIFICACAO_ALTERACAO_PACTO_EM_ANDAMENTO" xml:space="preserve">
+    <value>&lt;b&gt;NOTIFICAÇÃO DO SISTEMA PGD&lt;/b&gt;
+
+&lt;br/&gt;&lt;br/&gt;
+
+O plano de trabalho PGD {0} do servidor {1} foi alterado pela chefia, conforme dados abaixo:
+
+&lt;br/&gt;&lt;br/&gt;
+
+Período do plano de trabalho: {2} a {3}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Atividades:
+{4}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Para acessar o plano de trabalho clique {5}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Obrigado!
+
+&lt;br/&gt;&lt;br/&gt;
+
+Sistema PGD</value>
+  </data>
+  <data name="CORPO_EMAIL_NOTIFICACAO_ASSINATURA_PACTO_PELA_CHEFIA" xml:space="preserve">
+    <value>&lt;b&gt;NOTIFICAÇÃO DO SISTEMA PGD&lt;/b&gt;
+
+&lt;br/&gt;&lt;br/&gt;
+
+O plano de trabalho PGD {0} do servidor {1} foi assinado pela chefia e está apto a ser executado.
+
+&lt;br/&gt;&lt;br/&gt;
+
+Período do plano de trabalho: {2} a {3}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Atividades:
+
+&lt;br/&gt;&lt;br/&gt;
+
+{4}
+
+&lt;br/&gt;&lt;br/&gt;
+
+O plano de trabalho deve ser assinado também pelo servidor antes de seu início.
+
+&lt;br/&gt;&lt;br/&gt;
+
+Para acessar o plano de trabalho clique {5}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Obrigado!
+
+Sistema PGD</value>
+  </data>
+  <data name="CORPO_EMAIL_NOTIFICACAO_AVALIACAO_PACTO_PELA_CHEFIA" xml:space="preserve">
+    <value>&lt;b&gt;NOTIFICAÇÃO DO SISTEMA PGD&lt;/b&gt;
+
+&lt;br/&gt;&lt;br/&gt;
+
+O plano de trabalho PGD {0} do servidor {1} foi avaliado por {2}.
+
+&lt;br/&gt;&lt;br/&gt;
+
+Período do plano de trabalho: {3} a {4}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Data da avaliação {5}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Avaliação das Atividades:
+
+&lt;br/&gt;&lt;br/&gt;
+
+
+{6}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Plano de trabalho {7} concluído. 
+
+Para acessar o plano de trabalho clique {8}
+
+Obrigado!
+
+Sistema PGD</value>
+  </data>
+  <data name="CORPO_EMAIL_NOTIFICACAO_AVALIACAO_PARCIAL_PACTO_PELA_CHEFIA" xml:space="preserve">
+    <value>&lt;b&gt;NOTIFICAÇÃO DO SISTEMA PGD&lt;/b&gt;
+
+&lt;br&gt;&lt;br&gt;
+O plano de trabalho PGD {0} do servidor {1} foi avaliado parcialmente por {2}.
+&lt;br&gt;&lt;br&gt;
+
+Plano de trabalho avaliado parcialmente por {2}, Dirigente, na unidade {3} em {4}, às {5}, conforme horário oficial de Brasília. Foram avaliados os seguintes produtos:
+&lt;br&gt;&lt;br&gt;
+{6} da  atividade {7} totalizando {8} de carga horária na qualidade {9}
+&lt;br&gt;&lt;br&gt;
+
+Para acessar o plano de trabalho clique {10}
+&lt;br&gt;&lt;br&gt;
+
+Obrigado!
+&lt;br&gt;&lt;br&gt;
+
+Sistema PGD</value>
+  </data>
+  <data name="CORPO_EMAIL_NOTIFICACAO_FIM_PACTO" xml:space="preserve">
+    <value>&lt;b&gt;NOTIFICAÇÃO DO SISTEMA PGD &lt;/b&gt;
+
+&lt;br/&gt;&lt;br/&gt;
+
+O plano de trabalho PGD {0} do servidor {1} encerrou e requer avaliação da chefia.
+
+&lt;br/&gt;&lt;br/&gt;
+
+&lt;b&gt;A não avaliação do plano de trabalho e seus produtos impedirá a criação de novos planos de trabalhos PGD para o usuário. &lt;b/&gt;
+
+&lt;br/&gt;&lt;br/&gt;
+
+Período do plano de trabalho: {2} a {3}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Atividades:
+&lt;br/&gt;&lt;br/&gt;
+
+{4}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Os produtos do plano de trabalho devem ser avaliados.
+
+&lt;br/&gt;&lt;br/&gt;
+
+Para acessar o plano de trabalho clique {5}.
+
+&lt;br/&gt;&lt;br/&gt;
+
+Obrigado!
+
+&lt;br/&gt;&lt;br/&gt;
+
+Sistema PGD</value>
+  </data>
+  <data name="CORPO_EMAIL_NOTIFICACAO_INCLUSAO_PACTO" xml:space="preserve">
+    <value>&lt;b&gt;NOTIFICAÇÃO DO SISTEMA PGD&lt;/b&gt;
+
+&lt;br/&gt;&lt;br/&gt;
+
+O servidor {0} criou o plano de trabalho {1} que requer assinaturas para ser iniciado.
+
+&lt;br/&gt;&lt;br/&gt;
+
+Período do plano de trabalho: {2} a {3}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Atividades:
+{4}
+
+&lt;br/&gt;&lt;br/&gt;
+
+O plano de trabalho deve ser assinado pelo servidor e chefia antes de seu início.
+
+&lt;br/&gt;&lt;br/&gt;
+
+Para acessar o plano de trabalho clique {5}.
+
+&lt;br/&gt;&lt;br/&gt;
+
+Obrigado!
+
+Sistema PGD</value>
+  </data>
+  <data name="CORPO_EMAIL_NOTIFICACAO_INCLUSAO_PACTO_PELA_CHEFIA" xml:space="preserve">
+    <value>&lt;b&gt;NOTIFICAÇÃO DO SISTEMA PGD&lt;/b&gt;
+
+&lt;br/&gt;&lt;br/&gt;
+
+O dirigente {0} criou o plano de trabalho {1} para o servidor {2} que requer assinatura para ser iniciado.
+&lt;br/&gt;&lt;br/&gt;
+
+Período do plano de trabalho: {3} a {4}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Atividades:
+{5}
+
+&lt;br/&gt;&lt;br/&gt;
+
+O plano de trabalho deve ser assinado pelo servidor e chefia antes de seu início.
+
+&lt;br/&gt;&lt;br/&gt;
+
+Para acessar o plano de trabalho clique {6}.
+
+&lt;br/&gt;&lt;br/&gt;
+
+Obrigado!
+
+Sistema PGD</value>
+  </data>
+  <data name="CORPO_EMAIL_NOTIFICACAO_INTERRUPCAO_PACTO" xml:space="preserve">
+    <value>&lt;b&gt;NOTIFICAÇÃO DO SISTEMA PGD&lt;/b&gt;
+
+&lt;br/&gt;&lt;br/&gt;
+
+O plano de trabalho PGD {0} do servidor {1} foi interrompido por {2}.
+
+&lt;br/&gt;&lt;br/&gt;
+
+Período do plano de trabalho: {3} a {4}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Data da interrupção: {5}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Motivo da interrupção: {6}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Avaliação das Atividades:
+{7}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Caso restem atividades deste plano de trabalho a serem executadas, deverá ser criado um novo plano de trabalho PGD.
+
+&lt;br/&gt;&lt;br/&gt;
+
+Plano de trabalho {8} concluído. 
+
+&lt;br/&gt;&lt;br/&gt;
+
+Para acessar o plano de trabalho clique {9}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Obrigado!
+
+&lt;br/&gt;&lt;br/&gt;
+
+Sistema PGD</value>
+  </data>
+  <data name="CORPO_EMAIL_NOTIFICACAO_PACTO_REINICIADO_APOS_SUSPENSAO" xml:space="preserve">
+    <value>&lt;b&gt; NOTIFICAÇÃO DO SISTEMA PGD &lt;/b&gt;
+
+&lt;br/&gt;&lt;br/&gt;
+
+O plano de trabalho PGD {0} do servidor {1} foi alterado por {2} em {10}.
+
+&lt;br/&gt;&lt;br/&gt;
+Alteração: Reativação do plano de trabalho em {10}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Período do plano de trabalho : {3} a {4}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Data da suspensão: {5}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Período do plano de trabalho após reativação: {6} a {7}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Atividades:
+
+&lt;br/&gt;&lt;br/&gt;
+
+{8}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Situação do plano de trabalho: {11}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Para acessar o plano de trabalho clique {9}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Obrigado!
+
+Sistema PGD</value>
+  </data>
+  <data name="CORPO_EMAIL_NOTIFICACAO_PACTO_REINICIADO_AUTOMATICAMENTE" xml:space="preserve">
+    <value>&lt;b&gt; NOTIFICAÇÃO DO SISTEMA PGD &lt;/b&gt;
+
+&lt;br/&gt;&lt;br/&gt;
+
+O plano de trabalho PGD {0} do servidor {1} foi reativado automaticamente pelo sistema em {2}.
+
+&lt;br/&gt;&lt;br/&gt;
+
+Data da suspensão: {5}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Período do plano de trabalho após reativação: {3} a {4}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Atividades:
+
+&lt;br/&gt;&lt;br/&gt;
+
+{6}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Situação do plano de trabalho: {7}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Para acessar o plano de trabalho clique {8}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Obrigado!
+
+Sistema PGD</value>
+  </data>
+  <data name="CORPO_EMAIL_NOTIFICACAO_SUSPENSAO_PACTO" xml:space="preserve">
+    <value>&lt;b&gt;NOTIFICAÇÃO DO SISTEMA PGD&lt;/b&gt;
+
+&lt;br/&gt;&lt;br/&gt;
+
+O plano de trabalho PGD {0} do servidor {1} foi suspenso por {2}.
+
+&lt;br/&gt;&lt;br/&gt;
+
+Período do plano de trabalho: {3} a {4}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Data da suspensão: {5}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Motivo da suspensão: {6}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Atividades:
+{7}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Para concluir a execução do plano de trabalho, a chefia deverá "Retornar após suspensão".
+
+&lt;br/&gt;&lt;br/&gt;
+
+Para acessar o plano de trabalho clique {8}
+
+&lt;br/&gt;&lt;br/&gt;
+
+Obrigado!
+
+&lt;br/&gt;&lt;br/&gt;
+
+Sistema PGD</value>
+  </data>
+</root>

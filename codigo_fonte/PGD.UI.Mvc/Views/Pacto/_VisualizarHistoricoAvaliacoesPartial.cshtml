@@ -1,0 +1,88 @@
+﻿@model List<PGD.Application.ViewModels.AvaliacaoProdutoViewModel>
+@using PGD.Application.ViewModels;
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="avaliações">
+        <h4 class="panel-title">
+            Avaliações do plano de trabalho
+        </h4>
+    </div>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <table id="tblHistoricoAvaliacoes" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="text-center">Data</th>
+                    <th class="text-center hidden-xs hidden-sm">Avaliador</th>
+                    <th class="text-center">Atividade</th>
+                    <th class="text-center hidden-xs hidden-sm">Faixa</th>
+                    <th class="text-center hidden-xs hidden-sm">Total de Produtos</th>
+                    <th class="text-center">Produtos Avaliados</th>
+                    <th class="text-center">Horas Avaliadas</th>
+                    <th class="text-center">&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <tr>
+                        @Html.HiddenFor(x => x[i].IdAvaliacaoProduto)
+                        <td class="text-center">@Model[i].DataAvaliacao</td>
+                        <td class="text-center hidden-xs hidden-sm">@Model[i].NomeAvaliador</td>
+                        <td class="text-center">@Model[i].Produto.Atividade.NomAtividade</td>
+                        <td class="text-center hidden-xs hidden-sm">@Model[i].Produto.TipoAtividade.Faixa</td>
+                        <td class="text-center hidden-xs hidden-sm">@Model[i].Produto.QuantidadeProduto</td>
+                        <td class="text-center">@Model[i].QuantidadeProdutosAvaliados</td>
+                        <td class="text-center">@Model[i].CargaHorariaAvaliadaFormatada</td>
+                        <td class="text-center">
+                            @using (Ajax.BeginForm("PreparaAvaliacaoProduto", "Pacto", new { idAvaliacaoProduto = Model[i].IdAvaliacaoProduto, idProduto = Model[i].Produto.IdProduto, idPacto = Model[i].Produto.IdPacto, modoSomenteLeitura = Convert.ToBoolean(ViewData["modoSomenteLeitura"]), idOrigemAcao = Model[i].IdOrigemAcao },
+                                   new AjaxOptions()
+                                   {
+                                       HttpMethod = "Post",
+                                       UpdateTargetId = "containerExibirAvaliacao",
+                                       OnSuccess = "preparaExibicaoAvaliacaoProdutoSuccess()",
+                                       OnFailure = "defaultFailureHandler",
+                                   }))
+                            {
+                                <button type="submit" class="btn btn-xs btn-primary remPdt">Detalhar</button>
+
+                            }
+                            <br />
+
+                            @using (Ajax.BeginForm("PreparaAvaliacaoProduto", "Pacto", new { idAvaliacaoProduto = Model[i].IdAvaliacaoProduto, idProduto = Model[i].Produto.IdProduto, idPacto = Model[i].Produto.IdPacto, modoSomenteLeitura = Convert.ToBoolean(ViewData["modoSomenteLeitura"]), idOrigemAcao = Model[i].IdOrigemAcao },
+                                 new AjaxOptions()
+                                 {
+                                    
+                                     HttpMethod = "Post",
+                                     UpdateTargetId = "containerExibirAvaliacao",
+                                     OnSuccess = "cancelarAvaliacaoSuccess()",
+                                     OnFailure = "defaultFailureHandler",
+                                     
+                                     
+                                 }))
+                            {
+                                <button type="submit" class="btn btn-xs btn-warning" onclick="cancelarAvaliacao(event)">Cancelar</button>
+
+                            }
+
+                           
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+     function cancelarAvaliacao(e) {
+        if (confirm("Tem certeza que deseja cancelar a avaliação")) {
+            $("#feedback-form").submit();
+        } else {
+            hideLoading();
+            e.preventDefault();
+        }
+    }
+
+</script>
+
+

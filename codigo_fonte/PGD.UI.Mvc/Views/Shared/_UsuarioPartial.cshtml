@@ -1,0 +1,100 @@
+﻿@using PGD.Application.Util
+@{
+    var controller = ViewContext.Controller as PGD.UI.Mvc.Controllers.BaseController;
+    PGD.Application.ViewModels.UsuarioViewModel user = new PGD.Application.ViewModels.UsuarioViewModel();
+    if (controller != null)
+    {
+        user = controller.getUserLogado();
+    }
+}
+
+
+<div class="modal fade" id="modalUsuario" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="well" style="margin: auto; width: 100%; padding: 10px;">
+                    <h2 class="col-md-12 text-center">Conselho Administrativo de Defesa Econômica</h2>
+                    <br /><br /><br />
+
+                    @using (Html.BeginForm("LogOut", "Login", FormMethod.Post, htmlAttributes: new { @class = "form col-md-12", @id = "frmLogout" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="panel panel-default" style="border: 2px solid black">
+                            <div class="panel-heading" style="background-image: none; background-color: #165abf"></div>
+                            <div class="panel-body text-center">
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <p>CPF: @(user?.CPF.MaskCpfCpnj())</p>
+                                        <p>SIGLA - Unidade: @(!string.IsNullOrWhiteSpace(user?.SiglaUnidadeSelecionada) ? @user?.SiglaUnidadeSelecionada + " - " : "")@(user?.NomeUnidadeSelecionada)</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <a href="javascript:void(0)" onclick="trocarPerfil();"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Trocar de perfil?</a>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <button class="btn btn-danger" type="button" onclick="efetuarLogout()">Sair</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    }
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    function efetuarLogout() {
+
+        if (confirm('@PGD.Domain.Constantes.Mensagens.MD_001')) {
+            $('#modalUsuario').modal('hide');
+            $.ajax({
+                type: 'GET',
+                url: '/Login/LogOut',
+                beforeSend: () => showLoading(),
+                success: (data) => {
+                    if (data && data.ok) location.reload();
+                },
+                error: err => {
+                    console.log(err);
+                    hideLoading();
+                }
+            });
+        }
+    }
+
+    function trocarPerfil() {
+        if (confirm('@PGD.Domain.Constantes.Mensagens.MD_004')) {
+            $('#modalUsuario').modal('hide');
+
+            $.ajax({
+                type: 'GET',
+                url: '/Login/AlterarPerfil',
+                beforeSend: () => showLoading(),
+                success: (data) => {
+                    if(data && data.ok) location.reload();
+                },
+                error: err => {
+                    console.log(err);
+                    hideLoading();
+                }
+            });
+        }
+    }
+</script>

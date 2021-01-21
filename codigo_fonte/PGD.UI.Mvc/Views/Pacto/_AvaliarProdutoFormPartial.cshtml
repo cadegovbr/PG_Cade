@@ -1,0 +1,238 @@
+﻿@using PGD.Application.ViewModels;
+@using PGD.Domain.Enums;
+
+@{
+    var listaQualidade = new List<dynamic>
+    {
+        new {Id = 0}, new {Id = 1}, new {Id = 2}, new {Id = 3}, new {Id = 4}, new {Id = 5},
+        new {Id = 6}, new {Id = 7}, new {Id = 8}, new {Id = 9}, new {Id = 10},
+    };
+
+    var sltQualidade = new SelectList(listaQualidade, "Id", "Id");
+}
+
+@model PGD.Application.ViewModels.AvaliacaoProdutoViewModel
+
+@using (Ajax.BeginForm("AvaliarProduto", "Pacto", new AjaxOptions()
+{
+    HttpMethod = "Post",
+    UpdateTargetId = "containerAvaliarProdutoForm",
+    OnSuccess = "avaliarProdutoSuccess",
+    OnFailure = "defaultFailureHandler"
+}, new { @id = "formAvaliacao" }))
+{
+    @Html.HiddenFor(x => x.Produto.CargaHorariaProduto);
+    @Html.HiddenFor(x => x.Produto.QuantidadeProduto);
+    @Html.HiddenFor(x => x.Produto.QuantidadeProdutoAvaliado);
+    @Html.HiddenFor(x => x.Produto.Atividade.IdAtividade);
+    @Html.HiddenFor(x => x.Produto.Atividade.NomAtividade);
+    @Html.HiddenFor(x => x.CPFAvaliador)
+    @Html.HiddenFor(x => x.IdPacto)
+    @Html.HiddenFor(x => x.IdProduto)
+    @Html.HiddenFor(x => x.IdAvaliacaoProduto)
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="pacto_identificacao">
+            Dados da Avaliação
+        </div>
+        <div class="panel panel-body">
+
+            @if (Model.IdAvaliacaoProduto > 0)
+            {
+                <div class="row">
+                    <div class="col-md-3">
+                        @Html.Label("Data da Avaliação:")
+                    </div>
+                    <div class="col-md-9">
+                        @Html.DisplayFor(m => m.DataAvaliacao)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        @Html.Label("Usuário (dirigente) responsável:")
+                    </div>
+                    <div class="col-md-9">
+                        @Html.DisplayFor(m => m.NomeAvaliador)
+                    </div>
+                </div>
+            }
+
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.Label("Quantidade de produtos que deseja avaliar:")
+                </div>
+                <div class="col-md-9">
+                    @Html.DropDownListCGUFor(m => m.QuantidadeProdutosAvaliados, new SelectList((Dictionary<int, int>)TempData["QuantidadeProdutosAAvaliar"], "Key", "Value", Model.QuantidadeProdutosAvaliados),
+                             new { @class = "form-control", @onchange = "atualizarCargaHoraria();" }).SetDisabled(!Model.HabilitarCampos)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.Label("Horas a Homologar:")
+                </div>
+                <div class="col-md-9">
+                    @Html.TextBoxFor(m => m.CargaHorariaAvaliadaFormatada, new Dictionary<string, object>() { { "class", "textboxAsLabel" }, { "readonly", "readonly" } })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.Label("Entregue no Prazo?")
+                </div>
+                <div class="col-md-9">
+                    <label>@Html.RadioButtonCGUFor(x => x.EntregueNoPrazo, new { @required = "required", @onchange = "alternaVisibilidadeEntregueForaDoPrazo(false)" }, true).SetChecked(Model.EntregueNoPrazo.HasValue && Model.EntregueNoPrazo.Value).SetDisabled(!Model.HabilitarCampos) Sim</label>
+                    <label>@Html.RadioButtonCGUFor(x => x.EntregueNoPrazo, new { @required = "required", @onchange = "alternaVisibilidadeEntregueForaDoPrazo(true)" }, false).SetChecked(Model.EntregueNoPrazo.HasValue && !Model.EntregueNoPrazo.GetValueOrDefault()).SetDisabled(!Model.HabilitarCampos) Não</label>
+                </div>
+            </div>
+
+            <div id="divEntregueForaDoPrazo" style="@(!Model.EntregueNoPrazo.HasValue || Model.EntregueNoPrazo.GetValueOrDefault() ? "display:none" : "")">
+                <div class="row">
+                    <div class="col-md-3">
+                        @Html.Label("Data de Término Real:")
+                    </div>
+                    <div class="col-md-9">
+                        @Html.TextBoxCGUFor(x => x.DataTerminoReal, "{0:dd/MM/yyyy}", new { @class = "form-control datepicker", @placeholder = "" }).SetDisabled(!Model.HabilitarCampos)
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-3">
+                        @Html.LabelFor(m => m.IdJustificativa, "Justificativa")
+                    </div>
+                    <div class="col-md-9">
+
+                        @(Html.DropDownListCGUFor(model => Model.IdJustificativa,
+                            new SelectList((List<JustificativaViewModel>)TempData["Justificativas"], "IdJustificativa", "DescJustificativa"),
+                            new { @class = "form-control", @onchange = "atualizarQualidade(this);" }).SetDisabled(!Model.HabilitarCampos))
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <input type="hidden" value="1" name="IdNivelAvaliacao" id="IdNivelAvaliacao" />
+            <!-- 
+                <div class="row">
+                    <div class="col-md-3">
+                        @Html.Label("Nível da Avaliação:")
+                    </div>
+
+                    <div class="col-md-9">
+                        <label>@Html.RadioButtonCGUFor(x => x.IdNivelAvaliacao, new { @required = "required", @onchange = "alternaVisibilidadeNivelAvaliacao('S')" }, (int)eNivelAvaliacao.Simplificada).SetChecked(Model.ehAvaliacaoSimplificada || true).SetDisabled(!Model.HabilitarCampos) Simplificada</label>
+                        <label>@Html.RadioButtonCGUFor(x => x.IdNivelAvaliacao,
+                                                            new { @required = "required",
+                                                                  @onchange = "alternaVisibilidadeNivelAvaliacao('D')",
+                                                                  @Title=@Model.podeTerAvaliacaoDetalhada ? "" : "O plano de trabalho não está habilitado para avaliação detalhada." },
+                                                            (int)eNivelAvaliacao.Detalhada).SetChecked(Model.ehAvaliacaoDetalhada
+                                                       ).SetDisabled(!Model.HabilitarCampos || !Model.podeTerAvaliacaoDetalhada || true) Detalhada</label>
+                    </div>
+                </div>
+                -->
+
+
+                <div id="divAvaliacaoSimplificada" style="@(Model.ehAvaliacaoSimplificada || true ? "" : "display:none")">
+                    <div class="row">
+                        <div class="col-md-3">
+                            @Html.LabelFor(m => m.Avaliacao, "Qualidade:")
+                        </div>
+                        <div class="col-md-9">
+                            @Html.DropDownListCGUFor(m => m.Avaliacao, sltQualidade,new { @class = "form-control" }).SetDisabled(!Model.HabilitarCampos)
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+
+                <div id="divAvaliacaoDetalhada" style="@(!Model.ehAvaliacaoDetalhada ? "display:none" : "")">
+                    @Html.Partial("_AvaliacaoDetalhadaPartial")
+                </div>
+
+                <br />
+
+                <div class="row">
+                    <div class="col-md-3">
+                        @Html.LabelFor(m => m.LocalizacaoProduto, "Descrição da entrega:")
+                    </div>
+                    <div class="col-md-9">
+                        @Html.TextAreaCGUFor(m => m.LocalizacaoProduto, new { @rows = 3, @class = "form-control",@type = "text", @placeholder = "",@id="LocalizacaoProduto"}).SetReadonly(!Model.HabilitarCampos)
+                        <script>CKEDITOR.replace("LocalizacaoProduto")</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <button type="button" class="btn btn-primary btn-md" title="Fechar" id="btnFechar" onclick="fechar()">
+                    @if (Model.HabilitarCampos)
+                    {
+                        <text>Cancelar</text>
+                    }
+                    else
+                    {
+                        <text>Fechar</text>
+                    }
+                </button>
+            </div>
+            <div class="col-md-6">
+                @if (!Model.ModoSomenteLeitura)
+                {
+                    if (Model.HabilitarCampos)
+                    {
+                        <button type="button" onclick="submeterAvaliacao('@Url.Action("AvaliarProduto", "Pacto", new { idOrigemAcao = Model.IdOrigemAcao })'); return false;" class='btn btn-md btn-primary pull-right'>
+                            &nbsp;Assinar
+                        </button>
+                    }
+                    else
+                    {
+                        <button type="button" onclick="submeterAvaliacao('@Url.Action("CancelarAvaliacao", "Pacto", new {idOrigemAcao =  Model.IdOrigemAcao})'); return false;" class='btn btn-md btn-primary pull-right'>
+                            &nbsp;Cancelar Avaliação
+                        </button>
+                    }
+                }
+            </div>
+        </div>
+    }
+
+
+
+    <script type="text/javascript">
+        function submeterAvaliacao(action) {
+             for (instance in CKEDITOR.instances) {
+                    $('#' + instance).val(CKEDITOR.instances[instance].getData());
+            }
+            $('#formAvaliacao').attr('action', action);
+            $('#formAvaliacao').submit();
+            showLoading();
+        }
+
+        $(document).ready(function () {
+
+         //   $('#LocalizacaoProduto').blur(function () {       
+         //       retiraCaracterDangerousRequest($(this))
+         //   });
+        });
+
+        function alternaVisibilidadeNivelAvaliacao(nivelAvaliacao) {
+            if (nivelAvaliacao == 'S') {
+                $('#divAvaliacaoSimplificada').show();
+                $('#divAvaliacaoDetalhada').hide();
+            }
+            else if (nivelAvaliacao == 'D') {
+                $('#divAvaliacaoDetalhada').show();
+                $('#divAvaliacaoSimplificada').hide();
+            }
+        }
+
+        function alternaVisibilidadeEntregueForaDoPrazo(visible) {
+            if (visible) $('#divEntregueForaDoPrazo').show();
+            else {
+                $('#divEntregueForaDoPrazo').hide();
+                var txtDataTerminoReal = $('#@Html.IdFor(m => m.DataTerminoReal)');
+                var cmbJustificativa = $('#@Html.IdFor(m => m.IdJustificativa)');
+                var cmbQualidade = $('#@Html.IdFor(m => m.Avaliacao)');
+                txtDataTerminoReal.val('');
+                cmbJustificativa.val('');
+                cmbQualidade.val('');
+            }
+        }
+
+    </script>

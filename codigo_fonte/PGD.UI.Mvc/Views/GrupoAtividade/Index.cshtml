@@ -1,0 +1,121 @@
+﻿@model IEnumerable<PGD.Application.ViewModels.GrupoAtividadeViewModel>
+
+@{
+    ViewBag.Title = "Grupo Atividade";
+}
+<h1 class="">
+    Grupo de Atividades <div class="col-md-2 pull-right no-padding">
+    </div>
+</h1>
+
+<div class="clearfix"></div>
+<div class="well">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-group col-md-7">
+            <label>Grupo de Atividade:</label>
+            @Html.TextBox("NomGrupoAtividade", "", new { @class = "form-control", @placeholder = "" })
+        </div>
+        <div class="col-md-3">
+            <label>&nbsp;</label>
+            <button type="submit" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-search"></span> Consultar</button>
+        </div>
+        <div class="col-md-2">
+            <label>&nbsp;</label>
+            <a id="btnNovo" href="@Url.Action("Create")" class="btn btn-primary btn-block ">Novo</a>
+        </div>
+    }
+
+    <div class="clearfix"></div>
+</div>
+
+@if (Model.Count() == 0)
+{
+    <h4 class="col-md-12 text-center">@PGD.Domain.Constantes.Mensagens.ME_003</h4>
+}
+else
+{
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        @foreach (var obj in Model)
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="grup_@obj.IdGrupoAtividade">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_@obj.IdGrupoAtividade" aria-expanded="true" aria-controls="collapse_@obj.IdGrupoAtividade">
+                            @obj.NomGrupoAtividade
+                            <div class="pull-right">
+                                <a href="@Url.Action("Create", new { id = @obj.IdGrupoAtividade })" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-pencil" aria-hidden="true"></i></a>
+                                <a href="@Url.Action("Delete", new { id = @obj.IdGrupoAtividade })" class="btn btn-xs btn-danger" onclick="return confirm('@PGD.Domain.Constantes.Mensagens.MD_002');"><i class="glyphicon glyphicon-remove" aria-hidden="true" ></i></a>
+                            </div>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse_@obj.IdGrupoAtividade" class="panel-collapse collapse" role="tabpanel" aria-labelledby="grup_@obj.IdGrupoAtividade">
+                    <div class="panel-body no-padding ">
+                        <table class="table table-stripe table-center">
+                            <thead>
+                                <tr style="background-color: #7f7f7f; color: #fff">
+                                    <th class="text-center">Atividade</th>
+                                    <th class="text-center">Nível de Complexidade / Esforço</th>
+                                    <th class="text-center">Tempo Atividade PGD</th>
+                                    <th class="text-center">Tempo Atividade Presencial</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var ativ in obj.Atividades)
+                                {
+                                    <tr>
+                                        <td class="text-center">@ativ.NomAtividade</td>
+                                        <td class="text-center">
+                                            <ul class="text-center">
+                                                @foreach (var faixa in ativ.Tipos)
+                                                {
+                                                    <li>@faixa.Faixa</li>
+                                                }
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul class="text-center">
+                                                @foreach (var duracaoPGD in ativ.Tipos)
+                                                {
+                                                    <li>@duracaoPGD.DuracaoFaixa</li>
+                                                }
+                                            </ul>
+                                        </td>
+                                        <td class="text-center">
+                                            <ul>
+                                                @foreach (var duracaoPresencial in ativ.Tipos)
+                                                {
+                                                    <li>@duracaoPresencial.DuracaoFaixaPresencial</li>
+                                                }
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+@section scripts{
+    <script src="~/Scripts/datatables.min.js"></script>
+    <script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+    <script src="~/Scripts/pgd.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#pre-selected-options').multiSelect();
+            $('.verDetalhes').click(function (e) {
+                e.preventDefault();
+
+                $(this).siblings('.lista-hide').slideToggle('fast')
+            })
+        });
+    </script>
+
+}

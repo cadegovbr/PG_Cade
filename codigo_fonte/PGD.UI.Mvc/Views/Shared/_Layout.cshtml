@@ -1,0 +1,334 @@
+﻿@using PGD.Application.Util
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Sistema PGD - @ViewBag.Title</title>
+
+    <script defer="defer" src="//barra.brasil.gov.br/barra.js" type="text/javascript"></script>
+    <meta property="creator.productor" content="http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/214460">
+
+    @Styles.Render("~/bundles/css")
+
+    @Scripts.Render("~/bundles/jquery")
+
+    @Scripts.Render("~/bundles/jqueryval")
+
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @Scripts.Render("~/bundles/CGUUtil")
+
+    @Scripts.Render("~/bundles/modernizr")
+
+    @Scripts.Render("~/bundles/inputmask")
+
+
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link id="CSSGlobal" rel="stylesheet" type="text/css" href="~/Content/css/global.css">
+    <link id="CSSGlobalEscuro" rel="stylesheet" type="text/css" href="~/Content/css/global_escuro.css" disabled="disabled">
+
+    <script src="~/ckeditor/ckeditor.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+    <script src=https://cdn.es.gov.br/scripts/jquery/jquery-maskedinput/1.4.1/jquery.maskedinput-1.4.1.min.js></script>
+
+
+
+    <script type="text/javascript" language="javascript">
+        var ROOT = '@Url.Content("~")';
+
+        if (ROOT == "/")
+            ROOT = "";
+
+        //$(document).ready(function () {
+        //    $(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
+        //});
+
+        $(document).ajaxError(function (xhr, props) {
+            if (props.status === 401)
+            {
+                window.location.href = '@Url.Action("Index", "Home")';
+            }
+        });
+
+    </script>
+
+
+</head>
+<body>
+    @{var controller = ViewContext.Controller as PGD.UI.Mvc.Controllers.BaseController;
+        PGD.Application.ViewModels.UsuarioViewModel user = new PGD.Application.ViewModels.UsuarioViewModel();
+        PGD.Domain.Enums.Perfil perfil = PGD.Domain.Enums.Perfil.Consulta;
+        string versaoSistema = "";
+        if (controller != null)
+        {
+            user = controller.getUserLogado();
+            if (user?.Perfis != null && user.Perfis.Count == 1)
+            {
+                perfil = user.Perfis.FirstOrDefault();
+            }
+            versaoSistema = $" - versão {@controller.GetVersaoSistema()}";
+        }
+    }
+    <div id="tudo">
+        <div id="barra-brasil" style="background:#7F7F7F; height: 10px; padding:0 0 0 0px;display:block;">
+            <ul id="menu-barra-temp" style="list-style:none;">
+                <li style="display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED"><a href="http://brasil.gov.br" style="font-family:sans,sans-serif; text-decoration:none; color:white;">Portal do Governo Brasileiro</a></li>
+                <li><a style="font-family:sans,sans-serif; text-decoration:none; color:white;" href="http://epwg.governoeletronico.gov.br/barra/atualize.html">Atualize sua Barra de Governo</a></li>
+            </ul>
+        </div>
+        <div id="header">
+            <div class="container">
+                <div class="logo pull-left">
+                    <!--
+        <a href="@Url.Action("Index", "Home")">PGD</a>
+        <p>PROGRAMA DE GESTÃO DE DEMANDAS</p>
+    -->
+
+                    <a href="@Url.Action("Index", "Home")">
+                        <img src="~/Imagens/pg_cade_1.png" alt="some text" width=256 height=100>
+                    </a>
+                    <!--
+    <a href="@Url.Action("Index", "Home")">
+        <img src="~/Imagens/pg_cade_2.png" alt="some text" width=190 height=100>
+    </a>
+
+    <a href="@Url.Action("Index", "Home")">
+        <img src="~/Imagens/pg_cade_3.png" alt="some text" width=190 height=100>
+    </a>
+          -->
+                </div>
+
+                @if (user != null && user.IdUsuario > 0)
+                {
+                    <div class="loginpartial pull-right">
+                        <p>
+                            <a href="javascript:void(0)" onclick="alto_contraste();">ALTO CONTRASTE</a>
+                        </p>
+                        <p>
+                            <a href="javascript:void(0)" class="cpfUsuarioLogado" onclick="openModalUsuario();">Usuário: @(user?.Nome) &nbsp;</a>
+                            @if (user.PerfilSelecionado.HasValue)
+                            {
+                       
+                                    if (@user.PerfilSelecionado.ToString().Equals("Dirigente") )
+                                    {
+                                       <span>- Chefia |</span>
+                                    }
+                                    else if (@user.PerfilSelecionado.ToString().Equals("Solicitante") )
+                                    {
+                                        <span>- Participante |</span>
+                                    }
+                                    else
+                                    {
+                                        <span>- @user.PerfilSelecionado.ToString() | </span>
+                                    }
+                         
+
+                            }
+                            <a id="linkSignOut" href="javascript:void(0)"><span onclick="fazerLogOut()">Sair</span></a>
+</p>
+
+                    </div>
+                }
+                else
+                {
+                    <div class="loginpartial pull-right">
+                        <p><a href="#" onclick="alto_contraste();">ALTO CONTRASTE</a></p>
+                        @Html.ActionLink("Entrar", "Index", "Login", routeValues: null, htmlAttributes: new { id = "loginLink" })
+                    </div>
+                }
+
+            </div>
+        </div>
+        <div class="menu">
+            <div class="container" style="padding-bottom: 0;">
+                <ul class="pull-left">
+                    @if (controller != null &&
+                        !(controller.ControllerContext.RouteData.Values["controller"].ToString() == "Perfil" && controller.ControllerContext.RouteData.Values["action"].ToString() == "Selecionar")
+                        && controller.ControllerContext.RouteData.Values["controller"].ToString() != "Login")
+                    {
+                        <li>
+                            <a href="#" id="menuPactos">Plano de Trabalho</a>
+                            <ul>
+                                @if (user != null && !user.IsAdmin)
+                                {
+                                    <!-- Cade Alterado a Pedido -- remover Projetos e alterar label do menu para Solicitar Plano de Trabalho
+            <li><a href="@Url.Action("Solicitar", "Pacto", new { id = "", idTipoPacto = (int) PGD.Domain.Enums.eTipoPacto.PGD_Pontual})" onclick="showLoading()" id="menuSolicitar">Solicitar PGD - Processo de Trabalho</a></li>
+            <li><a href="@Url.Action("Solicitar", "Pacto", new { id = "", idTipoPacto = (int) PGD.Domain.Enums.eTipoPacto.PGD_Projeto})" onclick="showLoading()" id="menuSolicitar">Solicitar PGD - Projetos</a></li>
+         -->
+                                    <li><a href="@Url.Action("Solicitar", "Pacto", new { id = "", idTipoPacto = (int) PGD.Domain.Enums.eTipoPacto.PGD_Pontual})" onclick="showLoading()" id="menuSolicitar">Solicitar - Plano de Trabalho</a></li>
+                                }
+
+                                <li><a href="@Url.Action("Index", "Pacto")" onclick="showLoading()" id="menuConsultarPactos">Consultar</a></li>
+                            </ul>
+                        </li>
+                        <!-- Cade Comentado a pedido
+                                <li>
+                                    @if (user != null && user.IsDirigente)
+                                    {
+
+                                        <a href="#">Gerencial</a>
+                                        <ul>
+                                            @*  <li><a id="relatorioConsolidado" href="@Url.Action("Index", "RelatorioConsolidado")">Relátorio Consolidado</a></li>*@
+                                            <li><a id="relatorioFlPonto" onclick="showLoading()" href="@Url.Action("Index", "RelatorioApoioFolhaPonto")">Relatório de Auxilio à Folha de Ponto</a></li>
+                                            <li><a id="relatorioDadosBrutos" onclick="showLoading()" href="@Url.Action("Index", "ArquivoDadoBruto")">Relatório de Dados Brutos</a></li>
+                                        </ul>
+                                    }
+                                </li>
+                            -->
+
+                                <li>
+                                    @if (user != null && user.IsAdmin)
+                                    {
+                                        <a id="menuConfiguracoes" href="#">Configurações</a>
+                                        <ul>
+                                            <li><a id="menuOrdemServico" onclick="showLoading()" href="@Url.Action("Index", "OrdemServico")">Tabela de Atividades</a></li>
+                                            <li><a id="menuGrupoAtividade" onclick="showLoading()" href="@Url.Action("Index", "GrupoAtividade")">Gerenciar Grupo de Atividades</a></li>
+                                            <li><a id="menuAtividade" onclick="showLoading()" href="@Url.Action("Index", "Atividade")">Gerenciar Atividades</a></li>
+                                            <li><a id="menuPerfil" onclick="showLoading()" href="@Url.Action("Index", "Usuario")">Gerenciar Perfil</a></li>
+                                            <li><a id="menutiposPacto" onclick="showLoading()" href="@Url.Action("Index","UnidadeTipoPacto")">Gerenciar Tipos de Plano de Trabalho</a></li>
+                                            <li><a id="menuAvaliacaoDetalhada" onclick="showLoading()" href="@Url.Action("Index","CriterioAvaliacao")">Gerenciar Avaliação Detalhada</a></li>
+                                            @*<li><a id="trocaUser" href="@Url.Action("Index", "TrocaUsuario")">Trocar Usuário</a></li>*@
+                                        </ul>
+                                    }
+                                </li>
+
+                            }
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+                <div class="container">
+                    <div id="Alertas">
+                        <div id="Messages">
+                        </div>
+                        @Html.Partial("_AlertaPartial", new PGD.Application.ViewModels.MessageViewModel { })
+                    </div>
+                    @RenderBody()
+                </div>
+                <div class="footer">
+                    <div class="footer-azul2"></div>
+                    <div class="footer-cinza">
+                        @*<div class="center-block container" style="padding-bottom: 0">
+                                <div class="row" style="padding-left: 10px;">
+                                    <div class="col-md-12 left">
+                                        <p>Sistema Eletrônico do PGD @versaoSistema</p>
+                                        Direitos reservados - CGU - 2017
+                                    </div>
+                                </div>
+                            </div>*@
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modalGenerica" tabindex="-1" role="dialog" aria-labelledby="GenericModalLabel" aria-hidden="true">
+                <div id="ModalGeneric-dialog" class="modal-dialog modal-lg">
+                    <div id="ContentmodalGenerica" class="modal-content">
+
+                    </div>
+                </div>
+            </div>
+
+            @Html.Partial("_UsuarioPartial")
+
+            <div class="modal fade" id="modalWaiting" tabindex="-1" role="dialog" aria-labelledby="GenericModalLabel" aria-hidden="true">
+                <div id="ModalWaiting-dialog" class="modal-dialog modal-lg">
+                    <div id="ContentmodalWaiting" style="margin-left:50%; margin-top:30%; width:50%">
+                        <div class="modal-body">
+                            <img src="~/Content/img/loading.gif" style="width:40px; height:40px;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="loadingDiv" style="display: none">
+                <img class="loader" src="~/Content/img/loading-blue-pipe.gif" alt="Loading..." />
+            </div>
+
+            <div class="div-loader" id="div-loader"></div>
+            <script type="text/javascript">
+
+            $.when(
+                $.get("/Scripts/cldr-data/supplemental/likelySubtags.json"),
+                $.get("/Scripts/cldr-data/main/pt/numbers.json"),
+                $.get("/Scripts/cldr-data/supplemental/numberingSystems.json"),
+                $.get("/Scripts/cldr-data/main/pt/ca-gregorian.json"),
+                $.get("/Scripts/cldr-data/main/pt/timeZoneNames.json"),
+                $.get("/Scripts/cldr-data/supplemental/timeData.json"),
+                $.get("/Scripts/cldr-data/supplemental/weekData.json")
+            ).then(function() {
+
+                // Normalize $.get results, we only need the JSON, not the request statuses.
+                return [].slice.apply(arguments, [0]).map(function(result) {
+                    return result[0];
+                });
+
+            }).then(Globalize.load).then(function() {
+                Globalize.locale("pt");
+            });
+
+            $('#CSSGlobalEscuro').prop("disabled", true);
+
+            $("#Alertas").delay(8000).fadeOut();
+            $(document).ready(function() {
+
+                $('#div-loader').hide();
+
+                $(".datepicker").datepicker({
+                    changeMonth: true,
+                    dateFormat: 'dd/mm/yy',
+                    nextText: '&rarr;',
+                    prevText: '&larr;',
+                    monthNamesShort: [
+                        'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun',
+                        'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'
+                    ],
+                    dayNamesMin: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+                    currentText: 'Hoje',
+                    showOtherMonths: true,
+                    changeYear: true,
+                    numberOfMonths: 1,
+                    //maxDate: "0",
+                    defaultDate: new Date()
+                });
+            });
+
+            function openModalUsuario() {
+                $("#modalUsuario").modal('show');
+            }
+
+            $('form').submit(function() {
+                if ($(this).validate().checkForm() && !$(this).hasClass('prevent-loader'))
+                    $('#div-loader').show();
+            });
+
+            function fazerLogOut() {
+
+                if (confirm('@PGD.Domain.Constantes.Mensagens.MD_001')) {
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '/Login/LogOut',
+                        beforeSend: () => showLoading(),
+                        success: (data) => {
+                            if (data && data.ok) location.reload();
+                        },
+                        error: err => {
+                            console.log(err);
+                            hideLoading();
+                        }
+                    });
+                }
+            }
+
+
+            </script>
+            @RenderSection("scripts", required: false)
+        </body>
+        </html>

@@ -1,0 +1,8 @@
+﻿@model PGD.Application.ViewModels.MessageViewModel
+
+<div id="divAlerta" class="row alert alert-@Model.Tipo.ToString() fade in">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+        &times;
+    </button>
+    @Html.Raw(Model.Mensagem)
+</div>

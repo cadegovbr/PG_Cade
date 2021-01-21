@@ -1,0 +1,18 @@
+﻿@model PGD.Application.ViewModels.UsuarioViewModel
+
+@{
+    ViewBag.Title = "TrocaUser";
+}
+
+<h2>TrocaUser</h2>
+
+<form method="post" action="@Url.Action("Troca")" >
+    <div class="form-group">
+        @Html.LabelFor(model => model.CpfUsuario, htmlAttributes: new { @class = "col-sm-4 control-label" })
+
+        <div class="col-sm-8">
+            @Html.TextBoxFor(model => model.CpfUsuario, new { @class = "form-control" })
+        </div>
+    </div>
+    <input type="submit" value="Trocar" class="btn btn-danger" />
+</form>

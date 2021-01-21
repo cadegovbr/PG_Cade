@@ -1,0 +1,97 @@
+﻿@model IEnumerable<PGD.Application.ViewModels.CriterioAvaliacaoViewModel>
+
+@{
+    ViewBag.Title = "Avaliação Detalhada";
+}
+    <h1 class="">
+        Avaliação Detalhada <div class="col-md-2 pull-right no-padding">
+        </div>
+    </h1>
+
+<div class="clearfix"></div>
+<div class="well">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-group col-md-7">
+            <label>Critério de Avaliação:</label>
+            @Html.TextBox("DescCriterioAvaliacao", "", new { @class = "form-control", @placeholder = "" })
+        </div>
+        <div class="col-md-3">
+            <label>&nbsp;</label>
+            <button type="submit" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-search"></span> Consultar</button>
+        </div>
+        <div class="col-md-2">
+            <label>&nbsp;</label>
+            <a id="btnNovo" href="@Url.Action("Create")" class="btn btn-primary btn-block ">Novo</a>
+        </div>
+    }
+
+    <div class="clearfix"></div>
+</div>
+
+@if (Model == null || Model.Count() == 0)
+{
+    <h4 class="col-md-12 text-center">@PGD.Domain.Constantes.Mensagens.ME_003</h4>
+}
+else
+{
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        @foreach (var obj in Model)
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="grup_@obj.IdCriterioAvaliacao">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_@obj.IdCriterioAvaliacao" aria-expanded="true" aria-controls="collapse_@obj.IdCriterioAvaliacao">
+                            @obj.DescCriterioAvaliacao
+                            <div class="pull-right">
+                                <a href="@Url.Action("Create", new { id = @obj.IdCriterioAvaliacao })" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-pencil" aria-hidden="true"></i></a>
+                                <a href="@Url.Action("Delete", new { id = @obj.IdCriterioAvaliacao })" class="btn btn-xs btn-danger" onclick="return confirm('@PGD.Domain.Constantes.Mensagens.MD_002');"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></a>
+                            </div>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse_@obj.IdCriterioAvaliacao" class="panel-collapse collapse" role="tabpanel" aria-labelledby="grup_@obj.IdCriterioAvaliacao">
+                    <div class="panel-body no-padding ">
+                        <table class="table table-stripe table-center">
+                            <thead>
+                                <tr style="background-color: #7f7f7f; color: #fff">
+                                    <th class="text-center">Item para avaliação</th>
+                                    <th class="text-center">Impacto na Nota</th>
+                                    <th class="text-center">Nota Máxima</th>                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in obj.ItensAvaliacao.Where(i => !i.Inativo))
+                                {
+                                <tr>
+                                    <td class="text-center">@item.DescItemAvaliacao</td>
+                                    <td class="text-center">@item.ImpactoNota</td>
+                                    <td class="text-center">@item.NotaMaxima.DescNotaAvaliacao</td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+@section scripts{
+    <script src="~/Scripts/datatables.min.js"></script>
+    <script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+    <script src="~/Scripts/pgd.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#pre-selected-options').multiSelect();
+            $('.verDetalhes').click(function (e) {
+                e.preventDefault();
+
+                $(this).siblings('.lista-hide').slideToggle('fast')
+            })
+        });
+    </script>
+
+}

@@ -1,0 +1,131 @@
+﻿@model PGD.Application.ViewModels.OrdemServicoViewModel
+<h1 class="col-md-12">Cadastro de Nova Tabela de Atividade</h1>
+<div class="col-md-8">
+    @using (Html.BeginForm("Create", "OrdemServico", FormMethod.Post, htmlAttributes: new { @class = "form-horizontal", @id = "frmOrdemServico" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(x => x.IdOrdemServico)
+
+        <div class="form-group">
+            <label for="nomeAtividade" class="col-sm-4 control-label">Número Tabela de Atividade:</label>
+            <div class="col-sm-8">
+                @Html.TextBoxFor(x => x.IdOrdemServico, new { @id = "nomeAtividade", @class = "form-control", @disabled = true, @type = "number" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="nomeAtividade" class="col-sm-4 control-label">Descrição:</label>
+            <div class="col-sm-8">
+                @Html.TextAreaFor(x => x.DescOrdemServico, new { @id = "Descricao", @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="nomeAtividade" class="col-sm-4 control-label">Data início no sistema:</label>
+            <div class="col-sm-8">
+                @Html.TextBoxFor(x => x.DatInicioSistema, new { @id = "DatInicioSistema", @class = "form-control datepicker", @Value = Model.DatInicioSistema.ToString("dd/MM/yyyy") })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="nomeAtividade" class="col-sm-4 control-label">Data início no normativo:</label>
+            <div class="col-sm-8">
+                @Html.TextBoxFor(x => x.DatInicioNormativo, new { @id = "DatInicioNormativo", @class = "form-control datepicker", @Value = Model.DatInicioNormativo.ToString("dd/MM/yyyy") })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-12 left">
+                <label for="nomeAtividade" class="control-label left">Grupo de Atividades:</label>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-12">
+                    @Html.ListBoxFor(m => m.idsGrupos, (ViewBag.Grupos as SelectList), new { @class = "pre-selected-options" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-12 left">
+                <label for="criterioAvaliacao" class="control-label left">Critérios de Avaliação:</label>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-12">
+                    @Html.ListBoxFor(m => m.idsCriteriosAvaliacao, (ViewBag.CriteriosAvaliacao as SelectList), new { @class = "pre-selected-options" })
+                </div>
+            </div>
+        </div>
+
+        <hr class="col-md-12">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a href="@Url.Action("Index")" class="btn btn-danger">Cancelar</a>
+                &nbsp;
+                <button type="submit" id="salvar" class="btn btn-success">Salvar</button>
+            </div>
+        </div>
+    }
+</div>
+@section scripts{
+    <script src="~/Scripts/datatables.min.js"></script>
+    <script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+    <script src="~/Scripts/pgd.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.pre-selected-options').multiSelect({
+
+                selectableHeader: "<input type='text' class='form-control head-list' autocomplete='off' placeholder='Pesquise...'>",
+                selectionHeader: "<input type='text' class='form-control head-list' autocomplete='off' placeholder='Pesquise...'>",
+
+                afterInit: function (ms) {
+                    var that = this,
+                        $selectableSearch = that.$selectableUl.prev(),
+                        $selectionSearch = that.$selectionUl.prev(),
+                        selectableSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selectable:not(.ms-selected)',
+                        selectionSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selection.ms-selected';
+
+                    that.qs1 = $selectableSearch.quicksearch(selectableSearchString)
+                        .on('keydown', function (e) {
+                            if (e.which === 40) {
+                                that.$selectableUl.focus();
+                                return false;
+                            }
+                        });
+
+                    that.qs2 = $selectionSearch.quicksearch(selectionSearchString)
+                        .on('keydown', function (e) {
+                            if (e.which == 40) {
+                                that.$selectionUl.focus();
+                                return false;
+                            }
+                        });
+                },
+                afterSelect: function () {
+                    this.qs1.cache();
+                    this.qs2.cache();
+                },
+                afterDeselect: function () {
+                    this.qs1.cache();
+                    this.qs2.cache();
+                }
+            });
+
+            $('.verDetalhes').click(function (e) {
+                e.preventDefault();
+
+                $(this).siblings('.lista-hide').slideToggle('fast')
+            })
+        });
+
+        function submeteConsulta(action) {
+            $('#frmOrdemServico').attr('action', action);
+            $('#frmOrdemServico').submit();
+        }
+
+    </script>
+
+
+}

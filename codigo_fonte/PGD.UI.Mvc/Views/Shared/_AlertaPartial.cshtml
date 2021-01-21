@@ -1,0 +1,53 @@
+﻿@model PGD.Application.ViewModels.MessageViewModel
+@using PGD.Application.ViewModels
+@{
+    //var sClass = "row alert alert-success fade in";
+    MessageViewModel messageViewModel = null;
+}
+@if (Model != null && !string.IsNullOrEmpty(Model.Mensagem))
+{
+    messageViewModel = Model;
+}
+else if (ViewData["Message"] != null && ViewData["Message"].ToString() != "")
+{
+    messageViewModel = new MessageViewModel();
+
+    messageViewModel.Mensagem = ViewData["Message"].ToString();
+    if (ViewData["MessageType"] != null)
+    {
+        messageViewModel.Tipo = (TipoMessage)ViewData["MessageType"];
+    }
+}
+else if (ViewData.ModelState[""] != null && ViewData.ModelState[""].Errors.Count() > 0)
+{
+    <div id="page-content-wrapper" class="body-content">
+        <div id="divAlerta" class="row alert alert-danger fade in">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                &times;
+            </button>
+            @Html.Raw(HttpUtility.HtmlDecode(Html.ValidationSummary(true).ToHtmlString()))
+        </div>
+    </div>
+}
+else if (!ViewData.ModelState.IsValid && ViewData.ModelState["eSistuacao"] == null)
+{
+    <div id="validationMessage" class="alert alert-warning col-md-12">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+            &times;
+        </button>
+        @Html.Raw(HttpUtility.HtmlDecode(Html.ValidationSummary(false).ToHtmlString()))
+    </div>
+}
+<div>
+    @if (messageViewModel != null)
+    {
+        <div id="page-content-wrapper" class="body-content">
+            <div id="divAlerta" class="row alert alert-@messageViewModel.Tipo.ToString() fade in">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                    &times;
+                </button>
+                @messageViewModel.Mensagem
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,39 @@
+﻿@using PGD.Domain.Entities
+@using PGD.Domain.Entities.RH
+@model PGD.Application.ViewModels.SearchUnidadeTipoPactoViewModel
+
+<div class="clearfix"></div>
+<div class="well">
+    @using (Html.BeginForm("", "", FormMethod.Post, htmlAttributes: new { @class = "form col-md-12", id = "frm-pesquisar-unidades-tipo-pacto" }))
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(x => x.Skip, new { id = "hdn-skip" })
+        @Html.HiddenFor(x => x.Take, new { id = "hdn-take" })
+
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label>Nome da Unidade</label>
+                @Html.DropDownListCGUFor(model => model.IdUnidade, new SelectList((List<Unidade>)TempData["lstUnidade"], "IdUnidade", "Nome"), new { @class = "form-control" }).Selectize()
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div class="form-group col-md-6 col-xs-12">
+                <label>Tipo de Plano</label>
+                @Html.DropDownListCGUFor(model => model.IdTipoPacto, new SelectList((List<TipoPacto>)TempData["lstTipos"], "IdTipoPacto", "DescTipoPacto"), new { @class = "form-control" }).Selectize()
+            </div>
+            <div class="col-md-3 col-xs-12">
+                <button type="button" class="btn btn-primary btn-block" onclick="buscarUnidadesTipoPacto()"><span class="glyphicon glyphicon-search"></span> Consultar</button>
+            </div>
+            <div class="col-md-3 col-xs-12">
+                <label>&nbsp;</label>
+                <a id="btnNovo" href="@Url.Action("Create")" class="btn btn-primary btn-block ">Novo</a>
+            </div>
+        </div>
+    }
+
+    <div class="clearfix"></div>
+</div>

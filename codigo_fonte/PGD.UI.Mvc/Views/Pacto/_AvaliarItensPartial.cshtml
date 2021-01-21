@@ -1,0 +1,120 @@
+﻿@using PGD.Application.ViewModels;
+
+@model PGD.Application.ViewModels.AvaliacaoProdutoViewModel
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="pacto_identificacao">
+        <h4 class="panel-title">
+            Avaliação de Atividade
+        </h4>
+    </div>
+
+    <div class="panel panel-body">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="pacto_identificacao">
+                Dados da Atividade
+            </div>
+
+            <div class="panel panel-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        @Html.Label("Grupo de Atividade")
+                    </div>
+                    <div class="col-md-9">
+                        @Html.DisplayFor(m => m.Produto.GrupoAtividade.NomGrupoAtividade)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        @Html.Label("Atividade")
+                    </div>
+                    <div class="col-md-9">
+                        @Html.DisplayFor(m => m.Produto.Atividade.NomAtividade)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        @Html.Label("Faixa / Duração")
+                    </div>
+                    <div class="col-md-9">
+                        @Html.DisplayFor(m => m.Produto.TipoAtividade.Faixa) (@Html.DisplayFor(m => m.Produto.CargaHorariaProdutoFormatada))
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        @Html.Label("Quantidade de Produtos já Avaliados")
+                    </div>
+                    <div class="col-md-9">
+                        @Html.DisplayFor(m => m.Produto.QuantidadeProdutoAvaliado)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        @Html.Label("Carga Horária Já Avaliada")
+                    </div>
+                    <div class="col-md-2">
+                        @Html.DisplayFor(m => m.Produto.CargaHorariaHomologada)
+                    </div>
+                    <div class="col-md-7">
+                        @if (Model.IdAvaliacaoProduto == 0)
+                        {
+                            <span>Pendente de Homologação:</span><span style="color: red">@Html.DisplayFor(m => m.CargaHorariaPendenteFormatada)</span>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="containerAvaliarProdutoForm">
+            @Html.Partial("_AvaliarProdutoFormPartial", Model)
+        </div>
+
+    </div>
+
+    @Html.Partial("_AvaliarItensLegendaPartial", Model)
+
+</div>
+
+<script type="text/javascript">
+    
+    function atualizarCargaHoraria() {
+        var cargaHorariaProduto = $('#@Html.IdFor(m => m.Produto.CargaHorariaProduto)').val().replace(',', '.');
+        var quantidadeProdutos = $('#@Html.IdFor(m => m.QuantidadeProdutosAvaliados)').val();
+        var txtCargaHorariaAHomologar = $('#@Html.IdFor(m => m.CargaHorariaAvaliadaFormatada)');
+        if (isNaN(quantidadeProdutos)) txtCargaHorariaAHomologar.val(hourTohhmm(0));
+        else txtCargaHorariaAHomologar.val(hourTohhmm(cargaHorariaProduto * quantidadeProdutos));
+    }
+
+    function atualizarQualidade(cmbJustificativa) {
+        if (cmbJustificativa.value > 0) {
+            var cmbQualidade = $('#@Html.IdFor(m => m.Avaliacao)');
+            cmbQualidade.val('@((int)PGD.Domain.Enums.eAvaliacao.NaoEntregue)');
+        } else {
+            cmbQualidade.val('');
+        }
+    }
+
+    $(document).ready(function () {
+        $(".datepicker").datepicker({
+            changeMonth: true,
+            dateFormat: 'dd/mm/yy',
+            nextText: '&rarr;',
+            prevText: '&larr;',
+            monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun',
+                'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+            dayNamesMin: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+            currentText: 'Hoje',
+            showOtherMonths: true,
+            numberOfMonths: 1,
+            changeYear: true,
+            //maxDate: "0",
+            defaultDate: new Date()
+        });
+    });
+
+    function fechar() {
+        $('#containerRealizarAvaliacao').hide();
+        $('#containerExibirAvaliacao').hide();
+    }
+</script>

@@ -1,0 +1,82 @@
+# ASP.NET
+# Build and test ASP.NET projects.
+# Add steps that publish symbols, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
+
+trigger:
+- develop
+
+pool:
+  name: 'local'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+- script: 'E:/Sonar/SonarScannerMsbuild/SonarScanner.MSBuild.exe begin  /k:"pgd.sprint" /d:sonar.host.url="http://sed-tfs1-p:9000" /d:sonar.login="6f8e1e1bc4b965aefdf7acb63552f76fcc8b6680"  /v:$(Build.SourceBranch)'
+  condition: and(succeeded(), ne(variables['Build.SourceBranch'], 'refs/heads/master'), ne(variables['Build.SourceBranch'], 'refs/heads/develop'))
+  displayName: Sonar Analysis begin
+
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    msbuildArgs: '/p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:publishUrl=$(build.artifactstagingdirectory)/tmp'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: VSTest@1
+  displayName: 'VsTest - testAssemblies'
+  inputs:
+    testAssembly: '**/*test*.dll;-:**/obj/**;-:**/testadapter.dll'
+    codeCoverageEnabled: true
+    vstestLocationMethod: 'location'
+    vstestLocation: 'E:/Microsoft Visual Studio 2019/Common7/IDE/CommonExtensions/Microsoft/TestWindow'
+  continueOnError: true
+
+- script: 'E:/Sonar/SonarScannerMsbuild/SonarScanner.MSBuild.exe end /d:sonar.login="6f8e1e1bc4b965aefdf7acb63552f76fcc8b6680"'
+  condition: and(succeeded(), ne(variables['Build.SourceBranch'], 'refs/heads/master'), ne(variables['Build.SourceBranch'], 'refs/heads/develop'))
+  displayName: Sonar Analysis End
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'PGD.UI.Mvc/obj/$(BuildConfiguration)/Package/PackageTmp'
+    Contents: '**'
+    TargetFolder: '$(build.artifactstagingdirectory)/Pgd'
+
+- script: 'E:/Sonar/BuildBreaker/sonarbreaker.exe http://sed-tfs1-p:9000/api/qualitygates/project_status?projectKey=pgd.sprint 1'
+  failOnStderr: true
+  condition: and(succeeded(), ne(variables['Build.SourceBranch'], 'refs/heads/master'),  ne(variables['Build.SourceBranch'], 'refs/heads/develop'))
+  displayName: Sonar Build Breaker
+
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'PGD.Services.REST.SIGRHAPI/obj/$(BuildConfiguration)/Package/PackageTmp'
+    Contents: '**'
+    TargetFolder: '$(build.artifactstagingdirectory)/sigrhapi'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(build.sourcesdirectory)/PGD.Services.Console/bin/$(BuildConfiguration)/'
+    Contents: '**'
+    TargetFolder: '$(build.artifactstagingdirectory)/console'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(build.sourcesdirectory)/PGD.UpdateDatabase/bin/$(BuildConfiguration)/'
+    Contents: '**'
+    TargetFolder: '$(build.artifactstagingdirectory)/UpdateDatabase'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'

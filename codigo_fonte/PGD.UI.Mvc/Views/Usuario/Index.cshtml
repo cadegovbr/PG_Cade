@@ -1,0 +1,84 @@
+﻿@using PGD.Application.ViewModels
+@using PGD.Domain.Entities.RH
+@model SearchUsuarioViewModel
+
+@{
+    ViewBag.Title = "Consultar Usuários";
+}
+
+<h1 class="">Consultar Usuário </h1>
+
+<div class="well">
+    <form id="frm-consultar-usuarios">
+        @Html.AntiForgeryToken()
+        
+        @Html.HiddenFor(x => x.Skip, new {id = "hdn-skip"})
+        @Html.HiddenFor(x => x.Take, new {id = "hdn-take"})
+
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="">Nome do Servidor</label>
+                @Html.TextBoxFor(m => m.NomeUsuario, new { @class = "form-control", @placeholder = "", maxlength = 250 })
+            </div>
+            <div class="form-group col-md-6">
+                <label for="">Sigla - Unidade</label>
+                @Html.DropDownListFor(m => m.IdUnidade, new SelectList(new List<Unidade>(), "IdUnidade", "Nome"), 
+                    new { @class = "form-control", id="slt-unidade", placeholder = "Digite o nome ou a sigla da unidade" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="">Matrícula</label>
+                @Html.TextBoxFor(m => m.MatriculaUsuario, new { @class = "form-control", @placeholder = "", maxlength = 100 })
+            </div>
+        </div>
+
+        <div class="row col-md-12">
+            <div class="col-md-3" style='float: right'>
+                <button type="button" onclick="buscarUsuarios()" class="btn btn-primary btn-block" id="btn-consultar-usuario"><span class="glyphicon glyphicon-search"></span> Consultar</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="clearfix"></div>
+</div>
+
+<div id="div-table-usuarios" class="table-responsive">
+
+    <table class="table table-bordered tableFilter"
+           id="tbl-usuarios"
+           data-side-pagination="server"
+           data-ajax="ajaxTableUsuarios"
+           data-pagination="true"
+           data-pode-pesquisar="false"
+           data-search="false">
+        @*class="table table-striped table-hover" cellspacing="0" style="margin-top: 0px;">*@
+        <thead>
+        <tr>
+            <th data-field="Matricula" data-align="center" class="text-center">
+                <div class="th-inner ">Matrícula</div>
+            </th>
+            <th data-field="Nome" data-sortable="true" class="text-center">
+                <div class="th-inner ">Nome</div>
+            </th>
+            <th  data-field="CPF" class="text-center" data-align="center">
+                <div class="th-inner ">CPF</div>
+            </th>
+            <th data-field="Unidade" data-escape="true" data-width="25%" class="text-center" data-formatter="formatterUnidade">
+                <div class="th-inner ">Unidade(s)</div>
+            </th>
+            <th data-field="Status" class="text-center" data-formatter="formatterStatus">
+                <div class="th-inner ">Status</div>
+            </th>
+            <th class="text-center" data-formatter="formatterAcoes">
+                <div class="th-inner ">Editar</div>
+            </th>
+        </tr>
+        </thead>
+    </table>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/Site/Usuario/PesquisarUsuario.js"></script>
+}
