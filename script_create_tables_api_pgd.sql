@@ -104,7 +104,7 @@ CREATE TABLE [tb_parametro]
 GO
 
 INSERT INTO [tb_pessoa] (ds_nome, nr_cpf, st_registro) 
-VALUES ('Usuário de Sistema - API PGD', '000.000.000-00', 'ATIVO')
+VALUES ('Usuário de Sistema - API PGD CADE', '000.000.000-00', 'ATIVO')
 INSERT INTO [tb_pessoa] (ds_nome, nr_cpf, st_registro) 
 VALUES ('Usuário Admin', '111.111.111-11', 'ATIVO')
 
@@ -116,7 +116,7 @@ INSERT INTO [tb_perfil] (ds_perfil, ds_detalhe, st_registro)
 VALUES ('ROLE_USUARIO_AVANCADO', 'Usuário Avançado do Sistema', 'ATIVO')
 
 INSERT INTO [tb_usuario] (id_pessoa, ds_email, co_senha, st_registro) 
-VALUES (1, 'usapipg@cade.gov.br', NULL, 'ATIVO')
+VALUES (1, 'system@gov.br', NULL, 'ATIVO')
 INSERT INTO [tb_usuario] (id_pessoa, ds_email, co_senha, st_registro) 
 VALUES (2, 'user@gov.br', '$2a$10$bVH7/Gxnux5yKLvkUjuHheV32HqIzRRgkSG0rFkczuQa/h1NpMH6a', 'ATIVO') /* @t3st3# */
 
